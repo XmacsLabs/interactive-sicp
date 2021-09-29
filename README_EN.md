@@ -4,4 +4,4 @@ English | [简体中文](README.md)
 
 Enjoy reading SICP in GNU TeXmacs!
 
-Using GNU TeXmacs, evaluate the Scheme code snippet in SICP while reading!
+Using GNU TeXmacs, evaluate the Scheme code snippets in SICP while reading!
