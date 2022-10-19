@@ -1,4 +1,4 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.3>
 
 <project|sicp.tm>
 
@@ -1067,7 +1067,9 @@
 
   <subsection|Representing Sequences><label|2.2.1>
 
-  <\big-figure|<image|<tuple|<#89504E470D0A1A0A0000000D49484452000001190000004A08060000008F7D20FA000000097048597300000EC400000EC401952B0E1B0000039E49444154789CEDDDD192A2301484E1E3D6BCFF2BB3179653481264209DF491FFBBD999AA5D8C2DB621B0F2883196418FA3F0106E9B5CEAC8A59436939F818FA5DC295546BCB0E452472EA54C99FC66F16FE6283A48DBEE62E4D24636A5DE99BC6D2F7BC900F0B22E9847042503A09FA260222819007D540B26829201705DB36022281900D7EC164C042503E0BC8F0513E159324B684E33AAB63B0AB9D429C79F359711AFE9A18289187B31DE114BE5E71E1720A9B6FBE9B15EAE3E16B97CDEE637E572E5F1468CFD70C1449C2F19F50ED3D3E84FA3570EB5177BFB778E183DFE25346FA8DEB9B4A8C63F3297DAEF57F41CFB9F0A26E27CC98CDA61948EBE88AA43941EA57C651B7BCFEBC8739E9DCB8C439959B91C657388B4F613FA19846BD91C19D79537F25EAE3D32B9BA8D479C9FAA3BE4B2377E9599B91C79AECA4C4E154CC4B3649487390E3BCDE89DB1F7A1E4E8F1675A93A9518D3F732EBDDEE3A7B6D3734DE6F4202AFFBEF7F1EFF6F04E39BB521FB7934BB9CDDEE3CF9C4BEFB15FDECE953519D5429852B6F18EF20DB9649A158D32BD6022AE5D2793FD0500D0D66D16E778311E80B9BA1E26BA5D8C07609ED36790F630930110212A98084A06C0BBEE6BADD94B86C5E73A7269239B364936A302CFFABF5923B8F5470BB9D4714B942408B48E5CEAC8A5649349F6C32500E628190052940C00294A0680142503408A92012045C90090A2640048513200A428190052940C00294A0680142503408A92012045C90090722A9925B4371DCFAA95CBDDB321979265264E25B375E79DE588BB7F8DE4DD9F7F8D6526CE2583A7ED8E43F9BEDBE661F9461BCC2A13A792D9DEC317EFC8651FF9942C32712A991A3E9580E4DC4B067594EF133994EC32A16472B0DB714C9153697A266E25333D10007DB995CC1A85037C816FB883E45DCAE895E15D9EEF5F904DE97699A84AC6E2141D80B69FD903B839667875EA0F8F8CD9A4CD8492994FF1E27EC30C8F1BD7975266E2BCF00BE00B503200A428190052940C0029B785DFF50254C633000036DC4A26E2592E99CF0028587D3F8891DA7E42364F3617E3B995CCF4408CADB35982AC22F842AF145893C98142D937FD7B6CCD587D08B9CD64B0CF660A6C8A5C0CCB96994C1E144CDB2358CBDB5A367F4EE33693592A3FF3A62AB3B09A0EC38ADDDA9D5BC94C0FC4DCF44F25339C756B5BCF64A6E6E25632A8E3CD53472E6D36D9B02603408A92012045C90090A2640048513200A428190052234F61738D077043A34AC6E69CBD21CAB78E5C4A2933F90F136CBD9D67FB7E690000000049454E44AE426082>|png>|281pt|74pt||>>
+  \;
+
+  <\big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.480002gw|0.420008gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<cline|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>>|<cline|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>|<point|-3.5|2.5>|<point|-2.5|2.5>|<cline|<point|-4|1>|<point|-4.0|0.0>|<point|-3.0|0.0>|<point|-3.0|1.0>>|<cline|<point|-1|3>|<point|-1.0|2.0>|<point|0.0|2.0>|<point|0.0|3.0>>|<cline|<point|0|3>|<point|0.0|2.0>|<point|1.0|2.0>|<point|1.0|3.0>>|<point|-0.5|2.5>|<point|0.5|2.5>|<point|3.5|2.5>|<cline|<point|3.0|3.0>|<point|3.9999999999999987|3.0>|<point|3.9999999999999987|2.0>|<point|3.0|2.0>>|<point|2.5|2.5>|<cline|<point|1.9999999999999996|3.0>|<point|1.9999999999999996|2.0>|<point|3.0|2.0>|<point|3.0|3.0>>|<cline|<point|5.999999999999999|3.0000000000000004>|<point|6.999999999999997|3.0000000000000004>|<point|6.999999999999997|2.0>|<point|5.999999999999999|2.0>>|<point|5.499999999999999|2.5000000000000004>|<cline|<point|4.999999999999998|3.0000000000000004>|<point|4.999999999999998|2.0>|<point|5.999999999999999|2.0>|<point|5.999999999999999|3.0000000000000004>>|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>|<cline|<point|2.0|1.0>|<point|2.0|-3.885780586188048e-16>|<point|3.0|-3.885780586188048e-16>|<point|3.0|1.0>>|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>|<text-at|<with|font-base-size|12|1>|<point|-3.593097631961901|0.3682762270141557>>|<text-at|2|<point|-0.5999966926842176|0.3999966926842178>>|<text-at|<with|font-base-size|12|3>|<point|2.405880407461305|0.36585527186135725>>|<text-at|<with|font-base-size|12|4>|<point|5.420379679851831|0.32049212858843784>>|<with|arrow-end|\<gtr\>|<line|<point|-3.5|2.5>|<point|-3.5|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|-0.5|2.5>|<point|-0.5|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|2.5|2.5>|<point|2.5|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|5.5|2.5>|<point|5.5|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|-2.5|2.5>|<point|-1.0|2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|0.5|2.5>|<point|2.0|2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|3.5|2.5>|<point|5.0|2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|7|3>|<point|6.0|2.0>>>>>>
     <label|fig2.4>The sequence 1, 2, 3, 4 represented as a chain of pairs.
   </big-figure>
 
@@ -1105,9 +1107,9 @@
   In general,
 
   <\scm-code>
-    (list \<langle\><var|a\<#2081\>>\<rangle\>
-    \<langle\><var|a\<#2082\>>\<rangle\> ...
-    \<langle\><var|a\<#2099\>>\<rangle\>)
+    (list \<langle\><math|a<rsub|1>>\<rangle\>
+    \<langle\><math|a<rsub|2>>\<rangle\> ...
+    \<langle\><math|a<rsub|n>>\<rangle\>)
   </scm-code>
 
   is equivalent to
@@ -8653,7 +8655,7 @@
 <\references>
   <\collection>
     <associate|2.2.1|<tuple|2.2.1|69>>
-    <associate|2.2.2|<tuple|2.2.2|76>>
+    <associate|2.2.2|<tuple|2.2.2|75>>
     <associate|2.2.3|<tuple|2.2.3|80>>
     <associate|2.3.2|<tuple|2.3.2|102>>
     <associate|auto-1|<tuple|2|59>>
@@ -8724,20 +8726,20 @@
     <associate|auto-19|<tuple|algebraic specification|64>>
     <associate|auto-2|<tuple|2.1|59>>
     <associate|auto-20|<tuple|message passing|65>>
-    <associate|auto-21|<tuple|Church numerals|66>>
+    <associate|auto-21|<tuple|Church numerals|65>>
     <associate|auto-22|<tuple|2.1.4|66>>
     <associate|auto-23|<tuple|width|67>>
     <associate|auto-24|<tuple|2.2|68>>
     <associate|auto-25|<tuple|box-and-pointer notation|68>>
     <associate|auto-26|<tuple|pointer|68>>
     <associate|auto-27|<tuple|2.2|68>>
-    <associate|auto-28|<tuple|2.3|69>>
+    <associate|auto-28|<tuple|2.3|68>>
     <associate|auto-29|<tuple|closure property|69>>
     <associate|auto-3|<tuple|data abstraction|59>>
     <associate|auto-30|<tuple|hierarchical|69>>
     <associate|auto-31|<tuple|2.2.1|69>>
     <associate|auto-32|<tuple|2.4|69>>
-    <associate|auto-33|<tuple|sequence|70>>
+    <associate|auto-33|<tuple|sequence|69>>
     <associate|auto-34|<tuple|list|70>>
     <associate|auto-35|<tuple|list|70>>
     <associate|auto-36|<tuple|list structure|70>>
@@ -8747,8 +8749,8 @@
     <associate|auto-4|<tuple|selectors|59>>
     <associate|auto-40|<tuple|dotted-tail notation|73>>
     <associate|auto-41|<tuple|list|73>>
-    <associate|auto-42|<tuple|2.10|74>>
-    <associate|auto-43|<tuple|2.2.2|76>>
+    <associate|auto-42|<tuple|2.10|73>>
+    <associate|auto-43|<tuple|2.2.2|75>>
     <associate|auto-44|<tuple|2.5|76>>
     <associate|auto-45|<tuple|trees|76>>
     <associate|auto-46|<tuple|2.6|76>>
@@ -8832,7 +8834,7 @@
     <associate|fig2.24|<tuple|2.24|133>>
     <associate|fig2.25|<tuple|2.25|136>>
     <associate|fig2.26|<tuple|2.26|137>>
-    <associate|fig2.3|<tuple|2.3|69>>
+    <associate|fig2.3|<tuple|2.3|68>>
     <associate|fig2.4|<tuple|2.4|69>>
     <associate|fig2.5|<tuple|2.5|76>>
     <associate|fig2.6|<tuple|2.6|76>>
@@ -8995,7 +8997,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%3B56582C8-3B6A9F3D0>|<link|hyperlink|<id|%3B56582C8-3B6A9F3D0>|<url|#Figure-2_002e5>>|Figure
+        The list structure in <locus|<id|%-3FB881BF8--3FA74D7B8>|<link|hyperlink|<id|%-3FB881BF8--3FA74D7B8>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -9023,14 +9025,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%3B56582C8-3B6AF69C0>|<link|hyperlink|<id|%3B56582C8-3B6AF69C0>|<url|#fig2.10>>|Figure
+        <locus|<id|%-3FB881BF8--3FA7C6250>|<link|hyperlink|<id|%-3FB881BF8--3FA7C6250>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%3B56582C8-3B6AF91A8>|<link|hyperlink|<id|%3B56582C8-3B6AF91A8>|<url|#fig2.10>>|Figure
+        <locus|<id|%-3FB881BF8--3FA7AC150>|<link|hyperlink|<id|%-3FB881BF8--3FA7AC150>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -9046,7 +9048,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%3B56582C8-3B6AE6140>|<link|hyperlink|<id|%3B56582C8-3B6AE6140>|<url|#fig2.9>>|Figure
+        <locus|<id|%-3FB881BF8--3FA7AF760>|<link|hyperlink|<id|%-3FB881BF8--3FA7AF760>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
