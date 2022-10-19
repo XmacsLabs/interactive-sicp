@@ -1067,9 +1067,7 @@
 
   <subsection|Representing Sequences><label|2.2.1>
 
-  \;
-
-  <\big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.480002gw|0.420008gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<cline|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>>|<cline|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>|<point|-3.5|2.5>|<point|-2.5|2.5>|<cline|<point|-4|1>|<point|-4.0|0.0>|<point|-3.0|0.0>|<point|-3.0|1.0>>|<cline|<point|-1|3>|<point|-1.0|2.0>|<point|0.0|2.0>|<point|0.0|3.0>>|<cline|<point|0|3>|<point|0.0|2.0>|<point|1.0|2.0>|<point|1.0|3.0>>|<point|-0.5|2.5>|<point|0.5|2.5>|<point|3.5|2.5>|<cline|<point|3.0|3.0>|<point|3.9999999999999987|3.0>|<point|3.9999999999999987|2.0>|<point|3.0|2.0>>|<point|2.5|2.5>|<cline|<point|1.9999999999999996|3.0>|<point|1.9999999999999996|2.0>|<point|3.0|2.0>|<point|3.0|3.0>>|<cline|<point|5.999999999999999|3.0000000000000004>|<point|6.999999999999997|3.0000000000000004>|<point|6.999999999999997|2.0>|<point|5.999999999999999|2.0>>|<point|5.499999999999999|2.5000000000000004>|<cline|<point|4.999999999999998|3.0000000000000004>|<point|4.999999999999998|2.0>|<point|5.999999999999999|2.0>|<point|5.999999999999999|3.0000000000000004>>|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>|<cline|<point|2.0|1.0>|<point|2.0|-3.885780586188048e-16>|<point|3.0|-3.885780586188048e-16>|<point|3.0|1.0>>|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>|<text-at|<with|font-base-size|12|1>|<point|-3.593097631961901|0.3682762270141557>>|<text-at|2|<point|-0.5999966926842176|0.3999966926842178>>|<text-at|<with|font-base-size|12|3>|<point|2.405880407461305|0.36585527186135725>>|<text-at|<with|font-base-size|12|4>|<point|5.420379679851831|0.32049212858843784>>|<with|arrow-end|\<gtr\>|<line|<point|-3.5|2.5>|<point|-3.5|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|-0.5|2.5>|<point|-0.5|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|2.5|2.5>|<point|2.5|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|5.5|2.5>|<point|5.5|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|-2.5|2.5>|<point|-1.0|2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|0.5|2.5>|<point|2.0|2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|3.5|2.5>|<point|5.0|2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|7|3>|<point|6.0|2.0>>>>>>
+  <\big-figure|<with|gr-mode|<tuple|group-edit|move>|gr-frame|<tuple|scale|0.707097cm|<tuple|0.420873gw|0.443453gh>>|gr-geometry|<tuple|geometry|0.986667par|0.6par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-transformation|<tuple|<tuple|0.9950041652780258|0.0|-0.09983341664682815|0.0>|<tuple|0.0|1.0|0.0|0.0>|<tuple|0.09983341664682815|0.0|0.9950041652780258|0.0>|<tuple|0.0|0.0|0.0|1.0>>|magnify|0.840896415|<graphics||<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-3.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|1>|<point|-4.0|0.0>|<point|-3.0|0.0>|<point|-3.0|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1|3>|<point|-1.0|2.0>|<point|0.0|2.0>|<point|0.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|0|3>|<point|0.0|2.0>|<point|1.0|2.0>|<point|1.0|3.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|3.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|3.0|3.0>|<point|3.9999999999999987|3.0>|<point|3.9999999999999987|2.0>|<point|3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|1.9999999999999996|3.0>|<point|1.9999999999999996|2.0>|<point|3.0|2.0>|<point|3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.999999999999999|3.0000000000000004>|<point|6.999999999999997|3.0000000000000004>|<point|6.999999999999997|2.0>|<point|5.999999999999999|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|5.499999999999999|2.5000000000000004>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|4.999999999999998|3.0000000000000004>|<point|4.999999999999998|2.0>|<point|5.999999999999999|2.0>|<point|5.999999999999999|3.0000000000000004>>>|<with|magnify|0.8408964147443614|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|2.0|1.0>|<point|2.0|-3.885780586188048e-16>|<point|3.0|-3.885780586188048e-16>|<point|3.0|1.0>>>|<with|magnify|0.8408964147443614|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|12|1>|<point|-3.593097631961901|0.3682762270141557>>>|<with|magnify|0.8408964147443614|<text-at|2|<point|-0.5999966926842176|0.3999966926842178>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|12|3>|<point|2.405880407461305|0.36585527186135725>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|12|4>|<point|5.420379679851831|0.32049212858843784>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-3.501024677268475|2.5225909878829595>|<point|-3.501024677268475|1.0225909878829582>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-0.48894846585593915|2.561781411894845>|<point|-0.48894846585593915|1.061781411894845>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|2.495524431244153|2.5459183332822795>|<point|2.495524431244153|1.0459183332822821>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|5.5123046324007365|2.5369012998207285>|<point|5.5123046324007365|1.0369012998207283>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-2.5203512558408128|2.51236>|<point|-1.020351255840812|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|0.4725050759228232|2.48776>|<point|1.9725050759228244|2.48776>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|3.464129235987035|2.51236>|<point|4.964129235987034|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|7|3>|<point|6.0|2.0>>>>>>
     <label|fig2.4>The sequence 1, 2, 3, 4 represented as a chain of pairs.
   </big-figure>
 
@@ -8655,7 +8653,7 @@
 <\references>
   <\collection>
     <associate|2.2.1|<tuple|2.2.1|69>>
-    <associate|2.2.2|<tuple|2.2.2|75>>
+    <associate|2.2.2|<tuple|2.2.2|76>>
     <associate|2.2.3|<tuple|2.2.3|80>>
     <associate|2.3.2|<tuple|2.3.2|102>>
     <associate|auto-1|<tuple|2|59>>
@@ -8726,20 +8724,20 @@
     <associate|auto-19|<tuple|algebraic specification|64>>
     <associate|auto-2|<tuple|2.1|59>>
     <associate|auto-20|<tuple|message passing|65>>
-    <associate|auto-21|<tuple|Church numerals|65>>
+    <associate|auto-21|<tuple|Church numerals|66>>
     <associate|auto-22|<tuple|2.1.4|66>>
     <associate|auto-23|<tuple|width|67>>
     <associate|auto-24|<tuple|2.2|68>>
     <associate|auto-25|<tuple|box-and-pointer notation|68>>
     <associate|auto-26|<tuple|pointer|68>>
     <associate|auto-27|<tuple|2.2|68>>
-    <associate|auto-28|<tuple|2.3|68>>
+    <associate|auto-28|<tuple|2.3|69>>
     <associate|auto-29|<tuple|closure property|69>>
     <associate|auto-3|<tuple|data abstraction|59>>
     <associate|auto-30|<tuple|hierarchical|69>>
     <associate|auto-31|<tuple|2.2.1|69>>
     <associate|auto-32|<tuple|2.4|69>>
-    <associate|auto-33|<tuple|sequence|69>>
+    <associate|auto-33|<tuple|sequence|70>>
     <associate|auto-34|<tuple|list|70>>
     <associate|auto-35|<tuple|list|70>>
     <associate|auto-36|<tuple|list structure|70>>
@@ -8749,8 +8747,8 @@
     <associate|auto-4|<tuple|selectors|59>>
     <associate|auto-40|<tuple|dotted-tail notation|73>>
     <associate|auto-41|<tuple|list|73>>
-    <associate|auto-42|<tuple|2.10|73>>
-    <associate|auto-43|<tuple|2.2.2|75>>
+    <associate|auto-42|<tuple|2.10|74>>
+    <associate|auto-43|<tuple|2.2.2|76>>
     <associate|auto-44|<tuple|2.5|76>>
     <associate|auto-45|<tuple|trees|76>>
     <associate|auto-46|<tuple|2.6|76>>
@@ -8834,7 +8832,7 @@
     <associate|fig2.24|<tuple|2.24|133>>
     <associate|fig2.25|<tuple|2.25|136>>
     <associate|fig2.26|<tuple|2.26|137>>
-    <associate|fig2.3|<tuple|2.3|68>>
+    <associate|fig2.3|<tuple|2.3|69>>
     <associate|fig2.4|<tuple|2.4|69>>
     <associate|fig2.5|<tuple|2.5|76>>
     <associate|fig2.6|<tuple|2.6|76>>
@@ -8997,7 +8995,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%-3FB881BF8--3FA74D7B8>|<link|hyperlink|<id|%-3FB881BF8--3FA74D7B8>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%-45F8A438--44A89CC8>|<link|hyperlink|<id|%-45F8A438--44A89CC8>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -9025,14 +9023,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%-3FB881BF8--3FA7C6250>|<link|hyperlink|<id|%-3FB881BF8--3FA7C6250>|<url|#fig2.10>>|Figure
+        <locus|<id|%-45F8A438--44ADC388>|<link|hyperlink|<id|%-45F8A438--44ADC388>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%-3FB881BF8--3FA7AC150>|<link|hyperlink|<id|%-3FB881BF8--3FA7AC150>|<url|#fig2.10>>|Figure
+        <locus|<id|%-45F8A438--44B07C18>|<link|hyperlink|<id|%-45F8A438--44B07C18>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -9048,7 +9046,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%-3FB881BF8--3FA7AF760>|<link|hyperlink|<id|%-3FB881BF8--3FA7AF760>|<url|#fig2.9>>|Figure
+        <locus|<id|%-45F8A438--44AE1CB8>|<link|hyperlink|<id|%-45F8A438--44AE1CB8>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
