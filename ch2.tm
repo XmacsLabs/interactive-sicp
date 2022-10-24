@@ -938,7 +938,30 @@
   construct all sorts of data structures. <hlink|Figure 2.3|#fig2.3> shows
   two ways to use pairs to combine the numbers 1, 2, 3, and 4.
 
-  <\big-figure|<image|<tuple|<#89504E470D0A1A0A0000000D4948445200000190000000A0080600000022B23AD5000000097048597300000EC400000EC401952B0E1B0000088F49444154789CEDDDEB8E9B3A14065052CDFBBF72CE8F2A3D9472318E0D7BE3B5A4AAED4C428CB1FD616E794DF9BDEF2E40A5D7DD055891B52EA729667D92B74D456A4FBDEB30D2BA5EAE57E5F6DC68513B55C6BABC62F9D4CBD8A6A2B5A7B0EBFAAB552900188B0001A08A0001A08A0001A08A0001A08A0001A08A0001A0CACFDD0558985F93DCFAE696E5F5CEAD96DF6BB9ADF4A8D351EB7274FA675BBDEAF3B3DCEEEB1A2D40E62BDC72C3AFDD2CF3FE72993D97DBD2569DD696F1CA758E5697A3D33FDBEA559F9789162073CB0A4C59C1C1446EB0D1EEFE65DF5EFFBCBB2D657434DE95FA04E425FDE9E7AA0F1A4C499D46ABF768E5F988B4C77887A8DB654FF46D96B17F96B8BCCC3F53AE0D1DB9AC7347E5BCAB831DD567C44E93659BF71279FDF5CFB6B6EAF36CBF7CCFFEEEBA1E110F61F5980AAF4DE95A2CFBB2A9E2175AD7E7C87539BA2B0323725B6DA965FF5C1EA28EB6AEDDD50C20B5E9DC7AB93DCA70B52875D9FBF55CE7CCB6E9F5DAB3AE6A4F3DFBCFE74FEB65FF25DA0C64B8C40486D56BBCBB6C1C7523210055040800550408005504080055040800559E70D553D64B3823D67DD6BA9CA698F549DE3615A93DF5AEC348EB1A5ED6061D51AFBAB48DC664BB27E3101600550408676D3D22BBC7725B2D1BE8408010D990CFF3812C04085178982224234038CB400F4CD32440F89EC34C30280142548209821320D4E87518CBE131484480F02DB304189400212AC104C10910A2111C908400A196811E0617ED3BD1B94EAB93D56BCB290D97BD327C5B3E01079D0990B1F51864CF0EFC11CA005470080B802AA30448AF27C802DFF114E6C44609102026378F26264080683CC626895102C45E0E4063A304C8923D1C88C30E5E522EE3E5C837F779000F264038B20C8B3BF7143F9F2DC09ECBD18144460A90F93459033DCF2106E02FA39E03A1DE5DE16BCFF4D96CDB840408A55ED37D273BCD7E20A0D102C45E4E6EEFC5DF3C8F3E9A48D47320BD07889ECB7F5A0758D6D51DEB37FF4C87B2EED7B3FFF4EEFBDA4E435103649A726EE827EE1947DA0EF31948A4728D2863FDDFDD3FEFFEFC6FAC6EEFC801D28BC1272FDBEDD946E89B19D76F33F8463B0702F044B7CC6E0408005504080055040800550408005546BC0A8BFF45B8AC304219800A4F0890F900D4F212B95ECB8D22C23A4528037DF57A8069A4FE39EC435AB31FC25AEEBDB6DA9BEDB55C18C97BF1EFA7F6CFF973E2E67FBED56BBD9A2D37F30C64AB127ADD8C34C24D4ED04AF8C1AF83BDEFCE3933762C83F7ECFB2F5B6EE60001F8280D96BB02E8DBCF0DB9639C39407C8F32F05132085E791461ED21A425E355AA312D73806CE9D5401CBE8272BD76F022EF38B638B11F79FDFE913D403E1BA9F59EC57CB9F3FF03E5AEE89F11FAE615E344C81DE3EC57615D21420305FE15A56F7EAEC26AB9BCBDFF8759AE000188E7B5F83BE47205080055040800550408005504080055225FC67BF65AE833AFEFF55A1845AFFEA9BF71B9119FBB0359E847BFF5DC29EEB9DCCDD7479E81003C4DD6107934950C71E94775C28F6B4EA2035045800050257380EC7DA1548F659B8643397DA84EAA712D7380AC3DF638CAD339016AA41AD73207C895C26E40082AD5F75A0CEAEB714D8000504580ACB3F7046D99C5974BF36D8ED903645E211A28F034A1C7B5EC017285D01B100233938FABC9B82640B6090D68477F8AA1E9767842806898C0D3A418D79E10201FBD2A3CC58684A0F49FEFA83F009E274ABAF53CD156B28EBD4FF445A96768E1EEFE9A45947A7AFC850C773FB6B867053F7EE3319CBBFB6B1651EAA95B399E740E04800B091000AA081000AA081000AA081000AAFCDC5D8013E657123CE9523F782A7DF6D8F20AA954F5946D0692AA72017DB6C06BF627D5A5CC996620111A62EABD05B898FE712C4A1DAD05D761D932054814F34AF5A877A085CF007ED778B2FCDCA299900039475800ADDD1D1E73A70EA1653B0712C57B32FB00BEB70C8F28E7408AC6B64C3390F7CABFEF18C023ED2D406451FA6C06D182A368073953804468786B7B0B11CA0511E91BC752D751A6008924CADE02400B5557980A907352EF2D006CA81ADB9C4407A08A0001A08A0001A08A0001A08A0001A04AA4ABB0EEBE34F6EECF874CF4973251EA294A39000000000000000000000000000000000000000000000000800DAFBB0B0054F97C4150863E1CB9ACF32F5A8A58BED0227E2361F48D18B99CB59D61F96D65AF95DF455CDFD165DA2691CBFA9A7C635F954801324DB11BD95CE472D676866568BC663FD7B962D9DA1E253B02F39F6F2D67EFF767DB7EF4B246EECBE1450990E88D6CAB3C5B3FCFD6194ADE370F15EEB7DC16CBEDF39EFD6CED77AF9DDF6D7D56ED8E44A6B27242940099A63C8D2C4B396B6C1DAE320BC9A745D87FB67BEF6D9FA9ACCC440A9023591A5996722E39D7F12C5B33C6336DAA6427A7854C656526538064696459CAB9FCBC69FA7BC62348625BDB46CB76B29CF17E2C67B6EFC56BDE2BAF99BFEF49657DAFFC5BDB2F14A5A2D636DC99F3045B3FDBFBFFF2F34A442F67EDB993A3F7E958F1640AF94C6525A92C53CE2CE56C69C475CE20D376C9545692CAD2C8B294B38591D61500000008C989ADF3229F506E75A364E909F4C8750167456ECF3D2EACD1B76F90E99CC0D9B26EDD7BB2B79C4CF5017B22B7E5B5CB9E7B2FE7F03332DD0712C15685EEED1D1C5DC6BBF6BE5633893396D7D76FFDFEECEF2083E87DFBDBFE751414FAF6054AF6CEE77BF17B697FF4BBBDD71E397B17FB5E994BCA1079CF0D4A3CB56F97BCAFBA6F9B81B417E15126B57794AFDDDD0BFC7677DFFEE6BC4497A74CFC6AB520FEA849F9B5D7BE667F7A5B7E96F0807FDDD9B797E11162D66FA03827DBA34C6A1FD5B27CAFAB3578BA6C7DBBF4BD479FA76F5F2C44F25FCCF90F4630625BD6B76F3052C56A608C64A436AD6F030000004CD3B47EC9EA3797A81388CB7881ABB9AAE7210408D0CBD14D6B6621C90910A087A370300B79000102F474F48C3500D8D4E2112004640602F454F2F45A0028264000384D783CC47FC2B147C22CDB3F8A0000000049454E44AE426082>|png>|400pt|160pt||>>
+  <\big-figure>
+    \;
+
+    <with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|0.840896cm|<tuple|0.35547gw|0.407513gh>>|gr-geometry|<tuple|geometry|1par|0.486669par|bottom>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-line-width|2ln|gr-grid-old|<tuple|cartesian|<point|0|0>|5>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|5>|gr-snap|<tuple|control
+    point>|gr-point-size|4ln|gr-arrow-end|\<gtr\>|magnify|0.840896415|gr-auto-crop|true|<graphics||<with|line-width|2ln|<cline|<point|-2.999999999999999|4.0>|<point|-2.0|4.0>|<point|-2.0|2.9999999999999996>|<point|-2.999999999999999|2.9999999999999996>>>|<with|line-width|2ln|<line|<point|-3.9999999999999982|4.0>|<point|-2.999999999999999|4.0>|<point|-2.999999999999999|2.9999999999999996>|<point|-3.9999999999999982|2.9999999999999996>|<point|-3.9999999999999982|4.0>>>|<with|line-width|2ln|<cline|<point|-3.4795032094192346|1.9788269413943644>|<point|-2.4795032094192346|1.9788269413943644>|<point|-2.4795032094192346|0.9788269413943622>|<point|-3.4795032094192346|0.9788269413943622>>>|<with|line-width|2ln|<line|<point|4.500830491202061|3.978836727080301>|<point|5.500830491202061|3.978836727080301>|<point|5.500830491202061|2.978836727080302>|<point|4.500830491202061|2.978836727080302>|<point|4.500830491202061|3.978836727080301>>>|<with|line-width|2ln|<line|<point|7.506516534329462|2.010308669533006>|<point|8.50651653432946|2.010308669533006>|<point|8.50651653432946|1.0103086695330072>|<point|7.506516534329462|1.0103086695330072>|<point|7.506516534329462|2.010308669533006>>>|<with|line-width|2ln|<line|<point|5.008834257573277|1.989156450588701>|<point|6.008834257573275|1.989156450588701>|<point|6.008834257573275|0.9891564505887016>|<point|5.008834257573277|0.9891564505887016>|<point|5.008834257573277|1.989156450588701>>>|<with|line-width|2ln|<line|<point|3.992830847069243|1.9891493557348854>|<point|4.992830847069246|1.9891493557348854>|<point|4.992830847069246|0.9891493557348854>|<point|3.992830847069243|0.9891493557348854>|<point|3.992830847069243|1.9891493557348854>>>|<with|line-width|2ln|<line|<point|5.495671988754653|3.9788376240243384>|<point|6.495671988754655|3.9788376240243384>|<point|6.495671988754655|2.9788376240243437>|<point|5.495671988754653|2.9788376240243437>|<point|5.495671988754653|3.9788376240243384>>>|<with|line-width|2ln|<line|<point|0.775484359438603|2.5183232729196994>|<point|1.775484359438602|2.5183232729196994>|<point|1.775484359438602|1.518323272919699>|<point|0.775484359438603|1.518323272919699>|<point|0.775484359438603|2.5183232729196994>>>|<with|line-width|2ln|<line|<point|-0.748538741368383|2.5394861105966395>|<point|0.25146125863161667|2.5394861105966395>|<point|0.25146125863161667|1.5394861105966395>|<point|-0.748538741368383|1.5394861105966395>|<point|-0.748538741368383|2.5394861105966395>>>|<with|line-width|2ln|<line|<point|-3.2885604573361045|0.4863072895885694>|<point|-2.2885604573361036|0.4863072895885694>|<point|-2.2885604573361036|-0.5136927104114304>|<point|-3.2885604573361045|-0.5136927104114304>|<point|-3.2885604573361045|0.4863072895885694>>>|<with|line-width|2ln|<line|<point|-4.727896815319965|0.4863081105966391>|<point|-3.7278968153199665|0.4863081105966391>|<point|-3.7278968153199665|-0.5136918894033606>|<point|-4.727896815319965|-0.5136918894033606>|<point|-4.727896815319965|0.4863081105966391>>>|<with|line-width|2ln|<line|<point|0.5002990796396865|4.02116293160471>|<point|1.5002990796396856|4.02116293160471>|<point|1.5002990796396856|3.02116293160471>|<point|0.5002990796396865|3.02116293160471>|<point|0.5002990796396865|4.02116293160471>>>|<with|line-width|2ln|<line|<point|-0.5157041943118931|4.021169289588569>|<point|0.4842958056881046|4.021169289588569>|<point|0.4842958056881046|3.0211692895885696>|<point|-0.5157041943118931|3.0211692895885696>|<point|-0.5157041943118931|4.021169289588569>>>|<with|line-width|2ln|<line|<point|-4.484738837175153|1.978838007672973>|<point|-3.4847388371751533|1.978838007672973>|<point|-3.4847388371751533|0.978838007672972>|<point|-4.484738837175153|0.978838007672972>|<point|-4.484738837175153|1.978838007672973>>>|<with|point-size|4ln|<point|-3.51996|3.5254>>|<with|point-size|4ln|<point|-2.50395|3.5254>>|<with|point-size|4ln|<point|-0.0274342|3.5254>>|<with|point-size|4ln|<point|1.03091|3.5254>>|<with|point-size|4ln|<point|-3.98563|1.51455>>|<with|point-size|4ln|<point|-3.01196|1.51455>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.51996|3.5254>|<point|-3.4987928297393833|2.0013890726286547>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.98563|1.51455>|<point|-3.98562971292499|0.5197116020637651>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.01196|1.51455>|<point|-3.011955946553777|0.4985447810556952>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-0.0274342|3.5254>|<point|-0.006267363407858182|2.5728932398465405>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|1.03091|3.5254>|<point|1.0520736869956344|2.5517264188384705>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-2.50395|3.5254>|<point|-0.5566047096176743|3.525400185209684>>>|<with|line-width|2ln|<line|<point|7.993359083608475|3.9999988145257315>|<point|8.99335908360847|3.9999988145257315>|<point|8.99335908360847|2.9999988145257306>|<point|7.993359083608475|2.9999988145257306>|<point|7.993359083608475|3.9999988145257315>>>|<with|line-width|2ln|<line|<point|8.522519049212395|2.01031999193015>|<point|9.52251904921239|2.01031999193015>|<point|9.52251904921239|1.0103199919301498>|<point|8.522519049212395|1.0103199919301498>|<point|8.522519049212395|2.01031999193015>>>|<with|line-width|2ln|<line|<point|8.755368083476181|0.5074766368170397>|<point|9.755368083476176|0.5074766368170397>|<point|9.755368083476176|-0.4925233631829607>|<point|8.755368083476181|-0.4925233631829607>|<point|8.755368083476181|0.5074766368170397>>>|<with|line-width|2ln|<line|<point|7.252521725492322|0.4863096758896686>|<point|8.252521725492318|0.4863096758896686>|<point|8.252521725492318|-0.5136903241103327>|<point|7.252521725492322|-0.5136903241103327>|<point|7.252521725492322|0.4863096758896686>>>|<with|line-width|2ln|<line|<point|3.9928285200418667|0.48630963173700287>|<point|4.9928285200418605|0.48630963173700287>|<point|4.9928285200418605|-0.5136903682629971>|<point|3.9928285200418667|-0.5136903682629971>|<point|3.9928285200418667|0.48630963173700287>>>|<with|point-size|4ln|<point|5.00432|3.50564>>|<with|point-size|4ln|<point|5.99916|3.48447>>|<with|point-size|4ln|<point|4.49631|1.49479>>|<with|point-size|4ln|<point|5.49115|1.49479>>|<with|point-size|4ln|<point|8.01|1.51596>>|<with|point-size|4ln|<point|9.00485|1.51596>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.00432|3.50564>|<point|5.004316047096177|2.0451283238523614>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|4.49631|1.49479>|<point|4.496312342902501|0.5211172112713321>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.49115|1.49479>|<point|7.459667284032279|1.5159577986506152>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|8.01|1.51596>|<point|8.031171451250165|0.4787835692551925>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|9.00485|1.51596>|<point|9.004845217621378|0.5211172112713321>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.99916|3.48447>|<point|7.946504167217886|3.484472152401111>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-5.5029|3.48837>|<point|-4.042949007885784|3.5135395567442136>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|3.00509|3.53871>|<point|4.490216514916128|3.5387111364574935>>>|<\document-at>
+      <\scm-code>
+        <\with|font-base-size|16>
+          (cons (cons 1 2)
+
+          \ \ \ \ \ \ (cons 3 4))
+        </with>
+      </scm-code>
+    </document-at|<point|-4.745587661992882|-1.1039063151167132>>|<\document-at>
+      <\scm-code>
+        <\with|font-base-size|16>
+          (cons (cons 1
+
+          \ \ \ \ \ \ \ \ \ \ \ \ (cons 2 3))
+
+          \ \ \ \ \ \ 4)
+        </with>
+      </scm-code>
+    </document-at|<point|2.98208|-1.01734>>||<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|-4.26733|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|-2.78221|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|4.49238|-0.0104816>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|7.71434|0.0398616>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|9.24981|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|-0.265049|2.02842>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|1.27042|2.02842>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|8.49466|3.48837>>>>>
+  <|big-figure>
     <label|fig2.3>Two ways to combine 1, 2, 3, and 4 using pairs.
   </big-figure>
 
@@ -960,13 +983,13 @@
   structures\Vstructures made up of parts, which themselves are made up of
   parts, and so on.
 
-  From the outset of <hlink|Chapter 1|Chapter-1.xhtml#Chapter-1>, we've made
-  essential use of closure in dealing with procedures, because all but the
-  very simplest programs rely on the fact that the elements of a combination
-  can themselves be combinations. In this section, we take up the
-  consequences of closure for compound data. We describe some conventional
-  techniques for using pairs to represent sequences and trees, and we exhibit
-  a graphics language that illustrates closure in a vivid way.<\footnote>
+  From the outset of Chapter 1, we've made essential use of closure in
+  dealing with procedures, because all but the very simplest programs rely on
+  the fact that the elements of a combination can themselves be combinations.
+  In this section, we take up the consequences of closure for compound data.
+  We describe some conventional techniques for using pairs to represent
+  sequences and trees, and we exhibit a graphics language that illustrates
+  closure in a vivid way.<\footnote>
     The notion that a means of combination should satisfy closure is a
     straightforward idea. Unfortunately, the data combiners provided in many
     popular programming languages do not satisfy closure, or make closure
@@ -988,9 +1011,9 @@
 
   <subsection|Representing Sequences><label|2.2.1>
 
-  <\big-figure|<with|gr-mode|<tuple|group-edit|move>|gr-frame|<tuple|scale|0.707097cm|<tuple|0.420873gw|0.443453gh>>|gr-geometry|<tuple|geometry|0.986667par|0.6par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-transformation|<tuple|<tuple|0.9950041652780258|0.0|-0.09983341664682815|0.0>|<tuple|0.0|1.0|0.0|0.0>|<tuple|0.09983341664682815|0.0|0.9950041652780258|0.0>|<tuple|0.0|0.0|0.0|1.0>>|magnify|0.840896415|gr-snap|<tuple|control
+  <\big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|0.707097cm|<tuple|0.420873gw|0.443453gh>>|gr-geometry|<tuple|geometry|0.986667par|0.6par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-transformation|<tuple|<tuple|0.9950041652780258|0.0|-0.09983341664682815|0.0>|<tuple|0.0|1.0|0.0|0.0>|<tuple|0.09983341664682815|0.0|0.9950041652780258|0.0>|<tuple|0.0|0.0|0.0|1.0>>|magnify|0.840896415|gr-snap|<tuple|control
   point|grid point|grid curve point|curve-grid
-  intersection>|<graphics||<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-3.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|1>|<point|-4.0|0.0>|<point|-3.0|0.0>|<point|-3.0|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1|3>|<point|-1.0|2.0>|<point|0.0|2.0>|<point|0.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|0|3>|<point|0.0|2.0>|<point|1.0|2.0>|<point|1.0|3.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|3.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|3.0|3.0>|<point|3.9999999999999987|3.0>|<point|3.9999999999999987|2.0>|<point|3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|1.9999999999999996|3.0>|<point|1.9999999999999996|2.0>|<point|3.0|2.0>|<point|3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.999999999999999|3.0000000000000004>|<point|6.999999999999997|3.0000000000000004>|<point|6.999999999999997|2.0>|<point|5.999999999999999|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|5.499999999999999|2.5000000000000004>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|4.999999999999998|3.0000000000000004>|<point|4.999999999999998|2.0>|<point|5.999999999999999|2.0>|<point|5.999999999999999|3.0000000000000004>>>|<with|magnify|0.8408964147443614|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|2.0|1.0>|<point|2.0|-3.885780586188048e-16>|<point|3.0|-3.885780586188048e-16>|<point|3.0|1.0>>>|<with|magnify|0.8408964147443614|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|1>|<point|-3.593097631961901|0.3682762270141557>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|2>|<point|-0.6449913157577223|0.3075032520986105>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|3>|<point|2.348511608144202|0.3075048443957941>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|4>|<point|5.342030339128242|0.2775770710333033>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-3.501024677268475|2.5225909878829595>|<point|-3.501024677268475|1.0225909878829582>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-0.48894846585593915|2.561781411894845>|<point|-0.48894846585593915|1.061781411894845>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|2.495524431244153|2.5459183332822795>|<point|2.495524431244153|1.0459183332822821>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|5.5123046324007365|2.5369012998207285>|<point|5.5123046324007365|1.0369012998207283>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-2.5203512558408128|2.51236>|<point|-1.020351255840812|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|0.4725050759228232|2.48776>|<point|1.9725050759228244|2.48776>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|3.464129235987035|2.51236>|<point|4.964129235987034|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|7|3>|<point|6.0|2.0>>>>>>
+  intersection>|<graphics||<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-3.50102|2.52259>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|1>|<point|-4.0|0.0>|<point|-3.0|0.0>|<point|-3.0|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1|3>|<point|-1.0|2.0>|<point|0.0|2.0>|<point|0.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|0|3>|<point|0.0|2.0>|<point|1.0|2.0>|<point|1.0|3.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|3.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|3.0|3.0>|<point|3.9999999999999987|3.0>|<point|3.9999999999999987|2.0>|<point|3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|1.9999999999999996|3.0>|<point|1.9999999999999996|2.0>|<point|3.0|2.0>|<point|3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.999999999999999|3.0000000000000004>|<point|6.999999999999997|3.0000000000000004>|<point|6.999999999999997|2.0>|<point|5.999999999999999|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|5.499999999999999|2.5000000000000004>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|4.999999999999998|3.0000000000000004>|<point|4.999999999999998|2.0>|<point|5.999999999999999|2.0>|<point|5.999999999999999|3.0000000000000004>>>|<with|magnify|0.8408964147443614|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|2.0|1.0>|<point|2.0|-3.885780586188048e-16>|<point|3.0|-3.885780586188048e-16>|<point|3.0|1.0>>>|<with|magnify|0.8408964147443614|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|1>|<point|-3.593097631961901|0.3682762270141557>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|2>|<point|-0.6449913157577223|0.3075032520986105>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|3>|<point|2.348511608144202|0.3075048443957941>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|4>|<point|5.342030339128242|0.2775770710333033>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-3.501024677268475|2.5225909878829595>|<point|-3.501024677268475|1.0225909878829582>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-0.48894846585593915|2.561781411894845>|<point|-0.48894846585593915|1.061781411894845>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|2.495524431244153|2.5459183332822795>|<point|2.495524431244153|1.0459183332822821>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|5.5123046324007365|2.5369012998207285>|<point|5.5123046324007365|1.0369012998207283>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-2.5203512558408128|2.51236>|<point|-1.020351255840812|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|0.4725050759228232|2.48776>|<point|1.9725050759228244|2.48776>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|3.464129235987035|2.51236>|<point|4.964129235987034|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|7|3>|<point|6.0|2.0>>>>>>
     <label|fig2.4>The sequence 1, 2, 3, 4 represented as a chain of pairs.
   </big-figure>
 
@@ -1028,17 +1051,15 @@
   In general,
 
   <\scm-code>
-    (list \<langle\><math|a<rsub|1>>\<rangle\>
-    \<langle\><math|a<rsub|2>>\<rangle\> ...
-    \<langle\><math|a<rsub|n>>\<rangle\>)
+    (list \<langle\>a<rsub|1>\<rangle\> \<langle\>a<rsub|2>\<rangle\> ...
+    \<langle\>a<rsub|n>\<rangle\>)
   </scm-code>
 
   is equivalent to
 
   <\scm-code>
-    (cons \<less\><math|a<rsub|1>>\<gtr\> (cons
-    \<less\><math|a<rsub|2>>\<gtr\> (cons ... (cons
-    \<less\><math|a<rsub|n>>\<gtr\> nil) ...)))
+    (cons \<less\>a<rsub|1>\<gtr\> (cons \<less\>a<rsub|2>\<gtr\> (cons ...
+    (cons \<less\>a<rsub|n>\<gtr\> nil) ...)))
   </scm-code>
 
   Lisp systems conventionally print lists by printing the sequence of
@@ -8576,7 +8597,7 @@
 <\references>
   <\collection>
     <associate|2.2.1|<tuple|2.2.1|69>>
-    <associate|2.2.2|<tuple|2.2.2|76>>
+    <associate|2.2.2|<tuple|2.2.2|75>>
     <associate|2.2.3|<tuple|2.2.3|80>>
     <associate|2.3.2|<tuple|2.3.2|102>>
     <associate|auto-1|<tuple|2|59>>
@@ -8647,7 +8668,7 @@
     <associate|auto-19|<tuple|algebraic specification|64>>
     <associate|auto-2|<tuple|2.1|59>>
     <associate|auto-20|<tuple|message passing|65>>
-    <associate|auto-21|<tuple|Church numerals|66>>
+    <associate|auto-21|<tuple|Church numerals|65>>
     <associate|auto-22|<tuple|2.1.4|66>>
     <associate|auto-23|<tuple|width|67>>
     <associate|auto-24|<tuple|2.2|68>>
@@ -8670,8 +8691,8 @@
     <associate|auto-4|<tuple|selectors|59>>
     <associate|auto-40|<tuple|dotted-tail notation|73>>
     <associate|auto-41|<tuple|list|73>>
-    <associate|auto-42|<tuple|2.10|74>>
-    <associate|auto-43|<tuple|2.2.2|76>>
+    <associate|auto-42|<tuple|2.10|73>>
+    <associate|auto-43|<tuple|2.2.2|75>>
     <associate|auto-44|<tuple|2.5|76>>
     <associate|auto-45|<tuple|trees|76>>
     <associate|auto-46|<tuple|2.6|76>>
@@ -8900,7 +8921,8 @@
       </surround>|<pageref|auto-15>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.2>|>
-        Box-and-pointer representation of <with|font-family|<quote|tt>|(cons
+        Box-and-pointer representation of
+        <with|mode|<quote|prog>|prog-language|<quote|scheme>|font-family|<quote|rm>|(cons
         1 2)>.
       </surround>|<pageref|auto-27>>
 
@@ -8918,7 +8940,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%3AFE177B8-3CCF60D00>|<link|hyperlink|<id|%3AFE177B8-3CCF60D00>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%1745E5C08-181998D70>|<link|hyperlink|<id|%1745E5C08-181998D70>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -8946,14 +8968,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%3AFE177B8-3CCF40B70>|<link|hyperlink|<id|%3AFE177B8-3CCF40B70>|<url|#fig2.10>>|Figure
+        <locus|<id|%1745E5C08-18196D7E0>|<link|hyperlink|<id|%1745E5C08-18196D7E0>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%3AFE177B8-3CCF5C2C8>|<link|hyperlink|<id|%3AFE177B8-3CCF5C2C8>|<url|#fig2.10>>|Figure
+        <locus|<id|%1745E5C08-1819A8ED8>|<link|hyperlink|<id|%1745E5C08-1819A8ED8>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -8969,7 +8991,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%3AFE177B8-3CCF45918>|<link|hyperlink|<id|%3AFE177B8-3CCF45918>|<url|#fig2.9>>|Figure
+        <locus|<id|%1745E5C08-18196EF28>|<link|hyperlink|<id|%1745E5C08-18196EF28>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
