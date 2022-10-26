@@ -1694,7 +1694,12 @@
   by the interpreter. <hlink|Figure 2.5|#fig2.5> shows the representation of
   this structure in terms of pairs.
 
-  <\big-figure|<image|<tuple|<#89504E470D0A1A0A0000000D494844520000015F000000B4080600000033412F74000000097048597300000EC400000EC401952B0E1B0000075449444154789CEDDDEB729B3A140650B9E3F77F65CE8FD6A78402E622B1B561AD994C129328B22C3E8410CEAB00590C7F3EBF26DF8FBD661EDB53E6D263008F3517B67BB62FFDCEDCEF1D298B1D7E455700D8642D0C9702744B996BA35B01DC90F0853CBE4D03EC9926F816ACA61C1A13BE90DFEBCFC7D1D1EFF83317794757000831BDC066A47B310D0E39ACAD4A2833DBF696BB54B68C001EEFCAA901D31000235784A2E005000000BE307DD031EB7C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085FB89761E7E30411BE702FAF22685310BE0001842FDCDF507E8F88E988F085FB31F59080F00508207C01029807827B1A4F3BD8CF3B64E40BF724703B277C01002AB2E20100C63EF342C3E4FBB1E9B63313F9D323F16B66DBD932F79631F7778FD6056093F7E8EBB5A0996E3BB3887B1A72AFD1E347CA9CD6ADC6A956CB45EA594F051D88DAC8DA1F4AE9A74FA46CC37759AFF8D951E591DF3D7A2BE49117E0F3B7D6DE09AA45076B5166CB5B485376EE44B2F5874FF93DC9D286FFB7DB67B5C39E516FAD0ACC3DB11A7F6B6B19DF3A4F2F4775E01E7E644EC452B356F3A9AF726CBA60987C06A8ED9F6B655787EFDAC5BBABBD461FA518E9026DCC2E52788F362E85CF74DB30F3758D150A6B8FEF29EB685DD69E27C0118BABC3DE65FD547D6E5BEB0B6E7BCB3F3B62BD7ABE1B7886D565B9E30B6E7B02B8859EDEF0B9A7BA00F97CBD1FE2D7B71FD8B0AD969EC2AEA7BA00B96CBA11EDBDB4814D6A4EC95C5576CB3AD3EEAD1C5BBF6E3DF58B8CFBD55CF9AB650BDF73D6EEAE3BF3A2CE4DF3D4980A69552E7F2D5DB4EDB13FAC951F29DB7E352D7F5379C2B7AEB5D51202EE7932F487ABEFEE3C22533B6EAECF13C2B7B7A37A8FB6B491767C9E6FAFB93EF1DBA125B74F08DF2B8F8C59FF75CBB7BAF6340ACAA4D751DAD8D26AA69EFA44CFED78F88EDD27846F4BAD3A45EDF5D5ADCBE5AF1607E0A7BD6E59F62B6F3D9BCC9E53B5563FBB97D3CB768EBE1749ED72F7EAA94FD4B83376CFCF0CA38FA306FFC30D60BB6A6736C217609BAA534AC217E0BBEA73F9C217605D93554CC2176059B3E5A3C217E0BBEACBC9AC4FBB5E4F4B74F6D057DAC8DA1F4AE9A74F646E433AA55331A54FD411DE8EA61D0002085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F0EDD3B0F1312029E10BFD5B3AF03A20EFD3D5A046F8424E4329E5155D098E13BE39D8D1E066846F9F5EC529257FE90F37247C211F6742C74C0F62A1ED287C010208DF7E7D8EC846397043C2177230EF5BC7B81D430735C217F271267403C2B77F7634B8A18C3BF6F494617C2AB6E7F94C4FE15E33DB6AB74FD6D3C62BFA49D6B629E55CFBB47CDE19F7EF33B46563D3061E161E3F5ACED2F735640C98ABEA9CB16D4A395FEF56CF3B6B7B9E91AA2DB34D3BCC35C2D123D296DFCBD281B3D43342CB1D52BB7358B6F02DA5CD54C0DC722EA7192C11BA9C96317C6BEA62C909A91CBDC6003FBCA32B1068EEC29D9D89254297AA3286EF3424A7F76A97726ED5C3B7C7791EC14B75D9C277EE2E9F9617DCEC68085E9AC838E77BC56D96A6202845F0D250C6F02DA5FD8EB075195ACB8340EBB2AF9856C9BC56BAB7E01D663E482CDBB4434FCEDE61B7E4EC1C7674F96335A789AEAC776FC15BCABFF510BEE785AE7612BEE72D5DFC9B6E3BA3D63448C40EBB161A679F53EDE9A11E43774AE8DEC413C237B2B3665947FCAD8D5ADFB6D943FB6408DEB10C75ECD9E7C01D960F4F08DF2B3B69AB916F6B6BF56C39BAFCF6B7AF922978AD4B3FAF8BB38727846F6B57ECB8B5CA8D38D2F718B663998297BAC66FCA75F96B2F7C8F6B75CA3C0DC896E5B7EE70353BF5F40267ED39F0DE83B7F7835826D3EB342EB825D3F205FB0464EF23E9A8BF533378B38458967A6662E40B17CA34DAA52DFFC30D2E2278E986F0E529042F5D11BE3C81E0A53BC2972711BC74C305B77B102ACBB40D5D12BED7DB7393431777E25C68EBF3BD5BBBDCEDF944D2969CA613CDD32EDC82395F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085F8000C2172080F00508207C0102085FB2987B431D6FB2435AC2B72F4B612264E066846F5F3EFF321EB839E14B5643F15F2A484CF8F64FC8FCE6AC805B11BE0001846F7F8CF0E0019CCEF6691CBE5EA39F3E6DA35D48CDC8172080F0ED93511DDC9CF025230727D2D389AFD7F2625AE6D753BB004DB50A99EC2B24B40B8F62DA012080F00508207C0102085F8000C2172080F00508207C0102BCA32BC02C6FACB36CBA6E57FB9092916FBF84CAB2D7E8C34D14A4247CFB247897691B6EC1B40359795F5F5233F22523C14B7AC2976CA6C16BCE97944C3BF46998F9DA28EF27A14B6AC2B74F827699B6E1164C3B000410BE0001842F4000E10B1040F8020410BE00012C358B618DEA3CEDC263FC07CE6D535CBD04ED300000000049454E44AE426082>|png>|351pt|180pt||>>
+  <\big-figure>
+    <with|gr-mode|<tuple|group-edit|move>|gr-frame|<tuple|scale|1.00007cm|<tuple|0.425912gw|0.300015gh>>|gr-geometry|<tuple|geometry|1par|0.440007par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-grid-aspect|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|10|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|10|#e0e0ff>>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-line-width|2ln|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-point-size|4ln|magnify|0.594603556782387|<graphics||<with|line-width|2ln|<cline|<point|-2.8000000000000007|3.2>|<point|-2.0000000000000004|3.2>|<point|-2.0000000000000004|2.4>|<point|-2.8000000000000007|2.4>>>|<with|line-width|2ln|<cline|<point|-2|3.2>|<point|-1.2000000000000004|3.2>|<point|-1.2000000000000004|2.4>|<point|-2.0|2.4>>>|<with|line-width|2ln|<cline|<point|-2.8|1.4>|<point|-2.0|1.4>|<point|-2.0|0.6>|<point|-2.8|0.6>>>|<with|line-width|2ln|<cline|<point|-2|1.4>|<point|-1.2000000000000004|1.4>|<point|-1.2000000000000004|0.6>|<point|-2.0|0.6>>>|<with|line-width|2ln|<cline|<point|-0.4|1.4>|<point|0.3999999999999998|1.4>|<point|0.3999999999999998|0.6>|<point|-0.3999999999999998|0.6>>>|<with|line-width|2ln|<cline|<point|0.4|1.4>|<point|1.2000000000000004|1.4>|<point|1.2000000000000004|0.6>|<point|0.3999999999999998|0.6>>>|<with|line-width|2ln|<line|<point|1.2|1.4>|<point|0.3999999999999998|0.6>>>|<with|line-width|2ln|<line|<point|-2.8|-0.4>|<point|-2.0|-0.4>|<point|-2.0|-1.2>|<point|-2.8|-1.2>|<point|-2.8|-0.4>>>|<with|line-width|2ln|<line|<point|-0.4|-0.4>|<point|0.3999999999999998|-0.4>|<point|0.3999999999999998|-1.2>|<point|-0.3999999999999998|-1.2>|<point|-0.3999999999999998|-0.4>>>|<with|line-width|2ln|<line|<point|1.8|1.4>|<point|2.599999999999999|1.4>|<point|2.599999999999999|0.6>|<point|1.7999999999999996|0.6>|<point|1.7999999999999996|1.4>>>|<with|line-width|2ln|<line|<point|1.8|3.2>|<point|1.7999999999999996|2.4>|<point|2.599999999999999|2.4>|<point|2.599999999999999|3.2>|<point|1.7999999999999996|3.2>>>|<with|line-width|2ln|<line|<point|2.6|3.2>|<point|3.400000000000001|3.2>|<point|3.400000000000001|2.4>|<point|2.599999999999999|2.4>>>|<with|line-width|2ln|<line|<point|4.4|3.2>|<point|5.2|3.2>|<point|5.2|2.4>|<point|4.4|2.4>|<point|4.4|3.2>>>|<with|line-width|2ln|<line|<point|5.2|3.2>|<point|6.0|3.2>|<point|6.0|2.4>|<point|5.2|2.4>|<point|5.2|3.2>>>|<with|line-width|2ln|<line|<point|6|3.2>|<point|5.2|2.4>>>|<with|line-width|2ln|<line|<point|4.4|1.4>|<point|4.4|0.6>|<point|5.2|0.6>|<point|5.2|1.4>|<point|4.4|1.4>>>|<point|-2.4|2.8>|<point|-1.6|2.8>|<point|-2.4|1>|<point|-1.6|1>|<point|0|1>|<point|2.2|2.8>|<point|3|2.8>|<point|4.8|2.8>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|-2.4|-0.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|0|-0.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|2.2|1>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|4.8|1>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-1.6|2.8>|<point|1.7999999999999996|2.830350764372113>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-2.4|2.8>|<point|-2.4|1.4>>>|<with|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-2.4|1>|<point|-2.4|-0.4>>>|<with|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-1.6|1>|<point|-0.3999999999999998|0.9965700622530262>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|0|1>|<point|0.0|-0.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|2.2|2.8>|<point|2.2|1.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|3|2.8>|<point|4.4|2.8>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|4.8|2.8>|<point|4.8|1.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<arrow-with-text|<point|2.6|4.4>|<point|2.599999999999999|3.2>|<math-at|<scm|<with|font-base-size|16|(3
+    4)>>>>>|<with|point-size|4ln|magnify|1.681792830495885|<point|-2.4|2.8>>||<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.8|2.8>|<point|-2.8|2.8>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.8|1>|<point|-2.8|1.0>>>|<with|text-at-valign|center|<text-at|<scm|<with|font-base-size|16|(1
+    2)>>|<point|-4.074604801904888|1.1849725510946492>>>|<text-at|<with|font-base-size|16|<scm|((1
+    2) 3 4)>>|<point|-4.708014844291365|3.0461910834049872>>>>
+  <|big-figure>
     <label|fig2.5>Structure formed by <code*|(cons (list 1 2) (list 3 4))>.
   </big-figure>
 
@@ -8603,69 +8608,69 @@
     <associate|2.2.1|<tuple|2.2.1|69>>
     <associate|2.2.2|<tuple|2.2.2|76>>
     <associate|2.2.3|<tuple|2.2.3|80>>
-    <associate|2.3.2|<tuple|2.3.2|102>>
+    <associate|2.3.2|<tuple|2.3.2|103>>
     <associate|auto-1|<tuple|2|59>>
     <associate|auto-10|<tuple|pair|61>>
-    <associate|auto-100|<tuple|prefix code|113>>
-    <associate|auto-101|<tuple|2.18|113>>
-    <associate|auto-102|<tuple|2.18|114>>
-    <associate|auto-103|<tuple|2.41|115>>
-    <associate|auto-104|<tuple|generic procedures|116>>
-    <associate|auto-105|<tuple|generic procedures|116>>
-    <associate|auto-106|<tuple|generic procedures|116>>
-    <associate|auto-107|<tuple|2.4|118>>
-    <associate|auto-108|<tuple|additively|118>>
-    <associate|auto-109|<tuple|generic procedures|119>>
+    <associate|auto-100|<tuple|prefix code|114>>
+    <associate|auto-101|<tuple|2.18|114>>
+    <associate|auto-102|<tuple|2.18|115>>
+    <associate|auto-103|<tuple|2.41|116>>
+    <associate|auto-104|<tuple|generic procedures|117>>
+    <associate|auto-105|<tuple|generic procedures|117>>
+    <associate|auto-106|<tuple|generic procedures|117>>
+    <associate|auto-107|<tuple|2.4|119>>
+    <associate|auto-108|<tuple|additively|119>>
+    <associate|auto-109|<tuple|generic procedures|120>>
     <associate|auto-11|<tuple|list-structured|61>>
-    <associate|auto-110|<tuple|type tags|119>>
-    <associate|auto-111|<tuple|data-directed|119>>
-    <associate|auto-112|<tuple|2.19|119>>
-    <associate|auto-113|<tuple|2.4.1|119>>
-    <associate|auto-114|<tuple|2.20|120>>
-    <associate|auto-115|<tuple|2.4.2|122>>
-    <associate|auto-116|<tuple|type tag|122>>
-    <associate|auto-117|<tuple|2.21|124>>
+    <associate|auto-110|<tuple|type tags|120>>
+    <associate|auto-111|<tuple|data-directed|120>>
+    <associate|auto-112|<tuple|2.19|120>>
+    <associate|auto-113|<tuple|2.4.1|120>>
+    <associate|auto-114|<tuple|2.20|121>>
+    <associate|auto-115|<tuple|2.4.2|123>>
+    <associate|auto-116|<tuple|type tag|123>>
+    <associate|auto-117|<tuple|2.21|125>>
     <associate|auto-118|<tuple|2.4.3|125>>
     <associate|auto-119|<tuple|dispatching on type|125>>
     <associate|auto-12|<tuple|list-structured|61>>
-    <associate|auto-120|<tuple|additive|125>>
-    <associate|auto-121|<tuple|data directed programming|125>>
-    <associate|auto-122|<tuple|2.22|125>>
-    <associate|auto-123|<tuple|package|126>>
-    <associate|auto-124|<tuple|d|129>>
+    <associate|auto-120|<tuple|additive|126>>
+    <associate|auto-121|<tuple|data directed programming|126>>
+    <associate|auto-122|<tuple|2.22|126>>
+    <associate|auto-123|<tuple|package|127>>
+    <associate|auto-124|<tuple|d|130>>
     <associate|auto-125|<tuple|message passing|130>>
-    <associate|auto-126|<tuple|2.5|130>>
-    <associate|auto-127|<tuple|2.23|130>>
+    <associate|auto-126|<tuple|2.5|131>>
+    <associate|auto-127|<tuple|2.23|131>>
     <associate|auto-128|<tuple|2.5.1|131>>
-    <associate|auto-129|<tuple|ordinary|131>>
+    <associate|auto-129|<tuple|ordinary|132>>
     <associate|auto-13|<tuple|2.1.2|62>>
-    <associate|auto-130|<tuple|2.24|133>>
-    <associate|auto-131|<tuple|2.5.2|134>>
+    <associate|auto-130|<tuple|2.24|134>>
+    <associate|auto-131|<tuple|2.5.2|135>>
     <associate|auto-132|<tuple|2.48|135>>
-    <associate|auto-133|<tuple|coercion|135>>
-    <associate|auto-134|<tuple|2.50|136>>
-    <associate|auto-135|<tuple|hierarchy of types|136>>
-    <associate|auto-136|<tuple|subtype|136>>
-    <associate|auto-137|<tuple|supertype|136>>
-    <associate|auto-138|<tuple|tower|136>>
-    <associate|auto-139|<tuple|2.25|136>>
+    <associate|auto-133|<tuple|coercion|136>>
+    <associate|auto-134|<tuple|2.50|137>>
+    <associate|auto-135|<tuple|hierarchy of types|137>>
+    <associate|auto-136|<tuple|subtype|137>>
+    <associate|auto-137|<tuple|supertype|137>>
+    <associate|auto-138|<tuple|tower|137>>
+    <associate|auto-139|<tuple|2.25|137>>
     <associate|auto-14|<tuple|abstraction barriers|62>>
-    <associate|auto-140|<tuple|2.25|137>>
-    <associate|auto-141|<tuple|2.26|138>>
-    <associate|auto-142|<tuple|coerce|138>>
-    <associate|auto-143|<tuple|2.5.3|139>>
-    <associate|auto-144|<tuple|2.5.3|139>>
-    <associate|auto-145|<tuple|indeterminates|139>>
-    <associate|auto-146|<tuple|univariate polynomials|139>>
-    <associate|auto-147|<tuple|poly|140>>
-    <associate|auto-148|<tuple|2.56|142>>
-    <associate|auto-149|<tuple|dense|142>>
+    <associate|auto-140|<tuple|2.25|138>>
+    <associate|auto-141|<tuple|2.26|139>>
+    <associate|auto-142|<tuple|coerce|139>>
+    <associate|auto-143|<tuple|2.5.3|140>>
+    <associate|auto-144|<tuple|2.5.3|140>>
+    <associate|auto-145|<tuple|indeterminates|140>>
+    <associate|auto-146|<tuple|univariate polynomials|140>>
+    <associate|auto-147|<tuple|poly|141>>
+    <associate|auto-148|<tuple|2.56|143>>
+    <associate|auto-149|<tuple|dense|143>>
     <associate|auto-15|<tuple|2.1|63>>
-    <associate|auto-150|<tuple|sparse|142>>
-    <associate|auto-151|<tuple|2.91|144>>
-    <associate|auto-152|<tuple|2.92|145>>
-    <associate|auto-153|<tuple|pseudodivision|146>>
-    <associate|auto-154|<tuple|pseudoremainder|146>>
+    <associate|auto-150|<tuple|sparse|143>>
+    <associate|auto-151|<tuple|2.91|145>>
+    <associate|auto-152|<tuple|2.92|146>>
+    <associate|auto-153|<tuple|pseudodivision|147>>
+    <associate|auto-154|<tuple|pseudoremainder|147>>
     <associate|auto-16|<tuple|2.1.3|64>>
     <associate|auto-17|<tuple|data|64>>
     <associate|auto-18|<tuple|abstract models|64>>
@@ -8697,10 +8702,10 @@
     <associate|auto-41|<tuple|list|73>>
     <associate|auto-42|<tuple|2.10|74>>
     <associate|auto-43|<tuple|2.2.2|76>>
-    <associate|auto-44|<tuple|2.5|76>>
-    <associate|auto-45|<tuple|trees|76>>
-    <associate|auto-46|<tuple|2.6|76>>
-    <associate|auto-47|<tuple|balanced|78>>
+    <associate|auto-44|<tuple|2.5|77>>
+    <associate|auto-45|<tuple|trees|77>>
+    <associate|auto-46|<tuple|2.6|77>>
+    <associate|auto-47|<tuple|balanced|79>>
     <associate|auto-48|<tuple|4|79>>
     <associate|auto-49|<tuple|2.2.3|80>>
     <associate|auto-5|<tuple|constructors|59>>
@@ -8709,22 +8714,22 @@
     <associate|auto-52|<tuple|filter|81>>
     <associate|auto-53|<tuple|map|81>>
     <associate|auto-54|<tuple|accumulator|81>>
-    <associate|auto-55|<tuple|2.7|81>>
-    <associate|auto-56|<tuple|2.7|81>>
-    <associate|auto-57|<tuple|Horner's rule|84>>
-    <associate|auto-58|<tuple|2.39|86>>
-    <associate|auto-59|<tuple|comments|87>>
+    <associate|auto-55|<tuple|2.7|82>>
+    <associate|auto-56|<tuple|2.7|82>>
+    <associate|auto-57|<tuple|Horner's rule|85>>
+    <associate|auto-58|<tuple|2.39|87>>
+    <associate|auto-59|<tuple|comments|88>>
     <associate|auto-6|<tuple|2.1.1|59>>
-    <associate|auto-60|<tuple|2.8|88>>
-    <associate|auto-61|<tuple|2.2.4|89>>
+    <associate|auto-60|<tuple|2.8|89>>
+    <associate|auto-61|<tuple|2.2.4|90>>
     <associate|auto-62|<tuple|2.9|90>>
     <associate|auto-63|<tuple|2.9|90>>
     <associate|auto-64|<tuple|painter|90>>
     <associate|auto-65|<tuple|2.10|91>>
-    <associate|auto-66|<tuple|2.11|91>>
+    <associate|auto-66|<tuple|2.11|92>>
     <associate|auto-67|<tuple|2.12|92>>
     <associate|auto-68|<tuple|2.13|93>>
-    <associate|auto-69|<tuple|2.14|93>>
+    <associate|auto-69|<tuple|2.14|94>>
     <associate|auto-7|<tuple|wishful thinking|60>>
     <associate|auto-70|<tuple|2.44|94>>
     <associate|auto-71|<tuple|2.45|95>>
@@ -8732,188 +8737,188 @@
     <associate|auto-73|<tuple|frame coordinate map|95>>
     <associate|auto-74|<tuple|2.47|96>>
     <associate|auto-75|<tuple|4|97>>
-    <associate|auto-76|<tuple|2.51|98>>
+    <associate|auto-76|<tuple|2.51|99>>
     <associate|auto-77|<tuple|stratified design|99>>
     <associate|auto-78|<tuple|robust|99>>
-    <associate|auto-79|<tuple|2.3|99>>
+    <associate|auto-79|<tuple|2.3|100>>
     <associate|auto-8|<tuple|wishful thinking|60>>
-    <associate|auto-80|<tuple|2.3.1|99>>
+    <associate|auto-80|<tuple|2.3.1|100>>
     <associate|auto-81|<tuple|values|100>>
-    <associate|auto-82|<tuple|2.3.2|102>>
-    <associate|auto-83|<tuple|2.3.2|102>>
-    <associate|auto-84|<tuple|2.3.2|103>>
-    <associate|auto-85|<tuple|2.3.3|106>>
-    <associate|auto-86|<tuple|<with|mode|<quote|math>|\<bullet\>>|106>>
-    <associate|auto-87|<tuple|2.60|107>>
-    <associate|auto-88|<tuple|2.62|108>>
-    <associate|auto-89|<tuple|2.16|109>>
+    <associate|auto-82|<tuple|2.3.2|103>>
+    <associate|auto-83|<tuple|2.3.2|103>>
+    <associate|auto-84|<tuple|2.3.2|104>>
+    <associate|auto-85|<tuple|2.3.3|107>>
+    <associate|auto-86|<tuple|<with|mode|<quote|math>|\<bullet\>>|107>>
+    <associate|auto-87|<tuple|2.60|108>>
+    <associate|auto-88|<tuple|2.62|109>>
+    <associate|auto-89|<tuple|2.16|110>>
     <associate|auto-9|<tuple|pair|60>>
-    <associate|auto-90|<tuple|B-trees|110>>
-    <associate|auto-91|<tuple|red-black trees|110>>
-    <associate|auto-92|<tuple|2.17|110>>
-    <associate|auto-93|<tuple|2.40|111>>
-    <associate|auto-94|<tuple|key|112>>
-    <associate|auto-95|<tuple|2.3.4|112>>
-    <associate|auto-96|<tuple|fixed-length|113>>
-    <associate|auto-97|<tuple|variable-length|113>>
-    <associate|auto-98|<tuple|separator code|113>>
-    <associate|auto-99|<tuple|prefix|113>>
+    <associate|auto-90|<tuple|B-trees|111>>
+    <associate|auto-91|<tuple|red-black trees|111>>
+    <associate|auto-92|<tuple|2.17|111>>
+    <associate|auto-93|<tuple|2.40|112>>
+    <associate|auto-94|<tuple|key|113>>
+    <associate|auto-95|<tuple|2.3.4|113>>
+    <associate|auto-96|<tuple|fixed-length|114>>
+    <associate|auto-97|<tuple|variable-length|114>>
+    <associate|auto-98|<tuple|separator code|114>>
+    <associate|auto-99|<tuple|prefix|114>>
     <associate|ex2.12|<tuple|2.12|67>>
     <associate|ex2.2|<tuple|2.2|63>>
     <associate|ex2.21|<tuple|2.21|75>>
     <associate|ex2.3|<tuple|2.3|64>>
-    <associate|ex2.30|<tuple|2.30|79>>
-    <associate|ex2.79|<tuple|2.79|134>>
-    <associate|ex2.83|<tuple|2.83|138>>
+    <associate|ex2.30|<tuple|2.30|80>>
+    <associate|ex2.79|<tuple|2.79|135>>
+    <associate|ex2.83|<tuple|2.83|139>>
     <associate|fig2.1|<tuple|2.1|63>>
     <associate|fig2.10|<tuple|2.10|91>>
-    <associate|fig2.11|<tuple|2.11|91>>
+    <associate|fig2.11|<tuple|2.11|92>>
     <associate|fig2.12|<tuple|2.12|92>>
     <associate|fig2.13|<tuple|2.13|93>>
-    <associate|fig2.18|<tuple|2.18|113>>
-    <associate|fig2.19|<tuple|2.19|119>>
+    <associate|fig2.18|<tuple|2.18|114>>
+    <associate|fig2.19|<tuple|2.19|120>>
     <associate|fig2.2|<tuple|2.2|68>>
-    <associate|fig2.20|<tuple|2.20|120>>
-    <associate|fig2.21|<tuple|2.21|124>>
-    <associate|fig2.22|<tuple|2.22|125>>
-    <associate|fig2.23|<tuple|2.23|130>>
-    <associate|fig2.24|<tuple|2.24|133>>
-    <associate|fig2.25|<tuple|2.25|136>>
-    <associate|fig2.26|<tuple|2.26|138>>
+    <associate|fig2.20|<tuple|2.20|121>>
+    <associate|fig2.21|<tuple|2.21|125>>
+    <associate|fig2.22|<tuple|2.22|126>>
+    <associate|fig2.23|<tuple|2.23|131>>
+    <associate|fig2.24|<tuple|2.24|134>>
+    <associate|fig2.25|<tuple|2.25|137>>
+    <associate|fig2.26|<tuple|2.26|139>>
     <associate|fig2.3|<tuple|2.3|69>>
     <associate|fig2.4|<tuple|2.4|69>>
-    <associate|fig2.5|<tuple|2.5|76>>
-    <associate|fig2.6|<tuple|2.6|76>>
-    <associate|fig2.7|<tuple|2.7|81>>
-    <associate|fig2.8|<tuple|2.8|88>>
+    <associate|fig2.5|<tuple|2.5|77>>
+    <associate|fig2.6|<tuple|2.6|77>>
+    <associate|fig2.7|<tuple|2.7|82>>
+    <associate|fig2.8|<tuple|2.8|89>>
     <associate|fig2.9|<tuple|2.9|90>>
     <associate|footnote-2.1|<tuple|2.1|60>>
     <associate|footnote-2.10|<tuple|2.10|73>>
     <associate|footnote-2.11|<tuple|2.11|74>>
-    <associate|footnote-2.12|<tuple|2.12|77>>
-    <associate|footnote-2.13|<tuple|2.13|82>>
-    <associate|footnote-2.14|<tuple|2.14|84>>
-    <associate|footnote-2.15|<tuple|2.15|84>>
-    <associate|footnote-2.16|<tuple|2.16|85>>
-    <associate|footnote-2.17|<tuple|2.17|86>>
-    <associate|footnote-2.18|<tuple|2.18|86>>
-    <associate|footnote-2.19|<tuple|2.19|87>>
+    <associate|footnote-2.12|<tuple|2.12|78>>
+    <associate|footnote-2.13|<tuple|2.13|83>>
+    <associate|footnote-2.14|<tuple|2.14|85>>
+    <associate|footnote-2.15|<tuple|2.15|85>>
+    <associate|footnote-2.16|<tuple|2.16|86>>
+    <associate|footnote-2.17|<tuple|2.17|87>>
+    <associate|footnote-2.18|<tuple|2.18|87>>
+    <associate|footnote-2.19|<tuple|2.19|88>>
     <associate|footnote-2.2|<tuple|2.2|61>>
-    <associate|footnote-2.20|<tuple|2.20|87>>
-    <associate|footnote-2.21|<tuple|2.21|89>>
-    <associate|footnote-2.22|<tuple|2.22|90>>
-    <associate|footnote-2.23|<tuple|2.23|94>>
-    <associate|footnote-2.24|<tuple|2.24|94>>
-    <associate|footnote-2.25|<tuple|2.25|95>>
+    <associate|footnote-2.20|<tuple|2.20|88>>
+    <associate|footnote-2.21|<tuple|2.21|90>>
+    <associate|footnote-2.22|<tuple|2.22|91>>
+    <associate|footnote-2.23|<tuple|2.23|95>>
+    <associate|footnote-2.24|<tuple|2.24|95>>
+    <associate|footnote-2.25|<tuple|2.25|96>>
     <associate|footnote-2.26|<tuple|2.26|96>>
-    <associate|footnote-2.27|<tuple|2.27|96>>
-    <associate|footnote-2.28|<tuple|2.28|97>>
+    <associate|footnote-2.27|<tuple|2.27|97>>
+    <associate|footnote-2.28|<tuple|2.28|98>>
     <associate|footnote-2.29|<tuple|2.29|98>>
     <associate|footnote-2.3|<tuple|2.3|61>>
     <associate|footnote-2.30|<tuple|2.30|99>>
     <associate|footnote-2.31|<tuple|2.31|100>>
-    <associate|footnote-2.32|<tuple|2.32|100>>
-    <associate|footnote-2.33|<tuple|2.33|100>>
+    <associate|footnote-2.32|<tuple|2.32|101>>
+    <associate|footnote-2.33|<tuple|2.33|101>>
     <associate|footnote-2.34|<tuple|2.34|101>>
     <associate|footnote-2.35|<tuple|2.35|102>>
-    <associate|footnote-2.36|<tuple|2.36|106>>
-    <associate|footnote-2.37|<tuple|2.37|109>>
-    <associate|footnote-2.38|<tuple|2.38|109>>
-    <associate|footnote-2.39|<tuple|2.39|110>>
+    <associate|footnote-2.36|<tuple|2.36|107>>
+    <associate|footnote-2.37|<tuple|2.37|110>>
+    <associate|footnote-2.38|<tuple|2.38|110>>
+    <associate|footnote-2.39|<tuple|2.39|111>>
     <associate|footnote-2.4|<tuple|2.4|64>>
-    <associate|footnote-2.40|<tuple|2.40|111>>
-    <associate|footnote-2.41|<tuple|2.41|114>>
-    <associate|footnote-2.42|<tuple|2.42|119>>
-    <associate|footnote-2.43|<tuple|2.43|121>>
-    <associate|footnote-2.44|<tuple|2.44|126>>
-    <associate|footnote-2.45|<tuple|2.45|126>>
-    <associate|footnote-2.46|<tuple|2.46|127>>
-    <associate|footnote-2.47|<tuple|2.47|129>>
-    <associate|footnote-2.48|<tuple|2.48|134>>
-    <associate|footnote-2.49|<tuple|2.49|135>>
+    <associate|footnote-2.40|<tuple|2.40|112>>
+    <associate|footnote-2.41|<tuple|2.41|115>>
+    <associate|footnote-2.42|<tuple|2.42|120>>
+    <associate|footnote-2.43|<tuple|2.43|122>>
+    <associate|footnote-2.44|<tuple|2.44|127>>
+    <associate|footnote-2.45|<tuple|2.45|127>>
+    <associate|footnote-2.46|<tuple|2.46|128>>
+    <associate|footnote-2.47|<tuple|2.47|130>>
+    <associate|footnote-2.48|<tuple|2.48|135>>
+    <associate|footnote-2.49|<tuple|2.49|136>>
     <associate|footnote-2.5|<tuple|2.5|69>>
-    <associate|footnote-2.50|<tuple|2.50|136>>
-    <associate|footnote-2.51|<tuple|2.51|137>>
-    <associate|footnote-2.52|<tuple|2.52|139>>
-    <associate|footnote-2.53|<tuple|2.53|139>>
-    <associate|footnote-2.54|<tuple|2.54|140>>
-    <associate|footnote-2.55|<tuple|2.55|141>>
-    <associate|footnote-2.56|<tuple|2.56|142>>
-    <associate|footnote-2.57|<tuple|2.57|143>>
-    <associate|footnote-2.58|<tuple|2.58|143>>
-    <associate|footnote-2.59|<tuple|2.59|145>>
+    <associate|footnote-2.50|<tuple|2.50|137>>
+    <associate|footnote-2.51|<tuple|2.51|138>>
+    <associate|footnote-2.52|<tuple|2.52|140>>
+    <associate|footnote-2.53|<tuple|2.53|140>>
+    <associate|footnote-2.54|<tuple|2.54|141>>
+    <associate|footnote-2.55|<tuple|2.55|142>>
+    <associate|footnote-2.56|<tuple|2.56|143>>
+    <associate|footnote-2.57|<tuple|2.57|144>>
+    <associate|footnote-2.58|<tuple|2.58|144>>
+    <associate|footnote-2.59|<tuple|2.59|146>>
     <associate|footnote-2.6|<tuple|2.6|69>>
-    <associate|footnote-2.60|<tuple|2.60|146>>
-    <associate|footnote-2.61|<tuple|2.61|147>>
+    <associate|footnote-2.60|<tuple|2.60|147>>
+    <associate|footnote-2.61|<tuple|2.61|148>>
     <associate|footnote-2.7|<tuple|2.7|70>>
     <associate|footnote-2.8|<tuple|2.8|70>>
     <associate|footnote-2.9|<tuple|2.9|71>>
     <associate|footnr-2.1|<tuple|2.1|60>>
     <associate|footnr-2.10|<tuple|2.10|73>>
     <associate|footnr-2.11|<tuple|2.11|74>>
-    <associate|footnr-2.12|<tuple|2.12|77>>
-    <associate|footnr-2.13|<tuple|2.13|82>>
-    <associate|footnr-2.14|<tuple|2.14|84>>
-    <associate|footnr-2.15|<tuple|2.15|84>>
-    <associate|footnr-2.16|<tuple|2.16|85>>
-    <associate|footnr-2.17|<tuple|2.17|86>>
-    <associate|footnr-2.18|<tuple|2.18|86>>
-    <associate|footnr-2.19|<tuple|2.19|87>>
+    <associate|footnr-2.12|<tuple|2.12|78>>
+    <associate|footnr-2.13|<tuple|2.13|83>>
+    <associate|footnr-2.14|<tuple|2.14|85>>
+    <associate|footnr-2.15|<tuple|2.15|85>>
+    <associate|footnr-2.16|<tuple|2.16|86>>
+    <associate|footnr-2.17|<tuple|2.17|87>>
+    <associate|footnr-2.18|<tuple|2.18|87>>
+    <associate|footnr-2.19|<tuple|2.19|88>>
     <associate|footnr-2.2|<tuple|2.2|61>>
-    <associate|footnr-2.20|<tuple|comments|87>>
-    <associate|footnr-2.21|<tuple|2.21|89>>
-    <associate|footnr-2.22|<tuple|2.22|90>>
-    <associate|footnr-2.23|<tuple|2.23|94>>
-    <associate|footnr-2.24|<tuple|2.24|94>>
-    <associate|footnr-2.25|<tuple|2.25|95>>
+    <associate|footnr-2.20|<tuple|comments|88>>
+    <associate|footnr-2.21|<tuple|2.21|90>>
+    <associate|footnr-2.22|<tuple|2.22|91>>
+    <associate|footnr-2.23|<tuple|2.23|95>>
+    <associate|footnr-2.24|<tuple|2.24|95>>
+    <associate|footnr-2.25|<tuple|2.25|96>>
     <associate|footnr-2.26|<tuple|2.26|96>>
-    <associate|footnr-2.27|<tuple|2.27|96>>
-    <associate|footnr-2.28|<tuple|2.28|97>>
+    <associate|footnr-2.27|<tuple|2.27|97>>
+    <associate|footnr-2.28|<tuple|2.28|98>>
     <associate|footnr-2.29|<tuple|2.29|98>>
     <associate|footnr-2.3|<tuple|2.3|61>>
     <associate|footnr-2.30|<tuple|2.30|99>>
     <associate|footnr-2.31|<tuple|2.31|100>>
-    <associate|footnr-2.32|<tuple|2.32|100>>
-    <associate|footnr-2.33|<tuple|2.33|100>>
+    <associate|footnr-2.32|<tuple|2.32|101>>
+    <associate|footnr-2.33|<tuple|2.33|101>>
     <associate|footnr-2.34|<tuple|2.34|101>>
     <associate|footnr-2.35|<tuple|2.35|102>>
-    <associate|footnr-2.36|<tuple|<with|mode|<quote|math>|\<bullet\>>|106>>
-    <associate|footnr-2.37|<tuple|2.37|109>>
-    <associate|footnr-2.38|<tuple|2.38|109>>
-    <associate|footnr-2.39|<tuple|red-black trees|110>>
+    <associate|footnr-2.36|<tuple|<with|mode|<quote|math>|\<bullet\>>|107>>
+    <associate|footnr-2.37|<tuple|2.37|110>>
+    <associate|footnr-2.38|<tuple|2.38|110>>
+    <associate|footnr-2.39|<tuple|red-black trees|111>>
     <associate|footnr-2.4|<tuple|algebraic specification|64>>
-    <associate|footnr-2.40|<tuple|2.40|111>>
-    <associate|footnr-2.41|<tuple|2.41|114>>
-    <associate|footnr-2.42|<tuple|2.42|119>>
-    <associate|footnr-2.43|<tuple|2.43|121>>
-    <associate|footnr-2.44|<tuple|2.44|126>>
-    <associate|footnr-2.45|<tuple|2.45|126>>
-    <associate|footnr-2.46|<tuple|2.46|127>>
-    <associate|footnr-2.47|<tuple|2.47|129>>
-    <associate|footnr-2.48|<tuple|2.48|134>>
-    <associate|footnr-2.49|<tuple|2.49|135>>
+    <associate|footnr-2.40|<tuple|2.40|112>>
+    <associate|footnr-2.41|<tuple|2.41|115>>
+    <associate|footnr-2.42|<tuple|2.42|120>>
+    <associate|footnr-2.43|<tuple|2.43|122>>
+    <associate|footnr-2.44|<tuple|2.44|127>>
+    <associate|footnr-2.45|<tuple|2.45|127>>
+    <associate|footnr-2.46|<tuple|2.46|128>>
+    <associate|footnr-2.47|<tuple|2.47|130>>
+    <associate|footnr-2.48|<tuple|2.48|135>>
+    <associate|footnr-2.49|<tuple|2.49|136>>
     <associate|footnr-2.5|<tuple|2.5|69>>
-    <associate|footnr-2.50|<tuple|2.50|136>>
-    <associate|footnr-2.51|<tuple|2.51|137>>
-    <associate|footnr-2.52|<tuple|2.52|139>>
-    <associate|footnr-2.53|<tuple|2.53|139>>
-    <associate|footnr-2.54|<tuple|2.54|140>>
-    <associate|footnr-2.55|<tuple|2.55|141>>
-    <associate|footnr-2.56|<tuple|2.56|142>>
-    <associate|footnr-2.57|<tuple|2.57|143>>
-    <associate|footnr-2.58|<tuple|2.58|143>>
-    <associate|footnr-2.59|<tuple|2.59|145>>
+    <associate|footnr-2.50|<tuple|2.50|137>>
+    <associate|footnr-2.51|<tuple|2.51|138>>
+    <associate|footnr-2.52|<tuple|2.52|140>>
+    <associate|footnr-2.53|<tuple|2.53|140>>
+    <associate|footnr-2.54|<tuple|2.54|141>>
+    <associate|footnr-2.55|<tuple|2.55|142>>
+    <associate|footnr-2.56|<tuple|2.56|143>>
+    <associate|footnr-2.57|<tuple|2.57|144>>
+    <associate|footnr-2.58|<tuple|2.58|144>>
+    <associate|footnr-2.59|<tuple|2.59|146>>
     <associate|footnr-2.6|<tuple|2.6|69>>
-    <associate|footnr-2.60|<tuple|2.60|146>>
-    <associate|footnr-2.61|<tuple|2.61|147>>
+    <associate|footnr-2.60|<tuple|2.60|147>>
+    <associate|footnr-2.61|<tuple|2.61|148>>
     <associate|footnr-2.7|<tuple|list structure|70>>
     <associate|footnr-2.8|<tuple|2.8|70>>
     <associate|footnr-2.9|<tuple|2.9|71>>
-    <associate|index-Euclidean-ring|<tuple|2.59|145>>
-    <associate|index-generic-procedures|<tuple|2.41|116>>
-    <associate|index-integerizing-factor|<tuple|2.60|146>>
+    <associate|index-Euclidean-ring|<tuple|2.59|146>>
+    <associate|index-generic-procedures|<tuple|2.41|117>>
+    <associate|index-integerizing-factor|<tuple|2.60|147>>
     <associate|index-quote|<tuple|2.3.1|100>>
-    <associate|index-rational-functions|<tuple|2.92|145>>
+    <associate|index-rational-functions|<tuple|2.92|146>>
   </collection>
 </references>
 
@@ -8944,7 +8949,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%-77C27B808--769BF5F30>|<link|hyperlink|<id|%-77C27B808--769BF5F30>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%-2E110CDD8--2E1A25AA8>|<link|hyperlink|<id|%-2E110CDD8--2E1A25AA8>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -8972,14 +8977,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%-77C27B808--769C559D8>|<link|hyperlink|<id|%-77C27B808--769C559D8>|<url|#fig2.10>>|Figure
+        <locus|<id|%-2E110CDD8--2E1A592D8>|<link|hyperlink|<id|%-2E110CDD8--2E1A592D8>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%-77C27B808--769C82BC8>|<link|hyperlink|<id|%-77C27B808--769C82BC8>|<url|#fig2.10>>|Figure
+        <locus|<id|%-2E110CDD8--2EAA418C8>|<link|hyperlink|<id|%-2E110CDD8--2EAA418C8>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -8995,7 +9000,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%-77C27B808--769C60930>|<link|hyperlink|<id|%-77C27B808--769C60930>|<url|#fig2.9>>|Figure
+        <locus|<id|%-2E110CDD8--2EAAC5088>|<link|hyperlink|<id|%-2E110CDD8--2EAAC5088>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
