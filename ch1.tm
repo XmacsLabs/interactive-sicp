@@ -1,8 +1,8 @@
-<TeXmacs|2.1.3>
+<TeXmacs|2.1.2>
 
 <project|sicp.tm>
 
-<style|<tuple|book|british|comment>>
+<style|<tuple|book|british|comment|smart-ref|preview-ref>>
 
 <\body>
   \;
@@ -486,7 +486,7 @@
     and for implementing interpreters.
   </footnote>
 
-  <subsection|Evaluating Combinations><label|1.1.3>
+  <subsection|Evaluating Combinations><label|sec:1.1.3>
 
   One of our goals in this chapter is to isolate issues about thinking
   procedurally. As a case in point, let us consider that, in evaluating
@@ -790,7 +790,7 @@
   To evaluate a combination whose operator names a compound procedure, the
   interpreter follows much the same process as for combinations whose
   operators name primitive procedures, which we described in
-  <hlink|1.1.3|#1.1.3>. That is, the interpreter evaluates the elements of
+  <smart-ref|sec:1.1.3>. That is, the interpreter evaluates the elements of
   the combination and applies the procedure (which is the value of the
   operator of the combination) to the arguments (which are the values of the
   operands of the combination).
@@ -901,7 +901,7 @@
 
   <paragraph*|Applicative order versus normal order>
 
-  According to the description of evaluation given in <hlink|1.1.3|#1.1.3>,
+  According to the description of evaluation given in <smart-ref|sec:1.1.3>,
   the interpreter first evaluates the operator and operands and then applies
   the resulting procedure to the resulting arguments. This is not the only
   way to perform evaluation. An alternative evaluation model would not
@@ -1003,15 +1003,16 @@
   The general form of a conditional expression is
 
   <\scm-code>
-    (cond (\<langle\><var|p₁>\<rangle\> \<langle\><var|e₁>\<rangle\>)
+    (cond (\<langle\><var|p\<#2081\>>\<rangle\>
+    \<langle\><var|e\<#2081\>>\<rangle\>)
 
-    \ \ \ \ \ \ (\<langle\><var|p₂>\<rangle\>
-    \<langle\><var|e₂>\<rangle\>)
+    \ \ \ \ \ \ (\<langle\><var|p\<#2082\>>\<rangle\>
+    \<langle\><var|e\<#2082\>>\<rangle\>)
 
     \ \ \ \ \ \ ...
 
-    \ \ \ \ \ \ (\<langle\><var|pₙ>\<rangle\>
-    \<langle\><var|eₙ>\<rangle\>))
+    \ \ \ \ \ \ (\<langle\><var|p\<#2099\>>\<rangle\>
+    \<langle\><var|e\<#2099\>>\<rangle\>))
   </scm-code>
 
   consisting of the symbol <code*|cond> followed by parenthesized pairs of
@@ -1118,8 +1119,8 @@
   these:
 
   <\description>
-    <item*|(and \<langle\><var|e₁>\<rangle\> \<ldots\>
-    \<langle\><var|eₙ>\<rangle\>)>
+    <item*|(and \<langle\><var|e\<#2081\>>\<rangle\> \<ldots\>
+    \<langle\><var|e\<#2099\>>\<rangle\>)>
 
     The interpreter evaluates the expressions
     <code*|\<langle\>><var|e><code*|\<rangle\>> one at a time, in
@@ -1130,8 +1131,8 @@
     to true values, the value of the <code*|and> expression is the value of
     the last one.
 
-    <item*|(or \<langle\><var|e₁>\<rangle\> \<ldots\>
-    \<langle\><var|eₙ>\<rangle\>)>
+    <item*|(or \<langle\><var|e\<#2081\>>\<rangle\> \<ldots\>
+    \<langle\><var|e\<#2099\>>\<rangle\>)>
 
     The interpreter evaluates the expressions
     <code*|\<langle\>><var|e><code*|\<rangle\>> one at a time, in
@@ -2385,8 +2386,8 @@
   useless. When we consider processes that operate on hierarchically
   structured data rather than numbers, we will find that tree recursion is a
   natural and powerful tool.<hlink||#FOOT32><\footnote>
-    An example of this was hinted at in <hlink|1.1.3|#1.1.3>. The interpreter
-    itself evaluates expressions using a tree-recursive process.
+    An example of this was hinted at in <smart-ref|sec:1.1.3>. The
+    interpreter itself evaluates expressions using a tree-recursive process.
   </footnote> But even in numerical operations, tree-recursive processes can
   be useful in helping us to understand and design programs. For instance,
   although the first <code*|fib> procedure is much less efficient than the
@@ -5096,7 +5097,6 @@
     <associate|%_idx_92|<tuple|1.2|10>>
     <associate|%_idx_94|<tuple|1.2|10>>
     <associate|1.1|<tuple|1.1|11>>
-    <associate|1.1.3|<tuple|1.1.3|14>>
     <associate|1.1.4|<tuple|1.1.4|15>>
     <associate|1.1.7|<tuple|1.1.7|22>>
     <associate|1.1.8|<tuple|1.1.8|25>>
@@ -5107,24 +5107,6 @@
     <associate|1.3.1|<tuple|1.3.1|45>>
     <associate|1.3.3|<tuple|1.3.3|52>>
     <associate|DOCF58|<tuple|1.57|54>>
-    <associate|Exercise-1_002e29|<tuple|b|47>>
-    <associate|Exercise-1_002e30|<tuple|b|47>>
-    <associate|Exercise-1_002e31|<tuple|b|48>>
-    <associate|Exercise-1_002e32|<tuple|b|48>>
-    <associate|Exercise-1_002e33|<tuple|b|48>>
-    <associate|Exercise-1_002e34|<tuple|1.34|52>>
-    <associate|Exercise-1_002e35|<tuple|1.40|55>>
-    <associate|Exercise-1_002e36|<tuple|1.40|55>>
-    <associate|Exercise-1_002e37|<tuple|1.40|55>>
-    <associate|Exercise-1_002e38|<tuple|1.40|56>>
-    <associate|Exercise-1_002e39|<tuple|1.40|56>>
-    <associate|Exercise-1_002e40|<tuple|1.41|59>>
-    <associate|Exercise-1_002e41|<tuple|1.41|59>>
-    <associate|Exercise-1_002e42|<tuple|composition|59>>
-    <associate|Exercise-1_002e43|<tuple|1.43|60>>
-    <associate|Exercise-1_002e44|<tuple|1.45|60>>
-    <associate|Exercise-1_002e45|<tuple|1.45|60>>
-    <associate|Exercise-1_002e46|<tuple|iterative improvement|60>>
     <associate|Figure1.1|<tuple|1.1|15>>
     <associate|auto-1|<tuple|1|9>>
     <associate|auto-10|<tuple|recusion equations|9>>
@@ -5143,27 +5125,27 @@
     <associate|auto-111|<tuple|summation of a series|46>>
     <associate|auto-112|<tuple|sequences|48>>
     <associate|auto-113|<tuple|filter|48>>
-    <associate|auto-114|<tuple|1.3.2|49>>
-    <associate|auto-115|<tuple|1.53|50>>
+    <associate|auto-114|<tuple|1.3.2|48>>
+    <associate|auto-115|<tuple|1.53|49>>
     <associate|auto-116|<tuple|1.3.3|52>>
     <associate|auto-117|<tuple|1.3.3|52>>
     <associate|auto-118|<tuple|half interval method|52>>
-    <associate|auto-119|<tuple|1.56|54>>
+    <associate|auto-119|<tuple|1.56|53>>
     <associate|auto-12|<tuple|procedures|10>>
-    <associate|auto-120|<tuple|fixed point|54>>
-    <associate|auto-121|<tuple|average damping|55>>
+    <associate|auto-120|<tuple|fixed point|53>>
+    <associate|auto-121|<tuple|average damping|54>>
     <associate|auto-122|<tuple|continued fraction|55>>
     <associate|auto-123|<tuple|k-term finite continued fraction|55>>
-    <associate|auto-124|<tuple|1.3.4|56>>
-    <associate|auto-125|<tuple|1.60|57>>
-    <associate|auto-126|<tuple|Newton's method|57>>
-    <associate|auto-127|<tuple|1.63|58>>
-    <associate|auto-128|<tuple|first-class|59>>
+    <associate|auto-124|<tuple|1.3.4|55>>
+    <associate|auto-125|<tuple|1.60|56>>
+    <associate|auto-126|<tuple|Newton's method|56>>
+    <associate|auto-127|<tuple|1.63|57>>
+    <associate|auto-128|<tuple|first-class|58>>
     <associate|auto-129|<tuple|composition|59>>
     <associate|auto-13|<tuple|1.1|11>>
-    <associate|auto-130|<tuple|smoothing|60>>
-    <associate|auto-131|<tuple|n-fold smoothed function|60>>
-    <associate|auto-132|<tuple|iterative improvement|60>>
+    <associate|auto-130|<tuple|smoothing|59>>
+    <associate|auto-131|<tuple|n-fold smoothed function|59>>
+    <associate|auto-132|<tuple|iterative improvement|59>>
     <associate|auto-14|<tuple|integers|11>>
     <associate|auto-15|<tuple|real numbers|11>>
     <associate|auto-16|<tuple|1.1.1|11>>
@@ -5266,7 +5248,6 @@
     <associate|fig1.3|<tuple|1.3|29>>
     <associate|fig1.4|<tuple|1.4|30>>
     <associate|fig1.5|<tuple|1.5|33>>
-    <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-1.1|<tuple|1.1|10>>
     <associate|footnote-1.10|<tuple|1.10|14>>
     <associate|footnote-1.11|<tuple|1.11|15>>
@@ -5315,25 +5296,24 @@
     <associate|footnote-1.50|<tuple|1.50|47>>
     <associate|footnote-1.51|<tuple|1.51|48>>
     <associate|footnote-1.52|<tuple|1.52|48>>
-    <associate|footnote-1.53|<tuple|1.53|50>>
-    <associate|footnote-1.54|<tuple|1.54|52>>
-    <associate|footnote-1.55|<tuple|1.55|53>>
+    <associate|footnote-1.53|<tuple|1.53|49>>
+    <associate|footnote-1.54|<tuple|1.54|51>>
+    <associate|footnote-1.55|<tuple|1.55|52>>
     <associate|footnote-1.56|<tuple|1.56|53>>
     <associate|footnote-1.57|<tuple|1.57|54>>
     <associate|footnote-1.58|<tuple|1.58|54>>
     <associate|footnote-1.59|<tuple|1.59|56>>
     <associate|footnote-1.6|<tuple|1.6|13>>
-    <associate|footnote-1.60|<tuple|1.60|57>>
-    <associate|footnote-1.61|<tuple|1.61|57>>
-    <associate|footnote-1.62|<tuple|1.62|57>>
-    <associate|footnote-1.63|<tuple|1.63|58>>
-    <associate|footnote-1.64|<tuple|1.64|59>>
-    <associate|footnote-1.65|<tuple|1.65|59>>
-    <associate|footnote-1.66|<tuple|1.66|59>>
+    <associate|footnote-1.60|<tuple|1.60|56>>
+    <associate|footnote-1.61|<tuple|1.61|56>>
+    <associate|footnote-1.62|<tuple|1.62|56>>
+    <associate|footnote-1.63|<tuple|1.63|57>>
+    <associate|footnote-1.64|<tuple|1.64|58>>
+    <associate|footnote-1.65|<tuple|1.65|58>>
+    <associate|footnote-1.66|<tuple|1.66|58>>
     <associate|footnote-1.7|<tuple|1.7|13>>
     <associate|footnote-1.8|<tuple|1.8|13>>
     <associate|footnote-1.9|<tuple|1.9|14>>
-    <associate|footnote-2|<tuple|2|?>>
     <associate|footnr-1.1|<tuple|1.1|10>>
     <associate|footnr-1.10|<tuple|1.10|14>>
     <associate|footnr-1.11|<tuple|syntactic sugar|15>>
@@ -5382,26 +5362,27 @@
     <associate|footnr-1.50|<tuple|1.50|47>>
     <associate|footnr-1.51|<tuple|sequences|48>>
     <associate|footnr-1.52|<tuple|1.52|48>>
-    <associate|footnr-1.53|<tuple|1.53|50>>
-    <associate|footnr-1.54|<tuple|1.54|52>>
-    <associate|footnr-1.55|<tuple|1.55|53>>
+    <associate|footnr-1.53|<tuple|1.53|49>>
+    <associate|footnr-1.54|<tuple|1.54|51>>
+    <associate|footnr-1.55|<tuple|1.55|52>>
     <associate|footnr-1.56|<tuple|1.56|53>>
     <associate|footnr-1.57|<tuple|1.57|54>>
     <associate|footnr-1.58|<tuple|1.58|54>>
     <associate|footnr-1.59|<tuple|1.59|56>>
     <associate|footnr-1.6|<tuple|1.6|13>>
-    <associate|footnr-1.60|<tuple|1.60|57>>
-    <associate|footnr-1.61|<tuple|1.61|57>>
-    <associate|footnr-1.62|<tuple|1.62|57>>
-    <associate|footnr-1.63|<tuple|1.63|58>>
-    <associate|footnr-1.64|<tuple|1.64|59>>
-    <associate|footnr-1.65|<tuple|1.65|59>>
-    <associate|footnr-1.66|<tuple|1.66|59>>
+    <associate|footnr-1.60|<tuple|1.60|56>>
+    <associate|footnr-1.61|<tuple|1.61|56>>
+    <associate|footnr-1.62|<tuple|1.62|56>>
+    <associate|footnr-1.63|<tuple|1.63|57>>
+    <associate|footnr-1.64|<tuple|1.64|58>>
+    <associate|footnr-1.65|<tuple|1.65|58>>
+    <associate|footnr-1.66|<tuple|1.66|58>>
     <associate|footnr-1.7|<tuple|1.7|13>>
     <associate|footnr-1.8|<tuple|1.8|13>>
     <associate|footnr-1.9|<tuple|1.9|14>>
     <associate|index-invariant-quantity|<tuple|1.16|38>>
     <associate|index-stack|<tuple|1.30|31>>
+    <associate|sec:1.1.3|<tuple|1.1.3|14>>
   </collection>
 </references>
 
