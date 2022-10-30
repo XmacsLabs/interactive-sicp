@@ -2,7 +2,7 @@
 
 <project|sicp.tm>
 
-<style|<tuple|book|british|smart-ref>>
+<style|<tuple|book|british|smart-ref|preview-ref>>
 
 <\body>
   <\hide-preamble>
@@ -929,35 +929,10 @@
   numbers but pairs as well. (You made use of this fact, or should have, in
   doing <hlink|Exercise 2.2|#ex2.2> and <hlink|Exercise 2.3|#ex2.3>.) As a
   consequence, pairs provide a universal building block from which we can
-  construct all sorts of data structures. <hlink|Figure 2.3|#fig2.3> shows
-  two ways to use pairs to combine the numbers 1, 2, 3, and 4.
+  construct all sorts of data structures. <smart-ref|fig:2.3> shows two ways
+  to use pairs to combine the numbers 1, 2, 3, and 4.
 
-  <\big-figure>
-    \;
-
-    <with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|0.840896cm|<tuple|0.35547gw|0.407513gh>>|gr-geometry|<tuple|geometry|1par|0.486669par|bottom>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-line-width|2ln|gr-grid-old|<tuple|cartesian|<point|0|0>|5>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|5>|gr-snap|<tuple|control
-    point>|gr-point-size|4ln|gr-arrow-end|\<gtr\>|magnify|0.840896415|gr-auto-crop|true|<graphics||<with|line-width|2ln|<cline|<point|-2.999999999999999|4.0>|<point|-2.0|4.0>|<point|-2.0|2.9999999999999996>|<point|-2.999999999999999|2.9999999999999996>>>|<with|line-width|2ln|<line|<point|-3.9999999999999982|4.0>|<point|-2.999999999999999|4.0>|<point|-2.999999999999999|2.9999999999999996>|<point|-3.9999999999999982|2.9999999999999996>|<point|-3.9999999999999982|4.0>>>|<with|line-width|2ln|<cline|<point|-3.4795032094192346|1.9788269413943644>|<point|-2.4795032094192346|1.9788269413943644>|<point|-2.4795032094192346|0.9788269413943622>|<point|-3.4795032094192346|0.9788269413943622>>>|<with|line-width|2ln|<line|<point|4.500830491202061|3.978836727080301>|<point|5.500830491202061|3.978836727080301>|<point|5.500830491202061|2.978836727080302>|<point|4.500830491202061|2.978836727080302>|<point|4.500830491202061|3.978836727080301>>>|<with|line-width|2ln|<line|<point|7.506516534329462|2.010308669533006>|<point|8.50651653432946|2.010308669533006>|<point|8.50651653432946|1.0103086695330072>|<point|7.506516534329462|1.0103086695330072>|<point|7.506516534329462|2.010308669533006>>>|<with|line-width|2ln|<line|<point|5.008834257573277|1.989156450588701>|<point|6.008834257573275|1.989156450588701>|<point|6.008834257573275|0.9891564505887016>|<point|5.008834257573277|0.9891564505887016>|<point|5.008834257573277|1.989156450588701>>>|<with|line-width|2ln|<line|<point|3.992830847069243|1.9891493557348854>|<point|4.992830847069246|1.9891493557348854>|<point|4.992830847069246|0.9891493557348854>|<point|3.992830847069243|0.9891493557348854>|<point|3.992830847069243|1.9891493557348854>>>|<with|line-width|2ln|<line|<point|5.495671988754653|3.9788376240243384>|<point|6.495671988754655|3.9788376240243384>|<point|6.495671988754655|2.9788376240243437>|<point|5.495671988754653|2.9788376240243437>|<point|5.495671988754653|3.9788376240243384>>>|<with|line-width|2ln|<line|<point|0.775484359438603|2.5183232729196994>|<point|1.775484359438602|2.5183232729196994>|<point|1.775484359438602|1.518323272919699>|<point|0.775484359438603|1.518323272919699>|<point|0.775484359438603|2.5183232729196994>>>|<with|line-width|2ln|<line|<point|-0.748538741368383|2.5394861105966395>|<point|0.25146125863161667|2.5394861105966395>|<point|0.25146125863161667|1.5394861105966395>|<point|-0.748538741368383|1.5394861105966395>|<point|-0.748538741368383|2.5394861105966395>>>|<with|line-width|2ln|<line|<point|-3.2885604573361045|0.4863072895885694>|<point|-2.2885604573361036|0.4863072895885694>|<point|-2.2885604573361036|-0.5136927104114304>|<point|-3.2885604573361045|-0.5136927104114304>|<point|-3.2885604573361045|0.4863072895885694>>>|<with|line-width|2ln|<line|<point|-4.727896815319965|0.4863081105966391>|<point|-3.7278968153199665|0.4863081105966391>|<point|-3.7278968153199665|-0.5136918894033606>|<point|-4.727896815319965|-0.5136918894033606>|<point|-4.727896815319965|0.4863081105966391>>>|<with|line-width|2ln|<line|<point|0.5002990796396865|4.02116293160471>|<point|1.5002990796396856|4.02116293160471>|<point|1.5002990796396856|3.02116293160471>|<point|0.5002990796396865|3.02116293160471>|<point|0.5002990796396865|4.02116293160471>>>|<with|line-width|2ln|<line|<point|-0.5157041943118931|4.021169289588569>|<point|0.4842958056881046|4.021169289588569>|<point|0.4842958056881046|3.0211692895885696>|<point|-0.5157041943118931|3.0211692895885696>|<point|-0.5157041943118931|4.021169289588569>>>|<with|line-width|2ln|<line|<point|-4.484738837175153|1.978838007672973>|<point|-3.4847388371751533|1.978838007672973>|<point|-3.4847388371751533|0.978838007672972>|<point|-4.484738837175153|0.978838007672972>|<point|-4.484738837175153|1.978838007672973>>>|<with|point-size|4ln|<point|-3.51996|3.5254>>|<with|point-size|4ln|<point|-2.50395|3.5254>>|<with|point-size|4ln|<point|-0.0274342|3.5254>>|<with|point-size|4ln|<point|1.03091|3.5254>>|<with|point-size|4ln|<point|-3.98563|1.51455>>|<with|point-size|4ln|<point|-3.01196|1.51455>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.51996|3.5254>|<point|-3.4987928297393833|2.0013890726286547>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.98563|1.51455>|<point|-3.98562971292499|0.5197116020637651>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.01196|1.51455>|<point|-3.011955946553777|0.4985447810556952>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-0.0274342|3.5254>|<point|-0.006267363407858182|2.5728932398465405>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|1.03091|3.5254>|<point|1.0520736869956344|2.5517264188384705>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-2.50395|3.5254>|<point|-0.5566047096176743|3.525400185209684>>>|<with|line-width|2ln|<line|<point|7.993359083608475|3.9999988145257315>|<point|8.99335908360847|3.9999988145257315>|<point|8.99335908360847|2.9999988145257306>|<point|7.993359083608475|2.9999988145257306>|<point|7.993359083608475|3.9999988145257315>>>|<with|line-width|2ln|<line|<point|8.522519049212395|2.01031999193015>|<point|9.52251904921239|2.01031999193015>|<point|9.52251904921239|1.0103199919301498>|<point|8.522519049212395|1.0103199919301498>|<point|8.522519049212395|2.01031999193015>>>|<with|line-width|2ln|<line|<point|8.755368083476181|0.5074766368170397>|<point|9.755368083476176|0.5074766368170397>|<point|9.755368083476176|-0.4925233631829607>|<point|8.755368083476181|-0.4925233631829607>|<point|8.755368083476181|0.5074766368170397>>>|<with|line-width|2ln|<line|<point|7.252521725492322|0.4863096758896686>|<point|8.252521725492318|0.4863096758896686>|<point|8.252521725492318|-0.5136903241103327>|<point|7.252521725492322|-0.5136903241103327>|<point|7.252521725492322|0.4863096758896686>>>|<with|line-width|2ln|<line|<point|3.9928285200418667|0.48630963173700287>|<point|4.9928285200418605|0.48630963173700287>|<point|4.9928285200418605|-0.5136903682629971>|<point|3.9928285200418667|-0.5136903682629971>|<point|3.9928285200418667|0.48630963173700287>>>|<with|point-size|4ln|<point|5.00432|3.50564>>|<with|point-size|4ln|<point|5.99916|3.48447>>|<with|point-size|4ln|<point|4.49631|1.49479>>|<with|point-size|4ln|<point|5.49115|1.49479>>|<with|point-size|4ln|<point|8.01|1.51596>>|<with|point-size|4ln|<point|9.00485|1.51596>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.00432|3.50564>|<point|5.004316047096177|2.0451283238523614>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|4.49631|1.49479>|<point|4.496312342902501|0.5211172112713321>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.49115|1.49479>|<point|7.459667284032279|1.5159577986506152>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|8.01|1.51596>|<point|8.031171451250165|0.4787835692551925>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|9.00485|1.51596>|<point|9.004845217621378|0.5211172112713321>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.99916|3.48447>|<point|7.946504167217886|3.484472152401111>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-5.5029|3.48837>|<point|-4.042949007885784|3.5135395567442136>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|3.00509|3.53871>|<point|4.490216514916128|3.5387111364574935>>>|<\document-at>
-      <\scm-code>
-        <\with|font-base-size|16>
-          (cons (cons 1 2)
-
-          \ \ \ \ \ \ (cons 3 4))
-        </with>
-      </scm-code>
-    </document-at|<point|-4.745587661992882|-1.1039063151167132>>|<\document-at>
-      <\scm-code>
-        <\with|font-base-size|16>
-          (cons (cons 1
-
-          \ \ \ \ \ \ \ \ \ \ \ \ (cons 2 3))
-
-          \ \ \ \ \ \ 4)
-        </with>
-      </scm-code>
-    </document-at|<point|2.98208|-1.01734>>||<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|-4.26733|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|-2.78221|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|4.49238|-0.0104816>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|7.71434|0.0398616>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|9.24981|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|-0.265049|2.02842>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|1.27042|2.02842>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|8.49466|3.48837>>>>>
-  <|big-figure>
-    <label|fig2.3>Two ways to combine 1, 2, 3, and 4 using pairs.
-  </big-figure>
+  <include|fig_2.3.tm>
 
   The ability to create pairs whose elements are pairs is the essence of list
   structure's importance as a representational tool. We refer to this ability
@@ -8677,7 +8652,7 @@
     <associate|auto-25|<tuple|box-and-pointer notation|68>>
     <associate|auto-26|<tuple|pointer|68>>
     <associate|auto-27|<tuple|2.2|68|fig_2.2.tm>>
-    <associate|auto-28|<tuple|2.3|69>>
+    <associate|auto-28|<tuple|2.3|69|fig_2.3.tm>>
     <associate|auto-29|<tuple|closure property|69>>
     <associate|auto-3|<tuple|data abstraction|59>>
     <associate|auto-30|<tuple|hierarchical|69>>
@@ -8776,7 +8751,6 @@
     <associate|fig2.24|<tuple|2.24|133>>
     <associate|fig2.25|<tuple|2.25|136>>
     <associate|fig2.26|<tuple|2.26|138>>
-    <associate|fig2.3|<tuple|2.3|69>>
     <associate|fig2.4|<tuple|2.4|69>>
     <associate|fig2.5|<tuple|2.5|76>>
     <associate|fig2.6|<tuple|2.6|76>>
@@ -8785,6 +8759,7 @@
     <associate|fig2.9|<tuple|2.9|89>>
     <associate|fig:2.13|<tuple|2.13|92|fig_2.13.tm>>
     <associate|fig:2.2|<tuple|2.2|68|fig_2.2.tm>>
+    <associate|fig:2.3|<tuple|2.3|69|fig_2.3.tm>>
     <associate|footnote-2.1|<tuple|2.1|60>>
     <associate|footnote-2.10|<tuple|2.10|73>>
     <associate|footnote-2.11|<tuple|2.11|74>>
@@ -8914,6 +8889,7 @@
     <associate|index-rational-functions|<tuple|2.92|145>>
     <associate|part:fig_2.13.tm|<tuple|2.12|92>>
     <associate|part:fig_2.2.tm|<tuple|pointer|68>>
+    <associate|part:fig_2.3.tm|<tuple|2.2|69>>
   </collection>
 </references>
 
@@ -8944,7 +8920,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%2E8737CC8-2E9CFF008>|<link|hyperlink|<id|%2E8737CC8-2E9CFF008>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%-34FFF6C28--4A345BF30>|<link|hyperlink|<id|%-34FFF6C28--4A345BF30>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -8972,14 +8948,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%2E8737CC8-2E96B0D98>|<link|hyperlink|<id|%2E8737CC8-2E96B0D98>|<url|#fig2.10>>|Figure
+        <locus|<id|%-34FFF6C28--4A3D814C8>|<link|hyperlink|<id|%-34FFF6C28--4A3D814C8>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%2E8737CC8-2E96AFA78>|<link|hyperlink|<id|%2E8737CC8-2E96AFA78>|<url|#fig2.10>>|Figure
+        <locus|<id|%-34FFF6C28--4A3D82700>|<link|hyperlink|<id|%-34FFF6C28--4A3D82700>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -8995,7 +8971,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%2E8737CC8-2E96AD168>|<link|hyperlink|<id|%2E8737CC8-2E96AD168>|<url|#fig2.9>>|Figure
+        <locus|<id|%-34FFF6C28--4A3D84FF8>|<link|hyperlink|<id|%-34FFF6C28--4A3D84FF8>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
@@ -9199,6 +9175,8 @@
     </associate>
     <\associate|parts>
       <tuple|fig_2.2.tm|chapter-nr|2|section-nr|2|subsection-nr|0>
+
+      <tuple|fig_2.3.tm|chapter-nr|2|section-nr|2|subsection-nr|0>
 
       <tuple|fig_2.13.tm|chapter-nr|2|section-nr|2|subsection-nr|4>
     </associate>
