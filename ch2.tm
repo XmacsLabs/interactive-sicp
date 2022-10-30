@@ -913,23 +913,17 @@
   <section|Hierarchical Data and the Closure Property>
 
   As we have seen, pairs provide a primitive \Pglue\Q that we can use to
-  construct compound data objects. <hlink|Figure 2.2|#fig2.2> shows a
-  standard way to visualize a pair\Vin this case, the pair formed by
-  <scm|(cons 1 2)>. In this representation, which is called
-  <em|box-and-pointer notation><index|box-and-pointer notation>, each object
-  is shown as a <em|pointer><index|pointer> to a box. The box for a primitive
-  object contains a representation of the object. For example, the box for a
-  number contains a numeral. The box for a pair is actually a double box, the
-  left part containing (a pointer to) the <code*|car> of the pair and the
-  right part containing the <code*|cdr>.
+  construct compound data objects. <smart-ref|fig:2.2> shows a standard way
+  to visualize a pair\Vin this case, the pair formed by <scm|(cons 1 2)>. In
+  this representation, which is called <em|box-and-pointer
+  notation><index|box-and-pointer notation>, each object is shown as a
+  <em|pointer><index|pointer> to a box. The box for a primitive object
+  contains a representation of the object. For example, the box for a number
+  contains a numeral. The box for a pair is actually a double box, the left
+  part containing (a pointer to) the <code*|car> of the pair and the right
+  part containing the <code*|cdr>.
 
-  <\big-figure>
-    \;
-
-    <with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.509999gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-point-size|4ln|gr-line-width|2ln|gr-arrow-end|\<gtr\>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<with|line-width|2ln|<line|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>|<point|-4.0|3.0>>>|<with|line-width|2ln|<line|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>>|<point|-3.5|2.5>|<with|point-size|4ln|<point|-2.5|2.5>>|<with|point-size|4ln|<point|-3.5|2.5>>|<with|line-width|2ln|<line|<point|-1.4|3.0>|<point|-0.3999999999999998|3.0>|<point|-0.3999999999999998|2.0>|<point|-1.4|2.0>|<point|-1.4|3.0>>>|<with|line-width|2ln|<line|<point|-4|1>|<point|-3.0|1.0>|<point|-3.0|0.0>|<point|-4.0|0.0>|<point|-4.0|1.0>>>|<with|point-size|4ln|<point|-3.5|0.5>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-2.5|2.5>|<point|-1.4|2.5>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.5|2.5>|<point|-3.5|1.0>>>|<text-at|<with|font-base-size|14|2>|<point|-1.0144462145786481|2.351532338933721>>>>
-  <|big-figure>
-    <label|fig2.2>Box-and-pointer representation of <scm|(cons 1 2)>.
-  </big-figure>
+  <include|fig_2.2.tm>
 
   We have already seen that <code*|cons> can be used to combine not only
   numbers but pairs as well. (You made use of this fact, or should have, in
@@ -8680,7 +8674,7 @@
     <associate|auto-24|<tuple|2.2|68>>
     <associate|auto-25|<tuple|box-and-pointer notation|68>>
     <associate|auto-26|<tuple|pointer|68>>
-    <associate|auto-27|<tuple|2.2|68>>
+    <associate|auto-27|<tuple|2.2|68|fig_2.2.tm>>
     <associate|auto-28|<tuple|2.3|69>>
     <associate|auto-29|<tuple|closure property|69>>
     <associate|auto-3|<tuple|data abstraction|59>>
@@ -8771,7 +8765,6 @@
     <associate|fig2.10|<tuple|2.10|90>>
     <associate|fig2.11|<tuple|2.11|91>>
     <associate|fig2.12|<tuple|2.12|91>>
-    <associate|fig2.13|<tuple|2.13|92|fig_2.13.tm>>
     <associate|fig2.18|<tuple|2.18|113>>
     <associate|fig2.19|<tuple|2.19|119>>
     <associate|fig2.2|<tuple|2.2|68>>
@@ -8789,6 +8782,8 @@
     <associate|fig2.7|<tuple|2.7|81>>
     <associate|fig2.8|<tuple|2.8|88>>
     <associate|fig2.9|<tuple|2.9|89>>
+    <associate|fig:2.13|<tuple|2.13|92|fig_2.13.tm>>
+    <associate|fig:2.2|<tuple|2.2|?|fig_2.2.tm>>
     <associate|footnote-2.1|<tuple|2.1|60>>
     <associate|footnote-2.10|<tuple|2.10|73>>
     <associate|footnote-2.11|<tuple|2.11|74>>
@@ -8917,6 +8912,7 @@
     <associate|index-quote|<tuple|2.3.1|99>>
     <associate|index-rational-functions|<tuple|2.92|145>>
     <associate|part:fig_2.13.tm|<tuple|2.12|92>>
+    <associate|part:fig_2.2.tm|<tuple|pointer|?>>
   </collection>
 </references>
 
@@ -8947,7 +8943,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%405C30318-40ACBC0E8>|<link|hyperlink|<id|%405C30318-40ACBC0E8>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%-2E99FE508--2E8E5CE90>|<link|hyperlink|<id|%-2E99FE508--2E8E5CE90>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -8975,14 +8971,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%405C30318-4083CEAB8>|<link|hyperlink|<id|%405C30318-4083CEAB8>|<url|#fig2.10>>|Figure
+        <locus|<id|%-2E99FE508--2E85A33E8>|<link|hyperlink|<id|%-2E99FE508--2E85A33E8>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%405C30318-4083CF8D8>|<link|hyperlink|<id|%405C30318-4083CF8D8>|<url|#fig2.10>>|Figure
+        <locus|<id|%-2E99FE508--2E85A41E8>|<link|hyperlink|<id|%-2E99FE508--2E85A41E8>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -8998,7 +8994,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%405C30318-4083CE9D8>|<link|hyperlink|<id|%405C30318-4083CE9D8>|<url|#fig2.9>>|Figure
+        <locus|<id|%-2E99FE508--2E85BC658>|<link|hyperlink|<id|%-2E99FE508--2E85BC658>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
