@@ -2,7 +2,7 @@
 
 <project|sicp.tm>
 
-<style|<tuple|book|british>>
+<style|<tuple|book|british|smart-ref>>
 
 <\body>
   <\hide-preamble>
@@ -3308,14 +3308,11 @@
     \ \ \ \ \ \ \ \ (beside painter (below smaller smaller)))))
   </scm-code>
 
-  <\big-figure|<image|<tuple|<#89504E470D0A1A0A0000000D49484452000000BC000000BC0806000000C249C4AB0000000473424954080808087C086488000000097048597300000B1300000B1301009A9C180000048A49444154789CEDDDE18E9B38008551B2DAF77F65F6C7366A848C31040CF13D47AAB64D1840EC57D7D3CED8AF699AE6098208FE1E9E7B7FF33F77DF01F42478A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2087E4C5BDBE9CC1BC75CB91DCF916B9F763F821FD3EBCBF7AF74EBBDFD7BE5C9B9C4DA68F75ABCF70EA7747CE9BDE5C7CF8B635BEF67799EE5355BCE53BABFD6FBD96437B97B7CFBDC6B53835228AD3F5FFBF5F2C7DEF3D7AE57BBF6D6F17BCC46F8DFB667B4FB269ADA753E47F4B5E3D646FDEECCE1C7362FFEBB773AD012E9FCE7BCB5A84F1BA1BF3D8111FEF72CA706AF8DF76AAFB59E6BCF3DADBDBE9C972F7F13D6EE65EFFD543DE28F9A403D9EFBA57FC577E0DA77B3137780D64F1623087E6C9FD385D3FE5AAF4169CAF408E6F0E3BBE31F99EEFC87AD2A233C51044F14C11345F044113C51044F14C11345F044113C51044F14C173D4E3BE4EA685E089E28BC7782B7D33F6708CF02C0D19FA9B119E4F2DDFE2F7D3BF2104CF345DB4FECB1399D2F07664C98FAD65F31EE9E76E78109E7B7FBE899B2C82278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE0892278A2089E2882278AE089D233F8B57558CE58CCA7F6F1A5F7AC0913AA67F06B2B5B5DBDA4DB904BC6714C8FB5253F47D396C53A4BCB36978E5DBEBE5C13B174DDB5E3875C3894B25E7FBC2F632BC577E4E7A55F6FBDB7F55A8F67625AD5DF7CE7EAC1B5D1F38E186A23FD5544DFD99DC1CFD3F6BC7E6F10B573EE39BED754C694A9AF2E8BA97E4E5F4AF3ECD27B6B539ED2F1CB636AD7AD1D4F08FFE3FFEAF92C3CF7FE2C97FD87F84208FE2FD107B0C7D3FF7CF218C2084F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51043FA6969590B7B60BBD7235E523D73EE57E043FA696D590EF5C3179EBDA97DD9BE5B27F53CB68B7B545E8DAF69EB5AD405BEFA7B6D568EB79B6B61A3DCC4600F738E3B9AF4D0D6AFB5F1DDD0A742EFCD87BFED6AD41AF9AD2DCBA6D25E7D8BB6BE115D7F91CD16B3B33DE3EB89AC38F6F6D07C5BD1FBF75CC6BAA477D56EC5F9DE77D83B67CE9EF9BE75E9A33EF7D7D2D9CB5B9FDD5F7537B7DEFFDAC994B17A18F5ECFFDCE3D6A9FD6966D2B43B47EB2383CC18FAFB4EB798F296C6D17F4DBF85B9A0C777C8EF6C8CF0B8DF044113C51044F14C11345F044113C51044F14C11345F044113C5104CF371EF575322D044F145F3CC6A7DA37600CC1084FC970A1BF19E159DA5ADE6379CC4F113C6FA7AFFFF244A6347C3AB2E4C7D6B2798FF353373B10CFBD3FDFC44D16C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044113C51044F14C11345F044794DD62927C87FBC60F9F23A8BC62D0000000049454E44AE426082>|png>|0.3par|||><space|2em><image|<tuple|<#89504E470D0A1A0A0000000D49484452000000BC000000BD08060000000915170E0000000473424954080808087C086488000000097048597300000B1300000B1301009A9C180000065549444154789CEDDDEB92E3261485513935EFFFCACA8F442985E22E3870D8DFAAEA1AB72F12CD6C612C01BE2EDFEED505802FBF8BD0408CE7C05376B4B8FF5A5D02C012818714020F29041E52083CA410784821F09042E02185C0430A818714020F29041E52083CA410784821F09042E02185C0430A818714020F29041E52083CA4107848F9D3F0DC6759895FE2F6DBEF4BA106F35A6E4CD012F854609EDB4F58EE2BBDE6CA8A40792D372668097CAD30485E782D371ACCE8C37B5D51CB6BB9D1A0A785BF83DBBFC8FD3BB6925ECB8D815A039F0BC4CE61F15A6E0CC66949481911F83BF8D70BAFE5C60723CED278ED12782D373E98DDA5C99DDBBE128FD1E2629AD9812FB5A2BBB6B21CA8764CEBBAB54B13EEA8F7127DEC546078DAB0663BB394BE0A68D703D523D3BAEEE9C387014D5DA2AF3915980AFEE8409D74A0A6AE1B94C609A5C4FE8ED276727FDFF675DDFAF6107B0BCAFD3EF3EDAAF6B9A9F284B7ADCADDF3FCDC6B6AFFA6D27353FB89D54DF8D3BA7DCBBAFEEF753D5D9A524B3CAA2F3BB2A50F078D959E7392963AACED5A94DEBDB7ADEB9E0FADA90F19EFFBC3B7A0540B715D638FE094E7E0C955F4C803D5C28CFD3C75F4C5D6753D6A84E0AA5186B5FB8DF52B47DE1F3E565BA69E3AEBE9C3A7CA9F7B3CB79DDAF2E5F66D59D7FF7BDD88A36D5557E0EB7E5776614EEC3EE5ECF0F70EF99ED65CD704D8CA88C0FFAE317D3F6B1CA876B6A9EB19339EBCF076807AB64D5D333C1852083CA410784821F09042E02185C0430A818714020F29041E522C02BFFC727227AFE5B6E4AE8E68E121E5EBDA92D7B5D138890C8F65B62651475F5A788F15E2B1CCD68EAEA3DED192A9D927A9E7EC202C8F97725B3ABE8EBEAC4B63B124C508A9D9F1BB97DB924C1DF574697A66C1A7267E5B69FD8FDBA5DC9664EAC8556103941D2D86CC6905DC20F09042E02185C0430A818714020F29041E52083CA410784821F09042E02185C0430A818714020F29041E52083CA410784821F09042E02185C0430A818714020F29041E52083CA410784821F09042E02185C0430A818714020F29BF8B659B2186C0AF41BDDB637D786821F09042E02185C0430A818714020F29041E52083CA410F833D55CD42A7D83F6AC0B633DFB1D5616027FA69AAF916FFDAAF9514AFB9D5AAE3F33378E2952AD5D382EEA1D9CD86B7E91C7C26DDCC1735BCB14DB5FCD366265AB2D4B11633AD6F85AEFB9AE41787F2C38B9DBA9DFC39FDC76C2FB72FBCAEDB7F4FC16372DBC6FADADDD97E0E4F6F57E67883D6F9B51B9F4E1CF17B6B8330E92FBDFEDA6823DAC85FEBA81A780AB3EC028EBADF7F03F3DD7578FF5859FFB739F05C2D7B4F6E163DBCF9525777F6B5972EED88E60C3AADEA79EE66BDCEF6A8C871751FB81F17804FE7CEF2EC3B0537B05B133355BE02C8D06EBCF68DB7E26A4858714020F29041E52083CA410784821F09042E02185C0430A818714028F5EDB0D1BA841E02185B13478E4C6A31F83161EA12383FEA085C75B18F6D2AC2877083CAE2B3D41C46DB053E8D2E0D112EEF7040F77676BDC15F810D4BB3DE6B4420B818714020F29041E52083CA458053EB7CAED8855745B1EE3EC8830ABC0A7CEF1CEBEB071DC85137C33FB4A6BCB02FDB1FB538B7E9616EE6F595CFFB8CBE7C8B35E58B36631FDDADBB1DF4B8F95EE5BB9C829E65AF68508B9D6734510B659B01F73AD0A7C6E6DF4D47AE15FB6D9F27CCBAE0C0799B1D95F8850BBF87DEAB1DE85FB7B16D7B75A59F7BD3F3E27D8E20B115EACEB817AB7C7E0B18BE04921F0FF20F42298F1443F5A0A2D3CA410784821F09042E02185C0430A813F4FCD29D6D23C8459A7697BF63BB42C04FE3C35A759579D8A2DED777AB9380FEF4B6E5C51CBDC839A714B35638B5AE62FE4B4CC5FF88CAB8C6B7CA9F75CD720375FA0778EC11DF969D976ED7C83D95D9A65E3E1F15D6B6BF72538B9A1DCA5D677ABB906F4E1CF16B6C4A30F926788732ED4A3C23E643BB3C7C323ADA7DE6BC7F9BF1FABED67A75ED3DA871F797F4B596A301E7E21EBB9C4ABF7BB03C6C30B5831417D5B04FE6CEF2E83D514C6D8199C6D7096E67CD69FCFB6FE3C480B0F29041E52083CA410784821F09042E02185C0430A818714028F1E5B5E45AD41E02185A105B8AEFCF0DCA3D0C2E3EDD8A03F68E1F108C37EE497BD1178A4C6CBBB0E760A5D1A5C57FB77633DFFBA3C5BE3B2D007A0DEED31C50F5A083CA410784821F09042E02185C0430A818714020F29041E52B65ABB1B98ED6FA56CC0CCDC0A24770000000049454E44AE426082>|png>|0.3par|||>>
-    <label|fig2.13>Recursive plans for <code*|right-split> and
-    <code*|corner-split>.
-  </big-figure>
+  <include|fig_2.13.tm>
 
   We can produce balanced patterns by branching upwards as well as towards
-  the right (see <hlink|Exercise 2.44|#Exercise-2_002e44>, <hlink|Figure
-  2.13|#fig2.13> and <hlink|Figure 2.14|#fig2.14>):
+  the right (see <hlink|Exercise 2.44|#Exercise-2_002e44>,
+  <smart-ref|fig:2.13> and <hlink|Figure 2.14|#fig2.14>):
 
   <\scm-code>
     (define (corner-split painter n)
@@ -8608,69 +8605,69 @@
     <associate|2.2.1|<tuple|2.2.1|69>>
     <associate|2.2.2|<tuple|2.2.2|76>>
     <associate|2.2.3|<tuple|2.2.3|80>>
-    <associate|2.3.2|<tuple|2.3.2|103>>
+    <associate|2.3.2|<tuple|2.3.2|102>>
     <associate|auto-1|<tuple|2|59>>
     <associate|auto-10|<tuple|pair|61>>
-    <associate|auto-100|<tuple|prefix code|114>>
-    <associate|auto-101|<tuple|2.18|114>>
-    <associate|auto-102|<tuple|2.18|115>>
-    <associate|auto-103|<tuple|2.41|116>>
-    <associate|auto-104|<tuple|generic procedures|117>>
-    <associate|auto-105|<tuple|generic procedures|117>>
-    <associate|auto-106|<tuple|generic procedures|117>>
-    <associate|auto-107|<tuple|2.4|119>>
-    <associate|auto-108|<tuple|additively|119>>
-    <associate|auto-109|<tuple|generic procedures|120>>
+    <associate|auto-100|<tuple|prefix code|113>>
+    <associate|auto-101|<tuple|2.18|113>>
+    <associate|auto-102|<tuple|2.18|114>>
+    <associate|auto-103|<tuple|2.41|115>>
+    <associate|auto-104|<tuple|generic procedures|116>>
+    <associate|auto-105|<tuple|generic procedures|116>>
+    <associate|auto-106|<tuple|generic procedures|116>>
+    <associate|auto-107|<tuple|2.4|118>>
+    <associate|auto-108|<tuple|additively|118>>
+    <associate|auto-109|<tuple|generic procedures|119>>
     <associate|auto-11|<tuple|list-structured|61>>
-    <associate|auto-110|<tuple|type tags|120>>
-    <associate|auto-111|<tuple|data-directed|120>>
-    <associate|auto-112|<tuple|2.19|120>>
-    <associate|auto-113|<tuple|2.4.1|120>>
-    <associate|auto-114|<tuple|2.20|121>>
-    <associate|auto-115|<tuple|2.4.2|123>>
-    <associate|auto-116|<tuple|type tag|123>>
-    <associate|auto-117|<tuple|2.21|125>>
-    <associate|auto-118|<tuple|2.4.3|125>>
-    <associate|auto-119|<tuple|dispatching on type|125>>
+    <associate|auto-110|<tuple|type tags|119>>
+    <associate|auto-111|<tuple|data-directed|119>>
+    <associate|auto-112|<tuple|2.19|119>>
+    <associate|auto-113|<tuple|2.4.1|119>>
+    <associate|auto-114|<tuple|2.20|120>>
+    <associate|auto-115|<tuple|2.4.2|122>>
+    <associate|auto-116|<tuple|type tag|122>>
+    <associate|auto-117|<tuple|2.21|124>>
+    <associate|auto-118|<tuple|2.4.3|124>>
+    <associate|auto-119|<tuple|dispatching on type|124>>
     <associate|auto-12|<tuple|list-structured|61>>
-    <associate|auto-120|<tuple|additive|126>>
-    <associate|auto-121|<tuple|data directed programming|126>>
-    <associate|auto-122|<tuple|2.22|126>>
-    <associate|auto-123|<tuple|package|127>>
-    <associate|auto-124|<tuple|d|130>>
-    <associate|auto-125|<tuple|message passing|130>>
-    <associate|auto-126|<tuple|2.5|131>>
-    <associate|auto-127|<tuple|2.23|131>>
-    <associate|auto-128|<tuple|2.5.1|131>>
-    <associate|auto-129|<tuple|ordinary|132>>
+    <associate|auto-120|<tuple|additive|125>>
+    <associate|auto-121|<tuple|data directed programming|125>>
+    <associate|auto-122|<tuple|2.22|125>>
+    <associate|auto-123|<tuple|package|126>>
+    <associate|auto-124|<tuple|d|129>>
+    <associate|auto-125|<tuple|message passing|129>>
+    <associate|auto-126|<tuple|2.5|130>>
+    <associate|auto-127|<tuple|2.23|130>>
+    <associate|auto-128|<tuple|2.5.1|130>>
+    <associate|auto-129|<tuple|ordinary|131>>
     <associate|auto-13|<tuple|2.1.2|62>>
-    <associate|auto-130|<tuple|2.24|134>>
-    <associate|auto-131|<tuple|2.5.2|135>>
-    <associate|auto-132|<tuple|2.48|135>>
-    <associate|auto-133|<tuple|coercion|136>>
-    <associate|auto-134|<tuple|2.50|137>>
-    <associate|auto-135|<tuple|hierarchy of types|137>>
-    <associate|auto-136|<tuple|subtype|137>>
-    <associate|auto-137|<tuple|supertype|137>>
-    <associate|auto-138|<tuple|tower|137>>
-    <associate|auto-139|<tuple|2.25|137>>
+    <associate|auto-130|<tuple|2.24|133>>
+    <associate|auto-131|<tuple|2.5.2|134>>
+    <associate|auto-132|<tuple|2.48|134>>
+    <associate|auto-133|<tuple|coercion|135>>
+    <associate|auto-134|<tuple|2.50|136>>
+    <associate|auto-135|<tuple|hierarchy of types|136>>
+    <associate|auto-136|<tuple|subtype|136>>
+    <associate|auto-137|<tuple|supertype|136>>
+    <associate|auto-138|<tuple|tower|136>>
+    <associate|auto-139|<tuple|2.25|136>>
     <associate|auto-14|<tuple|abstraction barriers|62>>
-    <associate|auto-140|<tuple|2.25|138>>
-    <associate|auto-141|<tuple|2.26|139>>
-    <associate|auto-142|<tuple|coerce|139>>
-    <associate|auto-143|<tuple|2.5.3|140>>
-    <associate|auto-144|<tuple|2.5.3|140>>
-    <associate|auto-145|<tuple|indeterminates|140>>
-    <associate|auto-146|<tuple|univariate polynomials|140>>
-    <associate|auto-147|<tuple|poly|141>>
-    <associate|auto-148|<tuple|2.56|143>>
-    <associate|auto-149|<tuple|dense|143>>
+    <associate|auto-140|<tuple|2.25|137>>
+    <associate|auto-141|<tuple|2.26|138>>
+    <associate|auto-142|<tuple|coerce|138>>
+    <associate|auto-143|<tuple|2.5.3|139>>
+    <associate|auto-144|<tuple|2.5.3|139>>
+    <associate|auto-145|<tuple|indeterminates|139>>
+    <associate|auto-146|<tuple|univariate polynomials|139>>
+    <associate|auto-147|<tuple|poly|140>>
+    <associate|auto-148|<tuple|2.56|142>>
+    <associate|auto-149|<tuple|dense|142>>
     <associate|auto-15|<tuple|2.1|63>>
-    <associate|auto-150|<tuple|sparse|143>>
-    <associate|auto-151|<tuple|2.91|145>>
-    <associate|auto-152|<tuple|2.92|146>>
-    <associate|auto-153|<tuple|pseudodivision|147>>
-    <associate|auto-154|<tuple|pseudoremainder|147>>
+    <associate|auto-150|<tuple|sparse|142>>
+    <associate|auto-151|<tuple|2.91|144>>
+    <associate|auto-152|<tuple|2.92|145>>
+    <associate|auto-153|<tuple|pseudodivision|146>>
+    <associate|auto-154|<tuple|pseudoremainder|146>>
     <associate|auto-16|<tuple|2.1.3|64>>
     <associate|auto-17|<tuple|data|64>>
     <associate|auto-18|<tuple|abstract models|64>>
@@ -8702,10 +8699,10 @@
     <associate|auto-41|<tuple|list|73>>
     <associate|auto-42|<tuple|2.10|74>>
     <associate|auto-43|<tuple|2.2.2|76>>
-    <associate|auto-44|<tuple|2.5|77>>
-    <associate|auto-45|<tuple|trees|77>>
-    <associate|auto-46|<tuple|2.6|77>>
-    <associate|auto-47|<tuple|balanced|79>>
+    <associate|auto-44|<tuple|2.5|76>>
+    <associate|auto-45|<tuple|trees|76>>
+    <associate|auto-46|<tuple|2.6|76>>
+    <associate|auto-47|<tuple|balanced|78>>
     <associate|auto-48|<tuple|4|79>>
     <associate|auto-49|<tuple|2.2.3|80>>
     <associate|auto-5|<tuple|constructors|59>>
@@ -8714,211 +8711,212 @@
     <associate|auto-52|<tuple|filter|81>>
     <associate|auto-53|<tuple|map|81>>
     <associate|auto-54|<tuple|accumulator|81>>
-    <associate|auto-55|<tuple|2.7|82>>
-    <associate|auto-56|<tuple|2.7|82>>
-    <associate|auto-57|<tuple|Horner's rule|85>>
-    <associate|auto-58|<tuple|2.39|87>>
-    <associate|auto-59|<tuple|comments|88>>
+    <associate|auto-55|<tuple|2.7|81>>
+    <associate|auto-56|<tuple|2.7|81>>
+    <associate|auto-57|<tuple|Horner's rule|84>>
+    <associate|auto-58|<tuple|2.39|86>>
+    <associate|auto-59|<tuple|comments|87>>
     <associate|auto-6|<tuple|2.1.1|59>>
-    <associate|auto-60|<tuple|2.8|89>>
-    <associate|auto-61|<tuple|2.2.4|90>>
-    <associate|auto-62|<tuple|2.9|90>>
-    <associate|auto-63|<tuple|2.9|90>>
-    <associate|auto-64|<tuple|painter|90>>
-    <associate|auto-65|<tuple|2.10|91>>
-    <associate|auto-66|<tuple|2.11|92>>
-    <associate|auto-67|<tuple|2.12|92>>
-    <associate|auto-68|<tuple|2.13|93>>
-    <associate|auto-69|<tuple|2.14|94>>
+    <associate|auto-60|<tuple|2.8|88>>
+    <associate|auto-61|<tuple|2.2.4|89>>
+    <associate|auto-62|<tuple|2.9|89>>
+    <associate|auto-63|<tuple|2.9|89>>
+    <associate|auto-64|<tuple|painter|89>>
+    <associate|auto-65|<tuple|2.10|90>>
+    <associate|auto-66|<tuple|2.11|91>>
+    <associate|auto-67|<tuple|2.12|91>>
+    <associate|auto-68|<tuple|2.13|92|fig_2.13.tm>>
+    <associate|auto-69|<tuple|2.14|93>>
     <associate|auto-7|<tuple|wishful thinking|60>>
-    <associate|auto-70|<tuple|2.44|94>>
-    <associate|auto-71|<tuple|2.45|95>>
-    <associate|auto-72|<tuple|2.15|95>>
-    <associate|auto-73|<tuple|frame coordinate map|95>>
-    <associate|auto-74|<tuple|2.47|96>>
-    <associate|auto-75|<tuple|4|97>>
-    <associate|auto-76|<tuple|2.51|99>>
-    <associate|auto-77|<tuple|stratified design|99>>
-    <associate|auto-78|<tuple|robust|99>>
-    <associate|auto-79|<tuple|2.3|100>>
+    <associate|auto-70|<tuple|2.44|93>>
+    <associate|auto-71|<tuple|2.45|94>>
+    <associate|auto-72|<tuple|2.15|94>>
+    <associate|auto-73|<tuple|frame coordinate map|94>>
+    <associate|auto-74|<tuple|2.47|95>>
+    <associate|auto-75|<tuple|4|96>>
+    <associate|auto-76|<tuple|2.51|98>>
+    <associate|auto-77|<tuple|stratified design|98>>
+    <associate|auto-78|<tuple|robust|98>>
+    <associate|auto-79|<tuple|2.3|99>>
     <associate|auto-8|<tuple|wishful thinking|60>>
-    <associate|auto-80|<tuple|2.3.1|100>>
-    <associate|auto-81|<tuple|values|100>>
-    <associate|auto-82|<tuple|2.3.2|103>>
-    <associate|auto-83|<tuple|2.3.2|103>>
-    <associate|auto-84|<tuple|2.3.2|104>>
-    <associate|auto-85|<tuple|2.3.3|107>>
-    <associate|auto-86|<tuple|<with|mode|<quote|math>|\<bullet\>>|107>>
-    <associate|auto-87|<tuple|2.60|108>>
-    <associate|auto-88|<tuple|2.62|109>>
-    <associate|auto-89|<tuple|2.16|110>>
+    <associate|auto-80|<tuple|2.3.1|99>>
+    <associate|auto-81|<tuple|values|99>>
+    <associate|auto-82|<tuple|2.3.2|102>>
+    <associate|auto-83|<tuple|2.3.2|102>>
+    <associate|auto-84|<tuple|2.3.2|103>>
+    <associate|auto-85|<tuple|2.3.3|106>>
+    <associate|auto-86|<tuple|<with|mode|<quote|math>|\<bullet\>>|106>>
+    <associate|auto-87|<tuple|2.60|107>>
+    <associate|auto-88|<tuple|2.62|108>>
+    <associate|auto-89|<tuple|2.16|109>>
     <associate|auto-9|<tuple|pair|60>>
-    <associate|auto-90|<tuple|B-trees|111>>
-    <associate|auto-91|<tuple|red-black trees|111>>
-    <associate|auto-92|<tuple|2.17|111>>
-    <associate|auto-93|<tuple|2.40|112>>
-    <associate|auto-94|<tuple|key|113>>
-    <associate|auto-95|<tuple|2.3.4|113>>
-    <associate|auto-96|<tuple|fixed-length|114>>
-    <associate|auto-97|<tuple|variable-length|114>>
-    <associate|auto-98|<tuple|separator code|114>>
-    <associate|auto-99|<tuple|prefix|114>>
+    <associate|auto-90|<tuple|B-trees|110>>
+    <associate|auto-91|<tuple|red-black trees|110>>
+    <associate|auto-92|<tuple|2.17|110>>
+    <associate|auto-93|<tuple|2.40|111>>
+    <associate|auto-94|<tuple|key|112>>
+    <associate|auto-95|<tuple|2.3.4|112>>
+    <associate|auto-96|<tuple|fixed-length|113>>
+    <associate|auto-97|<tuple|variable-length|113>>
+    <associate|auto-98|<tuple|separator code|113>>
+    <associate|auto-99|<tuple|prefix|113>>
     <associate|ex2.12|<tuple|2.12|67>>
     <associate|ex2.2|<tuple|2.2|63>>
     <associate|ex2.21|<tuple|2.21|75>>
     <associate|ex2.3|<tuple|2.3|64>>
-    <associate|ex2.30|<tuple|2.30|80>>
-    <associate|ex2.79|<tuple|2.79|135>>
-    <associate|ex2.83|<tuple|2.83|139>>
+    <associate|ex2.30|<tuple|2.30|79>>
+    <associate|ex2.79|<tuple|2.79|134>>
+    <associate|ex2.83|<tuple|2.83|138>>
     <associate|fig2.1|<tuple|2.1|63>>
-    <associate|fig2.10|<tuple|2.10|91>>
-    <associate|fig2.11|<tuple|2.11|92>>
-    <associate|fig2.12|<tuple|2.12|92>>
-    <associate|fig2.13|<tuple|2.13|93>>
-    <associate|fig2.18|<tuple|2.18|114>>
-    <associate|fig2.19|<tuple|2.19|120>>
+    <associate|fig2.10|<tuple|2.10|90>>
+    <associate|fig2.11|<tuple|2.11|91>>
+    <associate|fig2.12|<tuple|2.12|91>>
+    <associate|fig2.13|<tuple|2.13|92|fig_2.13.tm>>
+    <associate|fig2.18|<tuple|2.18|113>>
+    <associate|fig2.19|<tuple|2.19|119>>
     <associate|fig2.2|<tuple|2.2|68>>
-    <associate|fig2.20|<tuple|2.20|121>>
-    <associate|fig2.21|<tuple|2.21|125>>
-    <associate|fig2.22|<tuple|2.22|126>>
-    <associate|fig2.23|<tuple|2.23|131>>
-    <associate|fig2.24|<tuple|2.24|134>>
-    <associate|fig2.25|<tuple|2.25|137>>
-    <associate|fig2.26|<tuple|2.26|139>>
+    <associate|fig2.20|<tuple|2.20|120>>
+    <associate|fig2.21|<tuple|2.21|124>>
+    <associate|fig2.22|<tuple|2.22|125>>
+    <associate|fig2.23|<tuple|2.23|130>>
+    <associate|fig2.24|<tuple|2.24|133>>
+    <associate|fig2.25|<tuple|2.25|136>>
+    <associate|fig2.26|<tuple|2.26|138>>
     <associate|fig2.3|<tuple|2.3|69>>
     <associate|fig2.4|<tuple|2.4|69>>
-    <associate|fig2.5|<tuple|2.5|77>>
-    <associate|fig2.6|<tuple|2.6|77>>
-    <associate|fig2.7|<tuple|2.7|82>>
-    <associate|fig2.8|<tuple|2.8|89>>
-    <associate|fig2.9|<tuple|2.9|90>>
+    <associate|fig2.5|<tuple|2.5|76>>
+    <associate|fig2.6|<tuple|2.6|76>>
+    <associate|fig2.7|<tuple|2.7|81>>
+    <associate|fig2.8|<tuple|2.8|88>>
+    <associate|fig2.9|<tuple|2.9|89>>
     <associate|footnote-2.1|<tuple|2.1|60>>
     <associate|footnote-2.10|<tuple|2.10|73>>
     <associate|footnote-2.11|<tuple|2.11|74>>
-    <associate|footnote-2.12|<tuple|2.12|78>>
-    <associate|footnote-2.13|<tuple|2.13|83>>
-    <associate|footnote-2.14|<tuple|2.14|85>>
-    <associate|footnote-2.15|<tuple|2.15|85>>
-    <associate|footnote-2.16|<tuple|2.16|86>>
-    <associate|footnote-2.17|<tuple|2.17|87>>
-    <associate|footnote-2.18|<tuple|2.18|87>>
-    <associate|footnote-2.19|<tuple|2.19|88>>
+    <associate|footnote-2.12|<tuple|2.12|77>>
+    <associate|footnote-2.13|<tuple|2.13|82>>
+    <associate|footnote-2.14|<tuple|2.14|84>>
+    <associate|footnote-2.15|<tuple|2.15|84>>
+    <associate|footnote-2.16|<tuple|2.16|85>>
+    <associate|footnote-2.17|<tuple|2.17|86>>
+    <associate|footnote-2.18|<tuple|2.18|86>>
+    <associate|footnote-2.19|<tuple|2.19|87>>
     <associate|footnote-2.2|<tuple|2.2|61>>
-    <associate|footnote-2.20|<tuple|2.20|88>>
-    <associate|footnote-2.21|<tuple|2.21|90>>
-    <associate|footnote-2.22|<tuple|2.22|91>>
-    <associate|footnote-2.23|<tuple|2.23|95>>
-    <associate|footnote-2.24|<tuple|2.24|95>>
-    <associate|footnote-2.25|<tuple|2.25|96>>
-    <associate|footnote-2.26|<tuple|2.26|96>>
-    <associate|footnote-2.27|<tuple|2.27|97>>
-    <associate|footnote-2.28|<tuple|2.28|98>>
-    <associate|footnote-2.29|<tuple|2.29|98>>
+    <associate|footnote-2.20|<tuple|2.20|87>>
+    <associate|footnote-2.21|<tuple|2.21|89>>
+    <associate|footnote-2.22|<tuple|2.22|90>>
+    <associate|footnote-2.23|<tuple|2.23|94>>
+    <associate|footnote-2.24|<tuple|2.24|94>>
+    <associate|footnote-2.25|<tuple|2.25|95>>
+    <associate|footnote-2.26|<tuple|2.26|95>>
+    <associate|footnote-2.27|<tuple|2.27|96>>
+    <associate|footnote-2.28|<tuple|2.28|97>>
+    <associate|footnote-2.29|<tuple|2.29|97>>
     <associate|footnote-2.3|<tuple|2.3|61>>
-    <associate|footnote-2.30|<tuple|2.30|99>>
-    <associate|footnote-2.31|<tuple|2.31|100>>
-    <associate|footnote-2.32|<tuple|2.32|101>>
-    <associate|footnote-2.33|<tuple|2.33|101>>
-    <associate|footnote-2.34|<tuple|2.34|101>>
-    <associate|footnote-2.35|<tuple|2.35|102>>
-    <associate|footnote-2.36|<tuple|2.36|107>>
-    <associate|footnote-2.37|<tuple|2.37|110>>
-    <associate|footnote-2.38|<tuple|2.38|110>>
-    <associate|footnote-2.39|<tuple|2.39|111>>
+    <associate|footnote-2.30|<tuple|2.30|98>>
+    <associate|footnote-2.31|<tuple|2.31|99>>
+    <associate|footnote-2.32|<tuple|2.32|100>>
+    <associate|footnote-2.33|<tuple|2.33|100>>
+    <associate|footnote-2.34|<tuple|2.34|100>>
+    <associate|footnote-2.35|<tuple|2.35|101>>
+    <associate|footnote-2.36|<tuple|2.36|106>>
+    <associate|footnote-2.37|<tuple|2.37|109>>
+    <associate|footnote-2.38|<tuple|2.38|109>>
+    <associate|footnote-2.39|<tuple|2.39|110>>
     <associate|footnote-2.4|<tuple|2.4|64>>
-    <associate|footnote-2.40|<tuple|2.40|112>>
-    <associate|footnote-2.41|<tuple|2.41|115>>
-    <associate|footnote-2.42|<tuple|2.42|120>>
-    <associate|footnote-2.43|<tuple|2.43|122>>
-    <associate|footnote-2.44|<tuple|2.44|127>>
-    <associate|footnote-2.45|<tuple|2.45|127>>
-    <associate|footnote-2.46|<tuple|2.46|128>>
-    <associate|footnote-2.47|<tuple|2.47|130>>
-    <associate|footnote-2.48|<tuple|2.48|135>>
-    <associate|footnote-2.49|<tuple|2.49|136>>
+    <associate|footnote-2.40|<tuple|2.40|111>>
+    <associate|footnote-2.41|<tuple|2.41|114>>
+    <associate|footnote-2.42|<tuple|2.42|119>>
+    <associate|footnote-2.43|<tuple|2.43|121>>
+    <associate|footnote-2.44|<tuple|2.44|126>>
+    <associate|footnote-2.45|<tuple|2.45|126>>
+    <associate|footnote-2.46|<tuple|2.46|127>>
+    <associate|footnote-2.47|<tuple|2.47|129>>
+    <associate|footnote-2.48|<tuple|2.48|134>>
+    <associate|footnote-2.49|<tuple|2.49|135>>
     <associate|footnote-2.5|<tuple|2.5|69>>
-    <associate|footnote-2.50|<tuple|2.50|137>>
-    <associate|footnote-2.51|<tuple|2.51|138>>
-    <associate|footnote-2.52|<tuple|2.52|140>>
-    <associate|footnote-2.53|<tuple|2.53|140>>
-    <associate|footnote-2.54|<tuple|2.54|141>>
-    <associate|footnote-2.55|<tuple|2.55|142>>
-    <associate|footnote-2.56|<tuple|2.56|143>>
-    <associate|footnote-2.57|<tuple|2.57|144>>
-    <associate|footnote-2.58|<tuple|2.58|144>>
-    <associate|footnote-2.59|<tuple|2.59|146>>
+    <associate|footnote-2.50|<tuple|2.50|136>>
+    <associate|footnote-2.51|<tuple|2.51|137>>
+    <associate|footnote-2.52|<tuple|2.52|139>>
+    <associate|footnote-2.53|<tuple|2.53|139>>
+    <associate|footnote-2.54|<tuple|2.54|140>>
+    <associate|footnote-2.55|<tuple|2.55|141>>
+    <associate|footnote-2.56|<tuple|2.56|142>>
+    <associate|footnote-2.57|<tuple|2.57|143>>
+    <associate|footnote-2.58|<tuple|2.58|143>>
+    <associate|footnote-2.59|<tuple|2.59|145>>
     <associate|footnote-2.6|<tuple|2.6|69>>
-    <associate|footnote-2.60|<tuple|2.60|147>>
-    <associate|footnote-2.61|<tuple|2.61|148>>
+    <associate|footnote-2.60|<tuple|2.60|146>>
+    <associate|footnote-2.61|<tuple|2.61|147>>
     <associate|footnote-2.7|<tuple|2.7|70>>
     <associate|footnote-2.8|<tuple|2.8|70>>
     <associate|footnote-2.9|<tuple|2.9|71>>
     <associate|footnr-2.1|<tuple|2.1|60>>
     <associate|footnr-2.10|<tuple|2.10|73>>
     <associate|footnr-2.11|<tuple|2.11|74>>
-    <associate|footnr-2.12|<tuple|2.12|78>>
-    <associate|footnr-2.13|<tuple|2.13|83>>
-    <associate|footnr-2.14|<tuple|2.14|85>>
-    <associate|footnr-2.15|<tuple|2.15|85>>
-    <associate|footnr-2.16|<tuple|2.16|86>>
-    <associate|footnr-2.17|<tuple|2.17|87>>
-    <associate|footnr-2.18|<tuple|2.18|87>>
-    <associate|footnr-2.19|<tuple|2.19|88>>
+    <associate|footnr-2.12|<tuple|2.12|77>>
+    <associate|footnr-2.13|<tuple|2.13|82>>
+    <associate|footnr-2.14|<tuple|2.14|84>>
+    <associate|footnr-2.15|<tuple|2.15|84>>
+    <associate|footnr-2.16|<tuple|2.16|85>>
+    <associate|footnr-2.17|<tuple|2.17|86>>
+    <associate|footnr-2.18|<tuple|2.18|86>>
+    <associate|footnr-2.19|<tuple|2.19|87>>
     <associate|footnr-2.2|<tuple|2.2|61>>
-    <associate|footnr-2.20|<tuple|comments|88>>
-    <associate|footnr-2.21|<tuple|2.21|90>>
-    <associate|footnr-2.22|<tuple|2.22|91>>
-    <associate|footnr-2.23|<tuple|2.23|95>>
-    <associate|footnr-2.24|<tuple|2.24|95>>
-    <associate|footnr-2.25|<tuple|2.25|96>>
-    <associate|footnr-2.26|<tuple|2.26|96>>
-    <associate|footnr-2.27|<tuple|2.27|97>>
-    <associate|footnr-2.28|<tuple|2.28|98>>
-    <associate|footnr-2.29|<tuple|2.29|98>>
+    <associate|footnr-2.20|<tuple|comments|87>>
+    <associate|footnr-2.21|<tuple|2.21|89>>
+    <associate|footnr-2.22|<tuple|2.22|90>>
+    <associate|footnr-2.23|<tuple|2.23|94>>
+    <associate|footnr-2.24|<tuple|2.24|94>>
+    <associate|footnr-2.25|<tuple|2.25|95>>
+    <associate|footnr-2.26|<tuple|2.26|95>>
+    <associate|footnr-2.27|<tuple|2.27|96>>
+    <associate|footnr-2.28|<tuple|2.28|97>>
+    <associate|footnr-2.29|<tuple|2.29|97>>
     <associate|footnr-2.3|<tuple|2.3|61>>
-    <associate|footnr-2.30|<tuple|2.30|99>>
-    <associate|footnr-2.31|<tuple|2.31|100>>
-    <associate|footnr-2.32|<tuple|2.32|101>>
-    <associate|footnr-2.33|<tuple|2.33|101>>
-    <associate|footnr-2.34|<tuple|2.34|101>>
-    <associate|footnr-2.35|<tuple|2.35|102>>
-    <associate|footnr-2.36|<tuple|<with|mode|<quote|math>|\<bullet\>>|107>>
-    <associate|footnr-2.37|<tuple|2.37|110>>
-    <associate|footnr-2.38|<tuple|2.38|110>>
-    <associate|footnr-2.39|<tuple|red-black trees|111>>
+    <associate|footnr-2.30|<tuple|2.30|98>>
+    <associate|footnr-2.31|<tuple|2.31|99>>
+    <associate|footnr-2.32|<tuple|2.32|100>>
+    <associate|footnr-2.33|<tuple|2.33|100>>
+    <associate|footnr-2.34|<tuple|2.34|100>>
+    <associate|footnr-2.35|<tuple|2.35|101>>
+    <associate|footnr-2.36|<tuple|<with|mode|<quote|math>|\<bullet\>>|106>>
+    <associate|footnr-2.37|<tuple|2.37|109>>
+    <associate|footnr-2.38|<tuple|2.38|109>>
+    <associate|footnr-2.39|<tuple|red-black trees|110>>
     <associate|footnr-2.4|<tuple|algebraic specification|64>>
-    <associate|footnr-2.40|<tuple|2.40|112>>
-    <associate|footnr-2.41|<tuple|2.41|115>>
-    <associate|footnr-2.42|<tuple|2.42|120>>
-    <associate|footnr-2.43|<tuple|2.43|122>>
-    <associate|footnr-2.44|<tuple|2.44|127>>
-    <associate|footnr-2.45|<tuple|2.45|127>>
-    <associate|footnr-2.46|<tuple|2.46|128>>
-    <associate|footnr-2.47|<tuple|2.47|130>>
-    <associate|footnr-2.48|<tuple|2.48|135>>
-    <associate|footnr-2.49|<tuple|2.49|136>>
+    <associate|footnr-2.40|<tuple|2.40|111>>
+    <associate|footnr-2.41|<tuple|2.41|114>>
+    <associate|footnr-2.42|<tuple|2.42|119>>
+    <associate|footnr-2.43|<tuple|2.43|121>>
+    <associate|footnr-2.44|<tuple|2.44|126>>
+    <associate|footnr-2.45|<tuple|2.45|126>>
+    <associate|footnr-2.46|<tuple|2.46|127>>
+    <associate|footnr-2.47|<tuple|2.47|129>>
+    <associate|footnr-2.48|<tuple|2.48|134>>
+    <associate|footnr-2.49|<tuple|2.49|135>>
     <associate|footnr-2.5|<tuple|2.5|69>>
-    <associate|footnr-2.50|<tuple|2.50|137>>
-    <associate|footnr-2.51|<tuple|2.51|138>>
-    <associate|footnr-2.52|<tuple|2.52|140>>
-    <associate|footnr-2.53|<tuple|2.53|140>>
-    <associate|footnr-2.54|<tuple|2.54|141>>
-    <associate|footnr-2.55|<tuple|2.55|142>>
-    <associate|footnr-2.56|<tuple|2.56|143>>
-    <associate|footnr-2.57|<tuple|2.57|144>>
-    <associate|footnr-2.58|<tuple|2.58|144>>
-    <associate|footnr-2.59|<tuple|2.59|146>>
+    <associate|footnr-2.50|<tuple|2.50|136>>
+    <associate|footnr-2.51|<tuple|2.51|137>>
+    <associate|footnr-2.52|<tuple|2.52|139>>
+    <associate|footnr-2.53|<tuple|2.53|139>>
+    <associate|footnr-2.54|<tuple|2.54|140>>
+    <associate|footnr-2.55|<tuple|2.55|141>>
+    <associate|footnr-2.56|<tuple|2.56|142>>
+    <associate|footnr-2.57|<tuple|2.57|143>>
+    <associate|footnr-2.58|<tuple|2.58|143>>
+    <associate|footnr-2.59|<tuple|2.59|145>>
     <associate|footnr-2.6|<tuple|2.6|69>>
-    <associate|footnr-2.60|<tuple|2.60|147>>
-    <associate|footnr-2.61|<tuple|2.61|148>>
+    <associate|footnr-2.60|<tuple|2.60|146>>
+    <associate|footnr-2.61|<tuple|2.61|147>>
     <associate|footnr-2.7|<tuple|list structure|70>>
     <associate|footnr-2.8|<tuple|2.8|70>>
     <associate|footnr-2.9|<tuple|2.9|71>>
-    <associate|index-Euclidean-ring|<tuple|2.59|146>>
-    <associate|index-generic-procedures|<tuple|2.41|117>>
-    <associate|index-integerizing-factor|<tuple|2.60|147>>
-    <associate|index-quote|<tuple|2.3.1|100>>
-    <associate|index-rational-functions|<tuple|2.92|146>>
+    <associate|index-Euclidean-ring|<tuple|2.59|145>>
+    <associate|index-generic-procedures|<tuple|2.41|116>>
+    <associate|index-integerizing-factor|<tuple|2.60|146>>
+    <associate|index-quote|<tuple|2.3.1|99>>
+    <associate|index-rational-functions|<tuple|2.92|145>>
+    <associate|part:fig_2.13.tm|<tuple|2.12|92>>
   </collection>
 </references>
 
@@ -8949,7 +8947,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%-2E110CDD8--2E1A25AA8>|<link|hyperlink|<id|%-2E110CDD8--2E1A25AA8>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%405C30318-40ACBC0E8>|<link|hyperlink|<id|%405C30318-40ACBC0E8>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -8977,14 +8975,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%-2E110CDD8--2E1A592D8>|<link|hyperlink|<id|%-2E110CDD8--2E1A592D8>|<url|#fig2.10>>|Figure
+        <locus|<id|%405C30318-4083CEAB8>|<link|hyperlink|<id|%405C30318-4083CEAB8>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%-2E110CDD8--2EAA418C8>|<link|hyperlink|<id|%-2E110CDD8--2EAA418C8>|<url|#fig2.10>>|Figure
+        <locus|<id|%405C30318-4083CF8D8>|<link|hyperlink|<id|%405C30318-4083CF8D8>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -9000,7 +8998,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%-2E110CDD8--2EAAC5088>|<link|hyperlink|<id|%-2E110CDD8--2EAAC5088>|<url|#fig2.9>>|Figure
+        <locus|<id|%405C30318-4083CE9D8>|<link|hyperlink|<id|%405C30318-4083CE9D8>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
@@ -9201,6 +9199,9 @@
       <tuple|<tuple|pseudodivision>|<pageref|auto-153>>
 
       <tuple|<tuple|pseudoremainder>|<pageref|auto-154>>
+    </associate>
+    <\associate|parts>
+      <tuple|fig_2.13.tm|chapter-nr|2|section-nr|2|subsection-nr|4>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Building
