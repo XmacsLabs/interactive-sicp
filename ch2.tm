@@ -5062,13 +5062,13 @@
   elements \Prandomly\Q the tree will tend to be balanced on the average. But
   this is not a guarantee. For example, if we start with an empty set and
   adjoin the numbers 1 through 7 in sequence we end up with the highly
-  unbalanced tree shown in <hlink|Figure 2.17|#Figure-2_002e17>. In this tree
-  all the left subtrees are empty, so it has no advantage over a simple
-  ordered list. One way to solve this problem is to define an operation that
-  transforms an arbitrary tree into a balanced tree with the same elements.
-  Then we can perform this transformation after every few <code*|adjoin-set>
-  operations to keep our set in balance. There are also other ways to solve
-  this problem, most of which involve designing new data structures for which
+  unbalanced tree shown in <smart-ref|fig:2.17>. In this tree all the left
+  subtrees are empty, so it has no advantage over a simple ordered list. One
+  way to solve this problem is to define an operation that transforms an
+  arbitrary tree into a balanced tree with the same elements. Then we can
+  perform this transformation after every few <code*|adjoin-set> operations
+  to keep our set in balance. There are also other ways to solve this
+  problem, most of which involve designing new data structures for which
   searching and insertion both can be done in
   <math|\<Theta\><around*|(|log\<nospace\>n|)>> steps.<\footnote>
     Examples of such structures include <em|B-trees><index|B-trees> and
@@ -5077,11 +5077,7 @@
     1990|References.xhtml#Cormen-et-al_002e-1990>.
   </footnote>
 
-  <\big-figure>
-    <image|<tuple|<#89504E470D0A1A0A0000000D49484452000000D2000000D40806000000E9C07D5F0000000473424954080808087C086488000000097048597300000B1300000B1301009A9C180000031349444154789CEDDDC1B69A301885D1E8EAFBBF329DB4B72E2E15BC1C347FB2F7C48903D07C46239A5B6B6D69FFDC1AF0B2FB9F5B0141C8B27F1760CB7DFF2EC01E2141809020E0D6B63F1B597C00000000802A96E60A08F8E6A7DF23890902CC4C102226081113B4CCA5407E18C8F452035F4C4C2D39E8C5C4B4D2035E4C4CE98AC12E26A673D540171353B972908B89695C3DC0C5C414DE31B8C5C4F0DE35B0C5C4D0DE39A8C50441AECD0300000080677A5B865EAFE8F5767C50C23A244BE510202438C19FAAC049228293D611098A127E7DFA00FE4340000000005091EF9B20444C10222608111384880942C404216282103141889820444C10222608111384880942C404216282103141889000000000E8931DF1B66DADE879ACE0244BE53CD5EB6E14BD101087DC3F7D0045785B070166269E32234180B72CDBD63390C709000000002AF1B37508111384880942C404216282103141889820444C10222608111384880942C404216282103141889820444C10222608111300000000546245AF00DBBA00C35B56B774CA8CD42FF1146203AD7E6D85E4F98213CC4E9DF30AD7BFC7883C5F000000C0DBB8940842C404216282103141889820444C10222608111384880942C404216282103141889820444C102226081113848809428404000000D003FF25CD1EBB62408025F103BCB2B0671D9231B3C18E7D1CF5372033140408698319893DC239C0FB5DF6F88C0400000000D54DF99375DF237195E962822B4C3933C115C4042153C4E4720FDEE131A421C7DC90274597868E69B813A26BC3C634D4C950C290310D732294325C4C439C04250D1553F913A0B461622A7DF00C618898CA1E3843291F53C9836648A5632A77C00CAD744CD09BE1AFCD0300000078CA122355592A8793BAFBF9BA92A9A6CBDD31FCAF1D5575B583A090A8AC8BD9A8352141443745C30BBAFC9C04000000001CD0DDA54450959820444C10222608111384880942C404216282103141889820444C10222608111384880942C4042162821021010000009FE13F93E175DF56F3EC46013F736B0F13911909CEF15D13042CAD796B07677CCD464202E0A3BE66A4DF6931E09B359CF56C0000000049454E44AE426082>|png>|0.3par|||>
-  <|big-figure>
-    Unbalanced tree produced by adjoining 1 through 7 in sequence.
-  </big-figure>
+  <include|fig_2.17.tm>
 
   <\exercise>
     Each of the following two procedures converts a binary tree to a list.
@@ -8578,8 +8574,8 @@
     <associate|auto-115|<tuple|2.4.2|122>>
     <associate|auto-116|<tuple|type tag|122>>
     <associate|auto-117|<tuple|2.21|124>>
-    <associate|auto-118|<tuple|2.4.3|124>>
-    <associate|auto-119|<tuple|dispatching on type|124>>
+    <associate|auto-118|<tuple|2.4.3|125>>
+    <associate|auto-119|<tuple|dispatching on type|125>>
     <associate|auto-12|<tuple|list-structured|61>>
     <associate|auto-120|<tuple|additive|125>>
     <associate|auto-121|<tuple|data directed programming|125>>
@@ -8703,7 +8699,7 @@
     <associate|auto-9|<tuple|pair|60>>
     <associate|auto-90|<tuple|B-trees|110>>
     <associate|auto-91|<tuple|red-black trees|110>>
-    <associate|auto-92|<tuple|2.17|110>>
+    <associate|auto-92|<tuple|2.17|110|fig_2.17.tm>>
     <associate|auto-93|<tuple|2.40|111>>
     <associate|auto-94|<tuple|key|112>>
     <associate|auto-95|<tuple|2.3.4|112>>
@@ -8739,6 +8735,7 @@
     <associate|fig:2.1|<tuple|2.1|63|fig_2.1.tm>>
     <associate|fig:2.13|<tuple|2.13|92|fig_2.13.tm>>
     <associate|fig:2.16|<tuple|2.16|109|fig_2.16.tm>>
+    <associate|fig:2.17|<tuple|2.17|110|fig_2.17.tm>>
     <associate|fig:2.2|<tuple|2.2|68|fig_2.2.tm>>
     <associate|fig:2.3|<tuple|2.3|69|fig_2.3.tm>>
     <associate|footnote-2.1|<tuple|2.1|60>>
@@ -8871,6 +8868,7 @@
     <associate|part:fig_2.1.tm|<tuple|abstraction barriers|63>>
     <associate|part:fig_2.13.tm|<tuple|2.12|92>>
     <associate|part:fig_2.16.tm|<tuple|2.62|109>>
+    <associate|part:fig_2.17.tm|<tuple|red-black trees|110>>
     <associate|part:fig_2.2.tm|<tuple|pointer|68>>
     <associate|part:fig_2.3.tm|<tuple|2.2|69>>
   </collection>
@@ -9166,6 +9164,8 @@
       <tuple|fig_2.13.tm|chapter-nr|2|section-nr|2|subsection-nr|4>
 
       <tuple|fig_2.16.tm|chapter-nr|2|section-nr|3|subsection-nr|3>
+
+      <tuple|fig_2.17.tm|chapter-nr|2|section-nr|3|subsection-nr|3>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Building
