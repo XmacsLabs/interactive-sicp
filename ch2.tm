@@ -4919,23 +4919,13 @@
   the set, called the \Pentry\Q at that node, and a link to each of two other
   (possibly empty) nodes. The \Pleft\Q link points to elements smaller than
   the one at the node, and the \Pright\Q link to elements greater than the
-  one at the node. <hlink|Figure 2.16|#Figure-2_002e16> shows some trees that
-  represent the set <math|<around*|{|1,3,5,7,9,11|}>>. The same set may be
-  represented by a tree in a number of different ways. The only thing we
-  require for a valid representation is that all elements in the left subtree
-  be smaller than the node entry and that all elements in the right subtree
-  be larger.
+  one at the node. <smart-ref|fig:2.16> shows some trees that represent the
+  set <math|<around*|{|1,3,5,7,9,11|}>>. The same set may be represented by a
+  tree in a number of different ways. The only thing we require for a valid
+  representation is that all elements in the left subtree be smaller than the
+  node entry and that all elements in the right subtree be larger.
 
-  <\big-figure>
-    \;
-
-    <tree|7|<tree|3|1|5>|<tree|9|11>><space|1em><tree|3|1|<tree|7|5|<tree|9|11>>><space|1em><tree|5|<tree|3|1>|<tree|9|7|11>>
-
-    \;
-  <|big-figure>
-    Various binary trees that represent the set
-    <math|<around*|{|1,3,5,7,9,11|}>>.
-  </big-figure>
+  <include|fig_2.16.tm>
 
   The advantage of the tree representation is this: Suppose we want to check
   whether a number <math|x> is contained in a set. We begin by comparing
@@ -8709,7 +8699,7 @@
     <associate|auto-86|<tuple|<with|mode|<quote|math>|\<bullet\>>|106>>
     <associate|auto-87|<tuple|2.60|107>>
     <associate|auto-88|<tuple|2.62|108>>
-    <associate|auto-89|<tuple|2.16|109>>
+    <associate|auto-89|<tuple|2.16|109|fig_2.16.tm>>
     <associate|auto-9|<tuple|pair|60>>
     <associate|auto-90|<tuple|B-trees|110>>
     <associate|auto-91|<tuple|red-black trees|110>>
@@ -8748,6 +8738,7 @@
     <associate|fig2.9|<tuple|2.9|89>>
     <associate|fig:2.1|<tuple|2.1|63|fig_2.1.tm>>
     <associate|fig:2.13|<tuple|2.13|92|fig_2.13.tm>>
+    <associate|fig:2.16|<tuple|2.16|109|fig_2.16.tm>>
     <associate|fig:2.2|<tuple|2.2|68|fig_2.2.tm>>
     <associate|fig:2.3|<tuple|2.3|69|fig_2.3.tm>>
     <associate|footnote-2.1|<tuple|2.1|60>>
@@ -8879,6 +8870,7 @@
     <associate|index-rational-functions|<tuple|2.92|145>>
     <associate|part:fig_2.1.tm|<tuple|abstraction barriers|63>>
     <associate|part:fig_2.13.tm|<tuple|2.12|92>>
+    <associate|part:fig_2.16.tm|<tuple|2.62|109>>
     <associate|part:fig_2.2.tm|<tuple|pointer|68>>
     <associate|part:fig_2.3.tm|<tuple|2.2|69>>
   </collection>
@@ -8911,7 +8903,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%1D40094B8-FD877840>|<link|hyperlink|<id|%1D40094B8-FD877840>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%7A75EEC98-7A8BA9108>|<link|hyperlink|<id|%7A75EEC98-7A8BA9108>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -8939,14 +8931,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%1D40094B8-FD5E7AA8>|<link|hyperlink|<id|%1D40094B8-FD5E7AA8>|<url|#fig2.10>>|Figure
+        <locus|<id|%7A75EEC98-7A89192D0>|<link|hyperlink|<id|%7A75EEC98-7A89192D0>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%1D40094B8-FD5E9950>|<link|hyperlink|<id|%1D40094B8-FD5E9950>|<url|#fig2.10>>|Figure
+        <locus|<id|%7A75EEC98-7A891B208>|<link|hyperlink|<id|%7A75EEC98-7A891B208>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -8962,7 +8954,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%1D40094B8-FD5EBAA0>|<link|hyperlink|<id|%1D40094B8-FD5EBAA0>|<url|#fig2.9>>|Figure
+        <locus|<id|%7A75EEC98-7A891F908>|<link|hyperlink|<id|%7A75EEC98-7A891F908>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
@@ -9172,6 +9164,8 @@
       <tuple|fig_2.3.tm|chapter-nr|2|section-nr|2|subsection-nr|0>
 
       <tuple|fig_2.13.tm|chapter-nr|2|section-nr|2|subsection-nr|4>
+
+      <tuple|fig_2.16.tm|chapter-nr|2|section-nr|3|subsection-nr|3>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Building
