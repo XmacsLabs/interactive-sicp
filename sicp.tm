@@ -6213,24 +6213,20 @@
 
   <subsection|Representing Sequences><label|2.2.1>
 
-  <\big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|0.707097cm|<tuple|0.420873gw|0.443453gh>>|gr-geometry|<tuple|geometry|0.986667par|0.6par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-transformation|<tuple|<tuple|0.9950041652780258|0.0|-0.09983341664682815|0.0>|<tuple|0.0|1.0|0.0|0.0>|<tuple|0.09983341664682815|0.0|0.9950041652780258|0.0>|<tuple|0.0|0.0|0.0|1.0>>|magnify|0.840896415|gr-snap|<tuple|control
-  point|grid point|grid curve point|curve-grid
-  intersection>|<graphics||<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-3.50102|2.52259>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|1>|<point|-4.0|0.0>|<point|-3.0|0.0>|<point|-3.0|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1|3>|<point|-1.0|2.0>|<point|0.0|2.0>|<point|0.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|0|3>|<point|0.0|2.0>|<point|1.0|2.0>|<point|1.0|3.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|3.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|3.0|3.0>|<point|3.9999999999999987|3.0>|<point|3.9999999999999987|2.0>|<point|3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|1.9999999999999996|3.0>|<point|1.9999999999999996|2.0>|<point|3.0|2.0>|<point|3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.999999999999999|3.0000000000000004>|<point|6.999999999999997|3.0000000000000004>|<point|6.999999999999997|2.0>|<point|5.999999999999999|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|5.499999999999999|2.5000000000000004>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|4.999999999999998|3.0000000000000004>|<point|4.999999999999998|2.0>|<point|5.999999999999999|2.0>|<point|5.999999999999999|3.0000000000000004>>>|<with|magnify|0.8408964147443614|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|2.0|1.0>|<point|2.0|-3.885780586188048e-16>|<point|3.0|-3.885780586188048e-16>|<point|3.0|1.0>>>|<with|magnify|0.8408964147443614|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|1>|<point|-3.593097631961901|0.3682762270141557>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|2>|<point|-0.6449913157577223|0.3075032520986105>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|3>|<point|2.348511608144202|0.3075048443957941>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|4>|<point|5.342030339128242|0.2775770710333033>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-3.501024677268475|2.5225909878829595>|<point|-3.501024677268475|1.0225909878829582>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-0.48894846585593915|2.561781411894845>|<point|-0.48894846585593915|1.061781411894845>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|2.495524431244153|2.5459183332822795>|<point|2.495524431244153|1.0459183332822821>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|5.5123046324007365|2.5369012998207285>|<point|5.5123046324007365|1.0369012998207283>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-2.5203512558408128|2.51236>|<point|-1.020351255840812|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|0.4725050759228232|2.48776>|<point|1.9725050759228244|2.48776>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|3.464129235987035|2.51236>|<point|4.964129235987034|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|7|3>|<point|6.0|2.0>>>>>>
-    <label|fig2.4>The sequence 1, 2, 3, 4 represented as a chain of pairs.
-  </big-figure>
+  <include|fig_2.4.tm>
 
   One of the useful structures we can build with pairs is a
   <em|sequence><index|sequence>\Van ordered collection of data objects. There
   are, of course, many ways to represent sequences in terms of pairs. One
-  particularly straightforward representation is illustrated in <hlink|Figure
-  2.4|#fig2.4>, where the sequence 1, 2, 3, 4 is represented as a chain of
-  pairs. The <code*|car> of each pair is the corresponding item in the chain,
-  and the <code*|cdr> of the pair is the next pair in the chain. The
-  <code*|cdr> of the final pair signals the end of the sequence by pointing
-  to a distinguished value that is not a pair, represented in box-and-pointer
-  diagrams as a diagonal line and in programs as the value of the variable
-  <code*|nil>. The entire sequence is constructed by nested <code*|cons>
-  operations:
+  particularly straightforward representation is illustrated in
+  <smart-ref|fig:2.4>, where the sequence 1, 2, 3, 4 is represented as a
+  chain of pairs. The <code*|car> of each pair is the corresponding item in
+  the chain, and the <code*|cdr> of the pair is the next pair in the chain.
+  The <code*|cdr> of the final pair signals the end of the sequence by
+  pointing to a distinguished value that is not a pair, represented in
+  box-and-pointer diagrams as a diagonal line and in programs as the value of
+  the variable <code*|nil>. The entire sequence is constructed by nested
+  <code*|cons> operations:
 
   <\scm-code>
     (cons 1
@@ -14215,7 +14211,7 @@
     <associate|auto-146|<tuple|closure property|69>>
     <associate|auto-147|<tuple|hierarchical|69>>
     <associate|auto-148|<tuple|2.2.1|69>>
-    <associate|auto-149|<tuple|2.4|69>>
+    <associate|auto-149|<tuple|2.4|69|fig_2.4.tm>>
     <associate|auto-15|<tuple|1.1.1|9>>
     <associate|auto-150|<tuple|sequence|69>>
     <associate|auto-151|<tuple|list|69>>
@@ -14313,11 +14309,11 @@
     <associate|auto-234|<tuple|coerce|137>>
     <associate|auto-235|<tuple|2.5.3|138>>
     <associate|auto-236|<tuple|indeterminates|138>>
-    <associate|auto-237|<tuple|univariate polynomials|139>>
+    <associate|auto-237|<tuple|univariate polynomials|138>>
     <associate|auto-238|<tuple|poly|139>>
-    <associate|auto-239|<tuple|dense|142>>
+    <associate|auto-239|<tuple|dense|141>>
     <associate|auto-24|<tuple|read-eval-print loop|11>>
-    <associate|auto-240|<tuple|sparse|142>>
+    <associate|auto-240|<tuple|sparse|141>>
     <associate|auto-241|<tuple|pseudodivision|145>>
     <associate|auto-242|<tuple|pseudoremainder|145>>
     <associate|auto-243|<tuple|2.61|147>>
@@ -14412,7 +14408,7 @@
     <associate|ex2.21|<tuple|2.21|75>>
     <associate|ex2.30|<tuple|2.30|79>>
     <associate|ex2.79|<tuple|2.79|133>>
-    <associate|ex2.83|<tuple|2.83|138>>
+    <associate|ex2.83|<tuple|2.83|137>>
     <associate|exercise:2.12|<tuple|2.12|67>>
     <associate|exercise:2.2|<tuple|2.2|63>>
     <associate|exercise:2.3|<tuple|2.3|64>>
@@ -14432,7 +14428,6 @@
     <associate|fig2.24|<tuple|2.24|132>>
     <associate|fig2.25|<tuple|2.25|135>>
     <associate|fig2.26|<tuple|2.26|137>>
-    <associate|fig2.4|<tuple|2.4|69>>
     <associate|fig2.5|<tuple|2.5|76>>
     <associate|fig2.6|<tuple|2.6|76>>
     <associate|fig2.7|<tuple|2.7|81>>
@@ -14444,6 +14439,7 @@
     <associate|fig:2.17|<tuple|2.17|109|fig_2.17.tm>>
     <associate|fig:2.2|<tuple|2.2|68|fig_2.2.tm>>
     <associate|fig:2.3|<tuple|2.3|68|fig_2.3.tm>>
+    <associate|fig:2.4|<tuple|2.4|69|fig_2.4.tm>>
     <associate|footnote-1.1|<tuple|1.1|8>>
     <associate|footnote-1.10|<tuple|1.10|12>>
     <associate|footnote-1.11|<tuple|1.11|13>>
@@ -14558,7 +14554,7 @@
     <associate|footnote-2.50|<tuple|2.50|135>>
     <associate|footnote-2.51|<tuple|2.51|136>>
     <associate|footnote-2.52|<tuple|2.52|138>>
-    <associate|footnote-2.53|<tuple|2.53|139>>
+    <associate|footnote-2.53|<tuple|2.53|138>>
     <associate|footnote-2.54|<tuple|2.54|139>>
     <associate|footnote-2.55|<tuple|2.55|140>>
     <associate|footnote-2.56|<tuple|2.56|141>>
@@ -14566,7 +14562,7 @@
     <associate|footnote-2.58|<tuple|2.58|142>>
     <associate|footnote-2.59|<tuple|2.59|144>>
     <associate|footnote-2.6|<tuple|2.6|69>>
-    <associate|footnote-2.60|<tuple|2.60|145>>
+    <associate|footnote-2.60|<tuple|2.60|144>>
     <associate|footnote-2.61|<tuple|2.61|146>>
     <associate|footnote-2.7|<tuple|2.7|69>>
     <associate|footnote-2.8|<tuple|2.8|70>>
@@ -14685,7 +14681,7 @@
     <associate|footnr-2.50|<tuple|2.50|135>>
     <associate|footnr-2.51|<tuple|2.51|136>>
     <associate|footnr-2.52|<tuple|2.52|138>>
-    <associate|footnr-2.53|<tuple|2.53|139>>
+    <associate|footnr-2.53|<tuple|2.53|138>>
     <associate|footnr-2.54|<tuple|2.54|139>>
     <associate|footnr-2.55|<tuple|2.55|140>>
     <associate|footnr-2.56|<tuple|2.56|141>>
@@ -14693,7 +14689,7 @@
     <associate|footnr-2.58|<tuple|2.58|142>>
     <associate|footnr-2.59|<tuple|2.59|144>>
     <associate|footnr-2.6|<tuple|2.6|69>>
-    <associate|footnr-2.60|<tuple|2.60|145>>
+    <associate|footnr-2.60|<tuple|2.60|144>>
     <associate|footnr-2.61|<tuple|2.61|146>>
     <associate|footnr-2.7|<tuple|list structure|69>>
     <associate|footnr-2.8|<tuple|2.8|70>>
@@ -14711,6 +14707,7 @@
     <associate|part:fig_2.17.tm|<tuple|red-black trees|109>>
     <associate|part:fig_2.2.tm|<tuple|pointer|68>>
     <associate|part:fig_2.3.tm|<tuple|2.2|68>>
+    <associate|part:fig_2.4.tm|<tuple|2.2.1|69>>
     <associate|sec:1.1.3|<tuple|1.1.3|12>>
   </collection>
 </references>
@@ -14767,7 +14764,7 @@
       </surround>|<pageref|auto-159>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%5E3FAD158-5C9903C28>|<link|hyperlink|<id|%5E3FAD158-5C9903C28>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%563BCB9F8-5592E7198>|<link|hyperlink|<id|%563BCB9F8-5592E7198>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-161>>
 
@@ -14795,14 +14792,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%5E3FAD158-5C9875C58>|<link|hyperlink|<id|%5E3FAD158-5C9875C58>|<url|#fig2.10>>|Figure
+        <locus|<id|%563BCB9F8-54845DE38>|<link|hyperlink|<id|%563BCB9F8-54845DE38>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-177>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%5E3FAD158-5C97F4628>|<link|hyperlink|<id|%5E3FAD158-5C97F4628>|<url|#fig2.10>>|Figure
+        <locus|<id|%563BCB9F8-5484CFE10>|<link|hyperlink|<id|%563BCB9F8-5484CFE10>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-178>>
 
@@ -14818,7 +14815,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%5E3FAD158-5C9844948>|<link|hyperlink|<id|%5E3FAD158-5C9844948>|<url|#fig2.9>>|Figure
+        <locus|<id|%563BCB9F8-5484D2308>|<link|hyperlink|<id|%563BCB9F8-5484D2308>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-180>>
 
@@ -15210,6 +15207,8 @@
       <tuple|fig_2.2.tm|chapter-nr|2|section-nr|2|subsection-nr|0>
 
       <tuple|fig_2.3.tm|chapter-nr|2|section-nr|2|subsection-nr|0>
+
+      <tuple|fig_2.4.tm|chapter-nr|2|section-nr|2|subsection-nr|1>
 
       <tuple|fig_2.13.tm|chapter-nr|2|section-nr|2|subsection-nr|4>
 
