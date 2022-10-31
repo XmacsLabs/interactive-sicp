@@ -361,11 +361,11 @@
   <code*|add-rat> and <code*|mul-rat>) that implement the actual operations.
 
   <\exercise>
-    Define a better version of <code*|make-rat> that handles both positive
-    and negative arguments. <code*|Make-rat> should normalize the sign so
-    that if the rational number is positive, both the numerator and
-    denominator are positive, and if the rational number is negative, only
-    the numerator is negative.
+    Define a better version of <scm|make-rat> that handles both positive and
+    negative arguments. <code*|Make-rat> should normalize the sign so that if
+    the rational number is positive, both the numerator and denominator are
+    positive, and if the rational number is negative, only the numerator is
+    negative.
   </exercise>
 
   <subsection|Abstraction Barriers>
@@ -450,9 +450,9 @@
   losing the ability to make progress on the rest of the system.
 
   <\exercise>
-    <label|ex2.2>Consider the problem of representing line segments in a
-    plane. Each segment is represented as a pair of points: a starting point
-    and an ending point. Define a constructor <code*|make-segment> and
+    <label|exercise:2.2>Consider the problem of representing line segments in
+    a plane. Each segment is represented as a pair of points: a starting
+    point and an ending point. Define a constructor <code*|make-segment> and
     selectors <code*|start-segment> and <code*|end-segment> that define the
     representation of segments in terms of points. Furthermore, a point can
     be represented as a pair of numbers: the <math|x> coordinate and the
@@ -482,8 +482,8 @@
   </exercise>
 
   <\exercise>
-    <label|ex2.3>Implement a representation for rectangles in a plane. (Hint:
-    You may want to make use of <hlink|Exercise 2.2|#ex2.2>.) In terms of
+    <label|exercise:2.3>Implement a representation for rectangles in a plane.
+    (Hint: You may want to make use of <smart-ref|exercise:2.2>.) In terms of
     your constructors and selectors, create procedures that compute the
     perimeter and the area of a given rectangle. Now implement a different
     representation for rectangles. Can you design your system with suitable
@@ -880,7 +880,7 @@
     <math|A<around*|/|B|\<nobracket\>>>. You will get the most insight by
     using intervals whose width is a small percentage of the center value.
     Examine the results of the computation in center-percent form (see
-    <smart-ref|exercise:2.12><hlink||#ex2.12>).
+    <smart-ref|exercise:2.12>).
   </exercise>
 
   <\exercise>
@@ -917,7 +917,7 @@
 
   We have already seen that <code*|cons> can be used to combine not only
   numbers but pairs as well. (You made use of this fact, or should have, in
-  doing <hlink|Exercise 2.2|#ex2.2> and <hlink|Exercise 2.3|#ex2.3>.) As a
+  doing <smart-ref|exercise:2.2> and <smart-ref|exercise:2.3>.) As a
   consequence, pairs provide a universal building block from which we can
   construct all sorts of data structures. <smart-ref|fig:2.3> shows two ways
   to use pairs to combine the numbers 1, 2, 3, and 4.
@@ -8707,14 +8707,15 @@
     <associate|auto-97|<tuple|variable-length|113>>
     <associate|auto-98|<tuple|separator code|113>>
     <associate|auto-99|<tuple|prefix|113>>
-    <associate|ex2.12|<tuple|2.12|67>>
     <associate|ex2.2|<tuple|2.2|63>>
     <associate|ex2.21|<tuple|2.21|75>>
     <associate|ex2.3|<tuple|2.3|64>>
     <associate|ex2.30|<tuple|2.30|79>>
     <associate|ex2.79|<tuple|2.79|134>>
     <associate|ex2.83|<tuple|2.83|138>>
-    <associate|exercise:2.12|<tuple|2.12|?>>
+    <associate|exercise:2.12|<tuple|2.12|67>>
+    <associate|exercise:2.2|<tuple|2.2|?>>
+    <associate|exercise:2.3|<tuple|2.3|?>>
     <associate|fig2.10|<tuple|2.10|90>>
     <associate|fig2.11|<tuple|2.11|91>>
     <associate|fig2.12|<tuple|2.12|91>>
@@ -8902,7 +8903,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%6195F9BC8-615157498>|<link|hyperlink|<id|%6195F9BC8-615157498>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%7311A9148-73294E978>|<link|hyperlink|<id|%7311A9148-73294E978>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -8930,14 +8931,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%6195F9BC8-61814AD48>|<link|hyperlink|<id|%6195F9BC8-61814AD48>|<url|#fig2.10>>|Figure
+        <locus|<id|%7311A9148-7326BF1E0>|<link|hyperlink|<id|%7311A9148-7326BF1E0>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%6195F9BC8-61814C8E8>|<link|hyperlink|<id|%6195F9BC8-61814C8E8>|<url|#fig2.10>>|Figure
+        <locus|<id|%7311A9148-7326C0910>|<link|hyperlink|<id|%7311A9148-7326C0910>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -8953,7 +8954,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%6195F9BC8-6181513D8>|<link|hyperlink|<id|%6195F9BC8-6181513D8>|<url|#fig2.9>>|Figure
+        <locus|<id|%7311A9148-7326C5740>|<link|hyperlink|<id|%7311A9148-7326C5740>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 
