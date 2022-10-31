@@ -728,21 +728,20 @@
 
   requires that the evaluation rule be applied to four different
   combinations. We can obtain a picture of this process by representing the
-  combination in the form of a tree, as shown in <hlink|Figure
-  1.1|#Figure1.1>. Each combination is represented by a node with branches
-  corresponding to the operator and the operands of the combination stemming
-  from it. The terminal nodes (that is, nodes with no branches stemming from
-  them) represent either operators or numbers. Viewing evaluation in terms of
-  the tree, we can imagine that the values of the operands percolate upward,
-  starting from the terminal nodes and then combining at higher and higher
-  levels. In general, we shall see that recursion is a very powerful
-  technique for dealing with hierarchical, treelike objects. In fact, the
-  \Ppercolate values upward\Q form of the evaluation rule is an example of a
-  general kind of process known as <em|tree accumulation><index|tree
-  accumulation>.
+  combination in the form of a tree, as shown in <smart-ref|fig:1.1>. Each
+  combination is represented by a node with branches corresponding to the
+  operator and the operands of the combination stemming from it. The terminal
+  nodes (that is, nodes with no branches stemming from them) represent either
+  operators or numbers. Viewing evaluation in terms of the tree, we can
+  imagine that the values of the operands percolate upward, starting from the
+  terminal nodes and then combining at higher and higher levels. In general,
+  we shall see that recursion is a very powerful technique for dealing with
+  hierarchical, treelike objects. In fact, the \Ppercolate values upward\Q
+  form of the evaluation rule is an example of a general kind of process
+  known as <em|tree accumulation><index|tree accumulation>.
 
   <\big-figure|<tree|390|*|<tree|26|+|2|<tree|24|*|4|6>>|<tree|15|+|3|5|7>>>
-    <label|Figure1.1>Tree representation, showing the value of each
+    <label|fig:1.1>Tree representation, showing the value of each
     subcombination.
   </big-figure>
 
@@ -1529,7 +1528,7 @@
     whether to evaluate the consequent or the alternative expression.)
   </exercise>
 
-  <subsection|Example: Square Roots by Newton's Method><label|1.1.7>
+  <subsection|Example: Square Roots by Newton's Method><label|sec:1.1.7>
 
   Procedures, as introduced above, are much like ordinary mathematical
   functions. They specify a value that is determined by one or more
@@ -1859,11 +1858,11 @@
   a number of subproblems: how to tell whether a guess is good enough, how to
   improve a guess, and so on. Each of these tasks is accomplished by a
   separate procedure. The entire <code*|sqrt> program can be viewed as a
-  cluster of procedures (shown in <hlink|Figure 1.2|#fig1.2>) that mirrors
-  the decomposition of the problem into subproblems.
+  cluster of procedures (shown in <smart-ref|fig:1.2>) that mirrors the
+  decomposition of the problem into subproblems.
 
   <\big-figure|<tree|sqrt|<tree|sqrt-iter|<tree|good-enough|square|abs>|<tree|improve|average>>>>
-    <label|fig1.2>Procedural decomposition of the <scm|sqrt> program
+    <label|fig:1.2>Procedural decomposition of the <scm|sqrt> program
   </big-figure>
 
   The importance of this decomposition strategy is not simply that one is
@@ -2173,7 +2172,7 @@
   </scm-code>
 
   We can use the substitution model of <hlink|1.1.5|#1.1.5> to watch this
-  procedure in action computing 6!, as shown in <hlink|Figure 1.3|#fig1.3>.
+  procedure in action computing 6!, as shown in <smart-ref|fig:1.3>.
 
   <\big-figure>
     <\scm-code>
@@ -2202,7 +2201,7 @@
       720
     </scm-code>
   <|big-figure>
-    <label|fig1.3>A linear recursive process for computing 6!.
+    <label|fig:1.3>A linear recursive process for computing 6!.
   </big-figure>
 
   Now let's take a different perspective on computing factorials. We could
@@ -2268,7 +2267,7 @@
   </scm-code>
 
   As before, we can use the substitution model to visualize the process of
-  computing 6!, as shown in <hlink|Figure 1.4|#fig1.4>.
+  computing 6!, as shown in <smart-ref|fig:1.4>.
 
   <\big-figure>
     <\scm-code>
@@ -2291,7 +2290,7 @@
       720
     </scm-code>
   <|big-figure>
-    <label|fig1.4>A linear iterative process for computing 6!.
+    <label|fig:1.4>A linear iterative process for computing 6!.
   </big-figure>
 
   Compare the two processes. From one point of view, they seem hardly
@@ -2303,18 +2302,19 @@
   that they evolve quite differently.
 
   Consider the first process. The substitution model reveals a shape of
-  expansion followed by contraction, indicated by the arrow in <hlink|Figure
-  1.3|#fig1.3>. The expansion occurs as the process builds up a chain of
-  <em|deferred operations><index|deferred operations> (in this case, a chain
-  of multiplications). The contraction occurs as the operations are actually
-  performed. This type of process, characterized by a chain of deferred
-  operations, is called a <em|recursive process><index|recursive process>.
-  Carrying out this process requires that the interpreter keep track of the
-  operations to be performed later on. In the computation of <math|n>!, the
-  length of the chain of deferred multiplications, and hence the amount of
-  information needed to keep track of it, grows linearly with <math|n> (is
-  proportional to <math|n>), just like the number of steps. Such a process is
-  called a <em|linear recursive process><index|linear recursive process>.
+  expansion followed by contraction, indicated by the arrow in
+  <smart-ref|fig:1.3>. The expansion occurs as the process builds up a chain
+  of <index|deferred operations><em|deferred operations> (in this case, a
+  chain of multiplications). The contraction occurs as the operations are
+  actually performed. This type of process, characterized by a chain of
+  deferred operations, is called a <em|recursive process><index|recursive
+  process>. Carrying out this process requires that the interpreter keep
+  track of the operations to be performed later on. In the computation of
+  <math|n>!, the length of the chain of deferred multiplications, and hence
+  the amount of information needed to keep track of it, grows linearly with
+  <math|n> (is proportional to <math|n>), just like the number of steps. Such
+  a process is called a <em|linear recursive process><index|linear recursive
+  process>.
 
   By contrast, the second process does not grow and shrink. At each step, all
   we need to keep track of, for any <math|n>, are the current values of the
@@ -2468,7 +2468,7 @@
     <math|5*n<rsup|2>>.
   </exercise>
 
-  <subsection|Tree Recursion><label|1.2.2>
+  <subsection|Tree Recursion><label|sec:1.2.2>
 
   Another common pattern of computation is called <em|tree
   recursion><index|tree recursion>. As an example, consider computing the
@@ -2509,26 +2509,26 @@
   <\big-figure|<tree|fib 5|<tree|fib 4|<tree|fib 3|<tree|fib 2|<tree|fib
   1|1>|<tree|fib 0|0>>>|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>>|<tree|fib
   3|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>>>>
-    <label|fig1.5>The tree-recursive process generated in computing
-    <code*|(fib 5)>.
+    <label|fig:1.5>The tree-recursive process generated in computing
+    <scm|(fib 5)>.
   </big-figure>
 
   Consider the pattern of this computation. To compute <code*|(fib 5)>, we
   compute <code*|(fib 4)> and <code*|(fib 3)>. To compute <code*|(fib 4)>, we
   compute <code*|(fib 3)> and <code*|(fib 2)>. In general, the evolved
-  process looks like a tree, as shown in <hlink|Figure 1.5|#fig1.5>. Notice
-  that the branches split into two at each level (except at the bottom); this
-  reflects the fact that the <code*|fib> procedure calls itself twice each
-  time it is invoked.
+  process looks like a tree, as shown in <smart-ref|fig:1.5>. Notice that the
+  branches split into two at each level (except at the bottom); this reflects
+  the fact that the <code*|fib> procedure calls itself twice each time it is
+  invoked.
 
   This procedure is instructive as a prototypical tree recursion, but it is a
   terrible way to compute Fibonacci numbers because it does so much redundant
-  computation. Notice in <hlink|Figure 1.5|#fig1.5> that the entire
-  computation of <code*|(fib 3)>\Valmost half the work\Vis duplicated. In
-  fact, it is not hard to show that the number of times the procedure will
-  compute <code*|(fib 1)> or <code*|(fib 0)> (the number of leaves in the
-  above tree, in general) is precisely <math|<with|mode|text|Fib><around*|(|n+1|)>>.
-  To get an idea of how bad this is, one can show that the value of
+  computation. Notice in <smart-ref|fig:1.5> that the entire computation of
+  <code*|(fib 3)>\Valmost half the work\Vis duplicated. In fact, it is not
+  hard to show that the number of times the procedure will compute
+  <code*|(fib 1)> or <code*|(fib 0)> (the number of leaves in the above tree,
+  in general) is precisely <math|<with|mode|text|Fib><around*|(|n+1|)>>. To
+  get an idea of how bad this is, one can show that the value of
   <math|<with|mode|text|Fib><around*|(|n|)>> grows exponentially with
   <math|n>. More precisely (see <hlink|Exercise 1.13|#Exercise-1_002e13>),
   <math|<with|mode|text|Fib><around*|(|n|)>> is the closest integer to
@@ -2781,7 +2781,7 @@
     where <math|\<varphi\>=<around*|(|1+<sqrt|5>|)><around*|/|2|\<nobracket\>>>.
     Hint: Let <math|\<psi\>=<around*|(|1-<sqrt|5>|)><around*|/|2|\<nobracket\>>>.
     Use induction and the definition of the Fibonacci numbers (see
-    <hlink|1.2.2|#1.2.2>) to prove that <math|<with|mode|text|Fib><around*|(|n|)>=<around*|(|\<varphi\><rsup|n>-\<psi\><rsup|n>|)><around*|/|<sqrt|5>|\<nobracket\>>>.
+    <smart-ref|sec:1.2.2>) to prove that <math|<with|mode|text|Fib><around*|(|n|)>=<around*|(|\<varphi\><rsup|n>-\<psi\><rsup|n>|)><around*|/|<sqrt|5>|\<nobracket\>>>.
   </exercise>
 
   <subsection|Orders of Growth>
@@ -2854,7 +2854,7 @@
 
   <\exercise>
     Draw the tree illustrating the process generated by the
-    <code*|count-change> procedure of <hlink|1.2.2|#1.2.2> in making change
+    <code*|count-change> procedure of <smart-ref|sec:1.2.2> in making change
     for 11 cents. What are the orders of growth of the space and number of
     steps used by this process as the amount to be changed increases?
   </exercise>
@@ -6896,8 +6896,8 @@
 
   as a list of three items, the first of which is itself a list, <code*|(1
   2)>. Indeed, this is suggested by the form in which the result is printed
-  by the interpreter. <hlink|Figure 2.5|#fig2.5> shows the representation of
-  this structure in terms of pairs.
+  by the interpreter. <smart-ref|fig:2.5> shows the representation of this
+  structure in terms of pairs.
 
   <\big-figure|<include|fig_2.5.tm>>
     <label|fig:2.5>Structure formed by <code*|(cons (list 1 2) (list 3 4))>.
@@ -9039,18 +9039,19 @@
   Stratified design helps make programs <em|robust><index|robust>, that is,
   it makes it likely that small changes in a specification will require
   correspondingly small changes in the program. For instance, suppose we
-  wanted to change the image based on <code*|wave> shown in <hlink|Figure
-  2.9|#fig2.9>. We could work at the lowest level to change the detailed
-  appearance of the <code*|wave> element; we could work at the middle level
-  to change the way <code*|corner-split> replicates the <code*|wave>; we
-  could work at the highest level to change how <code*|square-limit> arranges
-  the four copies of the corner. In general, each level of a stratified
-  design provides a different vocabulary for expressing the characteristics
-  of the system, and a different kind of ability to change it.
+  wanted to change the image based on <code*|wave> shown in
+  <smart-ref|fig:2.9>. We could work at the lowest level to change the
+  detailed appearance of the <code*|wave> element; we could work at the
+  middle level to change the way <code*|corner-split> replicates the
+  <code*|wave>; we could work at the highest level to change how
+  <code*|square-limit> arranges the four copies of the corner. In general,
+  each level of a stratified design provides a different vocabulary for
+  expressing the characteristics of the system, and a different kind of
+  ability to change it.
 
   <\exercise>
-    Make changes to the square limit of <code*|wave> shown in <hlink|Figure
-    2.9|#Figure-2_002e9> by working at each of the levels described above. In
+    Make changes to the square limit of <code*|wave> shown in
+    <smart-ref|fig:2.9> by working at each of the levels described above. In
     particular:
 
     <\enumerate>
@@ -14067,7 +14068,7 @@
 <\initial>
   <\collection>
     <associate|global-title|sicp.tm>
-    <associate|info-flag|short>
+    <associate|info-flag|detailed>
     <associate|page-medium|paper>
     <associate|par-first|0tab>
     <associate|par-par-sep|1fn>
@@ -14109,10 +14110,8 @@
     <associate|%_idx_94|<tuple|1.2|8>>
     <associate|1.1|<tuple|1.1|9>>
     <associate|1.1.4|<tuple|1.1.4|13>>
-    <associate|1.1.7|<tuple|1.1.7|20>>
     <associate|1.1.8|<tuple|1.1.8|23>>
     <associate|1.2.1|<tuple|1.2.1|27>>
-    <associate|1.2.2|<tuple|1.2.2|30>>
     <associate|1.2.4|<tuple|1.2.4|35>>
     <associate|1.3|<tuple|1.3|42>>
     <associate|1.3.1|<tuple|1.3.1|43>>
@@ -14120,7 +14119,6 @@
     <associate|2.2.2|<tuple|2.2.2|75>>
     <associate|2.2.3|<tuple|2.2.3|79>>
     <associate|DOCF58|<tuple|1.57|52>>
-    <associate|Figure1.1|<tuple|1.1|13>>
     <associate|auto-1|<tuple|1|7>>
     <associate|auto-10|<tuple|interpreter|8>>
     <associate|auto-100|<tuple|1.3|42>>
@@ -14377,12 +14375,13 @@
     <associate|exercise:2.12|<tuple|2.12|67>>
     <associate|exercise:2.2|<tuple|2.2|63>>
     <associate|exercise:2.3|<tuple|2.3|64>>
-    <associate|fig1.2|<tuple|1.2|23>>
-    <associate|fig1.3|<tuple|1.3|27>>
-    <associate|fig1.4|<tuple|1.4|28>>
-    <associate|fig1.5|<tuple|1.5|31>>
     <associate|fig2.23|<tuple|2.23|130>>
     <associate|fig2.25|<tuple|2.25|136>>
+    <associate|fig:1.1|<tuple|1.1|13>>
+    <associate|fig:1.2|<tuple|1.2|23>>
+    <associate|fig:1.3|<tuple|1.3|27>>
+    <associate|fig:1.4|<tuple|1.4|28>>
+    <associate|fig:1.5|<tuple|1.5|31>>
     <associate|fig:2.1|<tuple|2.1|63>>
     <associate|fig:2.10|<tuple|2.10|90>>
     <associate|fig:2.11|<tuple|2.11|91>>
@@ -14669,7 +14668,7 @@
     <associate|index-stack|<tuple|1.30|29>>
     <associate|part:fig_2.1.tm|<tuple|2.1|63>>
     <associate|part:fig_2.13.tm|<tuple|2.13|92>>
-    <associate|part:fig_2.15.tm|<tuple|2.15|?>>
+    <associate|part:fig_2.15.tm|<tuple|2.15|95>>
     <associate|part:fig_2.17.tm|<tuple|2.17|110>>
     <associate|part:fig_2.19.tm|<tuple|2.19|119>>
     <associate|part:fig_2.2.tm|<tuple|2.2|68>>
@@ -14683,6 +14682,8 @@
     <associate|part:fig_2.7.tm|<tuple|2.7|81>>
     <associate|part:fig_2.8.tm|<tuple|2.8|88>>
     <associate|sec:1.1.3|<tuple|1.1.3|12>>
+    <associate|sec:1.1.7|<tuple|1.1.7|20>>
+    <associate|sec:1.2.2|<tuple|1.2.2|30>>
     <associate|sec:2.2.1|<tuple|2.2.1|69>>
     <associate|sec:2.3.2|<tuple|2.3.2|102>>
     <associate|sec:2.4.2|<tuple|2.4.2|122>>
@@ -14714,7 +14715,8 @@
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|1.5>|>
         The tree-recursive process generated in computing
-        <with|font-family|<quote|tt>|(fib 5)>.
+        <with|mode|<quote|prog>|prog-language|<quote|scheme>|font-family|<quote|rm>|(fib
+        5)>.
       </surround>|<pageref|auto-80>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.1>|>
@@ -15192,6 +15194,8 @@
       <tuple|fig_2.8.tm|chapter-nr|2|section-nr|2|subsection-nr|3>
 
       <tuple|fig_2.13.tm|chapter-nr|2|section-nr|2|subsection-nr|4>
+
+      <tuple|fig_2.15.tm|chapter-nr|2|section-nr|2|subsection-nr|4>
 
       <tuple|fig_2.17.tm|chapter-nr|2|section-nr|3|subsection-nr|3>
 
