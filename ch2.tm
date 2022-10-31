@@ -827,11 +827,11 @@
   </exercise>
 
   <\exercise>
-    <label|ex2.12>Define a constructor <code*|make-center-percent> that takes
-    a center and a percentage tolerance and produces the desired interval.
-    You must also define a selector <code*|percent> that produces the
-    percentage tolerance for a given interval. The <code*|center> selector is
-    the same as the one shown above.
+    <label|exercise:2.12>Define a constructor <code*|make-center-percent>
+    that takes a center and a percentage tolerance and produces the desired
+    interval. You must also define a selector <code*|percent> that produces
+    the percentage tolerance for a given interval. The <code*|center>
+    selector is the same as the one shown above.
   </exercise>
 
   <\exercise>
@@ -880,7 +880,7 @@
     <math|A<around*|/|B|\<nobracket\>>>. You will get the most insight by
     using intervals whose width is a small percentage of the center value.
     Examine the results of the computation in center-percent form (see
-    <hlink|Exercise 2.12|#ex2.12>).
+    <smart-ref|exercise:2.12><hlink||#ex2.12>).
   </exercise>
 
   <\exercise>
@@ -8714,6 +8714,7 @@
     <associate|ex2.30|<tuple|2.30|79>>
     <associate|ex2.79|<tuple|2.79|134>>
     <associate|ex2.83|<tuple|2.83|138>>
+    <associate|exercise:2.12|<tuple|2.12|?>>
     <associate|fig2.10|<tuple|2.10|90>>
     <associate|fig2.11|<tuple|2.11|91>>
     <associate|fig2.12|<tuple|2.12|91>>
@@ -8901,7 +8902,7 @@
       </surround>|<pageref|auto-44>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.6>|>
-        The list structure in <locus|<id|%7A75EEC98-7A8BA9108>|<link|hyperlink|<id|%7A75EEC98-7A8BA9108>|<url|#fig2.5>>|Figure
+        The list structure in <locus|<id|%6195F9BC8-615157498>|<link|hyperlink|<id|%6195F9BC8-615157498>|<url|#fig2.5>>|Figure
         2.5> viewed as a tree.
       </surround>|<pageref|auto-46>>
 
@@ -8929,14 +8930,14 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.11>|>
         Images of William Barton Rogers, founder and first president of
         <rigid|MIT>, painted with respect to the same four frames as in
-        <locus|<id|%7A75EEC98-7A89192D0>|<link|hyperlink|<id|%7A75EEC98-7A89192D0>|<url|#fig2.10>>|Figure
+        <locus|<id|%6195F9BC8-61814AD48>|<link|hyperlink|<id|%6195F9BC8-61814AD48>|<url|#fig2.10>>|Figure
         2.10> (original image from Wikimedia Commons).
       </surround>|<pageref|auto-66>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.12>|>
         Creating a complex figure, starting from the
         <with|font-family|<quote|tt>|wave> painter of
-        <locus|<id|%7A75EEC98-7A891B208>|<link|hyperlink|<id|%7A75EEC98-7A891B208>|<url|#fig2.10>>|Figure
+        <locus|<id|%6195F9BC8-61814C8E8>|<link|hyperlink|<id|%6195F9BC8-61814C8E8>|<url|#fig2.10>>|Figure
         2.10>.
       </surround>|<pageref|auto-67>>
 
@@ -8952,7 +8953,7 @@
         <with|font-family|<quote|tt>|rogers>. Combining four
         <with|font-family|<quote|tt>|corner-split> figures produces symmetric
         <with|font-family|<quote|tt>|square-limit> designs as shown in
-        <locus|<id|%7A75EEC98-7A891F908>|<link|hyperlink|<id|%7A75EEC98-7A891F908>|<url|#fig2.9>>|Figure
+        <locus|<id|%6195F9BC8-6181513D8>|<link|hyperlink|<id|%6195F9BC8-6181513D8>|<url|#fig2.9>>|Figure
         2.9>.
       </surround>|<pageref|auto-69>>
 

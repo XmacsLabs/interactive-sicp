@@ -2,11 +2,9 @@
 
 <project|sicp.tm>
 
-<style|<tuple|book|british|comment|smart-ref|preview-ref>>
+<style|<tuple|book|british|smart-ref|preview-ref>>
 
 <\body>
-  \;
-
   <chapter|Building Abstractions with Procedures>
 
   We are about to study the idea of a <em|computational
@@ -5055,6 +5053,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|0>
+    <associate|info-flag|detailed>
     <associate|page-first|7>
     <associate|page-medium|paper>
     <associate|par-first|0tab>
@@ -5066,323 +5065,323 @@
 
 <\references>
   <\collection>
-    <associate|#1.2.6|<tuple|1.2.6|40>>
-    <associate|%_idx_102|<tuple|1.3|10>>
-    <associate|%_idx_104|<tuple|1.3|10>>
-    <associate|%_idx_106|<tuple|1.3|10>>
-    <associate|%_idx_36|<tuple|1.1|10>>
-    <associate|%_idx_46|<tuple|1.2|10>>
-    <associate|%_idx_48|<tuple|1.2|10>>
-    <associate|%_idx_50|<tuple|1.2|10>>
-    <associate|%_idx_52|<tuple|1.2|10>>
-    <associate|%_idx_54|<tuple|1.2|10>>
-    <associate|%_idx_56|<tuple|1.2|10>>
-    <associate|%_idx_58|<tuple|1.2|10>>
-    <associate|%_idx_60|<tuple|1.2|10>>
-    <associate|%_idx_62|<tuple|1.2|10>>
-    <associate|%_idx_64|<tuple|1.2|10>>
-    <associate|%_idx_66|<tuple|1.2|10>>
-    <associate|%_idx_68|<tuple|1.2|10>>
-    <associate|%_idx_70|<tuple|1.2|10>>
-    <associate|%_idx_72|<tuple|1.2|10>>
-    <associate|%_idx_74|<tuple|1.2|10>>
-    <associate|%_idx_76|<tuple|1.2|10>>
-    <associate|%_idx_78|<tuple|1.2|10>>
-    <associate|%_idx_80|<tuple|1.2|10>>
-    <associate|%_idx_82|<tuple|1.2|10>>
-    <associate|%_idx_84|<tuple|1.2|10>>
-    <associate|%_idx_86|<tuple|1.2|10>>
-    <associate|%_idx_88|<tuple|1.2|10>>
-    <associate|%_idx_90|<tuple|1.2|10>>
-    <associate|%_idx_92|<tuple|1.2|10>>
-    <associate|%_idx_94|<tuple|1.2|10>>
-    <associate|1.1|<tuple|1.1|11>>
-    <associate|1.1.4|<tuple|1.1.4|15>>
-    <associate|1.1.7|<tuple|1.1.7|22>>
-    <associate|1.1.8|<tuple|1.1.8|25>>
-    <associate|1.2.1|<tuple|1.2.1|29>>
-    <associate|1.2.2|<tuple|1.2.2|32>>
-    <associate|1.2.4|<tuple|1.2.4|37>>
-    <associate|1.3|<tuple|1.3|44>>
-    <associate|1.3.1|<tuple|1.3.1|45>>
-    <associate|1.3.3|<tuple|1.3.3|52>>
-    <associate|DOCF58|<tuple|1.57|54>>
-    <associate|Figure1.1|<tuple|1.1|15>>
-    <associate|auto-1|<tuple|1|9>>
-    <associate|auto-10|<tuple|recusion equations|9>>
-    <associate|auto-100|<tuple|congruent modulo|41>>
-    <associate|auto-101|<tuple|remainder of|41>>
-    <associate|auto-102|<tuple|modulo|41>>
-    <associate|auto-103|<tuple|1.46|42>>
-    <associate|auto-104|<tuple|Carmichael numbers|42>>
-    <associate|auto-105|<tuple|probabilistic algorithms|43>>
-    <associate|auto-106|<tuple|RSA algorithm|43>>
-    <associate|auto-107|<tuple|Miller-Rabin test|44>>
-    <associate|auto-108|<tuple|1.3|44>>
-    <associate|auto-109|<tuple|higher-order procedures|45>>
-    <associate|auto-11|<tuple|interpreter|10>>
-    <associate|auto-110|<tuple|1.3.1|45>>
-    <associate|auto-111|<tuple|summation of a series|46>>
-    <associate|auto-112|<tuple|sequences|48>>
-    <associate|auto-113|<tuple|filter|48>>
-    <associate|auto-114|<tuple|1.3.2|48>>
-    <associate|auto-115|<tuple|1.53|49>>
-    <associate|auto-116|<tuple|1.3.3|52>>
-    <associate|auto-117|<tuple|1.3.3|52>>
-    <associate|auto-118|<tuple|half interval method|52>>
-    <associate|auto-119|<tuple|1.56|53>>
-    <associate|auto-12|<tuple|procedures|10>>
-    <associate|auto-120|<tuple|fixed point|53>>
-    <associate|auto-121|<tuple|average damping|54>>
-    <associate|auto-122|<tuple|continued fraction|55>>
-    <associate|auto-123|<tuple|k-term finite continued fraction|55>>
-    <associate|auto-124|<tuple|1.3.4|55>>
-    <associate|auto-125|<tuple|1.60|56>>
-    <associate|auto-126|<tuple|Newton's method|56>>
-    <associate|auto-127|<tuple|1.63|57>>
-    <associate|auto-128|<tuple|first-class|58>>
-    <associate|auto-129|<tuple|composition|59>>
-    <associate|auto-13|<tuple|1.1|11>>
-    <associate|auto-130|<tuple|smoothing|59>>
-    <associate|auto-131|<tuple|n-fold smoothed function|59>>
-    <associate|auto-132|<tuple|iterative improvement|59>>
-    <associate|auto-14|<tuple|integers|11>>
-    <associate|auto-15|<tuple|real numbers|11>>
-    <associate|auto-16|<tuple|1.1.1|11>>
-    <associate|auto-17|<tuple|expression|11>>
-    <associate|auto-18|<tuple|evaluating|11>>
-    <associate|auto-19|<tuple|combinations|12>>
-    <associate|auto-2|<tuple|computational process|9>>
-    <associate|auto-20|<tuple|operator|12>>
-    <associate|auto-21|<tuple|operands|12>>
-    <associate|auto-22|<tuple|arguments|12>>
-    <associate|auto-23|<tuple|prefix notation|12>>
-    <associate|auto-24|<tuple|pretty-printing|13>>
-    <associate|auto-25|<tuple|read-eval-print loop|13>>
-    <associate|auto-26|<tuple|1.1.2|13>>
-    <associate|auto-27|<tuple|variable|13>>
-    <associate|auto-28|<tuple|value|13>>
-    <associate|auto-29|<tuple|environment|14>>
-    <associate|auto-3|<tuple|data|9>>
-    <associate|auto-30|<tuple|global environment|14>>
-    <associate|auto-31|<tuple|1.1.3|14>>
-    <associate|auto-32|<tuple|recursive|14>>
-    <associate|auto-33|<tuple|tree accumulation|14>>
-    <associate|auto-34|<tuple|1.1|15>>
-    <associate|auto-35|<tuple|special forms|15>>
-    <associate|auto-36|<tuple|syntactic sugar|15>>
-    <associate|auto-37|<tuple|1.1.4|15>>
-    <associate|auto-38|<tuple|procedure definitions|16>>
-    <associate|auto-39|<tuple|compound procedure|16>>
-    <associate|auto-4|<tuple|program|9>>
-    <associate|auto-40|<tuple|1.1.5|17>>
-    <associate|auto-41|<tuple|substitution model|18>>
-    <associate|auto-42|<tuple|substitution|18>>
-    <associate|auto-43|<tuple|substitution|18>>
-    <associate|auto-44|<tuple|normal order evaluation|19>>
-    <associate|auto-45|<tuple|application-order evaluation|19>>
-    <associate|auto-46|<tuple|stream processing|19>>
-    <associate|auto-47|<tuple|1.1.6|19>>
-    <associate|auto-48|<tuple|case analysis|19>>
-    <associate|auto-49|<tuple|clauses|20>>
-    <associate|auto-5|<tuple|programming languages|9>>
-    <associate|auto-50|<tuple|predicate|20>>
-    <associate|auto-51|<tuple|consequent expression|20>>
-    <associate|auto-52|<tuple|predicate|20>>
-    <associate|auto-53|<tuple|1.1.7|22>>
-    <associate|auto-54|<tuple|1.1.8|25>>
-    <associate|auto-55|<tuple|recursive|25>>
-    <associate|auto-56|<tuple|1.2|25>>
-    <associate|auto-57|<tuple|procedural abstraction|26>>
-    <associate|auto-58|<tuple|1.25|26>>
-    <associate|auto-59|<tuple|bound variable|27>>
-    <associate|auto-6|<tuple|bugs|9>>
-    <associate|auto-60|<tuple|binds|27>>
-    <associate|auto-61|<tuple|free|27>>
-    <associate|auto-62|<tuple|scope|27>>
-    <associate|auto-63|<tuple|capturing|27>>
-    <associate|auto-64|<tuple|capturing|27>>
-    <associate|auto-65|<tuple|block structure|28>>
-    <associate|auto-66|<tuple|lexical scoping|28>>
-    <associate|auto-67|<tuple|1.2|28>>
-    <associate|auto-68|<tuple|local evolution|29>>
-    <associate|auto-69|<tuple|global|29>>
-    <associate|auto-7|<tuple|glitches|9>>
-    <associate|auto-70|<tuple|1.2.1|29>>
-    <associate|auto-71|<tuple|1.3|29>>
-    <associate|auto-72|<tuple|1.4|30>>
-    <associate|auto-73|<tuple|deferred operations|31>>
-    <associate|auto-74|<tuple|recursive process|31>>
-    <associate|auto-75|<tuple|linear recursive process|31>>
-    <associate|auto-76|<tuple|iterative process|31>>
-    <associate|auto-77|<tuple|state variables|31>>
-    <associate|auto-78|<tuple|linear iterative process|31>>
-    <associate|auto-79|<tuple|process|31>>
-    <associate|auto-8|<tuple|debug|9>>
-    <associate|auto-80|<tuple|procedure|31>>
-    <associate|auto-81|<tuple|tail-recursive|31>>
-    <associate|auto-82|<tuple|1.2.2|32>>
-    <associate|auto-83|<tuple|tree recursion|32>>
-    <associate|auto-84|<tuple|1.5|33>>
-    <associate|auto-85|<tuple|golden ratio|33>>
-    <associate|auto-86|<tuple|1.32|34>>
-    <associate|auto-87|<tuple|tabulation|35>>
-    <associate|auto-88|<tuple|memoization|35>>
-    <associate|auto-89|<tuple|Pascal's triangle|35>>
-    <associate|auto-9|<tuple|1|9>>
-    <associate|auto-90|<tuple|binomial coefficients|35>>
-    <associate|auto-91|<tuple|1.2.3|36>>
-    <associate|auto-92|<tuple|order of growth|36>>
-    <associate|auto-93|<tuple|1.2.4|37>>
-    <associate|auto-94|<tuple|invariant quantity|38>>
-    <associate|auto-95|<tuple|1.2.5|39>>
-    <associate|auto-96|<tuple|Euclid's Algorithm|40>>
-    <associate|auto-97|<tuple|1.2.6|40>>
-    <associate|auto-98|<tuple|1.2.6|41>>
-    <associate|auto-99|<tuple|1.44|41>>
-    <associate|define_fib|<tuple|tree recursion|32>>
-    <associate|define_square|<tuple|procedure definitions|16>>
-    <associate|ex1.5|<tuple|1.5|22>>
-    <associate|ex1.7|<tuple|1.7|25>>
-    <associate|fig1.2|<tuple|1.2|25>>
-    <associate|fig1.3|<tuple|1.3|29>>
-    <associate|fig1.4|<tuple|1.4|30>>
-    <associate|fig1.5|<tuple|1.5|33>>
-    <associate|footnote-1.1|<tuple|1.1|10>>
-    <associate|footnote-1.10|<tuple|1.10|14>>
-    <associate|footnote-1.11|<tuple|1.11|15>>
-    <associate|footnote-1.12|<tuple|1.12|16>>
-    <associate|footnote-1.13|<tuple|1.13|16>>
-    <associate|footnote-1.14|<tuple|1.14|16>>
-    <associate|footnote-1.15|<tuple|1.15|18>>
-    <associate|footnote-1.16|<tuple|1.16|19>>
-    <associate|footnote-1.17|<tuple|1.17|20>>
-    <associate|footnote-1.18|<tuple|1.18|20>>
-    <associate|footnote-1.19|<tuple|1.19|21>>
-    <associate|footnote-1.2|<tuple|1.2|10>>
-    <associate|footnote-1.20|<tuple|1.20|23>>
-    <associate|footnote-1.21|<tuple|1.21|23>>
-    <associate|footnote-1.22|<tuple|1.22|24>>
-    <associate|footnote-1.23|<tuple|1.23|24>>
-    <associate|footnote-1.24|<tuple|1.24|24>>
-    <associate|footnote-1.25|<tuple|1.25|26>>
-    <associate|footnote-1.26|<tuple|1.26|27>>
-    <associate|footnote-1.27|<tuple|1.27|28>>
-    <associate|footnote-1.28|<tuple|1.28|28>>
-    <associate|footnote-1.29|<tuple|1.29|30>>
-    <associate|footnote-1.3|<tuple|1.3|10>>
-    <associate|footnote-1.30|<tuple|1.30|31>>
-    <associate|footnote-1.31|<tuple|1.31|31>>
-    <associate|footnote-1.32|<tuple|1.32|34>>
-    <associate|footnote-1.33|<tuple|1.33|34>>
-    <associate|footnote-1.34|<tuple|1.34|35>>
-    <associate|footnote-1.35|<tuple|1.35|35>>
-    <associate|footnote-1.36|<tuple|1.36|36>>
-    <associate|footnote-1.37|<tuple|1.37|38>>
-    <associate|footnote-1.38|<tuple|1.38|38>>
-    <associate|footnote-1.39|<tuple|1.39|38>>
-    <associate|footnote-1.4|<tuple|1.4|11>>
-    <associate|footnote-1.40|<tuple|1.40|38>>
-    <associate|footnote-1.41|<tuple|1.41|39>>
-    <associate|footnote-1.42|<tuple|1.42|40>>
-    <associate|footnote-1.43|<tuple|1.43|40>>
-    <associate|footnote-1.44|<tuple|1.44|41>>
-    <associate|footnote-1.45|<tuple|1.45|41>>
-    <associate|footnote-1.46|<tuple|1.46|42>>
-    <associate|footnote-1.47|<tuple|1.47|42>>
-    <associate|footnote-1.48|<tuple|1.48|43>>
-    <associate|footnote-1.49|<tuple|1.49|45>>
-    <associate|footnote-1.5|<tuple|1.5|11>>
-    <associate|footnote-1.50|<tuple|1.50|47>>
-    <associate|footnote-1.51|<tuple|1.51|48>>
-    <associate|footnote-1.52|<tuple|1.52|48>>
-    <associate|footnote-1.53|<tuple|1.53|49>>
-    <associate|footnote-1.54|<tuple|1.54|51>>
-    <associate|footnote-1.55|<tuple|1.55|52>>
-    <associate|footnote-1.56|<tuple|1.56|53>>
-    <associate|footnote-1.57|<tuple|1.57|54>>
-    <associate|footnote-1.58|<tuple|1.58|54>>
-    <associate|footnote-1.59|<tuple|1.59|56>>
-    <associate|footnote-1.6|<tuple|1.6|13>>
-    <associate|footnote-1.60|<tuple|1.60|56>>
-    <associate|footnote-1.61|<tuple|1.61|56>>
-    <associate|footnote-1.62|<tuple|1.62|56>>
-    <associate|footnote-1.63|<tuple|1.63|57>>
-    <associate|footnote-1.64|<tuple|1.64|58>>
-    <associate|footnote-1.65|<tuple|1.65|58>>
-    <associate|footnote-1.66|<tuple|1.66|58>>
-    <associate|footnote-1.7|<tuple|1.7|13>>
-    <associate|footnote-1.8|<tuple|1.8|13>>
-    <associate|footnote-1.9|<tuple|1.9|14>>
-    <associate|footnr-1.1|<tuple|1.1|10>>
-    <associate|footnr-1.10|<tuple|1.10|14>>
-    <associate|footnr-1.11|<tuple|syntactic sugar|15>>
-    <associate|footnr-1.12|<tuple|1.12|16>>
-    <associate|footnr-1.13|<tuple|1.13|16>>
-    <associate|footnr-1.14|<tuple|1.14|16>>
-    <associate|footnr-1.15|<tuple|substitution|18>>
-    <associate|footnr-1.16|<tuple|stream processing|19>>
-    <associate|footnr-1.17|<tuple|1.17|20>>
-    <associate|footnr-1.18|<tuple|1.18|20>>
-    <associate|footnr-1.19|<tuple|1.19|21>>
-    <associate|footnr-1.2|<tuple|1.2|10>>
-    <associate|footnr-1.20|<tuple|1.20|23>>
-    <associate|footnr-1.21|<tuple|1.21|23>>
-    <associate|footnr-1.22|<tuple|1.22|24>>
-    <associate|footnr-1.23|<tuple|1.23|24>>
-    <associate|footnr-1.24|<tuple|1.24|24>>
-    <associate|footnr-1.25|<tuple|1.25|26>>
-    <associate|footnr-1.26|<tuple|1.26|27>>
-    <associate|footnr-1.27|<tuple|1.27|28>>
-    <associate|footnr-1.28|<tuple|1.28|28>>
-    <associate|footnr-1.29|<tuple|1.29|30>>
-    <associate|footnr-1.3|<tuple|1.3|10>>
-    <associate|footnr-1.30|<tuple|1.30|31>>
-    <associate|footnr-1.31|<tuple|1.31|31>>
-    <associate|footnr-1.32|<tuple|1.32|34>>
-    <associate|footnr-1.33|<tuple|1.33|34>>
-    <associate|footnr-1.34|<tuple|memoization|35>>
-    <associate|footnr-1.35|<tuple|binomial coefficients|35>>
-    <associate|footnr-1.36|<tuple|1.36|36>>
-    <associate|footnr-1.37|<tuple|1.37|38>>
-    <associate|footnr-1.38|<tuple|1.38|38>>
-    <associate|footnr-1.39|<tuple|1.39|38>>
-    <associate|footnr-1.4|<tuple|real numbers|11>>
-    <associate|footnr-1.40|<tuple|1.40|38>>
-    <associate|footnr-1.41|<tuple|1.41|39>>
-    <associate|footnr-1.42|<tuple|1.42|40>>
-    <associate|footnr-1.43|<tuple|1.43|40>>
-    <associate|footnr-1.44|<tuple|1.44|41>>
-    <associate|footnr-1.45|<tuple|1.45|41>>
-    <associate|footnr-1.46|<tuple|1.46|42>>
-    <associate|footnr-1.47|<tuple|Carmichael numbers|42>>
-    <associate|footnr-1.48|<tuple|RSA algorithm|43>>
-    <associate|footnr-1.49|<tuple|1.49|45>>
-    <associate|footnr-1.5|<tuple|1.5|11>>
-    <associate|footnr-1.50|<tuple|1.50|47>>
-    <associate|footnr-1.51|<tuple|sequences|48>>
-    <associate|footnr-1.52|<tuple|1.52|48>>
-    <associate|footnr-1.53|<tuple|1.53|49>>
-    <associate|footnr-1.54|<tuple|1.54|51>>
-    <associate|footnr-1.55|<tuple|1.55|52>>
-    <associate|footnr-1.56|<tuple|1.56|53>>
-    <associate|footnr-1.57|<tuple|1.57|54>>
-    <associate|footnr-1.58|<tuple|1.58|54>>
-    <associate|footnr-1.59|<tuple|1.59|56>>
-    <associate|footnr-1.6|<tuple|1.6|13>>
-    <associate|footnr-1.60|<tuple|1.60|56>>
-    <associate|footnr-1.61|<tuple|1.61|56>>
-    <associate|footnr-1.62|<tuple|1.62|56>>
-    <associate|footnr-1.63|<tuple|1.63|57>>
-    <associate|footnr-1.64|<tuple|1.64|58>>
-    <associate|footnr-1.65|<tuple|1.65|58>>
-    <associate|footnr-1.66|<tuple|1.66|58>>
-    <associate|footnr-1.7|<tuple|1.7|13>>
-    <associate|footnr-1.8|<tuple|1.8|13>>
-    <associate|footnr-1.9|<tuple|1.9|14>>
-    <associate|index-invariant-quantity|<tuple|1.16|38>>
-    <associate|index-stack|<tuple|1.30|31>>
-    <associate|sec:1.1.3|<tuple|1.1.3|14>>
+    <associate|#1.2.6|<tuple|1.2.6|38>>
+    <associate|%_idx_102|<tuple|1.3|8>>
+    <associate|%_idx_104|<tuple|1.3|8>>
+    <associate|%_idx_106|<tuple|1.3|8>>
+    <associate|%_idx_36|<tuple|1.1|8>>
+    <associate|%_idx_46|<tuple|1.2|8>>
+    <associate|%_idx_48|<tuple|1.2|8>>
+    <associate|%_idx_50|<tuple|1.2|8>>
+    <associate|%_idx_52|<tuple|1.2|8>>
+    <associate|%_idx_54|<tuple|1.2|8>>
+    <associate|%_idx_56|<tuple|1.2|8>>
+    <associate|%_idx_58|<tuple|1.2|8>>
+    <associate|%_idx_60|<tuple|1.2|8>>
+    <associate|%_idx_62|<tuple|1.2|8>>
+    <associate|%_idx_64|<tuple|1.2|8>>
+    <associate|%_idx_66|<tuple|1.2|8>>
+    <associate|%_idx_68|<tuple|1.2|8>>
+    <associate|%_idx_70|<tuple|1.2|8>>
+    <associate|%_idx_72|<tuple|1.2|8>>
+    <associate|%_idx_74|<tuple|1.2|8>>
+    <associate|%_idx_76|<tuple|1.2|8>>
+    <associate|%_idx_78|<tuple|1.2|8>>
+    <associate|%_idx_80|<tuple|1.2|8>>
+    <associate|%_idx_82|<tuple|1.2|8>>
+    <associate|%_idx_84|<tuple|1.2|8>>
+    <associate|%_idx_86|<tuple|1.2|8>>
+    <associate|%_idx_88|<tuple|1.2|8>>
+    <associate|%_idx_90|<tuple|1.2|8>>
+    <associate|%_idx_92|<tuple|1.2|8>>
+    <associate|%_idx_94|<tuple|1.2|8>>
+    <associate|1.1|<tuple|1.1|9>>
+    <associate|1.1.4|<tuple|1.1.4|13>>
+    <associate|1.1.7|<tuple|1.1.7|20>>
+    <associate|1.1.8|<tuple|1.1.8|23>>
+    <associate|1.2.1|<tuple|1.2.1|27>>
+    <associate|1.2.2|<tuple|1.2.2|30>>
+    <associate|1.2.4|<tuple|1.2.4|35>>
+    <associate|1.3|<tuple|1.3|42>>
+    <associate|1.3.1|<tuple|1.3.1|43>>
+    <associate|1.3.3|<tuple|1.3.3|50>>
+    <associate|DOCF58|<tuple|1.57|52>>
+    <associate|Figure1.1|<tuple|1.1|13>>
+    <associate|auto-1|<tuple|1|7>>
+    <associate|auto-10|<tuple|recusion equations|7>>
+    <associate|auto-100|<tuple|congruent modulo|39>>
+    <associate|auto-101|<tuple|remainder of|39>>
+    <associate|auto-102|<tuple|modulo|39>>
+    <associate|auto-103|<tuple|1.46|40>>
+    <associate|auto-104|<tuple|Carmichael numbers|40>>
+    <associate|auto-105|<tuple|probabilistic algorithms|41>>
+    <associate|auto-106|<tuple|RSA algorithm|41>>
+    <associate|auto-107|<tuple|Miller-Rabin test|42>>
+    <associate|auto-108|<tuple|1.3|42>>
+    <associate|auto-109|<tuple|higher-order procedures|43>>
+    <associate|auto-11|<tuple|interpreter|8>>
+    <associate|auto-110|<tuple|1.3.1|43>>
+    <associate|auto-111|<tuple|summation of a series|44>>
+    <associate|auto-112|<tuple|sequences|46>>
+    <associate|auto-113|<tuple|filter|46>>
+    <associate|auto-114|<tuple|1.3.2|46>>
+    <associate|auto-115|<tuple|1.53|47>>
+    <associate|auto-116|<tuple|1.3.3|50>>
+    <associate|auto-117|<tuple|1.3.3|50>>
+    <associate|auto-118|<tuple|half interval method|50>>
+    <associate|auto-119|<tuple|1.56|51>>
+    <associate|auto-12|<tuple|procedures|8>>
+    <associate|auto-120|<tuple|fixed point|51>>
+    <associate|auto-121|<tuple|average damping|52>>
+    <associate|auto-122|<tuple|continued fraction|53>>
+    <associate|auto-123|<tuple|k-term finite continued fraction|53>>
+    <associate|auto-124|<tuple|1.3.4|53>>
+    <associate|auto-125|<tuple|1.60|54>>
+    <associate|auto-126|<tuple|Newton's method|54>>
+    <associate|auto-127|<tuple|1.63|55>>
+    <associate|auto-128|<tuple|first-class|56>>
+    <associate|auto-129|<tuple|composition|57>>
+    <associate|auto-13|<tuple|1.1|9>>
+    <associate|auto-130|<tuple|smoothing|57>>
+    <associate|auto-131|<tuple|n-fold smoothed function|57>>
+    <associate|auto-132|<tuple|iterative improvement|57>>
+    <associate|auto-14|<tuple|integers|9>>
+    <associate|auto-15|<tuple|real numbers|9>>
+    <associate|auto-16|<tuple|1.1.1|9>>
+    <associate|auto-17|<tuple|expression|9>>
+    <associate|auto-18|<tuple|evaluating|9>>
+    <associate|auto-19|<tuple|combinations|10>>
+    <associate|auto-2|<tuple|computational process|7>>
+    <associate|auto-20|<tuple|operator|10>>
+    <associate|auto-21|<tuple|operands|10>>
+    <associate|auto-22|<tuple|arguments|10>>
+    <associate|auto-23|<tuple|prefix notation|10>>
+    <associate|auto-24|<tuple|pretty-printing|11>>
+    <associate|auto-25|<tuple|read-eval-print loop|11>>
+    <associate|auto-26|<tuple|1.1.2|11>>
+    <associate|auto-27|<tuple|variable|11>>
+    <associate|auto-28|<tuple|value|11>>
+    <associate|auto-29|<tuple|environment|12>>
+    <associate|auto-3|<tuple|data|7>>
+    <associate|auto-30|<tuple|global environment|12>>
+    <associate|auto-31|<tuple|1.1.3|12>>
+    <associate|auto-32|<tuple|recursive|12>>
+    <associate|auto-33|<tuple|tree accumulation|12>>
+    <associate|auto-34|<tuple|1.1|13>>
+    <associate|auto-35|<tuple|special forms|13>>
+    <associate|auto-36|<tuple|syntactic sugar|13>>
+    <associate|auto-37|<tuple|1.1.4|13>>
+    <associate|auto-38|<tuple|procedure definitions|14>>
+    <associate|auto-39|<tuple|compound procedure|14>>
+    <associate|auto-4|<tuple|program|7>>
+    <associate|auto-40|<tuple|1.1.5|15>>
+    <associate|auto-41|<tuple|substitution model|16>>
+    <associate|auto-42|<tuple|substitution|16>>
+    <associate|auto-43|<tuple|substitution|16>>
+    <associate|auto-44|<tuple|normal order evaluation|17>>
+    <associate|auto-45|<tuple|application-order evaluation|17>>
+    <associate|auto-46|<tuple|stream processing|17>>
+    <associate|auto-47|<tuple|1.1.6|17>>
+    <associate|auto-48|<tuple|case analysis|17>>
+    <associate|auto-49|<tuple|clauses|18>>
+    <associate|auto-5|<tuple|programming languages|7>>
+    <associate|auto-50|<tuple|predicate|18>>
+    <associate|auto-51|<tuple|consequent expression|18>>
+    <associate|auto-52|<tuple|predicate|18>>
+    <associate|auto-53|<tuple|1.1.7|20>>
+    <associate|auto-54|<tuple|1.1.8|23>>
+    <associate|auto-55|<tuple|recursive|23>>
+    <associate|auto-56|<tuple|1.2|23>>
+    <associate|auto-57|<tuple|procedural abstraction|24>>
+    <associate|auto-58|<tuple|1.25|24>>
+    <associate|auto-59|<tuple|bound variable|25>>
+    <associate|auto-6|<tuple|bugs|7>>
+    <associate|auto-60|<tuple|binds|25>>
+    <associate|auto-61|<tuple|free|25>>
+    <associate|auto-62|<tuple|scope|25>>
+    <associate|auto-63|<tuple|capturing|25>>
+    <associate|auto-64|<tuple|capturing|25>>
+    <associate|auto-65|<tuple|block structure|26>>
+    <associate|auto-66|<tuple|lexical scoping|26>>
+    <associate|auto-67|<tuple|1.2|26>>
+    <associate|auto-68|<tuple|local evolution|27>>
+    <associate|auto-69|<tuple|global|27>>
+    <associate|auto-7|<tuple|glitches|7>>
+    <associate|auto-70|<tuple|1.2.1|27>>
+    <associate|auto-71|<tuple|1.3|27>>
+    <associate|auto-72|<tuple|1.4|28>>
+    <associate|auto-73|<tuple|deferred operations|29>>
+    <associate|auto-74|<tuple|recursive process|29>>
+    <associate|auto-75|<tuple|linear recursive process|29>>
+    <associate|auto-76|<tuple|iterative process|29>>
+    <associate|auto-77|<tuple|state variables|29>>
+    <associate|auto-78|<tuple|linear iterative process|29>>
+    <associate|auto-79|<tuple|process|29>>
+    <associate|auto-8|<tuple|debug|7>>
+    <associate|auto-80|<tuple|procedure|29>>
+    <associate|auto-81|<tuple|tail-recursive|29>>
+    <associate|auto-82|<tuple|1.2.2|30>>
+    <associate|auto-83|<tuple|tree recursion|30>>
+    <associate|auto-84|<tuple|1.5|31>>
+    <associate|auto-85|<tuple|golden ratio|31>>
+    <associate|auto-86|<tuple|1.32|32>>
+    <associate|auto-87|<tuple|tabulation|33>>
+    <associate|auto-88|<tuple|memoization|33>>
+    <associate|auto-89|<tuple|Pascal's triangle|33>>
+    <associate|auto-9|<tuple|1|7>>
+    <associate|auto-90|<tuple|binomial coefficients|33>>
+    <associate|auto-91|<tuple|1.2.3|34>>
+    <associate|auto-92|<tuple|order of growth|34>>
+    <associate|auto-93|<tuple|1.2.4|35>>
+    <associate|auto-94|<tuple|invariant quantity|36>>
+    <associate|auto-95|<tuple|1.2.5|37>>
+    <associate|auto-96|<tuple|Euclid's Algorithm|38>>
+    <associate|auto-97|<tuple|1.2.6|38>>
+    <associate|auto-98|<tuple|1.2.6|39>>
+    <associate|auto-99|<tuple|1.44|39>>
+    <associate|define_fib|<tuple|tree recursion|30>>
+    <associate|define_square|<tuple|procedure definitions|14>>
+    <associate|ex1.5|<tuple|1.5|20>>
+    <associate|ex1.7|<tuple|1.7|23>>
+    <associate|fig1.2|<tuple|1.2|23>>
+    <associate|fig1.3|<tuple|1.3|27>>
+    <associate|fig1.4|<tuple|1.4|28>>
+    <associate|fig1.5|<tuple|1.5|31>>
+    <associate|footnote-1.1|<tuple|1.1|8>>
+    <associate|footnote-1.10|<tuple|1.10|12>>
+    <associate|footnote-1.11|<tuple|1.11|13>>
+    <associate|footnote-1.12|<tuple|1.12|14>>
+    <associate|footnote-1.13|<tuple|1.13|14>>
+    <associate|footnote-1.14|<tuple|1.14|14>>
+    <associate|footnote-1.15|<tuple|1.15|16>>
+    <associate|footnote-1.16|<tuple|1.16|17>>
+    <associate|footnote-1.17|<tuple|1.17|18>>
+    <associate|footnote-1.18|<tuple|1.18|18>>
+    <associate|footnote-1.19|<tuple|1.19|19>>
+    <associate|footnote-1.2|<tuple|1.2|8>>
+    <associate|footnote-1.20|<tuple|1.20|21>>
+    <associate|footnote-1.21|<tuple|1.21|21>>
+    <associate|footnote-1.22|<tuple|1.22|22>>
+    <associate|footnote-1.23|<tuple|1.23|22>>
+    <associate|footnote-1.24|<tuple|1.24|22>>
+    <associate|footnote-1.25|<tuple|1.25|24>>
+    <associate|footnote-1.26|<tuple|1.26|25>>
+    <associate|footnote-1.27|<tuple|1.27|26>>
+    <associate|footnote-1.28|<tuple|1.28|26>>
+    <associate|footnote-1.29|<tuple|1.29|28>>
+    <associate|footnote-1.3|<tuple|1.3|8>>
+    <associate|footnote-1.30|<tuple|1.30|29>>
+    <associate|footnote-1.31|<tuple|1.31|29>>
+    <associate|footnote-1.32|<tuple|1.32|32>>
+    <associate|footnote-1.33|<tuple|1.33|32>>
+    <associate|footnote-1.34|<tuple|1.34|33>>
+    <associate|footnote-1.35|<tuple|1.35|33>>
+    <associate|footnote-1.36|<tuple|1.36|34>>
+    <associate|footnote-1.37|<tuple|1.37|36>>
+    <associate|footnote-1.38|<tuple|1.38|36>>
+    <associate|footnote-1.39|<tuple|1.39|36>>
+    <associate|footnote-1.4|<tuple|1.4|9>>
+    <associate|footnote-1.40|<tuple|1.40|36>>
+    <associate|footnote-1.41|<tuple|1.41|37>>
+    <associate|footnote-1.42|<tuple|1.42|38>>
+    <associate|footnote-1.43|<tuple|1.43|38>>
+    <associate|footnote-1.44|<tuple|1.44|39>>
+    <associate|footnote-1.45|<tuple|1.45|39>>
+    <associate|footnote-1.46|<tuple|1.46|40>>
+    <associate|footnote-1.47|<tuple|1.47|40>>
+    <associate|footnote-1.48|<tuple|1.48|41>>
+    <associate|footnote-1.49|<tuple|1.49|43>>
+    <associate|footnote-1.5|<tuple|1.5|9>>
+    <associate|footnote-1.50|<tuple|1.50|45>>
+    <associate|footnote-1.51|<tuple|1.51|46>>
+    <associate|footnote-1.52|<tuple|1.52|46>>
+    <associate|footnote-1.53|<tuple|1.53|47>>
+    <associate|footnote-1.54|<tuple|1.54|49>>
+    <associate|footnote-1.55|<tuple|1.55|50>>
+    <associate|footnote-1.56|<tuple|1.56|51>>
+    <associate|footnote-1.57|<tuple|1.57|52>>
+    <associate|footnote-1.58|<tuple|1.58|52>>
+    <associate|footnote-1.59|<tuple|1.59|54>>
+    <associate|footnote-1.6|<tuple|1.6|11>>
+    <associate|footnote-1.60|<tuple|1.60|54>>
+    <associate|footnote-1.61|<tuple|1.61|54>>
+    <associate|footnote-1.62|<tuple|1.62|54>>
+    <associate|footnote-1.63|<tuple|1.63|55>>
+    <associate|footnote-1.64|<tuple|1.64|56>>
+    <associate|footnote-1.65|<tuple|1.65|56>>
+    <associate|footnote-1.66|<tuple|1.66|56>>
+    <associate|footnote-1.7|<tuple|1.7|11>>
+    <associate|footnote-1.8|<tuple|1.8|11>>
+    <associate|footnote-1.9|<tuple|1.9|12>>
+    <associate|footnr-1.1|<tuple|1.1|8>>
+    <associate|footnr-1.10|<tuple|1.10|12>>
+    <associate|footnr-1.11|<tuple|syntactic sugar|13>>
+    <associate|footnr-1.12|<tuple|1.12|14>>
+    <associate|footnr-1.13|<tuple|1.13|14>>
+    <associate|footnr-1.14|<tuple|1.14|14>>
+    <associate|footnr-1.15|<tuple|substitution|16>>
+    <associate|footnr-1.16|<tuple|stream processing|17>>
+    <associate|footnr-1.17|<tuple|1.17|18>>
+    <associate|footnr-1.18|<tuple|1.18|18>>
+    <associate|footnr-1.19|<tuple|1.19|19>>
+    <associate|footnr-1.2|<tuple|1.2|8>>
+    <associate|footnr-1.20|<tuple|1.20|21>>
+    <associate|footnr-1.21|<tuple|1.21|21>>
+    <associate|footnr-1.22|<tuple|1.22|22>>
+    <associate|footnr-1.23|<tuple|1.23|22>>
+    <associate|footnr-1.24|<tuple|1.24|22>>
+    <associate|footnr-1.25|<tuple|1.25|24>>
+    <associate|footnr-1.26|<tuple|1.26|25>>
+    <associate|footnr-1.27|<tuple|1.27|26>>
+    <associate|footnr-1.28|<tuple|1.28|26>>
+    <associate|footnr-1.29|<tuple|1.29|28>>
+    <associate|footnr-1.3|<tuple|1.3|8>>
+    <associate|footnr-1.30|<tuple|1.30|29>>
+    <associate|footnr-1.31|<tuple|1.31|29>>
+    <associate|footnr-1.32|<tuple|1.32|32>>
+    <associate|footnr-1.33|<tuple|1.33|32>>
+    <associate|footnr-1.34|<tuple|memoization|33>>
+    <associate|footnr-1.35|<tuple|binomial coefficients|33>>
+    <associate|footnr-1.36|<tuple|1.36|34>>
+    <associate|footnr-1.37|<tuple|1.37|36>>
+    <associate|footnr-1.38|<tuple|1.38|36>>
+    <associate|footnr-1.39|<tuple|1.39|36>>
+    <associate|footnr-1.4|<tuple|real numbers|9>>
+    <associate|footnr-1.40|<tuple|1.40|36>>
+    <associate|footnr-1.41|<tuple|1.41|37>>
+    <associate|footnr-1.42|<tuple|1.42|38>>
+    <associate|footnr-1.43|<tuple|1.43|38>>
+    <associate|footnr-1.44|<tuple|1.44|39>>
+    <associate|footnr-1.45|<tuple|1.45|39>>
+    <associate|footnr-1.46|<tuple|1.46|40>>
+    <associate|footnr-1.47|<tuple|Carmichael numbers|40>>
+    <associate|footnr-1.48|<tuple|RSA algorithm|41>>
+    <associate|footnr-1.49|<tuple|1.49|43>>
+    <associate|footnr-1.5|<tuple|1.5|9>>
+    <associate|footnr-1.50|<tuple|1.50|45>>
+    <associate|footnr-1.51|<tuple|sequences|46>>
+    <associate|footnr-1.52|<tuple|1.52|46>>
+    <associate|footnr-1.53|<tuple|1.53|47>>
+    <associate|footnr-1.54|<tuple|1.54|49>>
+    <associate|footnr-1.55|<tuple|1.55|50>>
+    <associate|footnr-1.56|<tuple|1.56|51>>
+    <associate|footnr-1.57|<tuple|1.57|52>>
+    <associate|footnr-1.58|<tuple|1.58|52>>
+    <associate|footnr-1.59|<tuple|1.59|54>>
+    <associate|footnr-1.6|<tuple|1.6|11>>
+    <associate|footnr-1.60|<tuple|1.60|54>>
+    <associate|footnr-1.61|<tuple|1.61|54>>
+    <associate|footnr-1.62|<tuple|1.62|54>>
+    <associate|footnr-1.63|<tuple|1.63|55>>
+    <associate|footnr-1.64|<tuple|1.64|56>>
+    <associate|footnr-1.65|<tuple|1.65|56>>
+    <associate|footnr-1.66|<tuple|1.66|56>>
+    <associate|footnr-1.7|<tuple|1.7|11>>
+    <associate|footnr-1.8|<tuple|1.8|11>>
+    <associate|footnr-1.9|<tuple|1.9|12>>
+    <associate|index-invariant-quantity|<tuple|1.16|36>>
+    <associate|index-stack|<tuple|1.30|29>>
+    <associate|sec:1.1.3|<tuple|1.1.3|12>>
   </collection>
 </references>
 
