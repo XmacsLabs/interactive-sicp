@@ -979,9 +979,8 @@
   the interpreter, like <code*|+> and <code*|*>, or defined as a compound
   procedure.
 
-  <subsection|The Substitution Model for Procedure Application>
-
-  \;
+  <subsection|The Substitution Model for Procedure
+  Application><label|sec:1.1.5>
 
   To evaluate a combination whose operator names a compound procedure, the
   interpreter follows much the same process as for combinations whose
@@ -2149,7 +2148,7 @@
   that played by test patterns in photography: as oversimplified prototypical
   patterns, rather than practical examples in their own right.
 
-  <subsection|Linear Recursion and Iteration><label|1.2.1>
+  <subsection|Linear Recursion and Iteration><label|sec:1.2.1>
 
   We begin by considering the factorial function, defined by
   <math|n!=n\<cdot\><around*|(|n-1|)>\<cdot\><around*|(|n-2|)>*\<cdots\>*3\<cdot\>2\<cdot\>1>.
@@ -2763,14 +2762,14 @@
       <math|n<rsup|<with|mode|text|th>>> row consists of the coefficients of
       the terms in the expansion of <math|<around*|(|x+y|)><rsup|n>>. This
       pattern for computing the coefficients appeared in Blaise Pascal's 1653
-      seminal work on probability theory, <cite*|Traité du triangle
-      arithmétique>. According to <hlink|Knuth
+      seminal work on probability theory, <cite*|Trait\<#FFFD\> du triangle
+      arithm\<#FFFD\>tique>. According to <hlink|Knuth
       (1973)|References.xhtml#Knuth-_00281973_0029>, the same pattern appears
-      in the <cite*|Szu-yuen Yü-chien> (\PThe Precious Mirror of the Four
-      Elements\Q), published by the Chinese mathematician Chu Shih-chieh in
-      1303, in the works of the twelfth-century Persian poet and
+      in the <cite*|Szu-yuen Y\<#FFFD\>-chien> (\PThe Precious Mirror of the
+      Four Elements\Q), published by the Chinese mathematician Chu Shih-chieh
+      in 1303, in the works of the twelfth-century Persian poet and
       mathematician Omar Khayyam, and in the works of the twelfth-century
-      Hindu mathematician Bháscara Áchárya.
+      Hindu mathematician Bh\<#FFFD\>scara \<#FFFD\>ch\<#FFFD\>rya.
     </footnote> Write a procedure that computes elements of Pascal's triangle
     by means of a recursive process.
   </exercise>
@@ -3015,9 +3014,10 @@
   as is often the case with iterative algorithms, this is not written down so
   straightforwardly as the recursive algorithm.<\footnote>
     This iterative algorithm is ancient. It appears in the
-    <cite*|Chandah-sutra> by Áchárya Pingala, written before 200 <abbr|B.C.>
-    See <hlink|Knuth 1981|References.xhtml#Knuth-1981>, section 4.6.3, for a
-    full discussion and analysis of this and other methods of exponentiation.
+    <cite*|Chandah-sutra> by \<#FFFD\>ch\<#FFFD\>rya Pingala, written before
+    200 <abbr|B.C.> See <hlink|Knuth 1981|References.xhtml#Knuth-1981>,
+    section 4.6.3, for a full discussion and analysis of this and other
+    methods of exponentiation.
   </footnote>
 
   <\exercise>
@@ -3203,14 +3203,14 @@
   The fact that the number of steps required by Euclid's Algorithm has
   logarithmic growth bears an interesting relation to the Fibonacci numbers:
 
-  <\render-theorem|Lamé's Theorem>
+  <\render-theorem|Lam\<#FFFD\>'s Theorem>
     If Euclid's Algorithm requires <math|k> steps to compute the <abbr|GCD>
     of some pair, then the smaller number in the pair must be greater than or
     equal to the <math|k<rsup|<with|mode|text|th>>> Fibonacci
     number.<\footnote>
-      This theorem was proved in 1845 by Gabriel Lamé, a French mathematician
-      and engineer known chiefly for his contributions to mathematical
-      physics. To prove the theorem, we consider pairs
+      This theorem was proved in 1845 by Gabriel Lam\<#FFFD\>, a French
+      mathematician and engineer known chiefly for his contributions to
+      mathematical physics. To prove the theorem, we consider pairs
       <math|<around*|(|a<rsub|k>,b<rsub|k>|)>>, where
       <math|a<rsub|k>\<geq\>b<rsub|k>>, for which Euclid's Algorithm
       terminates in <math|k> steps. The proof is based on the claim that, if
@@ -3238,7 +3238,7 @@
       and <math|b<rsub|k>\<geq\><with|mode|text|Fib><around*|(|k|)>>. Thus,
       applying the claim we just proved together with the definition of the
       Fibonacci numbers gives <math|b<rsub|k+1>\<geq\>b<rsub|k>+b<rsub|k-1>\<geq\><with|mode|text|Fib><around*|(|k|)>+<with|mode|text|Fib><around*|(|k-1|)>=<with|mode|text|Fib><around*|(|k+1|)>>,
-      which completes the proof of Lamé's Theorem.
+      which completes the proof of Lam\<#FFFD\>'s Theorem.
     </footnote>
   </render-theorem>
 
@@ -14077,6 +14077,32 @@
   </collection>
 </initial>
 
+<\attachments>
+  <\collection>
+    <\associate|bib-bibliography>
+      <\db-entry|+XvyFBcGSDLJZsw|book|mccarthy1965lisp>
+        <db-field|contributor|jingkaimori>
+
+        <db-field|modus|imported>
+
+        <db-field|date|1671194785>
+      <|db-entry>
+        <db-field|author|John <name|McCarthy><name-sep>P.W.
+        <name|Abrahams><name-sep>D.J. <name|Edwards><name-sep>T.P.
+        <name|Hart><name-sep>M.I. <name|Levin>>
+
+        <db-field|title|Lisp 1.5 Programmer's Manual>
+
+        <db-field|publisher|MIT Press>
+
+        <db-field|year|1965>
+
+        <db-field|edition|2>
+      </db-entry>
+    </associate>
+  </collection>
+</attachments>
+
 <\references>
   <\collection>
     <associate|#1.2.6|<tuple|1.2.6|38>>
@@ -14111,7 +14137,6 @@
     <associate|1.1|<tuple|1.1|9>>
     <associate|1.1.4|<tuple|1.1.4|13>>
     <associate|1.1.8|<tuple|1.1.8|23>>
-    <associate|1.2.1|<tuple|1.2.1|27>>
     <associate|1.2.4|<tuple|1.2.4|35>>
     <associate|1.3|<tuple|1.3|42>>
     <associate|1.3.1|<tuple|1.3.1|43>>
@@ -14223,20 +14248,20 @@
     <associate|auto-190|<tuple|2.16|109>>
     <associate|auto-191|<tuple|B-trees|110>>
     <associate|auto-192|<tuple|red-black trees|110>>
-    <associate|auto-193|<tuple|2.17|110>>
-    <associate|auto-194|<tuple|key|111>>
-    <associate|auto-195|<tuple|2.3.4|112>>
-    <associate|auto-196|<tuple|fixed-length|112>>
-    <associate|auto-197|<tuple|variable-length|112>>
+    <associate|auto-193|<tuple|2.17|111>>
+    <associate|auto-194|<tuple|key|112>>
+    <associate|auto-195|<tuple|2.3.4|113>>
+    <associate|auto-196|<tuple|fixed-length|113>>
+    <associate|auto-197|<tuple|variable-length|113>>
     <associate|auto-198|<tuple|separator code|113>>
     <associate|auto-199|<tuple|prefix|113>>
     <associate|auto-2|<tuple|computational process|7>>
     <associate|auto-20|<tuple|operands|10>>
     <associate|auto-200|<tuple|prefix code|113>>
-    <associate|auto-201|<tuple|2.18|113>>
-    <associate|auto-202|<tuple|generic procedures|115>>
+    <associate|auto-201|<tuple|2.18|114>>
+    <associate|auto-202|<tuple|generic procedures|116>>
     <associate|auto-203|<tuple|2.4|118>>
-    <associate|auto-204|<tuple|additively|118>>
+    <associate|auto-204|<tuple|additively|119>>
     <associate|auto-205|<tuple|generic procedures|119>>
     <associate|auto-206|<tuple|type tags|119>>
     <associate|auto-207|<tuple|data-directed|119>>
@@ -14247,36 +14272,36 @@
     <associate|auto-211|<tuple|2.4.2|122>>
     <associate|auto-212|<tuple|type tag|122>>
     <associate|auto-213|<tuple|2.21|124>>
-    <associate|auto-214|<tuple|2.4.3|124>>
-    <associate|auto-215|<tuple|dispatching on type|124>>
+    <associate|auto-214|<tuple|2.4.3|125>>
+    <associate|auto-215|<tuple|dispatching on type|125>>
     <associate|auto-216|<tuple|additive|125>>
     <associate|auto-217|<tuple|data directed programming|125>>
-    <associate|auto-218|<tuple|2.22|125>>
+    <associate|auto-218|<tuple|2.22|126>>
     <associate|auto-219|<tuple|package|126>>
     <associate|auto-22|<tuple|prefix notation|10>>
     <associate|auto-220|<tuple|message passing|130>>
     <associate|auto-221|<tuple|2.5|130>>
-    <associate|auto-222|<tuple|2.23|130>>
+    <associate|auto-222|<tuple|2.23|131>>
     <associate|auto-223|<tuple|2.5.1|131>>
     <associate|auto-224|<tuple|ordinary|131>>
-    <associate|auto-225|<tuple|2.24|133>>
-    <associate|auto-226|<tuple|2.5.2|134>>
+    <associate|auto-225|<tuple|2.24|134>>
+    <associate|auto-226|<tuple|2.5.2|135>>
     <associate|auto-227|<tuple|coercion|135>>
-    <associate|auto-228|<tuple|hierarchy of types|136>>
-    <associate|auto-229|<tuple|subtype|136>>
+    <associate|auto-228|<tuple|hierarchy of types|137>>
+    <associate|auto-229|<tuple|subtype|137>>
     <associate|auto-23|<tuple|pretty-printing|11>>
-    <associate|auto-230|<tuple|supertype|136>>
-    <associate|auto-231|<tuple|tower|136>>
-    <associate|auto-232|<tuple|2.25|136>>
+    <associate|auto-230|<tuple|supertype|137>>
+    <associate|auto-231|<tuple|tower|137>>
+    <associate|auto-232|<tuple|2.25|137>>
     <associate|auto-233|<tuple|2.26|138>>
-    <associate|auto-234|<tuple|coerce|138>>
-    <associate|auto-235|<tuple|2.5.3|139>>
-    <associate|auto-236|<tuple|indeterminates|139>>
-    <associate|auto-237|<tuple|univariate polynomials|139>>
-    <associate|auto-238|<tuple|poly|140>>
-    <associate|auto-239|<tuple|dense|142>>
+    <associate|auto-234|<tuple|coerce|139>>
+    <associate|auto-235|<tuple|2.5.3|140>>
+    <associate|auto-236|<tuple|indeterminates|140>>
+    <associate|auto-237|<tuple|univariate polynomials|140>>
+    <associate|auto-238|<tuple|poly|141>>
+    <associate|auto-239|<tuple|dense|143>>
     <associate|auto-24|<tuple|read-eval-print loop|11>>
-    <associate|auto-240|<tuple|sparse|142>>
+    <associate|auto-240|<tuple|sparse|143>>
     <associate|auto-241|<tuple|pseudodivision|146>>
     <associate|auto-242|<tuple|pseudoremainder|146>>
     <associate|auto-243|<tuple|2.61|149>>
@@ -14371,12 +14396,12 @@
     <associate|ex2.21|<tuple|2.21|75>>
     <associate|ex2.30|<tuple|2.30|79>>
     <associate|ex2.79|<tuple|2.79|134>>
-    <associate|ex2.83|<tuple|2.83|138>>
+    <associate|ex2.83|<tuple|2.83|139>>
     <associate|exercise:2.12|<tuple|2.12|67>>
     <associate|exercise:2.2|<tuple|2.2|63>>
     <associate|exercise:2.3|<tuple|2.3|64>>
-    <associate|fig2.23|<tuple|2.23|130>>
-    <associate|fig2.25|<tuple|2.25|136>>
+    <associate|fig2.23|<tuple|2.23|131>>
+    <associate|fig2.25|<tuple|2.25|137>>
     <associate|fig:1.1|<tuple|1.1|13>>
     <associate|fig:1.2|<tuple|1.2|23>>
     <associate|fig:1.3|<tuple|1.3|27>>
@@ -14389,14 +14414,14 @@
     <associate|fig:2.13|<tuple|2.13|92>>
     <associate|fig:2.14|<tuple|2.14|93>>
     <associate|fig:2.16|<tuple|2.16|109>>
-    <associate|fig:2.17|<tuple|2.17|110>>
-    <associate|fig:2.18|<tuple|2.18|113>>
+    <associate|fig:2.17|<tuple|2.17|111>>
+    <associate|fig:2.18|<tuple|2.18|114>>
     <associate|fig:2.19|<tuple|2.19|119>>
     <associate|fig:2.2|<tuple|2.2|68>>
     <associate|fig:2.20|<tuple|2.20|120>>
     <associate|fig:2.21|<tuple|2.21|124>>
-    <associate|fig:2.22|<tuple|2.22|125>>
-    <associate|fig:2.24|<tuple|2.24|133>>
+    <associate|fig:2.22|<tuple|2.22|126>>
+    <associate|fig:2.24|<tuple|2.24|134>>
     <associate|fig:2.26|<tuple|2.26|138>>
     <associate|fig:2.3|<tuple|2.3|68>>
     <associate|fig:2.4|<tuple|2.4|69>>
@@ -14499,35 +14524,35 @@
     <associate|footnote-2.32|<tuple|2.32|100>>
     <associate|footnote-2.33|<tuple|2.33|100>>
     <associate|footnote-2.34|<tuple|2.34|101>>
-    <associate|footnote-2.35|<tuple|2.35|101>>
+    <associate|footnote-2.35|<tuple|2.35|102>>
     <associate|footnote-2.36|<tuple|2.36|106>>
     <associate|footnote-2.37|<tuple|2.37|109>>
     <associate|footnote-2.38|<tuple|2.38|109>>
     <associate|footnote-2.39|<tuple|2.39|110>>
     <associate|footnote-2.4|<tuple|2.4|64>>
-    <associate|footnote-2.40|<tuple|2.40|111>>
+    <associate|footnote-2.40|<tuple|2.40|112>>
     <associate|footnote-2.41|<tuple|2.41|114>>
     <associate|footnote-2.42|<tuple|2.42|119>>
     <associate|footnote-2.43|<tuple|2.43|121>>
-    <associate|footnote-2.44|<tuple|2.44|126>>
-    <associate|footnote-2.45|<tuple|2.45|126>>
+    <associate|footnote-2.44|<tuple|2.44|127>>
+    <associate|footnote-2.45|<tuple|2.45|127>>
     <associate|footnote-2.46|<tuple|2.46|127>>
-    <associate|footnote-2.47|<tuple|2.47|129>>
-    <associate|footnote-2.48|<tuple|2.48|134>>
-    <associate|footnote-2.49|<tuple|2.49|135>>
+    <associate|footnote-2.47|<tuple|2.47|130>>
+    <associate|footnote-2.48|<tuple|2.48|135>>
+    <associate|footnote-2.49|<tuple|2.49|136>>
     <associate|footnote-2.5|<tuple|2.5|69>>
     <associate|footnote-2.50|<tuple|2.50|136>>
-    <associate|footnote-2.51|<tuple|2.51|137>>
+    <associate|footnote-2.51|<tuple|2.51|138>>
     <associate|footnote-2.52|<tuple|2.52|139>>
-    <associate|footnote-2.53|<tuple|2.53|139>>
+    <associate|footnote-2.53|<tuple|2.53|140>>
     <associate|footnote-2.54|<tuple|2.54|140>>
-    <associate|footnote-2.55|<tuple|2.55|141>>
-    <associate|footnote-2.56|<tuple|2.56|142>>
+    <associate|footnote-2.55|<tuple|2.55|142>>
+    <associate|footnote-2.56|<tuple|2.56|143>>
     <associate|footnote-2.57|<tuple|2.57|143>>
     <associate|footnote-2.58|<tuple|2.58|143>>
-    <associate|footnote-2.59|<tuple|2.59|145>>
+    <associate|footnote-2.59|<tuple|2.59|146>>
     <associate|footnote-2.6|<tuple|2.6|69>>
-    <associate|footnote-2.60|<tuple|2.60|145>>
+    <associate|footnote-2.60|<tuple|2.60|146>>
     <associate|footnote-2.61|<tuple|2.61|147>>
     <associate|footnote-2.7|<tuple|2.7|69>>
     <associate|footnote-2.8|<tuple|2.8|70>>
@@ -14626,41 +14651,41 @@
     <associate|footnr-2.32|<tuple|2.32|100>>
     <associate|footnr-2.33|<tuple|2.33|100>>
     <associate|footnr-2.34|<tuple|2.34|101>>
-    <associate|footnr-2.35|<tuple|2.35|101>>
+    <associate|footnr-2.35|<tuple|2.35|102>>
     <associate|footnr-2.36|<tuple|<with|mode|<quote|math>|\<bullet\>>|106>>
     <associate|footnr-2.37|<tuple|2.37|109>>
     <associate|footnr-2.38|<tuple|2.38|109>>
     <associate|footnr-2.39|<tuple|red-black trees|110>>
     <associate|footnr-2.4|<tuple|algebraic specification|64>>
-    <associate|footnr-2.40|<tuple|2.40|111>>
+    <associate|footnr-2.40|<tuple|2.40|112>>
     <associate|footnr-2.41|<tuple|2.41|114>>
     <associate|footnr-2.42|<tuple|2.42|119>>
     <associate|footnr-2.43|<tuple|2.43|121>>
-    <associate|footnr-2.44|<tuple|2.44|126>>
-    <associate|footnr-2.45|<tuple|2.45|126>>
+    <associate|footnr-2.44|<tuple|2.44|127>>
+    <associate|footnr-2.45|<tuple|2.45|127>>
     <associate|footnr-2.46|<tuple|2.46|127>>
-    <associate|footnr-2.47|<tuple|2.47|129>>
-    <associate|footnr-2.48|<tuple|2.48|134>>
-    <associate|footnr-2.49|<tuple|2.49|135>>
+    <associate|footnr-2.47|<tuple|2.47|130>>
+    <associate|footnr-2.48|<tuple|2.48|135>>
+    <associate|footnr-2.49|<tuple|2.49|136>>
     <associate|footnr-2.5|<tuple|2.5|69>>
     <associate|footnr-2.50|<tuple|2.50|136>>
-    <associate|footnr-2.51|<tuple|2.51|137>>
+    <associate|footnr-2.51|<tuple|2.51|138>>
     <associate|footnr-2.52|<tuple|2.52|139>>
-    <associate|footnr-2.53|<tuple|2.53|139>>
+    <associate|footnr-2.53|<tuple|2.53|140>>
     <associate|footnr-2.54|<tuple|2.54|140>>
-    <associate|footnr-2.55|<tuple|2.55|141>>
-    <associate|footnr-2.56|<tuple|2.56|142>>
+    <associate|footnr-2.55|<tuple|2.55|142>>
+    <associate|footnr-2.56|<tuple|2.56|143>>
     <associate|footnr-2.57|<tuple|2.57|143>>
     <associate|footnr-2.58|<tuple|2.58|143>>
-    <associate|footnr-2.59|<tuple|2.59|145>>
+    <associate|footnr-2.59|<tuple|2.59|146>>
     <associate|footnr-2.6|<tuple|2.6|69>>
-    <associate|footnr-2.60|<tuple|2.60|145>>
+    <associate|footnr-2.60|<tuple|2.60|146>>
     <associate|footnr-2.61|<tuple|2.61|147>>
     <associate|footnr-2.7|<tuple|list structure|69>>
     <associate|footnr-2.8|<tuple|2.8|70>>
     <associate|footnr-2.9|<tuple|2.9|70>>
-    <associate|index-Euclidean-ring|<tuple|2.59|145>>
-    <associate|index-generic-procedures|<tuple|2.41|115>>
+    <associate|index-Euclidean-ring|<tuple|2.59|146>>
+    <associate|index-generic-procedures|<tuple|2.41|116>>
     <associate|index-integerizing-factor|<tuple|2.60|146>>
     <associate|index-invariant-quantity|<tuple|1.16|36>>
     <associate|index-quote|<tuple|2.3.1|100>>
@@ -14669,20 +14694,22 @@
     <associate|part:fig_2.1.tm|<tuple|2.1|63>>
     <associate|part:fig_2.13.tm|<tuple|2.13|92>>
     <associate|part:fig_2.15.tm|<tuple|2.15|95>>
-    <associate|part:fig_2.17.tm|<tuple|2.17|110>>
+    <associate|part:fig_2.17.tm|<tuple|2.17|111>>
     <associate|part:fig_2.19.tm|<tuple|2.19|119>>
     <associate|part:fig_2.2.tm|<tuple|2.2|68>>
     <associate|part:fig_2.20.tm|<tuple|2.20|120>>
     <associate|part:fig_2.21.tm|<tuple|2.21|124>>
-    <associate|part:fig_2.23.tm|<tuple|2.23|130>>
-    <associate|part:fig_2.24.tm|<tuple|2.24|133>>
+    <associate|part:fig_2.23.tm|<tuple|2.23|131>>
+    <associate|part:fig_2.24.tm|<tuple|2.24|134>>
     <associate|part:fig_2.3.tm|<tuple|2.3|68>>
     <associate|part:fig_2.4.tm|<tuple|2.4|69>>
     <associate|part:fig_2.5.tm|<tuple|2.5|76>>
     <associate|part:fig_2.7.tm|<tuple|2.7|81>>
     <associate|part:fig_2.8.tm|<tuple|2.8|88>>
     <associate|sec:1.1.3|<tuple|1.1.3|12>>
+    <associate|sec:1.1.5|<tuple|1.1.5|15>>
     <associate|sec:1.1.7|<tuple|1.1.7|20>>
+    <associate|sec:1.2.1|<tuple|1.2.1|27>>
     <associate|sec:1.2.2|<tuple|1.2.2|30>>
     <associate|sec:2.2.1|<tuple|2.2.1|69>>
     <associate|sec:2.3.2|<tuple|2.3.2|102>>
