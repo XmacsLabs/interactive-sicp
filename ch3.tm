@@ -1,4 +1,4 @@
-<TeXmacs|2.1.3>
+<TeXmacs|2.1.2>
 
 <project|sicp.tm>
 
@@ -105,7 +105,7 @@
   example, if we begin with $100 in the account, we should obtain the
   following sequence of responses using withdraw:
 
-  <\render-code>
+  <\scm-code>
     (withdraw 25)
 
     75
@@ -121,7 +121,7 @@
     (withdraw 15)
 
     35
-  </render-code>
+  </scm-code>
 
   Observe that the expression <scm|(withdraw 25)>, evaluated twice, yields
   different values. This is a new kind of behavior for a procedure. Until
@@ -1350,7 +1350,29 @@
   for the variable, then the variable is said to be
   <em|unbound><index|unbound> in the environment.
 
-  <\big-figure|>
+  <\big-figure>
+    <with|gr-mode|<tuple|group-edit|group-ungroup>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-snap|<tuple|control
+    point|grid point|curve-grid intersection|curve point|curve-curve
+    intersection|text border point|text border>|gr-auto-crop|true|<graphics||<line|<point|-1|2.5>|<point|-1.0|1.0>|<point|1.0|1.0>|<point|1.0|2.5>|<point|-1.0|2.5>>|<\document-at>
+      III
+    </document-at|<point|2.200000000000004|-1.3>>|<\document-at>
+      x:3
+
+      y:5
+    </document-at|<point|-0.7000000000000004|2.2>>|<\document-at>
+      z:6
+
+      x:7
+    </document-at|<point|-2.4000000000001283|-1.3>>|<\document-at>
+      m:5
+
+      y:2
+    </document-at|<point|1.0000000000000329|-1.3>>|<\document-at>
+      I
+    </document-at|<point|0.5|2.2>>|<\document-at>
+      II
+    </document-at|<point|-1.2000000000000746|-1.3>>|<line|<point|0.7000000000000296|-1.0>|<point|0.7000000000000296|-2.5>|<point|2.7|-2.5>|<point|2.7|-1.0>|<point|0.7000000000000296|-1.0>>|<line|<point|-2.700000000000041|-1.0>|<point|-2.700000000000041|-2.5>|<point|-0.7000000000001285|-2.5>|<point|-0.7000000000001285|-1.0>|<point|-2.700000000000041|-1.0>>|<with|arrow-end|\<gtr\>|<line|<point|-0.7000000000001284|-1.8000000000000003>|<point|-0.2999999999999996|-1.8>|<point|-0.2999999999999996|1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|0.7000000000000004|-1.8>|<point|0.2999999999999996|-1.8>|<point|0.2999999999999996|1.0>>>|<text-at|D|<point|0.5|0.3>>|<with|text-at-halign|right|<text-at|C|<point|-0.5|0.3>>>|<with|arrow-end|\<gtr\>|<line|<point|-1.7|-3.3>|<point|-1.7000000000000004|-2.5>>>|<with|arrow-end|\<gtr\>|<line|<point|1.7|-3.3>|<point|1.7000000000000004|-2.5>>>|<with|text-at-halign|right|<text-at|A|<point|-1.9|-3>>>|<text-at|B|<point|1.9|-3>>>>
+  <|big-figure>
     The simple environment structure
   </big-figure>
 
@@ -1398,6 +1420,59 @@
       the operand subexpressions.
     </enumerate>
   </quote-env>
+
+  The environment model of evaluation replaces the substitution model in
+  specifying what it means to apply a compound procedure to arguments.
+
+  In the environment model of evaluation, a procedure is always a pair
+  consisting of some code and a pointer to an environment. Procedures are
+  created in one way only: by evaluating a <scm|lambda> expression. This
+  produces a procedure whose code is obtained from the text of the
+  <scm|lambda> expression and whose environment is the environment in which
+  the <scm|lambda> expression was evaluated to produce the procedure.For
+  example, consider the procedure definition
+
+  <\session|scheme|default>
+    <\input>
+      Scheme]\ 
+    <|input>
+      (define (square x)
+
+      \ \ (* x x))
+    </input>
+  </session>
+
+  evaluated in the global environment. The procedure definition syntax is
+  just syntactic sugar for an underlying implicit <scm|lambda> expression. It
+  would have been equivalent to have used
+
+  <\session|scheme|default>
+    <\input>
+      Scheme]\ 
+    <|input>
+      (define (square x)
+
+      \ \ (* x x))
+    </input>
+  </session>
+
+  which evaluates <scm|(lambda (x) (* x x))> and binds <scm|square> to the
+  resulting value, all in the global environment.
+
+  \ shows the result of evaluating this <scm|define> expression. The
+  procedure object is a pair whose code specifies that the procedure has one
+  formal parameter, namely <scm|x>, and a procedure body<scm| (* x x)>. The
+  environment part of the procedure is a pointer to the global environment,
+  since that is the environment in which the <scm|lambda> expression was
+  evaluated to produce the procedure. A new binding, which associates the
+  procedure object with the symbol <scm|square>, has been added to the global
+  frame. In general, <scm|define> creates definitions by adding bindings to
+  frames.
+
+  <\big-figure|>
+    Environment structure produced by evaluating <scm|(define (square x) (* x
+    x))> in the global environment
+  </big-figure>
 
   <subsection|>
 
@@ -1965,8 +2040,8 @@
     <associate|auto-22|<tuple|referentially transparent|157>>
     <associate|auto-23|<tuple|aliasing|158>>
     <associate|auto-24|<tuple|side-effect bugs|158>>
-    <associate|auto-25|<tuple|side-effect bugs|158>>
-    <associate|auto-26|<tuple|imperative programming|158>>
+    <associate|auto-25|<tuple|side-effect bugs|159>>
+    <associate|auto-26|<tuple|imperative programming|159>>
     <associate|auto-27|<tuple|3.2|160>>
     <associate|auto-28|<tuple|environments|160>>
     <associate|auto-29|<tuple|frames|160>>
@@ -1977,22 +2052,23 @@
     <associate|auto-33|<tuple|value of a variable|160>>
     <associate|auto-34|<tuple|unbound|160>>
     <associate|auto-35|<tuple|3.1|160>>
-    <associate|auto-36|<tuple|3.2.1|160>>
-    <associate|auto-37|<tuple|3.2.2|161>>
-    <associate|auto-38|<tuple|3.3|161>>
-    <associate|auto-39|<tuple|3.3.1|161>>
+    <associate|auto-36|<tuple|3.2.1|161>>
+    <associate|auto-37|<tuple|3.2|162>>
+    <associate|auto-38|<tuple|3.2.2|162>>
+    <associate|auto-39|<tuple|3.3|162>>
     <associate|auto-4|<tuple|stream|147>>
-    <associate|auto-40|<tuple|3.3.2|161>>
-    <associate|auto-41|<tuple|3.3.3|161>>
-    <associate|auto-42|<tuple|3.3.4|161>>
-    <associate|auto-43|<tuple|3.3.5|161>>
-    <associate|auto-44|<tuple|primitive cnstraints|161>>
-    <associate|auto-45|<tuple|constraint networks|161>>
-    <associate|auto-46|<tuple|connectors|161>>
-    <associate|auto-47|<tuple|3.2|162>>
-    <associate|auto-48|<tuple|3.2|162>>
-    <associate|auto-49|<tuple|3.2|163>>
+    <associate|auto-40|<tuple|3.3.1|162>>
+    <associate|auto-41|<tuple|3.3.2|162>>
+    <associate|auto-42|<tuple|3.3.3|162>>
+    <associate|auto-43|<tuple|3.3.4|162>>
+    <associate|auto-44|<tuple|3.3.5|162>>
+    <associate|auto-45|<tuple|primitive cnstraints|162>>
+    <associate|auto-46|<tuple|constraint networks|162>>
+    <associate|auto-47|<tuple|connectors|162>>
+    <associate|auto-48|<tuple|3.3|163>>
+    <associate|auto-49|<tuple|3.3|163>>
     <associate|auto-5|<tuple|environment model|147>>
+    <associate|auto-50|<tuple|3.3|164>>
     <associate|auto-6|<tuple|delayed evaluation|147>>
     <associate|auto-7|<tuple|3.1|147>>
     <associate|auto-8|<tuple|state variable|147>>
@@ -2000,7 +2076,7 @@
     <associate|footnote-3.1|<tuple|3.1|148>>
     <associate|footnote-3.10|<tuple|3.10|158>>
     <associate|footnote-3.11|<tuple|3.11|159>>
-    <associate|footnote-3.12|<tuple|3.12|160>>
+    <associate|footnote-3.12|<tuple|3.12|161>>
     <associate|footnote-3.2|<tuple|3.2|149>>
     <associate|footnote-3.3|<tuple|3.3|149>>
     <associate|footnote-3.4|<tuple|3.4|150>>
@@ -2012,7 +2088,7 @@
     <associate|footnr-3.1|<tuple|3.1|148>>
     <associate|footnr-3.10|<tuple|side-effect bugs|158>>
     <associate|footnr-3.11|<tuple|3.11|159>>
-    <associate|footnr-3.12|<tuple|3.12|160>>
+    <associate|footnr-3.12|<tuple|3.12|161>>
     <associate|footnr-3.2|<tuple|3.2|149>>
     <associate|footnr-3.3|<tuple|3.3|149>>
     <associate|footnr-3.4|<tuple|hiding principle|150>>
@@ -2032,9 +2108,15 @@
       </surround>|<pageref|auto-35>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|3.2>|>
+        Environment structure produced by evaluating
+        <with|mode|<quote|prog>|prog-language|<quote|scheme>|font-family|<quote|rm>|(define
+        (square x) (* x x))> in the global environment
+      </surround>|<pageref|auto-37>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3.3>|>
         The relation <with|mode|<quote|math>|9*C = 5*(F - 32)> expressed as a
         constraint network.
-      </surround>|<pageref|auto-47>>
+      </surround>|<pageref|auto-48>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|modular>|<pageref|auto-2>>
@@ -2089,11 +2171,11 @@
 
       <tuple|<tuple|unbound>|<pageref|auto-34>>
 
-      <tuple|<tuple|primitive cnstraints>|<pageref|auto-44>>
+      <tuple|<tuple|primitive cnstraints>|<pageref|auto-45>>
 
-      <tuple|<tuple|constraint networks>|<pageref|auto-45>>
+      <tuple|<tuple|constraint networks>|<pageref|auto-46>>
 
-      <tuple|<tuple|connectors>|<pageref|auto-46>>
+      <tuple|<tuple|connectors>|<pageref|auto-47>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Modularity,
@@ -2134,38 +2216,38 @@
 
       <with|par-left|<quote|1tab>|3.2.2<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-38>>
 
       3.3<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>
+      <no-break><pageref|auto-39>
 
       <with|par-left|<quote|1tab>|3.3.1<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-40>>
 
       <with|par-left|<quote|1tab>|3.3.2<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>>
+      <no-break><pageref|auto-41>>
 
       <with|par-left|<quote|1tab>|3.3.3<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|1tab>|3.3.4<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-43>>
 
       <with|par-left|<quote|1tab>|3.3.5<space|2spc>Propagation of Constraints
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>>
+      <no-break><pageref|auto-44>>
 
       <with|par-left|<quote|2tab>|Using the constraint system
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
+      <no-break><pageref|auto-49>>
 
       <with|par-left|<quote|2tab>|Implementing the constraint system
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>>
+      <no-break><pageref|auto-50>>
     </associate>
   </collection>
 </auxiliary>
