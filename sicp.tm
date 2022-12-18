@@ -3265,7 +3265,7 @@
     <code*|(gcd 206 40)>? In the applicative-order evaluation?
   </exercise>
 
-  <subsection|Example: Testing for Primality><label|#1.2.6>
+  <subsection|Example: Testing for Primality><label|sec:1.2.6>
 
   This section describes two methods for checking the primality of an integer
   <math|n>, one with order of growth <math|\<Theta\><around*|(|<sqrt|n>|)>>,
@@ -11566,7 +11566,7 @@
   to level can be an important organizational strategy, as we shall see in
   <hlink|2.5|#2.5>.
 
-  <subsection|Data-Directed Programming and Additivity>
+  <subsection|Data-Directed Programming and Additivity><label|sec:2.4.3>
 
   The general strategy of checking the type of a datum and calling an
   appropriate procedure is called <em|dispatching on type><index|dispatching
@@ -14105,7 +14105,6 @@
 
 <\references>
   <\collection>
-    <associate|#1.2.6|<tuple|1.2.6|38>>
     <associate|%_idx_102|<tuple|1.3|8>>
     <associate|%_idx_104|<tuple|1.3|8>>
     <associate|%_idx_106|<tuple|1.3|8>>
@@ -14248,20 +14247,20 @@
     <associate|auto-190|<tuple|2.16|109>>
     <associate|auto-191|<tuple|B-trees|110>>
     <associate|auto-192|<tuple|red-black trees|110>>
-    <associate|auto-193|<tuple|2.17|111>>
-    <associate|auto-194|<tuple|key|112>>
-    <associate|auto-195|<tuple|2.3.4|113>>
-    <associate|auto-196|<tuple|fixed-length|113>>
-    <associate|auto-197|<tuple|variable-length|113>>
+    <associate|auto-193|<tuple|2.17|110>>
+    <associate|auto-194|<tuple|key|111>>
+    <associate|auto-195|<tuple|2.3.4|112>>
+    <associate|auto-196|<tuple|fixed-length|112>>
+    <associate|auto-197|<tuple|variable-length|112>>
     <associate|auto-198|<tuple|separator code|113>>
     <associate|auto-199|<tuple|prefix|113>>
     <associate|auto-2|<tuple|computational process|7>>
     <associate|auto-20|<tuple|operands|10>>
     <associate|auto-200|<tuple|prefix code|113>>
-    <associate|auto-201|<tuple|2.18|114>>
-    <associate|auto-202|<tuple|generic procedures|116>>
+    <associate|auto-201|<tuple|2.18|113>>
+    <associate|auto-202|<tuple|generic procedures|115>>
     <associate|auto-203|<tuple|2.4|118>>
-    <associate|auto-204|<tuple|additively|119>>
+    <associate|auto-204|<tuple|additively|118>>
     <associate|auto-205|<tuple|generic procedures|119>>
     <associate|auto-206|<tuple|type tags|119>>
     <associate|auto-207|<tuple|data-directed|119>>
@@ -14272,36 +14271,36 @@
     <associate|auto-211|<tuple|2.4.2|122>>
     <associate|auto-212|<tuple|type tag|122>>
     <associate|auto-213|<tuple|2.21|124>>
-    <associate|auto-214|<tuple|2.4.3|125>>
-    <associate|auto-215|<tuple|dispatching on type|125>>
+    <associate|auto-214|<tuple|2.4.3|124>>
+    <associate|auto-215|<tuple|dispatching on type|124>>
     <associate|auto-216|<tuple|additive|125>>
     <associate|auto-217|<tuple|data directed programming|125>>
-    <associate|auto-218|<tuple|2.22|126>>
+    <associate|auto-218|<tuple|2.22|125>>
     <associate|auto-219|<tuple|package|126>>
     <associate|auto-22|<tuple|prefix notation|10>>
     <associate|auto-220|<tuple|message passing|130>>
     <associate|auto-221|<tuple|2.5|130>>
-    <associate|auto-222|<tuple|2.23|131>>
+    <associate|auto-222|<tuple|2.23|130>>
     <associate|auto-223|<tuple|2.5.1|131>>
     <associate|auto-224|<tuple|ordinary|131>>
-    <associate|auto-225|<tuple|2.24|134>>
-    <associate|auto-226|<tuple|2.5.2|135>>
+    <associate|auto-225|<tuple|2.24|133>>
+    <associate|auto-226|<tuple|2.5.2|134>>
     <associate|auto-227|<tuple|coercion|135>>
-    <associate|auto-228|<tuple|hierarchy of types|137>>
-    <associate|auto-229|<tuple|subtype|137>>
+    <associate|auto-228|<tuple|hierarchy of types|136>>
+    <associate|auto-229|<tuple|subtype|136>>
     <associate|auto-23|<tuple|pretty-printing|11>>
-    <associate|auto-230|<tuple|supertype|137>>
-    <associate|auto-231|<tuple|tower|137>>
-    <associate|auto-232|<tuple|2.25|137>>
+    <associate|auto-230|<tuple|supertype|136>>
+    <associate|auto-231|<tuple|tower|136>>
+    <associate|auto-232|<tuple|2.25|136>>
     <associate|auto-233|<tuple|2.26|138>>
-    <associate|auto-234|<tuple|coerce|139>>
-    <associate|auto-235|<tuple|2.5.3|140>>
-    <associate|auto-236|<tuple|indeterminates|140>>
-    <associate|auto-237|<tuple|univariate polynomials|140>>
-    <associate|auto-238|<tuple|poly|141>>
-    <associate|auto-239|<tuple|dense|143>>
+    <associate|auto-234|<tuple|coerce|138>>
+    <associate|auto-235|<tuple|2.5.3|139>>
+    <associate|auto-236|<tuple|indeterminates|139>>
+    <associate|auto-237|<tuple|univariate polynomials|139>>
+    <associate|auto-238|<tuple|poly|140>>
+    <associate|auto-239|<tuple|dense|142>>
     <associate|auto-24|<tuple|read-eval-print loop|11>>
-    <associate|auto-240|<tuple|sparse|143>>
+    <associate|auto-240|<tuple|sparse|142>>
     <associate|auto-241|<tuple|pseudodivision|146>>
     <associate|auto-242|<tuple|pseudoremainder|146>>
     <associate|auto-243|<tuple|2.61|149>>
@@ -14396,12 +14395,12 @@
     <associate|ex2.21|<tuple|2.21|75>>
     <associate|ex2.30|<tuple|2.30|79>>
     <associate|ex2.79|<tuple|2.79|134>>
-    <associate|ex2.83|<tuple|2.83|139>>
+    <associate|ex2.83|<tuple|2.83|138>>
     <associate|exercise:2.12|<tuple|2.12|67>>
     <associate|exercise:2.2|<tuple|2.2|63>>
     <associate|exercise:2.3|<tuple|2.3|64>>
-    <associate|fig2.23|<tuple|2.23|131>>
-    <associate|fig2.25|<tuple|2.25|137>>
+    <associate|fig2.23|<tuple|2.23|130>>
+    <associate|fig2.25|<tuple|2.25|136>>
     <associate|fig:1.1|<tuple|1.1|13>>
     <associate|fig:1.2|<tuple|1.2|23>>
     <associate|fig:1.3|<tuple|1.3|27>>
@@ -14414,14 +14413,14 @@
     <associate|fig:2.13|<tuple|2.13|92>>
     <associate|fig:2.14|<tuple|2.14|93>>
     <associate|fig:2.16|<tuple|2.16|109>>
-    <associate|fig:2.17|<tuple|2.17|111>>
-    <associate|fig:2.18|<tuple|2.18|114>>
+    <associate|fig:2.17|<tuple|2.17|110>>
+    <associate|fig:2.18|<tuple|2.18|113>>
     <associate|fig:2.19|<tuple|2.19|119>>
     <associate|fig:2.2|<tuple|2.2|68>>
     <associate|fig:2.20|<tuple|2.20|120>>
     <associate|fig:2.21|<tuple|2.21|124>>
-    <associate|fig:2.22|<tuple|2.22|126>>
-    <associate|fig:2.24|<tuple|2.24|134>>
+    <associate|fig:2.22|<tuple|2.22|125>>
+    <associate|fig:2.24|<tuple|2.24|133>>
     <associate|fig:2.26|<tuple|2.26|138>>
     <associate|fig:2.3|<tuple|2.3|68>>
     <associate|fig:2.4|<tuple|2.4|69>>
@@ -14524,35 +14523,35 @@
     <associate|footnote-2.32|<tuple|2.32|100>>
     <associate|footnote-2.33|<tuple|2.33|100>>
     <associate|footnote-2.34|<tuple|2.34|101>>
-    <associate|footnote-2.35|<tuple|2.35|102>>
+    <associate|footnote-2.35|<tuple|2.35|101>>
     <associate|footnote-2.36|<tuple|2.36|106>>
     <associate|footnote-2.37|<tuple|2.37|109>>
     <associate|footnote-2.38|<tuple|2.38|109>>
     <associate|footnote-2.39|<tuple|2.39|110>>
     <associate|footnote-2.4|<tuple|2.4|64>>
-    <associate|footnote-2.40|<tuple|2.40|112>>
+    <associate|footnote-2.40|<tuple|2.40|111>>
     <associate|footnote-2.41|<tuple|2.41|114>>
     <associate|footnote-2.42|<tuple|2.42|119>>
     <associate|footnote-2.43|<tuple|2.43|121>>
-    <associate|footnote-2.44|<tuple|2.44|127>>
-    <associate|footnote-2.45|<tuple|2.45|127>>
+    <associate|footnote-2.44|<tuple|2.44|126>>
+    <associate|footnote-2.45|<tuple|2.45|126>>
     <associate|footnote-2.46|<tuple|2.46|127>>
-    <associate|footnote-2.47|<tuple|2.47|130>>
-    <associate|footnote-2.48|<tuple|2.48|135>>
-    <associate|footnote-2.49|<tuple|2.49|136>>
+    <associate|footnote-2.47|<tuple|2.47|129>>
+    <associate|footnote-2.48|<tuple|2.48|134>>
+    <associate|footnote-2.49|<tuple|2.49|135>>
     <associate|footnote-2.5|<tuple|2.5|69>>
     <associate|footnote-2.50|<tuple|2.50|136>>
-    <associate|footnote-2.51|<tuple|2.51|138>>
+    <associate|footnote-2.51|<tuple|2.51|137>>
     <associate|footnote-2.52|<tuple|2.52|139>>
-    <associate|footnote-2.53|<tuple|2.53|140>>
+    <associate|footnote-2.53|<tuple|2.53|139>>
     <associate|footnote-2.54|<tuple|2.54|140>>
-    <associate|footnote-2.55|<tuple|2.55|142>>
-    <associate|footnote-2.56|<tuple|2.56|143>>
+    <associate|footnote-2.55|<tuple|2.55|141>>
+    <associate|footnote-2.56|<tuple|2.56|142>>
     <associate|footnote-2.57|<tuple|2.57|143>>
     <associate|footnote-2.58|<tuple|2.58|143>>
-    <associate|footnote-2.59|<tuple|2.59|146>>
+    <associate|footnote-2.59|<tuple|2.59|145>>
     <associate|footnote-2.6|<tuple|2.6|69>>
-    <associate|footnote-2.60|<tuple|2.60|146>>
+    <associate|footnote-2.60|<tuple|2.60|145>>
     <associate|footnote-2.61|<tuple|2.61|147>>
     <associate|footnote-2.7|<tuple|2.7|69>>
     <associate|footnote-2.8|<tuple|2.8|70>>
@@ -14651,41 +14650,41 @@
     <associate|footnr-2.32|<tuple|2.32|100>>
     <associate|footnr-2.33|<tuple|2.33|100>>
     <associate|footnr-2.34|<tuple|2.34|101>>
-    <associate|footnr-2.35|<tuple|2.35|102>>
+    <associate|footnr-2.35|<tuple|2.35|101>>
     <associate|footnr-2.36|<tuple|<with|mode|<quote|math>|\<bullet\>>|106>>
     <associate|footnr-2.37|<tuple|2.37|109>>
     <associate|footnr-2.38|<tuple|2.38|109>>
     <associate|footnr-2.39|<tuple|red-black trees|110>>
     <associate|footnr-2.4|<tuple|algebraic specification|64>>
-    <associate|footnr-2.40|<tuple|2.40|112>>
+    <associate|footnr-2.40|<tuple|2.40|111>>
     <associate|footnr-2.41|<tuple|2.41|114>>
     <associate|footnr-2.42|<tuple|2.42|119>>
     <associate|footnr-2.43|<tuple|2.43|121>>
-    <associate|footnr-2.44|<tuple|2.44|127>>
-    <associate|footnr-2.45|<tuple|2.45|127>>
+    <associate|footnr-2.44|<tuple|2.44|126>>
+    <associate|footnr-2.45|<tuple|2.45|126>>
     <associate|footnr-2.46|<tuple|2.46|127>>
-    <associate|footnr-2.47|<tuple|2.47|130>>
-    <associate|footnr-2.48|<tuple|2.48|135>>
-    <associate|footnr-2.49|<tuple|2.49|136>>
+    <associate|footnr-2.47|<tuple|2.47|129>>
+    <associate|footnr-2.48|<tuple|2.48|134>>
+    <associate|footnr-2.49|<tuple|2.49|135>>
     <associate|footnr-2.5|<tuple|2.5|69>>
     <associate|footnr-2.50|<tuple|2.50|136>>
-    <associate|footnr-2.51|<tuple|2.51|138>>
+    <associate|footnr-2.51|<tuple|2.51|137>>
     <associate|footnr-2.52|<tuple|2.52|139>>
-    <associate|footnr-2.53|<tuple|2.53|140>>
+    <associate|footnr-2.53|<tuple|2.53|139>>
     <associate|footnr-2.54|<tuple|2.54|140>>
-    <associate|footnr-2.55|<tuple|2.55|142>>
-    <associate|footnr-2.56|<tuple|2.56|143>>
+    <associate|footnr-2.55|<tuple|2.55|141>>
+    <associate|footnr-2.56|<tuple|2.56|142>>
     <associate|footnr-2.57|<tuple|2.57|143>>
     <associate|footnr-2.58|<tuple|2.58|143>>
-    <associate|footnr-2.59|<tuple|2.59|146>>
+    <associate|footnr-2.59|<tuple|2.59|145>>
     <associate|footnr-2.6|<tuple|2.6|69>>
-    <associate|footnr-2.60|<tuple|2.60|146>>
+    <associate|footnr-2.60|<tuple|2.60|145>>
     <associate|footnr-2.61|<tuple|2.61|147>>
     <associate|footnr-2.7|<tuple|list structure|69>>
     <associate|footnr-2.8|<tuple|2.8|70>>
     <associate|footnr-2.9|<tuple|2.9|70>>
-    <associate|index-Euclidean-ring|<tuple|2.59|146>>
-    <associate|index-generic-procedures|<tuple|2.41|116>>
+    <associate|index-Euclidean-ring|<tuple|2.59|145>>
+    <associate|index-generic-procedures|<tuple|2.41|115>>
     <associate|index-integerizing-factor|<tuple|2.60|146>>
     <associate|index-invariant-quantity|<tuple|1.16|36>>
     <associate|index-quote|<tuple|2.3.1|100>>
@@ -14694,13 +14693,13 @@
     <associate|part:fig_2.1.tm|<tuple|2.1|63>>
     <associate|part:fig_2.13.tm|<tuple|2.13|92>>
     <associate|part:fig_2.15.tm|<tuple|2.15|95>>
-    <associate|part:fig_2.17.tm|<tuple|2.17|111>>
+    <associate|part:fig_2.17.tm|<tuple|2.17|110>>
     <associate|part:fig_2.19.tm|<tuple|2.19|119>>
     <associate|part:fig_2.2.tm|<tuple|2.2|68>>
     <associate|part:fig_2.20.tm|<tuple|2.20|120>>
     <associate|part:fig_2.21.tm|<tuple|2.21|124>>
-    <associate|part:fig_2.23.tm|<tuple|2.23|131>>
-    <associate|part:fig_2.24.tm|<tuple|2.24|134>>
+    <associate|part:fig_2.23.tm|<tuple|2.23|130>>
+    <associate|part:fig_2.24.tm|<tuple|2.24|133>>
     <associate|part:fig_2.3.tm|<tuple|2.3|68>>
     <associate|part:fig_2.4.tm|<tuple|2.4|69>>
     <associate|part:fig_2.5.tm|<tuple|2.5|76>>
@@ -14711,9 +14710,11 @@
     <associate|sec:1.1.7|<tuple|1.1.7|20>>
     <associate|sec:1.2.1|<tuple|1.2.1|27>>
     <associate|sec:1.2.2|<tuple|1.2.2|30>>
+    <associate|sec:1.2.6|<tuple|1.2.6|38>>
     <associate|sec:2.2.1|<tuple|2.2.1|69>>
     <associate|sec:2.3.2|<tuple|2.3.2|102>>
     <associate|sec:2.4.2|<tuple|2.4.2|122>>
+    <associate|sec:2.4.3|<tuple|2.4.3|124>>
   </collection>
 </references>
 
