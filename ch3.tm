@@ -2,7 +2,7 @@
 
 <project|sicp.tm>
 
-<style|book>
+<style|<tuple|book|smart-ref>>
 
 <\body>
   <chapter|Modularity, Objects and State>
@@ -45,14 +45,14 @@
   significant linguistic issues inprogramming. With objects, we must be
   concerned with how a computational object can change and yet maintain its
   identity. This will force us to abandon our old substitution model of
-  computation (section <hlink|1.1.5|#1.1.5>) in favor of a more mechanistic
-  but less theoretically tractable <em|environment model><index|environment
-  model> of computation. The difficulties of dealing with objects, change,
-  and identity are a fundamental consequence of the need to grapple with time
-  in our computational models. These difficulties become even greater when we
-  allow the possibility of concurrent execution of programs. The stream
-  approach can be most fully exploited when we decouple simulated time in our
-  model from the order of the events that take place in the computer during
+  computation (<smart-ref|sec:1.1.5>) in favor of a more mechanistic but less
+  theoretically tractable <em|environment model><index|environment model> of
+  computation. The difficulties of dealing with objects, change, and identity
+  are a fundamental consequence of the need to grapple with time in our
+  computational models. These difficulties become even greater when we allow
+  the possibility of concurrent execution of programs. The stream approach
+  can be most fully exploited when we decouple simulated time in our model
+  from the order of the events that take place in the computer during
   evaluation. We will accomplish this using a technique known as <em|delayed
   evaluation><index|delayed evaluation>.
 
@@ -93,7 +93,7 @@
   provide an <em|assignment operator><index|assignment operator> to enable us
   to change the value associated with a name.
 
-  <subsection|Local State Variables>
+  <subsection|Local State Variables><label|sec:3.1.1>
 
   To illustrate what we mean by having a computational object with
   time-varying state, let us model the situation of withdrawing money from a
@@ -131,10 +131,10 @@
   procedure with the same arguments always produced the same
   result.<\footnote>
     Actually, this is not quite true. One exception was the random-number
-    generator in section <hlink|1.2.6|#1.2.6>. Another exception involved the
-    operation/type tables we introduced in section <hlink|2.4.3|#2.4.3>,
-    where the values of two calls to get with the same arguments depended on
-    intervening<next-line>calls to put. On the other hand, until we introduce
+    generator in <smart-ref|sec:1.2.6>. Another exception involved the
+    operation/type tables we introduced in <smart-ref|sec:2.4.3>, where the
+    values of two calls to get with the same arguments depended on
+    intervening calls to put. On the other hand, until we introduce
     assignment, we have no way to create such procedures ourselves.
   </footnote>
 
@@ -194,9 +194,9 @@
 
     The name <scm|set!> reflects a naming convention used in Scheme:
     Operations that change the values of variables (or that change data
-    structures,<next-line>as we will see in section 3.3) are given names that
+    structures, as we will see in <smart-ref|sec:3.3>) are given names that
     end with an exclamation point. This is similar to the convention of
-    designating predicates<next-line>by names that end with a question mark.
+    designating predicates by names that end with a question mark.
   </footnote>
 
   <verbatim|Withdraw> also uses the <scm|begin> special form to cause two
@@ -273,19 +273,19 @@
   technique we will use for constructing computational objects with local
   state. Unfortunately, using this technique raises a serious problem: When
   we first introduced procedures, we also introduced the substitution model
-  of evaluation (section 1.1.5) to provide an interpretation of what
+  of evaluation (<smart-ref|sec:1.1.5>) to provide an interpretation of what
   procedure application means. We said that applying a procedure should be
   interpreted as evaluating the body of the procedure with the formal
   parameters replaced by their values. The trouble is that, as soon as we
   introduce assignment into our language, substitution is no longer an
   adequate model of procedure application. (We will see why this is so in
-  section <hlink|3.1.3|#3.1.3>.) As a consequence, we technically have at
-  this point no way to understand why the <verbatim|new-withdraw> procedure
-  behaves as claimed above. In order to really understand a procedure such as
+  <smart-ref|sec:3.1.3>.) As a consequence, we technically have at this point
+  no way to understand why the <verbatim|new-withdraw> procedure behaves as
+  claimed above. In order to really understand a procedure such as
   <verbatim|new-withdraw>, we will need to develop a new model of procedure
-  application. In section 3.2 we will introduce such a model, together with
-  an explanation of <scm|set!> and local variables. First, however, we
-  examine some variations on the theme established <verbatim|by
+  application. In <smart-ref|sec:3.2> we will introduce such a model,
+  together with an explanation of <scm|set!> and local variables. First,
+  however, we examine some variations on the theme established <verbatim|by
   new-withdraw>.
 
   The following procedure, <verbatim|make-withdraw>, creates ``withdrawal
@@ -295,7 +295,7 @@
     In contrast with new-withdraw above, we do not have to use let to make
     balance a local variable, since formal parameters are already local. This
     will be clearer after the discussion of the environment model of
-    evaluation in section <hlink|3.2|#3.2>. (See also exercise 3.10.)
+    evaluation in <smart-ref|sec:3.2>. (See also exercise 3.10.)
   </footnote>
 
   <\session|scheme|default>
@@ -413,8 +413,8 @@
   one of the two local procedures. The <verbatim|dispatch> procedure itself
   is returned as the value that represents the bank-account object. This is
   precisely the <em|message-passing> style of programming that we saw in
-  section <hlink|2.4.3|#2.4.3>, although here we are using it in conjunction
-  with the ability to modify local variables.
+  <smart-ref|sec:2.4.3>, although here we are using it in conjunction with
+  the ability to modify local variables.
 
   <verbatim|make-account> can be used as follows:
 
@@ -796,11 +796,12 @@
     You will find it useful to have a procedure that returns a number chosen
     at random from a given range. The following <verbatim|random-in-range>
     procedure implements this in terms of the random procedure used in
-    section 1.2.6, which returns a nonnegative number less than its
+    <smart-ref|sec:1.2.6>, which returns a nonnegative number less than its
     input.<\footnote>
       MIT Scheme provides such a procedure. If random is given an exact
-      integer (as in section 1.2.6) it returns an exact integer, but if it is
-      given a decimal value (as in this exercise) it returns a decimal value.
+      integer (as in <smart-ref|sec:1.2.6>) it returns an exact integer, but
+      if it is given a decimal value (as in this exercise) it returns a
+      decimal value.
     </footnote>
 
     <\session|scheme|default>
@@ -828,14 +829,15 @@
     have when testing and debugging programs that use random numbers.
   </exercise>
 
-  <subsection|The Cost of Introducing Assignment>
+  <subsection|The Cost of Introducing Assignment><label|sec:3.1.3>
 
   As we have seen, the <scm|set!> operation enables us to model objects that
   have local state. However, this advantage comes at a price. Our programming
   language can no longer be interpreted in terms of the substitution model of
-  procedure application that we introduced in section 1.1.5. Moreover, no
-  simple model with ``nice'' mathematical properties can be an adequate
-  framework for dealing with objects and assignment in programming languages.
+  procedure application that we introduced in <smart-ref|sec:1.1.5>.
+  Moreover, no simple model with ``nice'' mathematical properties can be an
+  adequate framework for dealing with objects and assignment in programming
+  languages.
 
   So long as we do not use assignments, two evaluations of the same procedure
   with the same arguments will produce the same result, so that procedures
@@ -845,8 +847,8 @@
   programming>.
 
   To understand how assignment complicates matters, consider a simplified
-  version of the <verbatim|make-withdraw> procedure of section 3.1.1 that
-  does not bother to check for an insufficient amount:
+  version of the <verbatim|make-withdraw> procedure of <smart-ref|sec:3.1.1>
+  that does not bother to check for an insufficient amount:
 
   <\session|scheme|default>
     <\unfolded-io|Scheme] >
@@ -996,8 +998,8 @@
   soon as we introduce <scm|set!> and the idea that the value of a variable
   can change, a variable can no longer be simply a name. Now a variable
   somehow refers to a place where a value can be stored, and the value stored
-  at this place can change. In section 3.2 we will see how environments play
-  this role of ``place'' in our computational model.
+  at this place can change. In <smart-ref|sec:3.2> we will see how
+  environments play this role of ``place'' in our computational model.
 
   <subsubsection*|Sameness and Change>
 
@@ -1161,7 +1163,7 @@
     The phenomenon of a single computational object being accessed by more
     than one name is known as <em|aliasing><index|aliasing>. The joint bank
     account situation illustrates a very simple example of an alias. In
-    section <hlink|3.3|#3.3> we will see much more complex examples, such as
+    <smart-ref|sec:3.3> we will see much more complex examples, such as
     ``distinct'' compound data structures that share parts. Bugs can occur in
     our programs if we forget that a change to an object may also, as a
     ``side effect,'' change a ``different'' object because the two
@@ -1197,7 +1199,7 @@
   programming>. In addition to raising complications about computational
   models, programs written in imperative style are susceptible to bugs that
   cannot occur in functional programs. For example, recall the iterative
-  factorial program from section <hlink|1.2.1|#1.2.1>:
+  factorial program from <smart-ref|sec:1.2.1>:
 
   <\session|scheme|default>
     <\input>
@@ -1276,8 +1278,8 @@
     concerns that can complicate programming and obscure the important ideas.
   </footnote> The complexity of imperative programs becomes even worse if we
   consider applications in which several processes execute concurrently. We
-  will return to this in section 3.4. First, however, we will address the
-  issue of providing a computational model for expressions that involve
+  will return to this in <smart-ref|sec:3.4>. First, however, we will address
+  the issue of providing a computational model for expressions that involve
   assignment, and explore the uses of objects with local state in designing
   simulations.
 
@@ -1306,22 +1308,23 @@
   </exercise>
 
   <\exercise>
-    When we defined the evaluation model in section 1.1.3, we said that the
-    first step in evaluating an expression is to evaluate its subexpressions.
-    But we never specified the order in which the subexpressions should be
-    evaluated (e.g., left to right or right to left). When we introduce
-    assignment, the order in which the arguments to a procedure are evaluated
-    can make a difference to the result. Define a simple procedure
-    <verbatim|f> such that evaluating <scm|(+ (f 0) (f 1))> will return 0 if
-    the arguments to <verbatim|+> are evaluated from left to right but will
-    return 1 if the arguments are evaluated from right to left.
+    When we defined the evaluation model in <smart-ref|sec:1.1.3>, we said
+    that the first step in evaluating an expression is to evaluate its
+    subexpressions. But we never specified the order in which the
+    subexpressions should be evaluated (e.g., left to right or right to
+    left). When we introduce assignment, the order in which the arguments to
+    a procedure are evaluated can make a difference to the result. Define a
+    simple procedure <verbatim|f> such that evaluating <scm|(+ (f 0) (f 1))>
+    will return 0 if the arguments to <verbatim|+> are evaluated from left to
+    right but will return 1 if the arguments are evaluated from right to
+    left.
   </exercise>
 
-  <section|The Environment Model of Evaluation>
+  <section|The Environment Model of Evaluation><label|sec:3.2>
 
   When we introduced compound procedures in chapter 1, we used the
-  substitution model of evaluation (section 1.1.5) to define what is meant by
-  applying a procedure to arguments:
+  substitution model of evaluation (<smart-ref|sec:1.1.5>) to define what is
+  meant by applying a procedure to arguments:
 
   <\quote-env>
     To apply a compound procedure to arguments, evaluate the body of the
@@ -1330,11 +1333,11 @@
   </quote-env>
 
   Once we admit assignment into our programming language, such a definition
-  is no longer adequate. In particular, section 3.1.3 argued that, in the
-  presence of assignment, a variable can no longer be considered to be merely
-  a name for a value. Rather, a variable must somehow designate a ``place''
-  in which values can be stored. In our new model of evaluation, these places
-  will be maintained in structures called
+  is no longer adequate. In particular, <smart-ref|sec:3.1.3> argued that, in
+  the presence of assignment, a variable can no longer be considered to be
+  merely a name for a value. Rather, a variable must somehow designate a
+  ``place'' in which values can be stored. In our new model of evaluation,
+  these places will be maintained in structures called
   <em|environments><index|environments>.
 
   An environment is a sequence of <em|frames><index|frames>. Each frame is a
@@ -1397,7 +1400,7 @@
   <subsection|The Rules for Evaluation>
 
   The overall specification of how the interpreter evaluates a combination
-  remains the same as when we first introduced it in section 1.1.3:
+  remains the same as when we first introduced it in <smart-ref|sec:1.1.3>:
 
   <\quote-env>
     To evaluate a combination:
@@ -1450,41 +1453,65 @@
     <\input>
       Scheme]\ 
     <|input>
-      (define (square x)
+      (define square
 
-      \ \ (* x x))
+      \ \ (lambda (x) (* x x)))
     </input>
   </session>
 
   which evaluates <scm|(lambda (x) (* x x))> and binds <scm|square> to the
   resulting value, all in the global environment.
 
-  \ shows the result of evaluating this <scm|define> expression. The
-  procedure object is a pair whose code specifies that the procedure has one
-  formal parameter, namely <scm|x>, and a procedure body<scm| (* x x)>. The
-  environment part of the procedure is a pointer to the global environment,
-  since that is the environment in which the <scm|lambda> expression was
-  evaluated to produce the procedure. A new binding, which associates the
-  procedure object with the symbol <scm|square>, has been added to the global
-  frame. In general, <scm|define> creates definitions by adding bindings to
-  frames.
+  <smart-ref|fig:3.2> shows the result of evaluating this <scm|define>
+  expression. The procedure object is a pair whose code specifies that the
+  procedure has one formal parameter, namely <scm|x>, and a procedure
+  body<scm| (* x x)>. The environment part of the procedure is a pointer to
+  the global environment, since that is the environment in which the
+  <scm|lambda> expression was evaluated to produce the procedure. A new
+  binding, which associates the procedure object with the symbol
+  <scm|square>, has been added to the global frame. In general, <scm|define>
+  creates definitions by adding bindings to frames.
 
-  <\big-figure|>
-    Environment structure produced by evaluating <scm|(define (square x) (* x
-    x))> in the global environment
+  <\big-figure|<with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-point-size|5ln|gr-snap|<tuple|control
+  point|grid point|grid curve point|curve-grid intersection|curve
+  point|curve-curve intersection>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics|||<line|<point|-2.200000000000056|1.4>|<point|-2.200000000000028|3.0>|<point|2.00000000000006|3.0>|<point|2.00000000000006|1.4>|<point|-2.200000000000028|1.4>>|<text-at|<verbatim|square>:|<point|-1.8000000000000664|1.8>>|<\document-at>
+    <\scm-code>
+      (define (square x)
+
+      \ \ (* x x))
+    </scm-code>
+  </document-at|<point|-4.0|1.0>>|<carc|<point|-0.200000000000007|-0.6000000000000488>|<point|1.0000000000000102|-0.6000000000000488>|<point|0.40000000000004665|6.938893903907843e-17>>|<carc|<point|-0.200000000000007|-0.6000000000000488>|<point|-1.4|-0.6000000000000488>|<point|-0.8000000000000551|6.938893903907843e-17>>|<\document-at>
+    parameters:<scm|x>
+
+    body:<scm|(* x x)>
+  </document-at|<point|-1.8000000000000487|-1.8000000000000576>>|<with|arrow-end|\<gtr\>|<line|<point|-0.8000000000000506|-0.6000000000000488>|<point|-0.8000000000000551|-1.8000000000000576>>>|<with|point-size|5ln|<point|-0.8000000000000506|-0.6000000000000488>>|<text-at|<em|other
+  variables>|<point|-1.8000000000000664|2.4>>|<with|point-size|5ln|<point|0.40000000000003627|-0.6000000000000488>>|<with|arrow-end|\<gtr\>|<line|<point|0.4000000000000364|-0.6000000000000488>|<point|1.5999999999999992|-0.6>|<point|1.5999999999999992|1.4>>>|<\document-at>
+    global
+
+    env
+  </document-at|<point|-4.0|2.6>>|<with|arrow-end|\<gtr\>|<line|<point|-3|2.3>|<point|-2.2|2.3>>>|<with|arrow-end|\<gtr\>|<line|<point|-0.6000000000000002|1.9>|<point|-0.20000000000000037|1.9>|<point|-0.20000000000000037|0.0>>>>>>
+    <label|fig:3.2>Environment structure produced by evaluating <scm|(define
+    (square x) (* x x))> in the global environment.
   </big-figure>
 
-  <subsection|>
-
-  <section|>
-
-  <subsection|>
-
-  <subsection|>
-
-  <subsection|>
+  Now that we have seen how procedures are created, we can describe how
+  procedures are applied. The environment model specifies: To apply a
+  procedure to arguments, create a new environment containing a frame that
+  binds the parameters to the values of the arguments. The enclosing
+  environment of this frame is the environment specified by the procedure.
+  Now, within this new environment, evaluate the procedure body.
 
   <subsection|>
+
+  <section|Modeling with Mutable Data><label|sec:3.3>
+
+  <subsection|>
+
+  <subsection|>
+
+  <subsection|>
+
+  <subsection|><label|sec:3.3.4>
 
   <subsection|Propagation of Constraints>
 
@@ -1530,13 +1557,26 @@
     9*C=5*<around*|(|F-32|)>
   </equation*>
 
+  Such a constraint can be thought of as a network consisting of primitive
+  adder, multiplier, and constant constraints (<smart-ref|fig:3.28>). In the
+  figure, we see on the left a multiplier box with three terminals, labeled
+  <em|m1>, <em|m2>, and <em|p>. These connect the multiplier to the rest of
+  the network as follows: The <em|m1> terminal is linked to a connector
+  <em|C>, which will hold the Celsius temperature. The <em|m2> terminal is
+  linked to a connector <em|w>, which is also linked to a constant box that
+  holds 9. The <em|p> terminal, which the multiplier box constrains to be the
+  product of <em|m1> and <em|m2> , is linked to the <em|p> terminal of
+  another multiplier box, whose <em|m2> is connected to a constant 5 and
+  whose <em|m1> is connected to one of the terms in a sum.
+
   \;
 
-  <\big-figure|>
-    The relation <math|9*C = 5*(F - 32)> expressed as a constraint network.
+  <\big-figure|<with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-text-at-valign|center|gr-snap|<tuple|control
+  point|grid point|grid curve point|curve-grid intersection|curve
+  point|curve-curve intersection>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<text-at|m1|<point|-3.8|1.4>>|<text-at|m2|<point|-3.8|0.6>>|<line|<point|-0.4|2>|<point|-0.3999999999999998|0.2>|<point|1.7999999999999996|0.2>|<point|1.7999999999999996|2.0>|<point|-0.3999999999999998|2.0>>|<line|<point|3.2|2>|<point|3.2|0.2>|<point|5.4|0.2>|<point|5.4|2.0>|<point|3.2|2.0>>|<text-at|p|<point|-0.2|1>>|<text-at|a1|<point|3.4|1.4>>|<text-at|a2|<point|3.4|0.6>>|<with|text-at-halign|right|<text-at|s|<point|5.2|1>>>|<with|text-at-halign|right|<text-at|p|<point|-2.0|1.0>>>|<with|text-at-halign|right|<text-at|m1|<point|1.5999999999999992|1.4>>>|<with|text-at-halign|right|<text-at|m2|<point|1.5999999999999992|0.6>>>|<text-at|*|<point|0.6000000000000002|1.0>>|<text-at|*|<point|-3.0|1.0>>|<with|<text-at|+|<point|4.2|1>>>|<line|<point|-3.4|-0.6>|<point|-3.4|-1.4>|<point|-2.4|-1.4>|<point|-2.4|-0.6>|<point|-3.4|-0.6>>|<line|<point|0.2|-0.6>|<point|0.20000000000000037|-1.4>|<point|1.2000000000000004|-1.4>|<point|1.2000000000000004|-0.6>|<point|0.20000000000000037|-0.6>>|<with|text-at-valign|center|<text-at|9|<point|-3.0|-1.0>>>|<with|text-at-valign|center|<text-at|5|<point|0.6000000000000002|-1.0>>>|<with|text-at-valign|center|<text-at|32|<point|4.2|-1.0>>>|<line|<point|-4|0.2>|<point|-4.0|2.0>|<point|-1.7999999999999996|2.0>|<point|-1.7999999999999996|0.2>|<point|-4.0|0.2>>|<line|<point|-1.8|1>|<point|-0.3999999999999998|0.995193008843565>>|<line|<point|1.8|1.5>|<point|3.2|1.5>>|<line|<point|-4.8|1.5>|<point|-4.0|1.5>>|<line|<point|5.4|1.5>|<point|6.2|1.5>>|<line|<point|-4.8|1.8>|<point|-5.8|1.8>|<point|-5.8|1.0>|<point|-4.8|1.0>|<point|-4.8|1.8>>|<with|text-at-valign|center|<text-at|C|<point|-5.4|1.4>>>|<line|<point|6.2|1.8>|<point|6.2|1.0>|<point|7.2|1.0>|<point|7.2|1.8>|<point|6.2|1.8>>|<with|text-at-valign|center|<text-at|F|<point|6.6|1.4>>>|<line|<point|-3.4|-1>|<point|-4.4|-1.0>|<point|-4.4|0.7>|<point|-4.0|0.7>>|<line|<point|1.2|-1>|<point|2.2|-1.0>|<point|2.2|0.7>|<point|1.7999999999999976|0.7000000000000001>>|<line|<point|3.8|-1.4>|<point|3.8|-0.6>|<point|4.8|-0.6>|<point|4.8|-1.4>|<point|3.8|-1.4>>|<line|<point|3.8|-1>|<point|2.8|-1.0>|<point|2.8|0.7>|<point|3.2|0.7>>>>>
+    <label|fig:3.28>The relation <math|9*C = 5*(F - 32)> expressed as a
+    constraint network.
   </big-figure>
-
-  \;
 
   Computation by such a network proceeds as follows: When a connector is
   given a value (by the user or by a constraint box to which it is linked),
@@ -1616,14 +1656,15 @@
   <verbatim|w>, <verbatim|x>, and <verbatim|y>, and links them as shown in
   figure 3.28 using the primitive constraint constructors <verbatim|adder>,
   <verbatim|multiplier>, and <verbatim|constant>. Just as with the
-  digital-circuit simulator of section 3.3.4, expressing these combinations
-  of primitive elements in terms of procedures automatically provides our
-  language with a means of abstraction for compound objects.
+  digital-circuit simulator of <smart-ref|sec:3.3.4>, expressing these
+  combinations of primitive elements in terms of procedures automatically
+  provides our language with a means of abstraction for compound objects.
 
   To watch the network in action, we can place probes on the connectors
   <verbatim|C> and <verbatim|F>, using a probe procedure similar to the one
-  we used to monitor wires in section 3.3.4. Placing a probe on a connector
-  will cause a message to be printed whenever the connector is given a value:
+  we used to monitor wires in <smart-ref|sec:3.3.4>. Placing a probe on a
+  connector will cause a message to be printed whenever the connector is
+  given a value:
 
   <\session|scheme|default>
     <\input>
@@ -1711,10 +1752,10 @@
   <subsubsection*|Implementing the constraint system>
 
   The constraint system is implemented via procedural objects with local
-  state, in a manner very similar to the digital-circuit simulator of section
-  3.3.4. Although the primitive objects of the constraint system are somewhat
-  more complex, the overall system is simpler, since there is no concern
-  about agendas and logic delays.
+  state, in a manner very similar to the digital-circuit simulator of
+  <smart-ref|sec:3.3.4>. Although the primitive objects of the constraint
+  system are somewhat more complex, the overall system is simpler, since
+  there is no concern about agendas and logic delays.
 
   The basic operations on connectors are the following:
 
@@ -1824,8 +1865,8 @@
   <verbatim|adder> connects the new adder to the designated connectors and
   returns it as its value. The procedure <verbatim|me>, which represents the
   adder, acts as a dispatch to the local procedures. The following ``syntax
-  interfaces'' (see footnote 27 in section 3.3.4) are used in conjunction
-  with the dispatch:
+  interfaces'' (see footnote 27 in <smart-ref|sec:3.3.4>) are used in
+  conjunction with the dispatch:
 
   <\session|scheme|default>
     <\input>
@@ -2005,7 +2046,11 @@
     </input>
   </session>
 
+  <subsubsection*|Representing connectors>
+
   \;
+
+  <section|Concurrency: Time Is of the Essence><label|sec:3.4>
 </body>
 
 <\initial>
@@ -2062,17 +2107,21 @@
     <associate|auto-42|<tuple|3.3.3|162>>
     <associate|auto-43|<tuple|3.3.4|162>>
     <associate|auto-44|<tuple|3.3.5|162>>
-    <associate|auto-45|<tuple|primitive cnstraints|162>>
-    <associate|auto-46|<tuple|constraint networks|162>>
-    <associate|auto-47|<tuple|connectors|162>>
+    <associate|auto-45|<tuple|primitive cnstraints|163>>
+    <associate|auto-46|<tuple|constraint networks|163>>
+    <associate|auto-47|<tuple|connectors|163>>
     <associate|auto-48|<tuple|3.3|163>>
-    <associate|auto-49|<tuple|3.3|163>>
+    <associate|auto-49|<tuple|3.3|164>>
     <associate|auto-5|<tuple|environment model|147>>
-    <associate|auto-50|<tuple|3.3|164>>
+    <associate|auto-50|<tuple|3.3|165>>
+    <associate|auto-51|<tuple|<with|mode|<quote|math>|\<bullet\>>|168>>
+    <associate|auto-52|<tuple|3.4|168>>
     <associate|auto-6|<tuple|delayed evaluation|147>>
     <associate|auto-7|<tuple|3.1|147>>
     <associate|auto-8|<tuple|state variable|147>>
     <associate|auto-9|<tuple|local state variable|148>>
+    <associate|fig:3.2|<tuple|3.2|162>>
+    <associate|fig:3.28|<tuple|3.3|163>>
     <associate|footnote-3.1|<tuple|3.1|148>>
     <associate|footnote-3.10|<tuple|3.10|158>>
     <associate|footnote-3.11|<tuple|3.11|159>>
@@ -2097,6 +2146,12 @@
     <associate|footnr-3.7|<tuple|3.7|153>>
     <associate|footnr-3.8|<tuple|3.8|155>>
     <associate|footnr-3.9|<tuple|3.9|156>>
+    <associate|sec:3.1.1|<tuple|3.1.1|148>>
+    <associate|sec:3.1.3|<tuple|3.1.3|155>>
+    <associate|sec:3.2|<tuple|3.2|160>>
+    <associate|sec:3.3|<tuple|3.3|162>>
+    <associate|sec:3.3.4|<tuple|3.3.4|162>>
+    <associate|sec:3.4|<tuple|3.4|168>>
   </collection>
 </references>
 
@@ -2110,7 +2165,7 @@
       <tuple|normal|<\surround|<hidden-binding|<tuple>|3.2>|>
         Environment structure produced by evaluating
         <with|mode|<quote|prog>|prog-language|<quote|scheme>|font-family|<quote|rm>|(define
-        (square x) (* x x))> in the global environment
+        (square x) (* x x))> in the global environment.
       </surround>|<pageref|auto-37>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|3.3>|>
@@ -2218,7 +2273,8 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>>
 
-      3.3<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3.3<space|2spc>Modeling with Mutable Data
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-39>
 
       <with|par-left|<quote|1tab>|3.3.1<space|2spc>
@@ -2248,6 +2304,14 @@
       <with|par-left|<quote|2tab>|Implementing the constraint system
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-50>>
+
+      <with|par-left|<quote|2tab>|Representing connectors
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-51>>
+
+      3.4<space|2spc>Concurrency: Time Is of the Essence
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-52>
     </associate>
   </collection>
 </auxiliary>
