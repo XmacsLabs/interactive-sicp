@@ -28,12 +28,12 @@
 
     n-1
   </document-at|<point|2.01297459981479|1.5483959518454822>>|<\document-at>
-    <\with|font|FandolSong|par-mode|center>
+    <\with|par-mode|center>
       corner-split
 
       n-1
     </with>
-  </document-at|<point|2.9837610795078717|1.295106471755523>>|<\document-at>
+  </document-at|<point|2.9481638166661446|1.3841041726204455>>|<\document-at>
     <\with|par-mode|center>
       right-split
 
