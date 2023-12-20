@@ -1197,17 +1197,19 @@
 
   The general form of a conditional expression is
 
-  <\scm-code>
-    (cond (\<langle\><var|p\<#2081\>>\<rangle\>
-    \<langle\><var|e\<#2081\>>\<rangle\>)
+  \;
 
-    \ \ \ \ \ \ (\<langle\><var|p\<#2082\>>\<rangle\>
-    \<langle\><var|e\<#2082\>>\<rangle\>)
+  <\scm-code>
+    (cond (\<langle\><var|p<rsub|1>>\<rangle\>
+    \<langle\><var|e<rsub|1>>\<rangle\>)
+
+    \ \ \ \ \ \ (\<langle\><var|p<rsub|2>>\<rangle\>
+    \<langle\><var|e<rsub|2>>\<rangle\>)
 
     \ \ \ \ \ \ ...
 
-    \ \ \ \ \ \ (\<langle\><var|p\<#2099\>>\<rangle\>
-    \<langle\><var|e\<#2099\>>\<rangle\>))
+    \ \ \ \ \ \ (\<langle\><var|p<rsub| >>\<rangle\> \<langle\><var|e<rsub|
+    >>\<rangle\>))
   </scm-code>
 
   consisting of the symbol <code*|cond> followed by parenthesized pairs of
