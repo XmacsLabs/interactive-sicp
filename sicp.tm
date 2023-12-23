@@ -873,28 +873,25 @@
 
   \;
 
-  The <code*|\<langle\>><var|name><code*|\<rangle\>> is a symbol to be
-  associated with the procedure definition in the environment.<\footnote>
+  The \<langle\><var|name>\<rangle\> is a symbol to be associated with the
+  procedure definition in the environment.<\footnote>
     Throughout this book, we will describe the general syntax of expressions
     by using italic symbols delimited by angle brackets\Ve.g.,
-    <code*|\<langle\>><var|name><code*|\<rangle\>>\Vto denote the \Pslots\Q
-    in the expression to be filled in when such an expression is actually
-    used.
-  </footnote> The <code*|\<langle\>><var|formal parameters><code*|\<rangle\>>
-  are the names used within the body of the procedure to refer to the
-  corresponding arguments of the procedure. The
-  <code*|\<langle\>><var|body><code*|\<rangle\>> is an expression that will
-  yield the value of the procedure application when the formal parameters are
-  replaced by the actual arguments to which the procedure is
-  applied.<hlink||#FOOT14><\footnote>
+    \<langle\><var|name>\<rangle\>\Vto denote the \Pslots\Q in the expression
+    to be filled in when such an expression is actually used.
+  </footnote> The \<langle\><var|formal parameters>\<rangle\> are the names
+  used within the body of the procedure to refer to the corresponding
+  arguments of the procedure. The \<langle\><var|body>\<rangle\> is an
+  expression that will yield the value of the procedure application when the
+  formal parameters are replaced by the actual arguments to which the
+  procedure is applied.<hlink||#FOOT14><\footnote>
     More generally, the body of the procedure can be a sequence of
     expressions. In this case, the interpreter evaluates each expression in
     the sequence in turn and returns the value of the final expression as the
     value of the procedure application.
-  </footnote> The <code*|\<langle\>><var|name><code*|\<rangle\>> and the
-  <code*|\<langle\>><var|formal parameters><code*|\<rangle\>> are grouped
-  within parentheses, just as they would be in an actual call to the
-  procedure being defined.
+  </footnote> The \<langle\><var|name>\<rangle\> and the
+  \<langle\><var|formal parameters>\<rangle\> are grouped within parentheses,
+  just as they would be in an actual call to the procedure being defined.
 
   Having defined <code*|square>, we can now use it:
 
@@ -1292,22 +1289,19 @@
   \<langle\><var|consequent>\<rangle\> \<langle\><var|alternative>\<rangle\>)>
 
   To evaluate an <code*|if> expression, the interpreter starts by evaluating
-  the <code*|\<langle\>><var|predicate><code*|\<rangle\>> part of the
-  expression. If the <code*|\<langle\>><var|predicate><code*|\<rangle\>>
-  evaluates to a true value, the interpreter then evaluates the
-  <code*|\<langle\>><var|consequent><code*|\<rangle\>> and returns its value.
-  Otherwise it evaluates the <code*|\<langle\>><var|alternative><code*|\<rangle\>>
-  and returns its value.<\footnote>
+  the \<langle\><var|predicate>\<rangle\> part of the expression. If the
+  \<langle\><var|predicate>\<rangle\> evaluates to a true value, the
+  interpreter then evaluates the \<langle\><var|consequent>\<rangle\> and
+  returns its value. Otherwise it evaluates the
+  \<langle\><var|alternative>\<rangle\> and returns its value.<\footnote>
     A minor difference between <code*|if> and <code*|cond> is that the
-    <code*|\<langle\>><var|e><code*|\<rangle\>> part of each <code*|cond>
-    clause may be a sequence of expressions. If the corresponding
-    <code*|\<langle\>><var|p><code*|\<rangle\>> is found to be true, the
-    expressions <code*|\<langle\>><var|e><code*|\<rangle\>> are evaluated in
-    sequence and the value of the final expression in the sequence is
-    returned as the value of the <code*|cond>. In an <code*|if> expression,
-    however, the <code*|\<langle\>><var|consequent><code*|\<rangle\>> and
-    <code*|\<langle\>><var|alternative><code*|\<rangle\>> must be single
-    expressions.
+    \<langle\><var|e>\<rangle\> part of each <code*|cond> clause may be a
+    sequence of expressions. If the corresponding \<langle\><var|p>\<rangle\>
+    is found to be true, the expressions \<langle\><var|e>\<rangle\> are
+    evaluated in sequence and the value of the final expression in the
+    sequence is returned as the value of the <code*|cond>. In an <code*|if>
+    expression, however, the \<langle\><var|consequent>\<rangle\> and
+    \<langle\><var|alternative>\<rangle\> must be single expressions.
   </footnote>
 
   In addition to primitive predicates such as <code*|\<less\>>, <code*|=>,
@@ -1319,32 +1313,27 @@
     <item*|(and \<langle\><var|e\<#2081\>>\<rangle\> \<ldots\>
     \<langle\><var|e\<#2099\>>\<rangle\>)>
 
-    The interpreter evaluates the expressions
-    <code*|\<langle\>><var|e><code*|\<rangle\>> one at a time, in
-    left-to-right order. If any <code*|\<langle\>><var|e><code*|\<rangle\>>
+    The interpreter evaluates the expressions \<langle\><var|e>\<rangle\> one
+    at a time, in left-to-right order. If any \<langle\><var|e>\<rangle\>
     evaluates to false, the value of the <code*|and> expression is false, and
-    the rest of the <code*|\<langle\>><var|e><code*|\<rangle\>>'s are not
-    evaluated. If all <code*|\<langle\>><var|e><code*|\<rangle\>>'s evaluate
-    to true values, the value of the <code*|and> expression is the value of
-    the last one.
+    the rest of the \<langle\><var|e>\<rangle\>'s are not evaluated. If all
+    \<langle\><var|e>\<rangle\>'s evaluate to true values, the value of the
+    <code*|and> expression is the value of the last one.
 
     <item*|(or \<langle\><var|e\<#2081\>>\<rangle\> \<ldots\>
     \<langle\><var|e\<#2099\>>\<rangle\>)>
 
-    The interpreter evaluates the expressions
-    <code*|\<langle\>><var|e><code*|\<rangle\>> one at a time, in
-    left-to-right order. If any <code*|\<langle\>><var|e><code*|\<rangle\>>
+    The interpreter evaluates the expressions \<langle\><var|e>\<rangle\> one
+    at a time, in left-to-right order. If any \<langle\><var|e>\<rangle\>
     evaluates to a true value, that value is returned as the value of the
-    <code*|or> expression, and the rest of the
-    <code*|\<langle\>><var|e><code*|\<rangle\>>'s are not evaluated. If all
-    <code*|\<langle\>><var|e><code*|\<rangle\>>'s evaluate to false, the
-    value of the <code*|or> expression is false.
+    <code*|or> expression, and the rest of the \<langle\><var|e>\<rangle\>'s
+    are not evaluated. If all \<langle\><var|e>\<rangle\>'s evaluate to
+    false, the value of the <code*|or> expression is false.
 
     <item*|(not \<langle\><var|e>\<rangle\>)>
 
     The value of a <code*|not> expression is true when the expression
-    <code*|\<langle\>><var|e><code*|\<rangle\>> evaluates to false, and false
-    otherwise.
+    \<langle\><var|e>\<rangle\> evaluates to false, and false otherwise.
   </description>
 
   Notice that <code*|and> and <code*|or> are special forms, not procedures,
@@ -5298,14 +5287,14 @@
   <\itemize>
     <item><code*|(make-rat \<langle\><var|n>\<rangle\>
     \<langle\><var|d>\<rangle\>)> returns the rational number whose numerator
-    is the integer <code*|\<langle\><var|n>\<rangle\>> and whose denominator
-    is the integer <code*|\<langle\><var|d>\<rangle\>>.
+    is the integer \<langle\> and whose denominator is the integer
+    \<rangle\>.
 
     <item><code*|(numer \<langle\><var|x>\<rangle\>)> returns the numerator
-    of the rational number <code*|\<langle\><var|x>\<rangle\>>.
+    of the rational number \<langle\>.
 
     <item><code*|(denom \<langle\><var|x>\<rangle\>)> returns the denominator
-    of the rational number <code*|\<langle\><var|x>\<rangle\>>.
+    of the rational number \<langle\>.
   </itemize>
 
   We are using here a powerful strategy of synthesis: <em|wishful
@@ -11641,16 +11630,14 @@
   <\itemize>
     <item><code*|(put \<langle\><var|op>\<rangle\>
     \<langle\><var|type>\<rangle\> \<langle\><var|item>\<rangle\>)> installs
-    the <code*|\<langle\>><var|item><code*|\<rangle\>> in the table, indexed
-    by the <code*|\<langle\>><var|op><code*|\<rangle\>> and the
-    <code*|\<langle\>><var|type><code*|\<rangle\>>.
+    the \<langle\><var|item>\<rangle\> in the table, indexed by the
+    \<langle\><var|op>\<rangle\> and the \<langle\><var|type>\<rangle\>.
 
     <item><code*|(get \<langle\><var|op>\<rangle\>
     \<langle\><var|type>\<rangle\>)> looks up the
-    <code*|\<langle\>><var|op><code*|\<rangle\>>,
-    <code*|\<langle\>><var|type><code*|\<rangle\>> entry in the table and
-    returns the item found there. If no item is found, <code*|get> returns
-    false.
+    \<langle\><var|op>\<rangle\>, \<langle\><var|type>\<rangle\> entry in the
+    table and returns the item found there. If no item is found, <code*|get>
+    returns false.
   </itemize>
 
   For now, we can assume that <code*|put> and <code*|get> are included in our
