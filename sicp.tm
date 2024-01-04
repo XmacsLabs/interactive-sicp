@@ -14059,6 +14059,7 @@
     <associate|global-title|sicp.tm>
     <associate|info-flag|detailed>
     <associate|page-medium|paper>
+    <associate|page-screen-margin|false>
     <associate|par-first|0tab>
     <associate|par-par-sep|1fn>
     <associate|preamble|false>
