@@ -1310,8 +1310,8 @@
   these:
 
   <\description>
-    <item*|(and \<langle\><var|e\<#2081\>>\<rangle\> \<ldots\>
-    \<langle\><var|e\<#2099\>>\<rangle\>)>
+    <item*|(and \<langle\>e<rsub|1>\<rangle\> \<ldots\>
+    \<langle\>e<rsub|n>\<rangle\>)>
 
     The interpreter evaluates the expressions \<langle\><var|e>\<rangle\> one
     at a time, in left-to-right order. If any \<langle\><var|e>\<rangle\>
@@ -1320,8 +1320,8 @@
     \<langle\><var|e>\<rangle\>'s evaluate to true values, the value of the
     <code*|and> expression is the value of the last one.
 
-    <item*|(or \<langle\><var|e\<#2081\>>\<rangle\> \<ldots\>
-    \<langle\><var|e\<#2099\>>\<rangle\>)>
+    <item*|(or \<langle\>e<rsub|1>\<rangle\> \<ldots\>
+    \<langle\>e<rsub|n>\<rangle\>)>
 
     The interpreter evaluates the expressions \<langle\><var|e>\<rangle\> one
     at a time, in left-to-right order. If any \<langle\><var|e>\<rangle\>
@@ -1330,7 +1330,7 @@
     are not evaluated. If all \<langle\><var|e>\<rangle\>'s evaluate to
     false, the value of the <code*|or> expression is false.
 
-    <item*|(not \<langle\><var|e>\<rangle\>)>
+    <item*|(not \<langle\>e\<rangle\>)>
 
     The value of a <code*|not> expression is true when the expression
     \<langle\><var|e>\<rangle\> evaluates to false, and false otherwise.
