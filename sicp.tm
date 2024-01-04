@@ -79,130 +79,130 @@
 
     <with|par-left|1tab|1.2.6<space|2spc>Example: Testing for Primality
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-93>>
+    <no-break><pageref|auto-94>>
 
     1.3<space|2spc>Formulating Abstractions with Higher-Order Procedures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-101>
+    <no-break><pageref|auto-102>
 
     <with|par-left|1tab|1.3.1<space|2spc>Procedures as Arguments
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-103>>
+    <no-break><pageref|auto-104>>
 
     <with|par-left|1tab|1.3.2<space|2spc>Constructing Procedures Using
     <with|font-family|tt|Lambda> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-107>>
+    <no-break><pageref|auto-108>>
 
     <with|par-left|1tab|1.3.3<space|2spc>Procedures as General Methods
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-108>>
+    <no-break><pageref|auto-109>>
 
     <with|par-left|1tab|1.3.4<space|2spc>Procedures as Returned Values
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-114>>
+    <no-break><pageref|auto-115>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Building
     Abstractions with Data> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-121><vspace|0.5fn>
+    <no-break><pageref|auto-122><vspace|0.5fn>
 
     2.1<space|2spc>Introduction to Data Abstraction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-122>
+    <no-break><pageref|auto-123>
 
     <with|par-left|1tab|2.1.1<space|2spc>Example: Arithmetic Operations for
     Rational Numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-126>>
+    <no-break><pageref|auto-127>>
 
     <with|par-left|1tab|2.1.2<space|2spc>Abstraction Barriers
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-131>>
+    <no-break><pageref|auto-132>>
 
     <with|par-left|1tab|2.1.3<space|2spc>What Is Meant by Data?
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-134>>
+    <no-break><pageref|auto-135>>
 
     <with|par-left|1tab|2.1.4<space|2spc>Extended Exercise: Interval
     Arithmetic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-140>>
+    <no-break><pageref|auto-141>>
 
     2.2<space|2spc>Hierarchical Data and the Closure Property
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-142>
+    <no-break><pageref|auto-143>
 
     <with|par-left|1tab|2.2.1<space|2spc>Representing Sequences
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-149>>
+    <no-break><pageref|auto-150>>
 
     <with|par-left|1tab|2.2.2<space|2spc>Hierarchical Structures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-159>>
+    <no-break><pageref|auto-160>>
 
     <with|par-left|1tab|2.2.3<space|2spc>Sequences as Conventional Interfaces
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-164>>
+    <no-break><pageref|auto-165>>
 
     <with|par-left|1tab|2.2.4<space|2spc>Example: A Picture Language
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-174>>
+    <no-break><pageref|auto-175>>
 
     2.3<space|2spc>Symbolic Data <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-186>
+    <no-break><pageref|auto-187>
 
     <with|par-left|1tab|2.3.1<space|2spc>Quotation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-187>>
+    <no-break><pageref|auto-188>>
 
     <with|par-left|1tab|2.3.2<space|2spc>Example: Symbolic Differentiation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-189>>
+    <no-break><pageref|auto-190>>
 
     <with|par-left|1tab|2.3.3<space|2spc>Example: Representing Sets
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-190>>
+    <no-break><pageref|auto-191>>
 
     <with|par-left|1tab|2.3.4<space|2spc>Example: Huffman Encoding Trees
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-196>>
+    <no-break><pageref|auto-197>>
 
     2.4<space|2spc>Multiple Representations for Abstract Data
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-204>
+    <no-break><pageref|auto-205>
 
     <with|par-left|1tab|2.4.1<space|2spc>Representations for Complex Numbers
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-210>>
+    <no-break><pageref|auto-211>>
 
     <with|par-left|1tab|2.4.2<space|2spc>Tagged data
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-212>>
+    <no-break><pageref|auto-213>>
 
     <with|par-left|1tab|2.4.3<space|2spc>Data-Directed Programming and
     Additivity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-215>>
+    <no-break><pageref|auto-216>>
 
     2.5<space|2spc>Systems with Generic Operations
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-222>
+    <no-break><pageref|auto-223>
 
     <with|par-left|1tab|2.5.1<space|2spc>Generic Arithmetic Operations
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-224>>
+    <no-break><pageref|auto-225>>
 
     <with|par-left|1tab|2.5.2<space|2spc>Combining Data of Different Types
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-227>>
+    <no-break><pageref|auto-228>>
 
     <with|par-left|1tab|2.5.3<space|2spc>Example: Symbolic Algebra
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-236>>
+    <no-break><pageref|auto-237>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Bibliography>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-244><vspace|0.5fn>
+    <no-break><pageref|auto-245><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-245><vspace|0.5fn>
+    <no-break><pageref|auto-246><vspace|0.5fn>
   </table-of-contents>
 
   <chapter|Building Abstractions with Procedures>
@@ -3194,15 +3194,15 @@
   The fact that the number of steps required by Euclid's Algorithm has
   logarithmic growth bears an interesting relation to the Fibonacci numbers:
 
-  <\render-theorem|Lam\<#FFFD\>'s Theorem>
+  <\render-theorem|Lamé's Theorem>
     If Euclid's Algorithm requires <math|k> steps to compute the <abbr|GCD>
     of some pair, then the smaller number in the pair must be greater than or
     equal to the <math|k<rsup|<with|mode|text|th>>> Fibonacci
     number.<\footnote>
-      This theorem was proved in 1845 by Gabriel Lam\<#FFFD\>, a French
-      mathematician and engineer known chiefly for his contributions to
-      mathematical physics. To prove the theorem, we consider pairs
-      <math|<around*|(|a<rsub|k>,b<rsub|k>|)>>, where
+      This theorem was proved in 1845 by <name|Gabriel Lamé><index|Gabriel
+      Lamé>, a French mathematician and engineer known chiefly for his
+      contributions to mathematical physics. To prove the theorem, we
+      consider pairs <math|<around*|(|a<rsub|k>,b<rsub|k>|)>>, where
       <math|a<rsub|k>\<geq\>b<rsub|k>>, for which Euclid's Algorithm
       terminates in <math|k> steps. The proof is based on the claim that, if
       <math|<around*|(|a<rsub|k+1>,b<rsub|k+1>|)>\<rightarrow\><around*|(|a<rsub|k>,b<rsub|k>|)>\<rightarrow\><around*|(|a<rsub|k-1>,b<rsub|k-1>|)>>
@@ -3229,7 +3229,7 @@
       and <math|b<rsub|k>\<geq\><with|mode|text|Fib><around*|(|k|)>>. Thus,
       applying the claim we just proved together with the definition of the
       Fibonacci numbers gives <math|b<rsub|k+1>\<geq\>b<rsub|k>+b<rsub|k-1>\<geq\><with|mode|text|Fib><around*|(|k|)>+<with|mode|text|Fib><around*|(|k-1|)>=<with|mode|text|Fib><around*|(|k+1|)>>,
-      which completes the proof of Lam\<#FFFD\>'s Theorem.
+      which completes the proof of Lamé's Theorem.
     </footnote>
   </render-theorem>
 
@@ -13742,25 +13742,25 @@
   <\the-index|idx>
     <index+1|Áchárya Pingala|<pageref|auto-89>>
 
-    <index+1|abstract models|<pageref|auto-136>>
+    <index+1|abstract models|<pageref|auto-137>>
 
-    <index+1|abstraction barriers|<pageref|auto-132>>
+    <index+1|abstraction barriers|<pageref|auto-133>>
 
-    <index+1|accumulator|<pageref|auto-169>>
+    <index+1|accumulator|<pageref|auto-170>>
 
-    <index+1|additive|<pageref|auto-217>>
+    <index+1|additive|<pageref|auto-218>>
 
-    <index+1|additively|<pageref|auto-205>>
+    <index+1|additively|<pageref|auto-206>>
 
-    <index+1|algebraic specification|<pageref|auto-137>>
+    <index+1|algebraic specification|<pageref|auto-138>>
 
     <index+1|application-order evaluation|<pageref|auto-43>>
 
     <index+1|arguments|<pageref|auto-21>>
 
-    <index+1|average damping|<pageref|auto-111>>
+    <index+1|average damping|<pageref|auto-112>>
 
-    <index+1|balanced|<pageref|auto-163>>
+    <index+1|balanced|<pageref|auto-164>>
 
     <index+1|binds|<pageref|auto-57>>
 
@@ -13770,69 +13770,69 @@
 
     <index+1|bound variable|<pageref|auto-56>>
 
-    <index+1|box-and-pointer notation|<pageref|auto-143>>
+    <index+1|box-and-pointer notation|<pageref|auto-144>>
 
-    <index+1|B-trees|<pageref|auto-192>>
+    <index+1|B-trees|<pageref|auto-193>>
 
     <index+1|bugs|<pageref|auto-6>>
 
     <index+1|capturing|<pageref|auto-60>>
 
-    <index+1|Carmichael numbers|<pageref|auto-97>>
+    <index+1|Carmichael numbers|<pageref|auto-98>>
 
     <index+1|case analysis|<pageref|auto-46>>
 
-    <index+1|Church numerals|<pageref|auto-139>>
+    <index+1|Church numerals|<pageref|auto-140>>
 
     <index+1|clauses|<pageref|auto-47>>
 
-    <index+1|closure property|<pageref|auto-147>>
+    <index+1|closure property|<pageref|auto-148>>
 
-    <index+1|coerce|<pageref|auto-235>>
+    <index+1|coerce|<pageref|auto-236>>
 
-    <index+1|coercion|<pageref|auto-228>>
+    <index+1|coercion|<pageref|auto-229>>
 
     <index+1|combinations|<pageref|auto-18>>
 
-    <index+1|comments|<pageref|auto-172>>
+    <index+1|comments|<pageref|auto-173>>
 
-    <index+1|composition|<pageref|auto-117>>
+    <index+1|composition|<pageref|auto-118>>
 
     <index+1|compound procedure|<pageref|auto-38>>
 
     <index+1|computational process|<pageref|auto-2>>
 
-    <index+1|congruent modulo|<pageref|auto-94>>
+    <index+1|congruent modulo|<pageref|auto-95>>
 
     <index+1|consequent expression|<pageref|auto-49>>
 
-    <index+1|constructors|<pageref|auto-125>>
+    <index+1|constructors|<pageref|auto-126>>
 
-    <index+1|continued fraction|<pageref|auto-112>>
+    <index+1|continued fraction|<pageref|auto-113>>
 
-    <index+1|conventional interfaces|<pageref|auto-165>>
+    <index+1|conventional interfaces|<pageref|auto-166>>
 
-    <index+1|data|<pageref|auto-3>, <pageref|auto-135>>
+    <index+1|data|<pageref|auto-3>, <pageref|auto-136>>
 
-    <index+1|data abstraction|<pageref|auto-123>>
+    <index+1|data abstraction|<pageref|auto-124>>
 
-    <index+1|data directed programming|<pageref|auto-218>>
+    <index+1|data directed programming|<pageref|auto-219>>
 
-    <index+1|data-directed|<pageref|auto-208>>
+    <index+1|data-directed|<pageref|auto-209>>
 
     <index+1|debug|<pageref|auto-8>>
 
     <index+1|deferred operations|<pageref|auto-69>>
 
-    <index+1|dense|<pageref|auto-240>>
+    <index+1|dense|<pageref|auto-241>>
 
-    <index+1|dispatching on type|<pageref|auto-216>>
+    <index+1|dispatching on type|<pageref|auto-217>>
 
-    <index+1|dotted-tail notation|<pageref|auto-157>>
+    <index+1|dotted-tail notation|<pageref|auto-158>>
 
-    <index+1|empty list|<pageref|auto-155>>
+    <index+1|empty list|<pageref|auto-156>>
 
-    <index+1|enumerator|<pageref|auto-166>>
+    <index+1|enumerator|<pageref|auto-167>>
 
     <index+1|environment|<pageref|auto-28>>
 
@@ -13842,19 +13842,21 @@
 
     <index+1|expression|<pageref|auto-16>>
 
-    <index+1|filter|<pageref|auto-106>, <pageref|auto-167>>
+    <index+1|filter|<pageref|auto-107>, <pageref|auto-168>>
 
-    <index+1|first-class|<pageref|auto-116>>
+    <index+1|first-class|<pageref|auto-117>>
 
-    <index+1|fixed point|<pageref|auto-110>>
+    <index+1|fixed point|<pageref|auto-111>>
 
-    <index+1|fixed-length|<pageref|auto-197>>
+    <index+1|fixed-length|<pageref|auto-198>>
 
-    <index+1|frame coordinate map|<pageref|auto-183>>
+    <index+1|frame coordinate map|<pageref|auto-184>>
 
     <index+1|free|<pageref|auto-58>>
 
-    <index+1|generic procedures|<pageref|auto-203>, <pageref|auto-206>>
+    <index+1|Gabriel Lamé|<pageref|auto-93>>
+
+    <index+1|generic procedures|<pageref|auto-204>, <pageref|auto-207>>
 
     <index+1|glitches|<pageref|auto-7>>
 
@@ -13864,17 +13866,17 @@
 
     <index+1|golden ratio|<pageref|auto-81>>
 
-    <index+1|half interval method|<pageref|auto-109>>
+    <index+1|half interval method|<pageref|auto-110>>
 
-    <index+1|hierarchical|<pageref|auto-148>>
+    <index+1|hierarchical|<pageref|auto-149>>
 
-    <index+1|hierarchy of types|<pageref|auto-229>>
+    <index+1|hierarchy of types|<pageref|auto-230>>
 
-    <index+1|higher-order procedures|<pageref|auto-102>>
+    <index+1|higher-order procedures|<pageref|auto-103>>
 
-    <index+1|Horner's rule|<pageref|auto-171>>
+    <index+1|Horner's rule|<pageref|auto-172>>
 
-    <index+1|indeterminates|<pageref|auto-237>>
+    <index+1|indeterminates|<pageref|auto-238>>
 
     <index+1|integers|<pageref|auto-13>>
 
@@ -13882,13 +13884,13 @@
 
     <index+1|invariant quantity|<pageref|auto-90>>
 
-    <index+1|iterative improvement|<pageref|auto-120>>
+    <index+1|iterative improvement|<pageref|auto-121>>
 
     <index+1|iterative process|<pageref|auto-72>>
 
-    <index+1|key|<pageref|auto-195>>
+    <index+1|key|<pageref|auto-196>>
 
-    <index+1|k-term finite continued fraction|<pageref|auto-113>>
+    <index+1|k-term finite continued fraction|<pageref|auto-114>>
 
     <index+1|lexical scoping|<pageref|auto-62>>
 
@@ -13896,29 +13898,29 @@
 
     <index+1|linear recursive process|<pageref|auto-71>>
 
-    <index+1|list|<pageref|auto-152>, <pageref|auto-158>>
+    <index+1|list|<pageref|auto-153>, <pageref|auto-159>>
 
-    <index+1|list structure|<pageref|auto-154>>
+    <index+1|list structure|<pageref|auto-155>>
 
-    <index+1|list-structured|<pageref|auto-130>>
+    <index+1|list-structured|<pageref|auto-131>>
 
     <index+1|local evolution|<pageref|auto-64>>
 
-    <index+1|map|<pageref|auto-168>>
+    <index+1|map|<pageref|auto-169>>
 
     <index+1|memoization|<pageref|auto-83>>
 
-    <index+1|message passing|<pageref|auto-138>, <pageref|auto-221>>
+    <index+1|message passing|<pageref|auto-139>, <pageref|auto-222>>
 
-    <index+1|Miller-Rabin test|<pageref|auto-100>>
+    <index+1|Miller-Rabin test|<pageref|auto-101>>
 
-    <index+1|modulo|<pageref|auto-96>>
+    <index+1|modulo|<pageref|auto-97>>
 
-    <index+1|Newton's method|<pageref|auto-115>>
+    <index+1|Newton's method|<pageref|auto-116>>
 
-    <index+1|n-fold smoothed function|<pageref|auto-119>>
+    <index+1|n-fold smoothed function|<pageref|auto-120>>
 
-    <index+1|nil|<pageref|auto-156>>
+    <index+1|nil|<pageref|auto-157>>
 
     <index+1|normal order evaluation|<pageref|auto-42>>
 
@@ -13928,31 +13930,31 @@
 
     <index+1|order of growth|<pageref|auto-87>>
 
-    <index+1|ordinary|<pageref|auto-225>>
+    <index+1|ordinary|<pageref|auto-226>>
 
-    <index+1|package|<pageref|auto-220>>
+    <index+1|package|<pageref|auto-221>>
 
-    <index+1|painter|<pageref|auto-176>>
+    <index+1|painter|<pageref|auto-177>>
 
-    <index+1|pair|<pageref|auto-128>\U<pageref|auto-129>>
+    <index+1|pair|<pageref|auto-129>\U<pageref|auto-130>>
 
     <index+1|Pascal's triangle|<pageref|auto-84>>
 
-    <index+1|pointer|<pageref|auto-144>>
+    <index+1|pointer|<pageref|auto-145>>
 
-    <index+1|poly|<pageref|auto-239>>
+    <index+1|poly|<pageref|auto-240>>
 
     <index+1|predicate|<pageref|auto-48>>
 
-    <index+1|prefix|<pageref|auto-200>>
+    <index+1|prefix|<pageref|auto-201>>
 
-    <index+1|prefix code|<pageref|auto-201>>
+    <index+1|prefix code|<pageref|auto-202>>
 
     <index+1|prefix notation|<pageref|auto-22>>
 
     <index+1|pretty-printing|<pageref|auto-23>>
 
-    <index+1|probabilistic algorithms|<pageref|auto-98>>
+    <index+1|probabilistic algorithms|<pageref|auto-99>>
 
     <index+1|procedural abstraction|<pageref|auto-55>>
 
@@ -13968,9 +13970,9 @@
 
     <index+1|programming languages|<pageref|auto-5>>
 
-    <index+1|pseudodivision|<pageref|auto-242>>
+    <index+1|pseudodivision|<pageref|auto-243>>
 
-    <index+1|pseudoremainder|<pageref|auto-243>>
+    <index+1|pseudoremainder|<pageref|auto-244>>
 
     <index+1|read-eval-print loop|<pageref|auto-24>>
 
@@ -13982,33 +13984,33 @@
 
     <index+1|recusion equations|<pageref|auto-9>>
 
-    <index+1|red-black trees|<pageref|auto-193>>
+    <index+1|red-black trees|<pageref|auto-194>>
 
-    <index+1|remainder of|<pageref|auto-95>>
+    <index+1|remainder of|<pageref|auto-96>>
 
-    <index+1|robust|<pageref|auto-185>>
+    <index+1|robust|<pageref|auto-186>>
 
-    <index+1|RSA algorithm|<pageref|auto-99>>
+    <index+1|RSA algorithm|<pageref|auto-100>>
 
     <index+1|scope|<pageref|auto-59>>
 
-    <index+1|selectors|<pageref|auto-124>>
+    <index+1|selectors|<pageref|auto-125>>
 
-    <index+1|separator code|<pageref|auto-199>>
+    <index+1|separator code|<pageref|auto-200>>
 
-    <index+1|sequence|<pageref|auto-151>>
+    <index+1|sequence|<pageref|auto-152>>
 
-    <index+1|sequences|<pageref|auto-105>>
+    <index+1|sequences|<pageref|auto-106>>
 
-    <index+1|smoothing|<pageref|auto-118>>
+    <index+1|smoothing|<pageref|auto-119>>
 
-    <index+1|sparse|<pageref|auto-241>>
+    <index+1|sparse|<pageref|auto-242>>
 
     <index+1|special forms|<pageref|auto-34>>
 
     <index+1|state variables|<pageref|auto-73>>
 
-    <index+1|stratified design|<pageref|auto-184>>
+    <index+1|stratified design|<pageref|auto-185>>
 
     <index+1|stream processing|<pageref|auto-44>>
 
@@ -14016,11 +14018,11 @@
 
     <index+1|substitution model|<pageref|auto-40>>
 
-    <index+1|subtype|<pageref|auto-230>>
+    <index+1|subtype|<pageref|auto-231>>
 
-    <index+1|summation of a series|<pageref|auto-104>>
+    <index+1|summation of a series|<pageref|auto-105>>
 
-    <index+1|supertype|<pageref|auto-231>>
+    <index+1|supertype|<pageref|auto-232>>
 
     <index+1|syntactic sugar|<pageref|auto-35>>
 
@@ -14028,31 +14030,31 @@
 
     <index+1|tail-recursive|<pageref|auto-77>>
 
-    <index+1|tower|<pageref|auto-232>>
+    <index+1|tower|<pageref|auto-233>>
 
     <index+1|tree accumulation|<pageref|auto-32>>
 
     <index+1|tree recursion|<pageref|auto-79>>
 
-    <index+1|trees|<pageref|auto-161>>
+    <index+1|trees|<pageref|auto-162>>
 
-    <index+1|type tag|<pageref|auto-213>>
+    <index+1|type tag|<pageref|auto-214>>
 
-    <index+1|type tags|<pageref|auto-207>>
+    <index+1|type tags|<pageref|auto-208>>
 
-    <index+1|univariate polynomials|<pageref|auto-238>>
+    <index+1|univariate polynomials|<pageref|auto-239>>
 
     <index+1|value|<pageref|auto-27>>
 
-    <index+1|values|<pageref|auto-188>>
+    <index+1|values|<pageref|auto-189>>
 
     <index+1|variable|<pageref|auto-26>>
 
-    <index+1|variable-length|<pageref|auto-198>>
+    <index+1|variable-length|<pageref|auto-199>>
 
-    <index+1|width|<pageref|auto-141>>
+    <index+1|width|<pageref|auto-142>>
 
-    <index+1|wishful thinking|<pageref|auto-127>>
+    <index+1|wishful thinking|<pageref|auto-128>>
   </the-index>
 </body>
 
