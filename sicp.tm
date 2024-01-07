@@ -3007,9 +3007,9 @@
   </footnote>
 
   <\exercise>
-    Design a procedure that evolves an iterative exponentiation process that
-    uses successive squaring and uses a logarithmic number of steps, as does
-    <code*|fast-expt>. (Hint: Using the observation that
+    <label|ex1.16>Design a procedure that evolves an iterative exponentiation
+    process that uses successive squaring and uses a logarithmic number of
+    steps, as does <code*|fast-expt>. (Hint: Using the observation that
     <math|<around*|(|b<rsup|n<around*|/|2|\<nobracket\>>>|)><rsup|2>=<around*|(|b<rsup|2>|)><rsup|n<around*|/|2|\<nobracket\>>>>,
     keep, along with the exponent <math|n> and the base <math|b>, an
     additional state variable <math|a>, and define the state transformation
@@ -3023,12 +3023,12 @@
   </exercise>
 
   <\exercise>
-    The exponentiation algorithms in this section are based on performing
-    exponentiation by means of repeated multiplication. In a similar way, one
-    can perform integer multiplication by means of repeated addition. The
-    following multiplication procedure (in which it is assumed that our
-    language can only add, not multiply) is analogous to the <code*|expt>
-    procedure:
+    <label|ex1.17>The exponentiation algorithms in this section are based on
+    performing exponentiation by means of repeated multiplication. In a
+    similar way, one can perform integer multiplication by means of repeated
+    addition. The following multiplication procedure (in which it is assumed
+    that our language can only add, not multiply) is analogous to the
+    <code*|expt> procedure:
 
     <\scm-code>
       (define (* a b)
@@ -3048,11 +3048,10 @@
   </exercise>
 
   <\exercise>
-    Using the results of <hlink|Exercise 1.16|#Exercise-1_002e16> and
-    <hlink|Exercise 1.17|#Exercise-1_002e17>, devise a procedure that
-    generates an iterative process for multiplying two integers in terms of
-    adding, doubling, and halving and uses a logarithmic number of
-    steps.<\footnote>
+    Using the results of Exercise <reference|ex1.16> and Exercise
+    <reference|ex1.17>, devise a procedure that generates an iterative
+    process for multiplying two integers in terms of adding, doubling, and
+    halving and uses a logarithmic number of steps.<\footnote>
       This algorithm, which is sometimes known as the \PRussian peasant
       method\Q of multiplication, is ancient. Examples of its use are found
       in the Rhind Papyrus, one of the two oldest mathematical documents in
