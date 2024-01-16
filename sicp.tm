@@ -581,8 +581,6 @@
 
   <subsection|Naming and the Environment>
 
-  \;
-
   A critical aspect of a programming language is the means it provides for
   using names to refer to computational objects. We say that the name
   identifies a <em|variable><index|variable> whose <em|value><index|value> is
@@ -659,7 +657,7 @@
 
   <scm|Define> is our language's simplest means of abstraction, for it allows
   us to use simple names to refer to the results of compound operations, such
-  as the <code*|circumference> computed above. In general, computational
+  as the <scm|circumference> computed above. In general, computational
   objects may have very complex structures, and it would be extremely
   inconvenient to have to remember and repeat their details each time we want
   to use them. Indeed, complex programs are constructed by building, step by
@@ -800,11 +798,11 @@
     syntax, and partly to the observation that many \Pconvenient\Q syntactic
     constructs, which make the language less uniform, end up causing more
     trouble than they are worth when programs become large and complex. In
-    the words of Alan Perlis, \PSyntactic sugar causes cancer of the
+    the words of <name|Alan Perlis>, \PSyntactic sugar causes cancer of the
     semicolon.\Q
   </footnote>
 
-  <subsection|Compound Procedures><label|1.1.4>
+  <subsection|Compound Procedures><label|sec:1.1.4>
 
   We have identified in Lisp some of the elements that must appear in any
   powerful programming language:
@@ -868,8 +866,6 @@
     (define (\<langle\><var|name>\<rangle\> \<langle\><var|formal
     parameters>\<rangle\>) \<langle\><var|body>\<rangle\>)
   </scm-code>
-
-  \;
 
   The \<langle\><var|name>\<rangle\> is a symbol to be associated with the
   procedure definition in the environment.<\footnote>
@@ -999,9 +995,8 @@
     (f 5)
   </scm-code>
 
-  where <code*|f> is the procedure defined in
-  <hlink|1.1.4|#g_t1_002e1_002e4>. We begin by retrieving the body of
-  <code*|f>:
+  where <code*|f> is the procedure defined in <smart-ref|sec:1.1.4>. We begin
+  by retrieving the body of <code*|f>:
 
   <\scm-code>
     (sum-of-squares (+ a 1) (* a 2))
@@ -4415,7 +4410,7 @@
 
   <subsection|Procedures as General Methods><label|1.3.3>
 
-  We introduced compound procedures in <hlink|1.1.4|#1.1.4> as a mechanism
+  We introduced compound procedures in <smart-ref|sec:1.1.4> as a mechanism
   for abstracting patterns of numerical operations so as to make them
   independent of the particular numbers involved. With higher-order
   procedures, such as the <code*|integral> procedure of <hlink|1.3.1|#1.3.1>,
