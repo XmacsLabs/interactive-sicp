@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|generic|no-page-numbers|british>>
+<style|<tuple|generic|british|smart-ref|preview-ref>>
 
 <\body>
   <section|The Elements of Programming><label|1.1>
@@ -1745,7 +1745,7 @@
 <\references>
   <\collection>
     <associate|1.1|<tuple|1|1>>
-    <associate|1.1.8|<tuple|1.8|14>>
+    <associate|1.1.8|<tuple|1.8|15>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|arguments|2>>
     <associate|auto-11|<tuple|prefix notation|2>>
@@ -1783,8 +1783,8 @@
     <associate|auto-40|<tuple|consequent expression|9>>
     <associate|auto-41|<tuple|predicate|10>>
     <associate|auto-42|<tuple|1.7|12>>
-    <associate|auto-43|<tuple|1.8|14>>
-    <associate|auto-44|<tuple|recursive|14>>
+    <associate|auto-43|<tuple|1.8|15>>
+    <associate|auto-44|<tuple|recursive|15>>
     <associate|auto-45|<tuple|2|15>>
     <associate|auto-46|<tuple|procedural abstraction|15>>
     <associate|auto-47|<tuple|22|15>>
