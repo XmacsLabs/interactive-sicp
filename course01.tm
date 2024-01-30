@@ -1213,12 +1213,12 @@
   guess <math|y> for the value of the square root of a number <math|x>, we
   can perform a simple manipulation to get a better guess (one closer to the
   actual square root) by averaging <math|y> with
-  <math|x<around*|/|y|\<nobracket\>>>.<hlink||#FOOT21><\footnote>
+  <math|x<around*|/|y|\<nobracket\>>>.<\footnote>
     This square-root algorithm is actually a special case of Newton's method,
     which is a general technique for finding roots of equations. The
     square-root algorithm itself was developed by Heron of Alexandria in the
     first century <abbr|A.D.> We will see how to express the general Newton's
-    method as a Lisp procedure in <smart-ref|sec:1.3.4>.
+    method as a Lisp procedure in Section 1.3.4.
   </footnote> For example, we can compute the square root of 2 as follows.
   Suppose our initial guess is 1:
 
@@ -1464,9 +1464,9 @@
     an approximation to the cube root of <math|x>, then a better
     approximation is given by the value <math|<frac|x<around*|/|y<rsup|2>+2*y|\<nobracket\>>|3>>.
     Use this formula to implement a cube-root procedure analogous to the
-    square-root procedure. (In <smart-ref|sec:1.3.4> we will see how to
-    implement Newton's method in general as an abstraction of these
-    square-root and cube-root procedures.)
+    square-root procedure. (In Section 1.3.4 we will see how to implement
+    Newton's method in general as an abstraction of these square-root and
+    cube-root procedures.)
   </exercise>
 
   <subsection|Procedures as Black-Box Abstractions><label|1.1.8>
