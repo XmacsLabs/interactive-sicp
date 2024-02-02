@@ -292,15 +292,14 @@
   features, may differ from one another in significant ways. The dialect of
   Lisp used in this book is called Scheme.<\footnote>
     The two dialects in which most major Lisp programs of the 1970s were
-    written are <label|%_idx_46><label|%_idx_48>MacLisp <label|%_idx_50>(Moon
-    1978; <label|%_idx_52>Pitman 1983), developed at the <label|%_idx_54>MIT
-    Project MAC, and <label|%_idx_56><label|%_idx_58>Interlisp
-    <label|%_idx_60>(Teitelman 1974), developed at <label|%_idx_62>Bolt
-    Beranek and Newman Inc. and the <label|%_idx_64>Xerox Palo Alto Research
-    Center. <label|%_idx_66><label|%_idx_68>Portable Standard Lisp
-    <label|%_idx_70>(Hearn 1969; <label|%_idx_72>Griss 1981) was a Lisp
-    dialect designed to be easily portable between different machines.
-    MacLisp spawned a number of subdialects, such as
+    written are <label|%_idx_48>MacLisp <label|%_idx_50>(Moon 1978;
+    <label|%_idx_52>Pitman 1983), developed at the MIT Project MAC, and
+    <label|%_idx_56><label|%_idx_58>Interlisp <label|%_idx_60>(Teitelman
+    1974), developed at <label|%_idx_62>Bolt Beranek and Newman Inc. and the
+    Xerox Palo Alto Research Center. <label|%_idx_66><label|%_idx_68>Portable
+    Standard Lisp <label|%_idx_70>(Hearn 1969; <label|%_idx_72>Griss 1981)
+    was a Lisp dialect designed to be easily portable between different
+    machines. MacLisp spawned a number of subdialects, such as
     <label|%_idx_74><label|%_idx_76>Franz Lisp, which was developed at the
     <label|%_idx_78>University of California at Berkeley, and
     <label|%_idx_80><label|%_idx_82>Zetalisp (Moon 1981), which was based on
@@ -331,8 +330,7 @@
     dynamics of the Solar System is chaotic. This computation was made
     possible by new integration algorithms, a special-purpose compiler, and a
     special-purpose computer all implemented with the aid of software tools
-    written in Lisp <label|%_idx_106>(Abelson et al. 1992; Sussman and Wisdom
-    1992).
+    written in Lisp (Abelson et al. 1992; Sussman and Wisdom 1992).
   </footnote> Although Lisp has not yet overcome its old reputation as
   hopelessly inefficient, Lisp is now used in many applications where
   efficiency is not the central concern. For example, Lisp has become a
@@ -1128,7 +1126,7 @@
   procedure applications that can be modeled using substitution (including
   all the procedures in the first two chapters of this book) and that yield
   legitimate values, normal-order and applicative-order evaluation produce
-  the same value. (See <hlink|Exercise 1.5|#ex1.5> for an instance of an
+  the same value. (See Exercise <reference|ex1.5> for an instance of an
   \Pillegitimate\Q value where normal-order and applicative-order evaluation
   do not give the same result.)
 
@@ -1649,9 +1647,9 @@
   </session>
 
   We also have to say what we mean by \Pgood enough.\Q The following will do
-  for illustration, but it is not really a very good test. (See
-  <hlink|Exercise 1.7|#ex1.7>.) The idea is to improve the answer until it is
-  close enough so that its square differs from the radicand by less than a
+  for illustration, but it is not really a very good test. (See Exercise
+  <reference|ex1.7>.) The idea is to improve the answer until it is close
+  enough so that its square differs from the radicand by less than a
   predetermined tolerance (here 0.001):<\footnote>
     We will usually give predicates names ending with question marks, to help
     us remember that they are predicates. This is just a stylistic
@@ -2143,7 +2141,7 @@
     \ \ \ \ \ \ (* n (factorial (- n 1)))))
   </scm-code>
 
-  We can use the substitution model of <hlink|1.1.5|#1.1.5> to watch this
+  We can use the substitution model of <smart-ref|sec:1.1.5> to watch this
   procedure in action computing 6!, as shown in <smart-ref|fig:1.3>.
 
   <\big-figure>
@@ -2312,11 +2310,11 @@
   chain of deferred operations. The longer the chain, the more information
   must be maintained.<\footnote>
     When we discuss the implementation of procedures on register machines in
-    <hlink|Chapter 5|Chapter-5.xhtml#Chapter-5>, we will see that any
-    iterative process can be realized \Pin hardware\Q as a machine that has a
-    fixed set of registers and no auxiliary memory. In contrast, realizing a
-    recursive process requires a machine that uses an auxiliary data
-    structure known as a <label|index-stack> <em|stack>.
+    Chapter 5, we will see that any iterative process can be realized \Pin
+    hardware\Q as a machine that has a fixed set of registers and no
+    auxiliary memory. In contrast, realizing a recursive process requires a
+    machine that uses an auxiliary data structure known as a
+    <label|index-stack> <em|stack>.
   </footnote>
 
   In contrasting iteration and recursion, we must be careful not to confuse
@@ -2340,26 +2338,23 @@
   iterative. As a consequence, these languages can describe iterative
   processes only by resorting to special-purpose \Plooping constructs\Q such
   as <code*|do>, <code*|repeat>, <code*|until>, <code*|for>, and
-  <code*|while>. The implementation of Scheme we shall consider in
-  <hlink|Chapter 5|Chapter-5.xhtml#Chapter-5> does not share this defect. It
-  will execute an iterative process in constant space, even if the iterative
-  process is described by a recursive procedure. An implementation with this
-  property is called <em|tail-recursive><index|tail-recursive>. With a
-  tail-recursive implementation, iteration can be expressed using the
-  ordinary procedure call mechanism, so that special iteration constructs are
-  useful only as syntactic sugar.<hlink||#FOOT31><\footnote>
+  <code*|while>. The implementation of Scheme we shall consider in Chapter 5
+  does not share this defect. It will execute an iterative process in
+  constant space, even if the iterative process is described by a recursive
+  procedure. An implementation with this property is called
+  <em|tail-recursive><index|tail-recursive>. With a tail-recursive
+  implementation, iteration can be expressed using the ordinary procedure
+  call mechanism, so that special iteration constructs are useful only as
+  syntactic sugar.<\footnote>
     Tail recursion has long been known as a compiler optimization trick. A
-    coherent semantic basis for tail recursion was provided by Carl
-    <hlink|Hewitt (1977)|References.xhtml#Hewitt-_00281977_0029>, who
-    explained it in terms of the \Pmessage-passing\Q model of computation
-    that we shall discuss in <hlink|Chapter 3|Chapter-3.xhtml#Chapter-3>.
-    Inspired by this, Gerald Jay Sussman and Guy Lewis Steele Jr. (see
-    <hlink|Steele and Sussman 1975|References.xhtml#Steele-and-Sussman-1975>)
+    coherent semantic basis for tail recursion was provided by Carl Hewitt
+    (1977), who explained it in terms of the \Pmessage-passing\Q model of
+    computation that we shall discuss in Chapter 3. Inspired by this, Gerald
+    Jay Sussman and Guy Lewis Steele Jr. (see Steele and Sussman 1975)
     constructed a tail-recursive interpreter for Scheme. Steele later showed
     how tail recursion is a consequence of the natural way to compile
-    procedure calls (<hlink|Steele 1977|References.xhtml#Steele-1977>). The
-    <abbr|IEEE> standard for Scheme requires that Scheme implementations be
-    tail-recursive.
+    procedure calls (Steele 1977). The <abbr|IEEE> standard for Scheme
+    requires that Scheme implementations be tail-recursive.
   </footnote>
 
   <\exercise>
@@ -2502,7 +2497,7 @@
   in general) is precisely <math|<with|mode|text|Fib><around*|(|n+1|)>>. To
   get an idea of how bad this is, one can show that the value of
   <math|<with|mode|text|Fib><around*|(|n|)>> grows exponentially with
-  <math|n>. More precisely (see <hlink|Exercise 1.13|#Exercise-1_002e13>),
+  <math|n>. More precisely (see Exercise <reference|ex1.13>),
   <math|<with|mode|text|Fib><around*|(|n|)>> is the closest integer to
   <math|\<varphi\><rsup|n><around*|/|<sqrt|5>|\<nobracket\>>>, where
   <math|\<varphi\>=<frac|1+<sqrt|5>|2>\<approx\>1.6180> is the <em|golden
@@ -2698,8 +2693,7 @@
     straightforward way. Tabulation can sometimes be used to transform
     processes that require an exponential number of steps (such as
     <code*|count-change>) into processes whose space and time requirements
-    grow linearly with the input. See <hlink|Exercise
-    3.27|3_002e3.xhtml#Exercise-3_002e27>.
+    grow linearly with the input. See Exercise 3.27.
   </footnote>
 
   <\exercise>
@@ -2735,21 +2729,20 @@
       <math|n<rsup|<with|mode|text|th>>> row consists of the coefficients of
       the terms in the expansion of <math|<around*|(|x+y|)><rsup|n>>. This
       pattern for computing the coefficients appeared in Blaise Pascal's 1653
-      seminal work on probability theory, <cite*|Trait\<#FFFD\> du triangle
-      arithm\<#FFFD\>tique>. According to <hlink|Knuth
-      (1973)|References.xhtml#Knuth-_00281973_0029>, the same pattern appears
-      in the <cite*|Szu-yuen Y\<#FFFD\>-chien> (\PThe Precious Mirror of the
-      Four Elements\Q), published by the Chinese mathematician Chu Shih-chieh
-      in 1303, in the works of the twelfth-century Persian poet and
+      seminal work on probability theory, <em|Traité du triangle
+      arithmétique>. According to Knuth (1973), the same pattern appears in
+      the <em|Szu-yuen Yü-chien> (\PThe Precious Mirror of the Four
+      Elements\Q), published by the Chinese mathematician Chu Shih-chieh in
+      1303, in the works of the twelfth-century Persian poet and
       mathematician Omar Khayyam, and in the works of the twelfth-century
-      Hindu mathematician Bh\<#FFFD\>scara \<#FFFD\>ch\<#FFFD\>rya.
+      Hindu mathematician Bháscara Áchárya.
     </footnote> Write a procedure that computes elements of Pascal's triangle
     by means of a recursive process.
   </exercise>
 
   <\exercise>
-    Prove that <math|<with|mode|text|Fib><around*|(|n|)>> is the closest
-    integer to <math|\<varphi\><rsup|n><around*|/|<sqrt|5>|\<nobracket\>>>,
+    <label|ex1.13>Prove that <math|<with|mode|text|Fib><around*|(|n|)>> is
+    the closest integer to <math|\<varphi\><rsup|n><around*|/|<sqrt|5>|\<nobracket\>>>,
     where <math|\<varphi\>=<around*|(|1+<sqrt|5>|)><around*|/|2|\<nobracket\>>>.
     Hint: Let <math|\<psi\>=<around*|(|1-<sqrt|5>|)><around*|/|2|\<nobracket\>>>.
     Use induction and the definition of the Fibonacci numbers (see
@@ -2790,7 +2783,7 @@
   <math|k<rsub|1>*f<around*|(|n|)>> and <math|k<rsub|2>*f<around*|(|n|)>>.)
 
   For instance, with the linear recursive process for computing factorial
-  described in <hlink|1.2.1|#1.2.1> the number of steps grows proportionally
+  described in <smart-ref|sec:1.2.1> the number of steps grows proportionally
   to the input <math|n>. Thus, the steps required for this process grows as
   <math|\<Theta\><around*|(|n|)>>. We also saw that the space required grows
   as <math|\<Theta\><around*|(|n|)>>. For the iterative factorial, the number
@@ -2807,7 +2800,7 @@
   </footnote> The tree-recursive Fibonacci computation requires
   <math|\<Theta\><around*|(|\<varphi\><rsup|n>|)>> steps and space
   <math|\<Theta\><around*|(|n|)>>, where <math|\<varphi\>> is the golden
-  ratio described in <hlink|1.2.2|#1.2.2>.
+  ratio described in <smart-ref|sec:1.2.2>.
 
   Orders of growth provide only a crude description of the behavior of a
   process. For example, a process requiring <math|n<rsup|2>> steps and a
@@ -2819,10 +2812,9 @@
   a <math|\<Theta\><around*|(|n|)>> (linear) process, doubling the size will
   roughly double the amount of resources used. For an exponential process,
   each increment in problem size will multiply the resource utilization by a
-  constant factor. In the remainder of <hlink|1.2|#g_t1_002e2> we will
-  examine two algorithms whose order of growth is logarithmic, so that
-  doubling the problem size increases the resource requirement by a constant
-  amount.
+  constant factor. In the remainder of <smart-ref|%_idx_90> we will examine
+  two algorithms whose order of growth is logarithmic, so that doubling the
+  problem size increases the resource requirement by a constant amount.
 
   <\exercise>
     Draw the tree illustrating the process generated by the
@@ -2983,14 +2975,13 @@
     power. See <hlink|1.2.6|#g_t1_002e2_002e6>.
   </footnote> It is also possible to use the idea of successive squaring to
   devise an iterative algorithm that computes exponentials with a logarithmic
-  number of steps (see <hlink|Exercise 1.16|#Exercise-1_002e16>), although,
-  as is often the case with iterative algorithms, this is not written down so
+  number of steps (see Exercise <reference|ex1.16>), although, as is often
+  the case with iterative algorithms, this is not written down so
   straightforwardly as the recursive algorithm.<\footnote>
     This iterative algorithm is ancient. It appears in the <em|Chandah-sutra>
     by <name|Áchárya Pingala><index|Áchárya Pingala>, written before 200
-    <abbr|B.C.> See <hlink|Knuth 1981|References.xhtml#Knuth-1981>, section
-    4.6.3, for a full discussion and analysis of this and other methods of
-    exponentiation.
+    <abbr|B.C.> See Knuth 1981, section 4.6.3, for a full discussion and
+    analysis of this and other methods of exponentiation.
   </footnote>
 
   <\exercise>
@@ -3035,10 +3026,10 @@
   </exercise>
 
   <\exercise>
-    Using the results of Exercise <reference|ex1.16> and Exercise
-    <reference|ex1.17>, devise a procedure that generates an iterative
-    process for multiplying two integers in terms of adding, doubling, and
-    halving and uses a logarithmic number of steps.<\footnote>
+    <label|ex1.18>Using the results of Exercise <reference|ex1.16> and
+    Exercise <reference|ex1.17>, devise a procedure that generates an
+    iterative process for multiplying two integers in terms of adding,
+    doubling, and halving and uses a logarithmic number of steps.<\footnote>
       This algorithm, which is sometimes known as the \PRussian peasant
       method\Q of multiplication, is ancient. Examples of its use are found
       in the Rhind Papyrus, one of the two oldest mathematical documents in
@@ -3072,7 +3063,7 @@
     procedure. Put this all together to complete the following procedure,
     which runs in a logarithmic number of steps:<\footnote>
       This exercise was suggested to us by Joe Stoy, based on an example in
-      <hlink|Kaldewaij 1990|References.xhtml#Kaldewaij-1990>.
+      Kaldewaij 1990.
     </footnote>
 
     <\scm-code>
@@ -3148,13 +3139,12 @@
   method for computing the <abbr|GCD> is known as <em|Euclid's
   Algorithm><index|Euclid's Algorithm>.<\footnote>
     Euclid's Algorithm is so called because it appears in Euclid's
-    <cite*|Elements> (Book 7, ca. 300 <abbr|B.C.>). According to <hlink|Knuth
-    (1973)|References.xhtml#Knuth-_00281973_0029>, it can be considered the
-    oldest known nontrivial algorithm. The ancient Egyptian method of
-    multiplication (<hlink|Exercise 1.18|#Exercise-1_002e18>) is surely
-    older, but, as Knuth explains, Euclid's algorithm is the oldest known to
-    have been presented as a general algorithm, rather than as a set of
-    illustrative examples.
+    <cite*|Elements> (Book 7, ca. 300 <abbr|B.C.>). According to Knuth
+    (1973), it can be considered the oldest known nontrivial algorithm. The
+    ancient Egyptian method of multiplication (Exercise <reference|ex1.18>)
+    is surely older, but, as Knuth explains, Euclid's algorithm is the oldest
+    known to have been presented as a general algorithm, rather than as a set
+    of illustrative examples.
   </footnote>
 
   It is easy to express Euclid's Algorithm as a procedure:
@@ -3373,8 +3363,7 @@
     <math|b<rsup|e<around*|/|2|\<nobracket\>>>> modulo <math|m>, square this,
     and take the remainder modulo <math|m>. This technique is useful because
     it means we can perform our computation without ever having to deal with
-    numbers much larger than <math|m>. (Compare <hlink|Exercise
-    1.25|#Exercise-1_002e25>.)
+    numbers much larger than <math|m>. (Compare Exercise <reference|ex1.25>.)
   </footnote>
 
   The Fermat test is performed by choosing at random a number <math|a>
@@ -3464,14 +3453,13 @@
     infeasible to factor an arbitrary 200-digit number, the primality of such
     a number can be checked in a few seconds with the Fermat test. This fact
     forms the basis of a technique for constructing \Punbreakable codes\Q
-    suggested by <hlink|Rivest et al. (1977)|References.xhtml#Rivest-et-al_002e-_00281977_0029>.
-    The resulting <em|RSA algorithm><index|RSA algorithm> has become a widely
-    used technique for enhancing the security of electronic communications.
-    Because of this and related developments, the study of prime numbers,
-    once considered the epitome of a topic in \Ppure\Q mathematics to be
-    studied only for its own sake, now turns out to have important practical
-    applications to cryptography, electronic funds transfer, and information
-    retrieval.
+    suggested by Rivest et al. (1977). The resulting <em|RSA
+    algorithm><index|RSA algorithm> has become a widely used technique for
+    enhancing the security of electronic communications. Because of this and
+    related developments, the study of prime numbers, once considered the
+    epitome of a topic in \Ppure\Q mathematics to be studied only for its own
+    sake, now turns out to have important practical applications to
+    cryptography, electronic funds transfer, and information retrieval.
   </footnote>
 
   <\exercise>
@@ -3554,9 +3542,9 @@
   </exercise>
 
   <\exercise>
-    Alyssa P. Hacker complains that we went to a lot of extra work in writing
-    <code*|expmod>. After all, she says, since we already know how to compute
-    exponentials, we could have simply written
+    <label|ex1.25>Alyssa P. Hacker complains that we went to a lot of extra
+    work in writing <code*|expmod>. After all, she says, since we already
+    know how to compute exponentials, we could have simply written
 
     <\scm-code>
       (define (expmod base exp m)
@@ -3614,14 +3602,13 @@
 
   <\exercise>
     One variant of the Fermat test that cannot be fooled is called the
-    <em|Miller-Rabin test><index|Miller-Rabin test> (<hlink|Miller
-    1976|References.xhtml#Miller-1976>; <hlink|Rabin
-    1980|References.xhtml#Rabin-1980>). This starts from an alternate form of
-    Fermat's Little Theorem, which states that if <math|n> is a prime number
-    and <math|a> is any positive integer less than <math|n>, then <math|a>
-    raised to the <math|<around*|(|n-1|)>>-st power is congruent to 1 modulo
-    <math|n>. To test the primality of a number <math|n> by the Miller-Rabin
-    test, we pick a random number <math|a\<less\>n> and raise <math|a> to the
+    <em|Miller-Rabin test><index|Miller-Rabin test> (Miller 1976; Rabin
+    1980). This starts from an alternate form of Fermat's Little Theorem,
+    which states that if <math|n> is a prime number and <math|a> is any
+    positive integer less than <math|n>, then <math|a> raised to the
+    <math|<around*|(|n-1|)>>-st power is congruent to 1 modulo <math|n>. To
+    test the primality of a number <math|n> by the Miller-Rabin test, we pick
+    a random number <math|a\<less\>n> and raise <math|a> to the
     <math|<around*|(|n-1|)>>-st power modulo <math|n> using the
     <code*|expmod> procedure. However, whenever we perform the squaring step
     in <code*|expmod>, we check to see if we have discovered a \Pnontrivial
