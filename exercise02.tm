@@ -171,51 +171,105 @@
     </solution*>
   </folded>
 
-  <\exercise>
-    \ Observe that our model of evaluation allows for combinations whose
-    operators are compound expressions. Use this observation to describe the
-    behavior of the following procedure:
+  <\folded>
+    <\exercise>
+      \ Observe that our model of evaluation allows for combinations whose
+      operators are compound expressions. Use this observation to describe
+      the behavior of the following procedure:
 
-    <\scm-code>
-      (define (a-plus-abs-b a b)
+      <\scm-code>
+        (define (a-plus-abs-b a b)
 
-      \ \ ((if (\<gtr\> b 0) + -) a b))
-    </scm-code>
-  </exercise>
-
-  <\exercise>
-    <label|ex1.5>Ben Bitdiddle has invented a test to determine whether the
-    interpreter he is faced with is using applicative-order evaluation or
-    normal-order evaluation. He defines the following two procedures:
-
-    <\scm-code>
-      (define (p) (p))
-
+        \ \ ((if (\<gtr\> b 0) + -) a b))
+      </scm-code>
+    </exercise>
+  <|folded>
+    <\solution*>
       \;
 
-      (define (test x y)
+      <\scm-code>
+        (a-plus-abs-b 3 4)
 
-      \ \ (if (= x 0)
+        ((if (\<gtr\> 4 0) + -) 3 4)
 
-      \ \ \ \ \ \ 0
+        (+ 3 4)
 
-      \ \ \ \ \ \ y))
-    </scm-code>
+        7
 
-    Then he evaluates the expression
+        \;
 
-    <\scm-code>
-      (test 0 (p))
-    </scm-code>
+        (a-plus-abs-b 3 -4)
 
-    What behavior will Ben observe with an interpreter that uses
-    applicative-order evaluation? What behavior will he observe with an
-    interpreter that uses normal-order evaluation? Explain your answer.
-    (Assume that the evaluation rule for the special form <code*|if> is the
-    same whether the interpreter is using normal or applicative order: The
-    predicate expression is evaluated first, and the result determines
-    whether to evaluate the consequent or the alternative expression.)
-  </exercise>
+        ((if (\<gtr\> -4 0) + -) 3 -4)
+
+        (- 3 -4)
+
+        7
+      </scm-code>
+    </solution*>
+  </folded>
+
+  <\folded>
+    <\exercise>
+      <label|ex1.5>Ben Bitdiddle has invented a test to determine whether the
+      interpreter he is faced with is using applicative-order evaluation or
+      normal-order evaluation. He defines the following two procedures:
+
+      <\scm-code>
+        (define (p) (p))
+
+        \;
+
+        (define (test x y)
+
+        \ \ (if (= x 0)
+
+        \ \ \ \ \ \ 0
+
+        \ \ \ \ \ \ y))
+      </scm-code>
+
+      Then he evaluates the expression
+
+      <\scm-code>
+        (test 0 (p))
+      </scm-code>
+
+      What behavior will Ben observe with an interpreter that uses
+      applicative-order evaluation? What behavior will he observe with an
+      interpreter that uses normal-order evaluation? Explain your answer.
+      (Assume that the evaluation rule for the special form <code*|if> is the
+      same whether the interpreter is using normal or applicative order: The
+      predicate expression is evaluated first, and the result determines
+      whether to evaluate the consequent or the alternative expression.)
+    </exercise>
+  <|folded>
+    <\solution*>
+      \;
+
+      <\description>
+        <item*|normal order evaluation>
+
+        <\scm-code>
+          (test 0 (p))
+
+          (test 0 (p))
+
+          (test 0 (p))
+        </scm-code>
+
+        <item*|applicative order evaluation>
+
+        <\scm-code>
+          (test 0 (p))
+
+          (if (= 0 0) 0 (p))
+
+          0
+        </scm-code>
+      </description>
+    </solution*>
+  </folded>
 
   <\exercise>
     Alyssa P. Hacker doesn't see why <code*|if> needs to be provided as a
@@ -296,7 +350,7 @@
 
 <\references>
   <\collection>
-    <associate|ex1.5|<tuple|5|1|course01.tm>>
-    <associate|ex1.7|<tuple|7|2|course01.tm>>
+    <associate|ex1.5|<tuple|5|1>>
+    <associate|ex1.7|<tuple|7|2>>
   </collection>
 </references>

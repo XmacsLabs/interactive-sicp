@@ -200,9 +200,13 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-247><vspace|0.5fn>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Glossary>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-248><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-249><vspace|0.5fn>
   </table-of-contents>
 
   <chapter|Building Abstractions with Procedures>
@@ -410,9 +414,9 @@
   One easy way to get started at programming is to examine some typical
   interactions with an interpreter for the Scheme dialect of Lisp. Imagine
   that you are sitting at a computer terminal. You type an
-  <em|expression><index|expression>, and the interpreter responds by
-  displaying the result of its <em|evaluating><index|evaluating> that
-  expression.
+  <em|expression><glossary-explain|expression|\<#8868\>\<#8FBE\>\<#5F0F\>\V\V\<#539F\>\<#8BED\>\<#6216\>\<#8005\>\<#7EC4\>\<#5408\>\<#5F0F\>>,
+  and the interpreter responds by displaying the result of its
+  <em|evaluating><index|evaluating> that expression.
 
   One kind of primitive expression you might type is a number. (More
   precisely, the expression that you type consists of the numerals that
@@ -477,17 +481,20 @@
 
   Expressions such as these, formed by delimiting a list of expressions
   within parentheses in order to denote procedure application, are called
-  <em|combinations><index|combinations>. The leftmost element in the list is
-  called the <em|operator><index|operator>, and the other elements are called
-  <em|operands><index|operands>. The value of a combination is obtained by
-  applying the procedure specified by the operator to the
-  <em|arguments><index|arguments> that are the values of the operands.
+  <em|combinations><glossary-explain|combinations|\<#7EC4\>\<#5408\>\<#5F0F\>>.
+  The leftmost element in the list is called the
+  <em|operator><glossary-explain|operator|\<#64CD\>\<#4F5C\>\<#7B26\>>, and
+  the other elements are called <em|operands><glossary-explain|operands|\<#64CD\>\<#4F5C\>\<#6570\>>.
+  The value of a combination is obtained by applying the procedure specified
+  by the operator to the <em|arguments><glossary-explain|arguments|\<#53C2\>\<#6570\>>
+  that are the values of the operands.
 
   The convention of placing the operator to the left of the operands is known
-  as <em|prefix notation><index|prefix notation>, and it may be somewhat
-  confusing at first because it departs significantly from the customary
-  mathematical convention. Prefix notation has several advantages, however.
-  One of them is that it can accommodate procedures that may take an
+  as <em|prefix notation><glossary-explain|prefix
+  notation|\<#524D\>\<#7F00\>\<#8868\>\<#793A\>\<#6CD5\>>, and it may be
+  somewhat confusing at first because it departs significantly from the
+  customary mathematical convention. Prefix notation has several advantages,
+  however. One of them is that it can accommodate procedures that may take an
   arbitrary number of arguments, as in the following examples:
 
   <\session|scheme|default>
@@ -581,8 +588,8 @@
 
   A critical aspect of a programming language is the means it provides for
   using names to refer to computational objects. We say that the name
-  identifies a <em|variable><index|variable> whose <em|value><index|value> is
-  the object.
+  identifies a <em|variable><glossary-explain|variable|\<#53D8\>\<#91CF\>>
+  whose <em|value><glossary-explain|value|\<#503C\>> is the object.
 
   In the Scheme dialect of Lisp, we name things with <scm|define>. Typing
 
@@ -786,17 +793,17 @@
   for a small number of special forms.<\footnote>
     Special syntactic forms that are simply convenient alternative surface
     structures for things that can be written in more uniform ways are
-    sometimes called <em|syntactic sugar><index|syntactic sugar>, to use a
-    phrase coined by Peter Landin. In comparison with users of other
-    languages, Lisp programmers, as a rule, are less concerned with matters
-    of syntax. (By contrast, examine any Pascal manual and notice how much of
-    it is devoted to descriptions of syntax.) This disdain for syntax is due
-    partly to the flexibility of Lisp, which makes it easy to change surface
-    syntax, and partly to the observation that many \Pconvenient\Q syntactic
-    constructs, which make the language less uniform, end up causing more
-    trouble than they are worth when programs become large and complex. In
-    the words of <name|Alan Perlis>, \PSyntactic sugar causes cancer of the
-    semicolon.\Q
+    sometimes called <em|syntactic sugar><glossary-explain|syntactic
+    sugar|\<#8BED\>\<#6CD5\>\<#7CD6\>>, to use a phrase coined by Peter
+    Landin. In comparison with users of other languages, Lisp programmers, as
+    a rule, are less concerned with matters of syntax. (By contrast, examine
+    any Pascal manual and notice how much of it is devoted to descriptions of
+    syntax.) This disdain for syntax is due partly to the flexibility of
+    Lisp, which makes it easy to change surface syntax, and partly to the
+    observation that many \Pconvenient\Q syntactic constructs, which make the
+    language less uniform, end up causing more trouble than they are worth
+    when programs become large and complex. In the words of <name|Alan
+    Perlis>, \PSyntactic sugar causes cancer of the semicolon.\Q
   </footnote>
 
   <subsection|Compound Procedures><label|sec:1.1.4>
@@ -843,12 +850,13 @@
     \ To square something, multiply it by itself.
   </code>
 
-  We have here a <em|compound procedure><index|compound procedure>, which has
-  been given the name <code*|square>. The procedure represents the operation
-  of multiplying something by itself. The thing to be multiplied is given a
-  local name, <code*|x>, which plays the same role that a pronoun plays in
-  natural language. Evaluating the definition creates this compound procedure
-  and associates it with the name <code*|square>.<\footnote>
+  We have here a <em|compound procedure><glossary-explain|compound
+  procedure|\<#590D\>\<#5408\>\<#51FD\>\<#6570\>>, which has been given the
+  name <code*|square>. The procedure represents the operation of multiplying
+  something by itself. The thing to be multiplied is given a local name,
+  <code*|x>, which plays the same role that a pronoun plays in natural
+  language. Evaluating the definition creates this compound procedure and
+  associates it with the name <code*|square>.<\footnote>
     Observe that there are two different operations being combined here: we
     are creating the procedure, and we are giving it the name <code*|square>.
     It is possible, indeed important, to be able to separate these two
@@ -1037,10 +1045,11 @@
   </scm-code>
 
   The process we have just described is called the <em|substitution
-  model><index|substitution model> for procedure application. It can be taken
-  as a model that determines the \Pmeaning\Q of procedure application,
-  insofar as the procedures in this chapter are concerned. However, there are
-  two points that should be stressed:
+  model><glossary-explain|substitution model|\<#4EE3\>\<#6362\>\<#6A21\>\<#578B\>>
+  for procedure application. It can be taken as a model that determines the
+  \Pmeaning\Q of procedure application, insofar as the procedures in this
+  chapter are concerned. However, there are two points that should be
+  stressed:
 
   <\itemize>
     <item>The purpose of the substitution is to help us think about procedure
@@ -1119,16 +1128,18 @@
   <code*|(+ 5 1)> and <code*|(* 5 2)>.
 
   This alternative \Pfully expand and then reduce\Q evaluation method is
-  known as <em|normal-order evaluation><index|normal order evaluation>, in
-  contrast to the \Pevaluate the arguments and then apply\Q method that the
-  interpreter actually uses, which is called <em|applicative-order
-  evaluation><index|application-order evaluation>. It can be shown that, for
-  procedure applications that can be modeled using substitution (including
-  all the procedures in the first two chapters of this book) and that yield
-  legitimate values, normal-order and applicative-order evaluation produce
-  the same value. (See Exercise <reference|ex1.5> for an instance of an
-  \Pillegitimate\Q value where normal-order and applicative-order evaluation
-  do not give the same result.)
+  known as <em|normal-order evaluation><glossary-explain|normal-order
+  evaluation|\<#6B63\>\<#5E38\>\<#5E8F\>\<#6C42\>\<#503C\>>, in contrast to
+  the \Pevaluate the arguments and then apply\Q method that the interpreter
+  actually uses, which is called <em|applicative-order
+  evaluation><glossary-explain|applicative-order
+  evaluation|\<#5E94\>\<#7528\>\<#5E8F\>\<#6C42\>\<#503C\>>. It can be shown
+  that, for procedure applications that can be modeled using substitution
+  (including all the procedures in the first two chapters of this book) and
+  that yield legitimate values, normal-order and applicative-order evaluation
+  produce the same value. (See Exercise <reference|ex1.5> for an instance of
+  an \Pillegitimate\Q value where normal-order and applicative-order
+  evaluation do not give the same result.)
 
   Lisp uses applicative-order evaluation, partly because of the additional
   efficiency obtained from avoiding multiple evaluations of expressions such
@@ -1198,8 +1209,9 @@
   <code|(\<langle\><var|p>\<rangle\> \<langle\><var|e>\<rangle\>)>
 
   called <em|clauses><index|clauses>. The first expression in each pair is a
-  <em|predicate><index|predicate>\Vthat is, an expression whose value is
-  interpreted as either true or false.<\footnote>
+  <em|predicate><glossary-explain|predicate|\<#8C13\>\<#8BCD\>\V\V\<#4E00\>\<#79CD\>\<#503C\>\<#4E3A\>\<#771F\>\<#6216\>\<#8005\>\<#5047\>\<#7684\>\<#8868\>\<#8FBE\>\<#5F0F\>>\Vthat
+  is, an expression whose value is interpreted as either true or
+  false.<\footnote>
     \PInterpreted as either true or false\Q means this: In Scheme, there are
     two distinguished values that are denoted by the constants <scm|#t> and
     <scm|#f>. When the interpreter checks a predicate's value, it interprets
@@ -3349,8 +3361,8 @@
   </scm-code>
 
   This is very similar to the <code*|fast-expt> procedure of
-  <smart-ref|sec:1.2.4>. It uses successive squaring, so that the number of steps
-  grows logarithmically with the exponent.<\footnote>
+  <smart-ref|sec:1.2.4>. It uses successive squaring, so that the number of
+  steps grows logarithmically with the exponent.<\footnote>
     The reduction steps in the cases where the exponent <math|e> is greater
     than 1 are based on the fact that, for any integers <math|x>, <math|y>,
     and <math|m>, we can find the remainder of <math|x> times <math|y> modulo
@@ -13703,6 +13715,36 @@
     </bib-list>
   </bibliography>
 
+  <\the-glossary|gly>
+    <glossary-2|expression|\<#8868\>\<#8FBE\>\<#5F0F\>\V\V\<#539F\>\<#8BED\>\<#6216\>\<#8005\>\<#7EC4\>\<#5408\>\<#5F0F\>|<pageref|auto-16>>
+
+    <glossary-2|combinations|\<#7EC4\>\<#5408\>\<#5F0F\>|<pageref|auto-18>>
+
+    <glossary-2|operator|\<#64CD\>\<#4F5C\>\<#7B26\>|<pageref|auto-19>>
+
+    <glossary-2|operands|\<#64CD\>\<#4F5C\>\<#6570\>|<pageref|auto-20>>
+
+    <glossary-2|arguments|\<#53C2\>\<#6570\>|<pageref|auto-21>>
+
+    <glossary-2|prefix notation|\<#524D\>\<#7F00\>\<#8868\>\<#793A\>\<#6CD5\>|<pageref|auto-22>>
+
+    <glossary-2|variable|\<#53D8\>\<#91CF\>|<pageref|auto-27>>
+
+    <glossary-2|value|\<#503C\>|<pageref|auto-28>>
+
+    <glossary-2|syntactic sugar|\<#8BED\>\<#6CD5\>\<#7CD6\>|<pageref|auto-36>>
+
+    <glossary-2|compound procedure|\<#590D\>\<#5408\>\<#51FD\>\<#6570\>|<pageref|auto-39>>
+
+    <glossary-2|substitution model|\<#4EE3\>\<#6362\>\<#6A21\>\<#578B\>|<pageref|auto-41>>
+
+    <glossary-2|normal-order evaluation|\<#6B63\>\<#5E38\>\<#5E8F\>\<#6C42\>\<#503C\>|<pageref|auto-43>>
+
+    <glossary-2|applicative-order evaluation|\<#5E94\>\<#7528\>\<#5E8F\>\<#6C42\>\<#503C\>|<pageref|auto-44>>
+
+    <glossary-2|predicate|\<#8C13\>\<#8BCD\>\V\V\<#4E00\>\<#79CD\>\<#503C\>\<#4E3A\>\<#771F\>\<#6216\>\<#8005\>\<#5047\>\<#7684\>\<#8868\>\<#8FBE\>\<#5F0F\>|<pageref|auto-49>>
+  </the-glossary>
+
   <\the-index|idx>
     <index+1|Áchárya Pingala|<pageref|auto-90>>
 
@@ -13719,10 +13761,6 @@
     <index+1|Alan Perlis|<pageref|auto-25>>
 
     <index+1|algebraic specification|<pageref|auto-140>>
-
-    <index+1|application-order evaluation|<pageref|auto-44>>
-
-    <index+1|arguments|<pageref|auto-21>>
 
     <index+1|average damping|<pageref|auto-114>>
 
@@ -13758,13 +13796,9 @@
 
     <index+1|coercion|<pageref|auto-231>>
 
-    <index+1|combinations|<pageref|auto-18>>
-
     <index+1|comments|<pageref|auto-175>>
 
     <index+1|composition|<pageref|auto-120>>
-
-    <index+1|compound procedure|<pageref|auto-39>>
 
     <index+1|computational process|<pageref|auto-2>>
 
@@ -13805,8 +13839,6 @@
     <index+1|Euclid's Algorithm|<pageref|auto-93>>
 
     <index+1|evaluating|<pageref|auto-17>>
-
-    <index+1|expression|<pageref|auto-16>>
 
     <index+1|filter|<pageref|auto-109>, <pageref|auto-170>>
 
@@ -13890,12 +13922,6 @@
 
     <index+1|nil|<pageref|auto-159>>
 
-    <index+1|normal order evaluation|<pageref|auto-43>>
-
-    <index+1|operands|<pageref|auto-20>>
-
-    <index+1|operator|<pageref|auto-19>>
-
     <index+1|order of growth|<pageref|auto-88>>
 
     <index+1|ordinary|<pageref|auto-228>>
@@ -13912,13 +13938,11 @@
 
     <index+1|poly|<pageref|auto-242>>
 
-    <index+1|predicate|<pageref|auto-49>>
+    <index+1|predicate|<pageref|auto-51>>
 
     <index+1|prefix|<pageref|auto-203>>
 
     <index+1|prefix code|<pageref|auto-204>>
-
-    <index+1|prefix notation|<pageref|auto-22>>
 
     <index+1|pretty-printing|<pageref|auto-23>>
 
@@ -13984,15 +14008,11 @@
 
     <index+1|substitution|<pageref|auto-42>>
 
-    <index+1|substitution model|<pageref|auto-41>>
-
     <index+1|subtype|<pageref|auto-233>>
 
     <index+1|summation of a series|<pageref|auto-106>>
 
     <index+1|supertype|<pageref|auto-234>>
-
-    <index+1|syntactic sugar|<pageref|auto-36>>
 
     <index+1|tabulation|<pageref|auto-83>>
 
@@ -14012,11 +14032,7 @@
 
     <index+1|univariate polynomials|<pageref|auto-241>>
 
-    <index+1|value|<pageref|auto-28>>
-
     <index+1|values|<pageref|auto-191>>
-
-    <index+1|variable|<pageref|auto-27>>
 
     <index+1|variable-length|<pageref|auto-201>>
 
