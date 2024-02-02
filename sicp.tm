@@ -2549,7 +2549,7 @@
   One should not conclude from this that tree-recursive processes are
   useless. When we consider processes that operate on hierarchically
   structured data rather than numbers, we will find that tree recursion is a
-  natural and powerful tool.<hlink||#FOOT32><\footnote>
+  natural and powerful tool.<\footnote>
     An example of this was hinted at in <smart-ref|sec:1.1.3>. The
     interpreter itself evaluates expressions using a tree-recursive process.
   </footnote> But even in numerical operations, tree-recursive processes can
@@ -2857,7 +2857,7 @@
     </enumerate-alpha>
   </exercise>
 
-  <subsection|Exponentiation><label|1.2.4>
+  <subsection|Exponentiation><label|sec:1.2.4>
 
   Consider the problem of computing the exponential of a given number. We
   would like a procedure that takes as arguments a base <math|b> and a
@@ -2971,8 +2971,8 @@
   and <math|\<Theta\><around*|(|n|)>> growth becomes striking as <math|n>
   becomes large. For example, <code*|fast-expt> for <math|n> = 1000 requires
   only 14 multiplications.<\footnote>
-    You may wonder why anyone would care about raising numbers to the 1000th
-    power. See <hlink|1.2.6|#g_t1_002e2_002e6>.
+    You may wonder wh anyone would care about raising numbers to the 1000th
+    power. See <smart-ref|sec:1.2.6>.
   </footnote> It is also possible to use the idea of successive squaring to
   devise an iterative algorithm that computes exponentials with a logarithmic
   number of steps (see Exercise <reference|ex1.16>), although, as is often
@@ -3042,7 +3042,7 @@
     There is a clever algorithm for computing the Fibonacci numbers in a
     logarithmic number of steps. Recall the transformation of the state
     variables <math|a> and <math|b> in the <code*|fib-iter> process of
-    <hlink|1.2.2|#g_t1_002e2_002e2>: <math|a\<leftarrow\>a+b> and
+    <smart-ref|sec:1.2.2>: <math|a\<leftarrow\>a+b> and
     <math|b\<leftarrow\>a>. Call this transformation <math|T>, and observe
     that applying <math|T> over and over again <math|n> times, starting with
     1 and 0, produces the pair <math|<with|mode|text|Fib><around*|(|n+1|)>>
@@ -3106,14 +3106,13 @@
   The greatest common divisor (<abbr|GCD>) of two integers <math|a> and
   <math|b> is defined to be the largest integer that divides both <math|a>
   and <math|b> with no remainder. For example, the <abbr|GCD> of 16 and 28 is
-  4. In <hlink|Chapter 2|Chapter-2.xhtml#Chapter-2>, when we investigate how
-  to implement rational-number arithmetic, we will need to be able to compute
-  <abbr|GCD>s in order to reduce rational numbers to lowest terms. (To reduce
-  a rational number to lowest terms, we must divide both the numerator and
-  the denominator by their <abbr|GCD>. For example, 16/28 reduces to 4/7.)
-  One way to find the <abbr|GCD> of two integers is to factor them and search
-  for common factors, but there is a famous algorithm that is much more
-  efficient.
+  4. In Chapter 2, when we investigate how to implement rational-number
+  arithmetic, we will need to be able to compute <abbr|GCD>s in order to
+  reduce rational numbers to lowest terms. (To reduce a rational number to
+  lowest terms, we must divide both the numerator and the denominator by
+  their <abbr|GCD>. For example, 16/28 reduces to 4/7.) One way to find the
+  <abbr|GCD> of two integers is to factor them and search for common factors,
+  but there is a famous algorithm that is much more efficient.
 
   The idea of the algorithm is based on the observation that, if <math|r> is
   the remainder when <math|a> is divided by <math|b>, then the common
@@ -3217,14 +3216,13 @@
     rules used by the interpreter. As an example, consider the iterative
     <code*|gcd> procedure given above. Suppose we were to interpret this
     procedure using normal-order evaluation, as discussed in
-    <hlink|1.1.5|1_002e1.xhtml#g_t1_002e1_002e5>. (The
-    normal-order-evaluation rule for <code*|if> is described in
-    <hlink|Exercise 1.5|1_002e1.xhtml#Exercise-1_002e5>.) Using the
-    substitution method (for normal order), illustrate the process generated
-    in evaluating <code*|(gcd 206 40)> and indicate the <code*|remainder>
-    operations that are actually performed. How many <code*|remainder>
-    operations are actually performed in the normal-order evaluation of
-    <code*|(gcd 206 40)>? In the applicative-order evaluation?
+    <smart-ref|sec:1.1.5>. (The normal-order-evaluation rule for <code*|if>
+    is described in Exercise <reference|ex1.5>.) Using the substitution
+    method (for normal order), illustrate the process generated in evaluating
+    <code*|(gcd 206 40)> and indicate the <code*|remainder> operations that
+    are actually performed. How many <code*|remainder> operations are
+    actually performed in the normal-order evaluation of <code*|(gcd 206
+    40)>? In the applicative-order evaluation?
   </exercise>
 
   <subsection|Example: Testing for Primality><label|sec:1.2.6>
@@ -3351,8 +3349,8 @@
   </scm-code>
 
   This is very similar to the <code*|fast-expt> procedure of
-  <hlink|1.2.4|#1.2.4>. It uses successive squaring, so that the number of
-  steps grows logarithmically with the exponent.<\footnote>
+  <smart-ref|sec:1.2.4>. It uses successive squaring, so that the number of steps
+  grows logarithmically with the exponent.<\footnote>
     The reduction steps in the cases where the exponent <math|e> is greater
     than 1 are based on the fact that, for any integers <math|x>, <math|y>,
     and <math|m>, we can find the remainder of <math|x> times <math|y> modulo
@@ -3431,9 +3429,9 @@
   There are variations of the Fermat test that cannot be fooled. In these
   tests, as with the Fermat method, one tests the primality of an integer
   <math|n> by choosing a random integer <math|a\<less\>n> and checking some
-  condition that depends upon <math|n> and <math|a>. (See <hlink|Exercise
-  1.28|#Exercise-1_002e28> for an example of such a test.) On the other hand,
-  in contrast to the Fermat test, one can prove that, for any <math|n>, the
+  condition that depends upon <math|n> and <math|a>. (See Exercise
+  <reference|ex1.28> for an example of such a test.) On the other hand, in
+  contrast to the Fermat test, one can prove that, for any <math|n>, the
   condition does not hold for most of the integers <math|a\<less\>n> unless
   <math|n> is prime. Thus, if <math|n> passes the test for some random choice
   of <math|a>, the chances are better than even that <math|n> is prime. If
@@ -3468,13 +3466,13 @@
   </exercise>
 
   <\exercise>
-    Most Lisp implementations include a primitive called <code*|runtime> that
-    returns an integer that specifies the amount of time the system has been
-    running (measured, for example, in microseconds). The following
-    <code*|timed-prime-test> procedure, when called with an integer <math|n>,
-    prints <math|n> and checks to see if <math|n> is prime. If <math|n> is
-    prime, the procedure prints three asterisks followed by the amount of
-    time used in performing the test.
+    <label|ex1.22>Most Lisp implementations include a primitive called
+    <code*|runtime> that returns an integer that specifies the amount of time
+    the system has been running (measured, for example, in microseconds). The
+    following <code*|timed-prime-test> procedure, when called with an integer
+    <math|n>, prints <math|n> and checks to see if <math|n> is prime. If
+    <math|n> is prime, the procedure prints three asterisks followed by the
+    amount of time used in performing the test.
 
     <\scm-code>
       (define (timed-prime-test n)
@@ -3524,21 +3522,21 @@
     to use <code*|(next test-divisor)> instead of <code*|(+ test-divisor 1)>.
     With <code*|timed-prime-test> incorporating this modified version of
     <code*|smallest-divisor>, run the test for each of the 12 primes found in
-    <hlink|Exercise 1.22|#Exercise-1_002e22>. Since this modification halves
-    the number of test steps, you should expect it to run about twice as
-    fast. Is this expectation confirmed? If not, what is the observed ratio
-    of the speeds of the two algorithms, and how do you explain the fact that
-    it is different from 2?
+    Exercise <reference|ex1.22>. Since this modification halves the number of
+    test steps, you should expect it to run about twice as fast. Is this
+    expectation confirmed? If not, what is the observed ratio of the speeds
+    of the two algorithms, and how do you explain the fact that it is
+    different from 2?
   </exercise>
 
   <\exercise>
-    Modify the <code*|timed-prime-test> procedure of <hlink|Exercise
-    1.22|#Exercise-1_002e22> to use <code*|fast-prime?> (the Fermat method),
-    and test each of the 12 primes you found in that exercise. Since the
-    Fermat test has <math|\<Theta\><around*|(|log\<nospace\>n|)>> growth, how
-    would you expect the time to test primes near 1,000,000 to compare with
-    the time needed to test primes near 1000? Do your data bear this out? Can
-    you explain any discrepancy you find?
+    <label|ex1.24>Modify the <code*|timed-prime-test> procedure of Exercise
+    <reference|ex1.22> to use <code*|fast-prime?> (the Fermat method), and
+    test each of the 12 primes you found in that exercise. Since the Fermat
+    test has <math|\<Theta\><around*|(|log\<nospace\>n|)>> growth, how would
+    you expect the time to test primes near 1,000,000 to compare with the
+    time needed to test primes near 1000? Do your data bear this out? Can you
+    explain any discrepancy you find?
   </exercise>
 
   <\exercise>
@@ -3557,12 +3555,12 @@
   </exercise>
 
   <\exercise>
-    Louis Reasoner is having great difficulty doing <hlink|Exercise
-    1.24|#Exercise-1_002e24>. His <code*|fast-prime?> test seems to run more
-    slowly than his <code*|prime?> test. Louis calls his friend Eva Lu Ator
-    over to help. When they examine Louis's code, they find that he has
-    rewritten the <code*|expmod> procedure to use an explicit multiplication,
-    rather than calling <code*|square>:
+    Louis Reasoner is having great difficulty doing Exercise
+    <reference|ex1.24>. His <code*|fast-prime?> test seems to run more slowly
+    than his <code*|prime?> test. Louis calls his friend Eva Lu Ator over to
+    help. When they examine Louis's code, they find that he has rewritten the
+    <code*|expmod> procedure to use an explicit multiplication, rather than
+    calling <code*|square>:
 
     <\scm-code>
       (define (expmod base exp m)
@@ -3592,20 +3590,20 @@
   </exercise>
 
   <\exercise>
-    Demonstrate that the Carmichael numbers listed in <hlink|Footnote
-    47|#Footnote-47> really do fool the Fermat test. That is, write a
-    procedure that takes an integer <math|n> and tests whether
+    Demonstrate that the Carmichael numbers listed in Footnote
+    <smart-ref|footnote-1.47> really do fool the Fermat test. That is, write
+    a procedure that takes an integer <math|n> and tests whether
     <math|a<rsup|n>> is congruent to <math|a> modulo <math|n> for every
     <math|a\<less\>n>, and try your procedure on the given Carmichael
     numbers.
   </exercise>
 
   <\exercise>
-    One variant of the Fermat test that cannot be fooled is called the
-    <em|Miller-Rabin test><index|Miller-Rabin test> (Miller 1976; Rabin
-    1980). This starts from an alternate form of Fermat's Little Theorem,
-    which states that if <math|n> is a prime number and <math|a> is any
-    positive integer less than <math|n>, then <math|a> raised to the
+    <label|ex1.28>One variant of the Fermat test that cannot be fooled is
+    called the <em|Miller-Rabin test><index|Miller-Rabin test> (Miller 1976;
+    Rabin 1980). This starts from an alternate form of Fermat's Little
+    Theorem, which states that if <math|n> is a prime number and <math|a> is
+    any positive integer less than <math|n>, then <math|a> raised to the
     <math|<around*|(|n-1|)>>-st power is congruent to 1 modulo <math|n>. To
     test the primality of a number <math|n> by the Miller-Rabin test, we pick
     a random number <math|a\<less\>n> and raise <math|a> to the
@@ -4696,14 +4694,13 @@
   With this modification, the square-root procedure works. In fact, if we
   unravel the definitions, we can see that the sequence of approximations to
   the square root generated here is precisely the same as the one generated
-  by our original square-root procedure of
-  <hlink|1.1.7|1_002e1.xhtml#g_t1_002e1_002e7>. This approach of averaging
-  successive approximations to a solution, a technique that we call
-  <em|average damping><index|average damping>, often aids the convergence of
-  fixed-point searches.
+  by our original square-root procedure of <smart-ref|sec:1.1.7>. This
+  approach of averaging successive approximations to a solution, a technique
+  that we call <em|average damping><index|average damping>, often aids the
+  convergence of fixed-point searches.
 
   <\exercise>
-    Show that the golden ratio <math|\<varphi\>> (<hlink|1.2.2|#1.2.2>) is a
+    Show that the golden ratio <math|\<varphi\>> (<smart-ref|sec:1.2.2>) is a
     fixed point of the transformation <math|x\<mapsto\>1+1<around*|/|x|\<nobracket\>>>,
     and use this fact to compute <math|\<varphi\>> by means of the
     <code*|fixed-point> procedure.
@@ -4712,9 +4709,8 @@
   <\exercise>
     Modify <code*|fixed-point> so that it prints the sequence of
     approximations it generates, using the <code*|newline> and
-    <code*|display> primitives shown in <hlink|Exercise
-    1.22|1_002e2.xhtml#Exercise-1_002e22>. Then find a solution to
-    <math|x<rsup|x>=1000> by finding a fixed point of
+    <code*|display> primitives shown in Exercise <reference|ex1.22>. Then
+    find a solution to <math|x<rsup|x>=1000> by finding a fixed point of
     <math|x\<mapsto\>log\<nospace\><around*|(|1000|)><around*|/|log\<nospace\><around*|(|x|)>|\<nobracket\>>>.
     (Use Scheme's primitive <code*|log> procedure, which computes natural
     logarithms.) Compare the number of steps this takes with and without
@@ -4733,10 +4729,10 @@
       expansion with the <math|N<rsub|i>> and the <math|D<rsub|i>> all equal
       to 1 produces <math|1<around*|/|\<varphi\>|\<nobracket\>>>, where
       <math|\<varphi\>> is the golden ratio (described in
-      <hlink|1.2.2|1_002e2.xhtml#g_t1_002e2_002e2>). One way to approximate
-      an infinite continued fraction is to truncate the expansion after a
-      given number of terms. Such a truncation\Va so-called finite continued
-      fraction <em|<with|font-shape|italic|k>-term finite continued
+      <smart-ref|sec:1.2.2>). One way to approximate an infinite continued
+      fraction is to truncate the expansion after a given number of terms.
+      Such a truncation\Va so-called finite continued fraction
+      <em|<with|font-shape|italic|k>-term finite continued
       fraction><index|k-term finite continued fraction>\Vhas the form
       <math|<frac|N<rsub|1>|D<rsub|1>+<frac|N<rsub|2>|\<ddots\>+<frac|N<rsub|k>|D<rsub|k>>>>>.
       Suppose that <code*|n> and <code*|d> are procedures of one argument
@@ -10104,7 +10100,7 @@
   <math|\<Theta\><around*|(|log\<nospace\>n|)>>.<\footnote>
     Halving the size of the problem at each step is the distinguishing
     characteristic of logarithmic growth, as we saw with the
-    fast-exponentiation algorithm of <hlink|1.2.4|#1.2.4> and the
+    fast-exponentiation algorithm of <smart-ref|sec:1.2.4> and the
     half-interval search method of <hlink|1.3.3|#1.3.3>.
   </footnote> For large sets, this will be a significant speedup over the
   previous representations.
