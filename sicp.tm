@@ -268,7 +268,7 @@
   first Lisp interpreter was implemented by McCarthy with the help of
   colleagues and students in the Artificial Intelligence Group of the MIT
   Research Laboratory of Electronics and in the MIT Computation
-  Center.<hlink||https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-9.html#footnote_Temp_7><\footnote>
+  Center.<\footnote>
     The <em|Lisp 1 Programmer's Manual> appeared in 1960, and the <em|Lisp
     1.5 Programmer's Manual> (<cite|mccarthy1965lisp>) was published in 1962.
     The early history of Lisp is described in McCarthy 1978.
@@ -675,9 +675,9 @@
   <em|global environment><index|global environment>, since we will see later
   that a computation may involve a number of different
   environments).<\footnote>
-    <hlink|Chapter 3|Chapter-3.xhtml#Chapter-3> will show that this notion of
-    environment is crucial, both for understanding how the interpreter works
-    and for implementing interpreters.
+    Chapter 3 will show that this notion of environment is crucial, both for
+    understanding how the interpreter works and for implementing
+    interpreters.
   </footnote>
 
   <subsection|Evaluating Combinations><label|sec:1.1.3>
@@ -766,10 +766,9 @@
   speak of the value of an expression such as <scm|(+ x 1)> without
   specifying any information about the environment that would provide a
   meaning for the symbol <code*|x> (or even for the symbol <code*|+>). As we
-  shall see in <hlink|Chapter 3|Chapter-3.xhtml#Chapter-3>, the general
-  notion of the environment as providing a context in which evaluation takes
-  place will play an important role in our understanding of program
-  execution.
+  shall see in Chapter 3, the general notion of the environment as providing
+  a context in which evaluation takes place will play an important role in
+  our understanding of program execution.
 
   Notice that the evaluation rule given above does not handle definitions.
   For instance, evaluating <scm|(define x 3)> does not apply <code*|define>
@@ -857,7 +856,7 @@
     It is possible, indeed important, to be able to separate these two
     notions\Vto create procedures without naming them, and to give names to
     procedures that have already been created. We will see how to do this in
-    <hlink|1.3.2|1_002e3.xhtml#g_t1_002e3_002e2>.
+    <smart-ref|sec:1.3.2>.
   </footnote>
 
   The general form of a procedure definition is
@@ -878,7 +877,7 @@
   arguments of the procedure. The \<langle\><var|body>\<rangle\> is an
   expression that will yield the value of the procedure application when the
   formal parameters are replaced by the actual arguments to which the
-  procedure is applied.<hlink||#FOOT14><\footnote>
+  procedure is applied.<\footnote>
     More generally, the body of the procedure can be a sequence of
     expressions. In this case, the interpreter evaluates each expression in
     the sequence in turn and returns the value of the final expression as the
@@ -1052,23 +1051,21 @@
     manipulating the text of a procedure to substitute values for the formal
     parameters. In practice, the \Psubstitution\Q is accomplished by using a
     local environment for the formal parameters. We will discuss this more
-    fully in <hlink|Chapter 3|Chapter-3.xhtml#Chapter-3> and <hlink|Chapter
-    4|Chapter-4.xhtml#Chapter-4> when we examine the implementation of an
+    fully in Chapter 3 and Chapter 4 when we examine the implementation of an
     interpreter in detail.
 
     <item>Over the course of this book, we will present a sequence of
     increasingly elaborate models of how interpreters work, culminating with
-    a complete implementation of an interpreter and compiler in
-    <hlink|Chapter 5|Chapter-5.xhtml#Chapter-5>. The substitution model is
-    only the first of these models\Va way to get started thinking formally
-    about the evaluation process. In general, when modeling phenomena in
-    science and engineering, we begin with simplified, incomplete models. As
-    we examine things in greater detail, these simple models become
-    inadequate and must be replaced by more refined models. The substitution
-    model is no exception. In particular, when we address in <hlink|Chapter
-    3|Chapter-3.xhtml#Chapter-3> the use of procedures with \Pmutable data,\Q
-    we will see that the substitution model breaks down and must be replaced
-    by a more complicated model of procedure application.<\footnote>
+    a complete implementation of an interpreter and compiler in Chapter 5.
+    The substitution model is only the first of these models\Va way to get
+    started thinking formally about the evaluation process. In general, when
+    modeling phenomena in science and engineering, we begin with simplified,
+    incomplete models. As we examine things in greater detail, these simple
+    models become inadequate and must be replaced by more refined models. The
+    substitution model is no exception. In particular, when we address in
+    Chapter 3 the use of procedures with \Pmutable data,\Q we will see that
+    the substitution model breaks down and must be replaced by a more
+    complicated model of procedure application.<\footnote>
       Despite the simplicity of the substitution idea, it turns out to be
       surprisingly complicated to give a rigorous mathematical definition of
       the substitution process. The problem arises from the possibility of
@@ -1076,9 +1073,8 @@
       procedure and the (possibly identical) names used in the expressions to
       which the procedure may be applied. Indeed, there is a long history of
       erroneous definitions of <em|substitution><index|substitution> in the
-      literature of logic and programming semantics. See <hlink|Stoy
-      1977|References.xhtml#Stoy-1977> for a careful discussion of
-      substitution.
+      literature of logic and programming semantics. See Stoy 1977 for a
+      careful discussion of substitution.
     </footnote>
   </itemize>
 
@@ -1091,7 +1087,7 @@
   evaluate the operands until their values were needed. Instead it would
   first substitute operand expressions for parameters until it obtained an
   expression involving only primitive operators, and would then perform the
-  evaluation. If we used this method, the evaluation of <code*|(f 5)> would
+  evaluation. If we used this method, the evaluation of <scm|(f 5)> would
   proceed according to the sequence of expansions
 
   <\scm-code>
@@ -1143,14 +1139,12 @@
   complicated to deal with when we leave the realm of procedures that can be
   modeled by substitution. On the other hand, normal-order evaluation can be
   an extremely valuable tool, and we will investigate some of its
-  implications in <hlink|Chapter 3|Chapter-3.xhtml#Chapter-3> and
-  <hlink|Chapter 4|Chapter-4.xhtml#Chapter-4>.<\footnote>
-    In <hlink|Chapter 3|Chapter-3.xhtml#Chapter-3> we will introduce
-    <em|stream processing><index|stream processing>, which is a way of
-    handling apparently \Pinfinite\Q data structures by incorporating a
-    limited form of normal-order evaluation. In
-    <hlink|4.2|4_002e2.xhtml#g_t4_002e2> we will modify the Scheme
-    interpreter to produce a normal-order variant of Scheme.
+  implications in Chapter 3 and Chapter 4.<\footnote>
+    In Chapter 3 we will introduce <em|stream processing><index|stream
+    processing>, which is a way of handling apparently \Pinfinite\Q data
+    structures by incorporating a limited form of normal-order evaluation. In
+    4.2 we will modify the Scheme interpreter to produce a normal-order
+    variant of Scheme.
   </footnote>
 
   <subsection|Conditional Expressions and Predicates>
@@ -1557,8 +1551,7 @@
     enough so that, given \Pwhat is\Q knowledge specified by the programmer,
     they can generate \Phow to\Q knowledge automatically. This cannot be done
     in general, but there are important areas where progress has been made.
-    We shall revisit this idea in <hlink|Chapter
-    4|Chapter-4.xhtml#Chapter-4>.
+    We shall revisit this idea in Chapter 4.
   </footnote>
 
   How does one compute square roots? The most common way is to use Newton's
@@ -1566,7 +1559,7 @@
   guess <math|y> for the value of the square root of a number <math|x>, we
   can perform a simple manipulation to get a better guess (one closer to the
   actual square root) by averaging <math|y> with
-  <math|x<around*|/|y|\<nobracket\>>>.<hlink||#FOOT21><\footnote>
+  <math|x<around*|/|y|\<nobracket\>>>.<\footnote>
     This square-root algorithm is actually a special case of Newton's method,
     which is a general technique for finding roots of equations. The
     square-root algorithm itself was developed by Heron of Alexandria in the
@@ -1686,13 +1679,12 @@
     and dividing two integers produces a rational number rather than a
     decimal. For example, dividing 10 by 6 yields 5/3, while dividing 10.0 by
     6.0 yields 1.6666666666666667. (We will learn how to implement arithmetic
-    on rational numbers in <hlink|2.1.1|2_002e1.xhtml#g_t2_002e1_002e1>.) If
-    we start with an initial guess of 1 in our square-root program, and
-    <math|x> is an exact integer, all subsequent values produced in the
-    square-root computation will be rational numbers rather than decimals.
-    Mixed operations on rational numbers and decimals always yield decimals,
-    so starting with an initial guess of 1.0 forces all subsequent values to
-    be decimals.
+    on rational numbers in <smart-ref|sec:2.1.1>.) If we start with an
+    initial guess of 1 in our square-root program, and <math|x> is an exact
+    integer, all subsequent values produced in the square-root computation
+    will be rational numbers rather than decimals. Mixed operations on
+    rational numbers and decimals always yield decimals, so starting with an
+    initial guess of 1.0 forces all subsequent values to be decimals.
   </footnote>
 
   <\session|scheme|default>
@@ -1750,7 +1742,7 @@
   to call a procedure.<\footnote>
     Readers who are worried about the efficiency issues involved in using
     procedure calls to implement iteration should note the remarks on \Ptail
-    recursion\Q in <hlink|1.2.1|1_002e2.xhtml#g_t1_002e2_002e1>.
+    recursion\Q in <smart-ref|sec:1.2.1>.
   </footnote>
 
   <\exercise>
@@ -1831,8 +1823,8 @@
   may be disturbing; it may seem unclear how such a \Pcircular\Q definition
   could make sense at all, much less specify a well-defined process to be
   carried out by a computer. This will be addressed more carefully in
-  <hlink|1.2|1_002e2.xhtml#g_t1_002e2>. But first let's consider some other
-  important points illustrated by the <code*|sqrt> example.
+  <smart-ref|sec:1.2>. But first let's consider some other important points
+  illustrated by the <code*|sqrt> example.
 
   Observe that the problem of computing square roots breaks up naturally into
   a number of subproblems: how to tell whether a guess is good enough, how to
@@ -2087,7 +2079,7 @@
   an important tool for helping to organize the construction of large
   programs.
 
-  <section|Procedures and the Processes They Generate>
+  <section|Procedures and the Processes They Generate><label|sec:1.2>
 
   We have now considered the elements of programming: We have used primitive
   arithmetic operations, we have combined these operations, and we have
@@ -3872,7 +3864,7 @@
     the definitions of <code*|pi-next> and <code*|pi-term> within
     <code*|pi-sum>, since these procedures are unlikely to be useful for any
     other purpose. We will see how to get rid of them altogether in
-    <hlink|1.3.2|#g_t1_002e3_002e2>.
+    <smart-ref|sec:1.3.2>.
   </footnote>
 
   <\session|scheme|default>
@@ -4075,7 +4067,7 @@
     </enumerate-alpha>
   </exercise>
 
-  <subsection|Constructing Procedures Using <code*|Lambda>>
+  <subsection|Constructing Procedures Using <code*|Lambda>><label|sec:1.3.2>
 
   In using <code*|sum> as in <hlink|1.3.1|#1.3.1>, it seems terribly awkward
   to have to define trivial procedures such as <code*|pi-term> and
@@ -5260,7 +5252,8 @@
   To illustrate this technique, we will consider how to design a set of
   procedures for manipulating rational numbers.
 
-  <subsection|Example: Arithmetic Operations for Rational Numbers>
+  <subsection|Example: Arithmetic Operations for Rational
+  Numbers><label|sec:2.1.1>
 
   Suppose we want to do arithmetic with rational numbers. We want to be able
   to add, subtract, multiply, and divide them and to test whether two
