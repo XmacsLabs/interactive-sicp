@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|course|british|smart-ref|preview-ref>>
+<style|<tuple|course|british|smart-ref|preview-ref|doc>>
 
 <\body>
   <\exercise>
@@ -253,9 +253,9 @@
         <\scm-code>
           (test 0 (p))
 
-          (test 0 (p))
+          (if (= 0 0) 0 (p))
 
-          (test 0 (p))
+          0
         </scm-code>
 
         <item*|applicative order evaluation>
@@ -263,72 +263,248 @@
         <\scm-code>
           (test 0 (p))
 
-          (if (= 0 0) 0 (p))
+          (test 0 (p))
 
-          0
+          (test 0 (p))
         </scm-code>
       </description>
     </solution*>
   </folded>
 
-  <\exercise>
-    Alyssa P. Hacker doesn't see why <code*|if> needs to be provided as a
-    special form. \PWhy can't I just define it as an ordinary procedure in
-    terms of <code*|cond>?\Q she asks. Alyssa's friend Eva Lu Ator claims
-    this can indeed be done, and she defines a new version of <code*|if>:
+  <\folded>
+    <\exercise>
+      Alyssa P. Hacker doesn't see why <code*|if> needs to be provided as a
+      special form. \PWhy can't I just define it as an ordinary procedure in
+      terms of <code*|cond>?\Q she asks. Alyssa's friend Eva Lu Ator claims
+      this can indeed be done, and she defines a new version of <code*|if>:
 
-    <\scm-code>
-      (define (new-if predicate then-clause else-clause)
+      <\scm-code>
+        (define (new-if predicate then-clause else-clause)
 
-      \ \ (cond (predicate then-clause)
+        \ \ (cond (predicate then-clause)
 
-      \ \ \ \ \ \ \ \ (else else-clause)))
-    </scm-code>
+        \ \ \ \ \ \ \ \ (else else-clause)))
+      </scm-code>
 
-    Eva demonstrates the program for Alyssa:
+      Eva demonstrates the program for Alyssa:
 
-    <\scm-code>
-      (new-if (= 2 3) 0 5)
+      <\scm-code>
+        (new-if (= 2 3) 0 5)
 
-      <with|font-shape|italic|5>
+        <with|font-shape|italic|5>
+
+        \;
+
+        (new-if (= 1 1) 0 5)
+
+        <with|font-shape|italic|0>
+      </scm-code>
+
+      Delighted, Alyssa uses <code*|new-if> to rewrite the square-root
+      program:
+
+      <\scm-code>
+        (define (sqrt-iter guess x)
+
+        \ \ (new-if (good-enough? guess x)
+
+        \ \ \ \ \ \ \ \ \ \ guess
+
+        \ \ \ \ \ \ \ \ \ \ (sqrt-iter (improve guess x)
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x)))
+      </scm-code>
+
+      What happens when Alyssa attempts to use this to compute square roots?
+      Explain.
+    </exercise>
+  <|folded>
+    <\session|scheme|default>
+      <\unfolded-io|Scheme] >
+        (define (square x) (* x x))
+      <|unfolded-io>
+        square
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (sqrt-iter guess x)
+
+        \ \ (if (good-enough? guess x)
+
+        \ \ \ \ \ \ guess
+
+        \ \ \ \ \ \ (sqrt-iter (improve guess x)
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x)))
+      <|unfolded-io>
+        sqrt-iter
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (improve guess x)
+
+        \ \ (average guess (/ x guess)))
+      <|unfolded-io>
+        improve
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (average x y)
+
+        \ \ (/ (+ x y) 2))
+      <|unfolded-io>
+        average
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (good-enough? guess x)
+
+        \ \ (\<less\> (abs (- (<hlink|square|#define_square> guess) x))
+        0.001))
+      <|unfolded-io>
+        good-enough?
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (sqrt x)
+
+        \ \ (sqrt-iter 1.0 x))
+      <|unfolded-io>
+        sqrt
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (sqrt 2)
+      <|unfolded-io>
+        1.4142156862745097
+      </unfolded-io>
 
       \;
 
-      (new-if (= 1 1) 0 5)
+      Attempt to use <scm|new-if>:
 
-      <with|font-shape|italic|0>
-    </scm-code>
+      <\input|Scheme] >
+        (define (new-if predicate then-clause else-clause)
 
-    Delighted, Alyssa uses <code*|new-if> to rewrite the square-root program:
+        \ \ (cond (predicate then-clause)
 
-    <\scm-code>
-      (define (sqrt-iter guess x)
+        \ \ \ \ \ \ \ \ (else else-clause)))
+      </input>
 
-      \ \ (new-if (good-enough? guess x)
+      <\input|Scheme] >
+        (define (sqrt-iter guess x)
 
-      \ \ \ \ \ \ \ \ \ \ guess
+        \ \ (new-if (good-enough? guess x)
 
-      \ \ \ \ \ \ \ \ \ \ (sqrt-iter (improve guess x)
+        \ \ \ \ \ \ guess
 
-      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x)))
-    </scm-code>
+        \ \ \ \ \ \ (sqrt-iter (improve guess x)
 
-    What happens when Alyssa attempts to use this to compute square roots?
-    Explain.
-  </exercise>
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x)))
+      </input>
+    </session>
+  </folded>
 
-  <\exercise>
-    <label|ex1.7>The <code*|good-enough?> test used in computing square roots
-    will not be very effective for finding the square roots of very small
-    numbers. Also, in real computers, arithmetic operations are almost always
-    performed with limited precision. This makes our test inadequate for very
-    large numbers. Explain these statements, with examples showing how the
-    test fails for small and large numbers. An alternative strategy for
-    implementing <code*|good-enough?> is to watch how <code*|guess> changes
-    from one iteration to the next and to stop when the change is a very
-    small fraction of the guess. Design a square-root procedure that uses
-    this kind of end test. Does this work better for small and large numbers?
-  </exercise>
+  <\folded>
+    <\exercise>
+      <label|ex1.7>The <code*|good-enough?> test used in computing square
+      roots will not be very effective for finding the square roots of very
+      small numbers. Also, in real computers, arithmetic operations are
+      almost always performed with limited precision. This makes our test
+      inadequate for very large numbers. Explain these statements, with
+      examples showing how the test fails for small and large numbers. An
+      alternative strategy for implementing <code*|good-enough?> is to watch
+      how <code*|guess> changes from one iteration to the next and to stop
+      when the change is a very small fraction of the guess. Design a
+      square-root procedure that uses this kind of end test. Does this work
+      better for small and large numbers?
+    </exercise>
+  <|folded>
+    We can use <scm|debug-message> to print messages in
+    <menu|Debug|Console|Debugging Console>.
+
+    <\session|scheme|default>
+      <\input>
+        Scheme]\ 
+      <|input>
+        (debug-message "std" "hello\\n")
+      </input>
+    </session>
+
+    <\session|scheme|default>
+      <\unfolded-io|Scheme] >
+        (define (square x) (* x x))
+      <|unfolded-io>
+        square
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (sqrt-iter guess x)
+
+        \ \ (if (good-enough? guess x)
+
+        \ \ \ \ \ \ guess
+
+        \ \ \ \ \ \ (sqrt-iter (improve guess x)
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x)))
+      <|unfolded-io>
+        sqrt-iter
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (improve guess x)
+
+        \ \ (average guess (/ x guess)))
+      <|unfolded-io>
+        improve
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (average x y)
+
+        \ \ (/ (+ x y) 2))
+      <|unfolded-io>
+        average
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (good-enough? guess x)
+
+        \ \ (debug-message "std" (string-append "guess: "
+        (number-\<gtr\>string guess) "\\n"))
+
+        \ \ (\<less\> (abs (- (<hlink|square|#define_square> guess) x))
+        0.001))
+      <|unfolded-io>
+        good-enough?
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (sqrt x)
+
+        \ \ (sqrt-iter 1.0 x))
+      <|unfolded-io>
+        sqrt
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (sqrt 0.000000001)
+      <|unfolded-io>
+        0.03125001065624928
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (sqrt 1000)
+      <|unfolded-io>
+        31.622782450701045
+      </unfolded-io>
+
+      <\input|Scheme] >
+        \;
+      </input>
+    </session>
+  </folded>
 
   <\exercise>
     Newton's method for cube roots is based on the fact that if <math|y> is
@@ -350,6 +526,7 @@
 
 <\references>
   <\collection>
+    <associate|auto-1|<tuple|7|?>>
     <associate|ex1.5|<tuple|5|1>>
     <associate|ex1.7|<tuple|7|2>>
   </collection>

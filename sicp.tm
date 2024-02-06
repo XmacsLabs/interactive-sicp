@@ -1129,7 +1129,7 @@
 
   This alternative \Pfully expand and then reduce\Q evaluation method is
   known as <em|normal-order evaluation><glossary-explain|normal-order
-  evaluation|\<#6B63\>\<#5E38\>\<#5E8F\>\<#6C42\>\<#503C\>>, in contrast to
+  evaluation|\<#6B63\>\<#5219\>\<#5E8F\>\<#6C42\>\<#503C\>>, in contrast to
   the \Pevaluate the arguments and then apply\Q method that the interpreter
   actually uses, which is called <em|applicative-order
   evaluation><glossary-explain|applicative-order
@@ -13738,7 +13738,7 @@
 
     <glossary-2|substitution model|\<#4EE3\>\<#6362\>\<#6A21\>\<#578B\>|<pageref|auto-41>>
 
-    <glossary-2|normal-order evaluation|\<#6B63\>\<#5E38\>\<#5E8F\>\<#6C42\>\<#503C\>|<pageref|auto-43>>
+    <glossary-2|normal-order evaluation|\<#6B63\>\<#5219\>\<#5E8F\>\<#6C42\>\<#503C\>|<pageref|auto-43>>
 
     <glossary-2|applicative-order evaluation|\<#5E94\>\<#7528\>\<#5E8F\>\<#6C42\>\<#503C\>|<pageref|auto-44>>
 
