@@ -63,150 +63,150 @@
 
     <with|par-left|1tab|1.2.2<space|2spc>Tree Recursion
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-79>>
+    <no-break><pageref|auto-80>>
 
     <with|par-left|1tab|1.2.3<space|2spc>Orders of Growth
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-87>>
+    <no-break><pageref|auto-89>>
 
     <with|par-left|1tab|1.2.4<space|2spc>Exponentiation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-89>>
+    <no-break><pageref|auto-91>>
 
     <with|par-left|1tab|1.2.5<space|2spc>Greatest Common Divisors
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-92>>
+    <no-break><pageref|auto-94>>
 
     <with|par-left|1tab|1.2.6<space|2spc>Example: Testing for Primality
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-95>>
+    <no-break><pageref|auto-97>>
 
     1.3<space|2spc>Formulating Abstractions with Higher-Order Procedures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-103>
+    <no-break><pageref|auto-105>
 
     <with|par-left|1tab|1.3.1<space|2spc>Procedures as Arguments
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-105>>
+    <no-break><pageref|auto-107>>
 
     <with|par-left|1tab|1.3.2<space|2spc>Constructing Procedures Using
     <with|font-family|tt|Lambda> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-110>>
+    <no-break><pageref|auto-112>>
 
     <with|par-left|1tab|1.3.3<space|2spc>Procedures as General Methods
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-111>>
+    <no-break><pageref|auto-113>>
 
     <with|par-left|1tab|1.3.4<space|2spc>Procedures as Returned Values
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-117>>
+    <no-break><pageref|auto-119>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Building
     Abstractions with Data> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-124><vspace|0.5fn>
+    <no-break><pageref|auto-126><vspace|0.5fn>
 
     2.1<space|2spc>Introduction to Data Abstraction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-125>
+    <no-break><pageref|auto-127>
 
     <with|par-left|1tab|2.1.1<space|2spc>Example: Arithmetic Operations for
     Rational Numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-129>>
+    <no-break><pageref|auto-131>>
 
     <with|par-left|1tab|2.1.2<space|2spc>Abstraction Barriers
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-134>>
+    <no-break><pageref|auto-136>>
 
     <with|par-left|1tab|2.1.3<space|2spc>What Is Meant by Data?
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-137>>
+    <no-break><pageref|auto-139>>
 
     <with|par-left|1tab|2.1.4<space|2spc>Extended Exercise: Interval
     Arithmetic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-143>>
+    <no-break><pageref|auto-145>>
 
     2.2<space|2spc>Hierarchical Data and the Closure Property
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-145>
+    <no-break><pageref|auto-147>
 
     <with|par-left|1tab|2.2.1<space|2spc>Representing Sequences
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-152>>
+    <no-break><pageref|auto-154>>
 
     <with|par-left|1tab|2.2.2<space|2spc>Hierarchical Structures
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-162>>
+    <no-break><pageref|auto-164>>
 
     <with|par-left|1tab|2.2.3<space|2spc>Sequences as Conventional Interfaces
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-167>>
+    <no-break><pageref|auto-169>>
 
     <with|par-left|1tab|2.2.4<space|2spc>Example: A Picture Language
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-177>>
+    <no-break><pageref|auto-179>>
 
     2.3<space|2spc>Symbolic Data <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-189>
+    <no-break><pageref|auto-191>
 
     <with|par-left|1tab|2.3.1<space|2spc>Quotation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-190>>
+    <no-break><pageref|auto-192>>
 
     <with|par-left|1tab|2.3.2<space|2spc>Example: Symbolic Differentiation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-192>>
+    <no-break><pageref|auto-194>>
 
     <with|par-left|1tab|2.3.3<space|2spc>Example: Representing Sets
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-193>>
+    <no-break><pageref|auto-195>>
 
     <with|par-left|1tab|2.3.4<space|2spc>Example: Huffman Encoding Trees
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-199>>
+    <no-break><pageref|auto-201>>
 
     2.4<space|2spc>Multiple Representations for Abstract Data
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-207>
+    <no-break><pageref|auto-209>
 
     <with|par-left|1tab|2.4.1<space|2spc>Representations for Complex Numbers
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-213>>
+    <no-break><pageref|auto-215>>
 
     <with|par-left|1tab|2.4.2<space|2spc>Tagged data
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-215>>
+    <no-break><pageref|auto-217>>
 
     <with|par-left|1tab|2.4.3<space|2spc>Data-Directed Programming and
     Additivity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-218>>
+    <no-break><pageref|auto-220>>
 
     2.5<space|2spc>Systems with Generic Operations
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-225>
+    <no-break><pageref|auto-227>
 
     <with|par-left|1tab|2.5.1<space|2spc>Generic Arithmetic Operations
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-227>>
+    <no-break><pageref|auto-229>>
 
     <with|par-left|1tab|2.5.2<space|2spc>Combining Data of Different Types
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-230>>
+    <no-break><pageref|auto-232>>
 
     <with|par-left|1tab|2.5.3<space|2spc>Example: Symbolic Algebra
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-239>>
+    <no-break><pageref|auto-241>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Bibliography>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-247><vspace|0.5fn>
+    <no-break><pageref|auto-249><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Glossary>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-248><vspace|0.5fn>
+    <no-break><pageref|auto-250><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-249><vspace|0.5fn>
+    <no-break><pageref|auto-251><vspace|0.5fn>
   </table-of-contents>
 
   <chapter|Building Abstractions with Procedures>
@@ -2458,9 +2458,10 @@
   <subsection|Tree Recursion><label|sec:1.2.2>
 
   Another common pattern of computation is called <em|tree
-  recursion><index|tree recursion>. As an example, consider computing the
-  sequence of Fibonacci numbers, in which each number is the sum of the
-  preceding two:
+  recursion><glossary-explain|tree recursion|\<#6811\>\<#5F62\>\<#9012\>\<#5F52\>>.
+  As an example, consider computing the sequence of Fibonacci
+  numbers<glossary-explain|Fibonacci numbers|\<#6590\>\<#6CE2\>\<#90A3\>\<#5951\>\<#6570\>>,
+  in which each number is the sum of the preceding two:
 
   0, 1, 1, 2, 3, 5, 8, 13, 21, \<ldots\>.
 
@@ -2511,24 +2512,25 @@
   This procedure is instructive as a prototypical tree recursion, but it is a
   terrible way to compute Fibonacci numbers because it does so much redundant
   computation. Notice in <smart-ref|fig:1.5> that the entire computation of
-  <code*|(fib 3)>\Valmost half the work\Vis duplicated. In fact, it is not
-  hard to show that the number of times the procedure will compute
-  <code*|(fib 1)> or <code*|(fib 0)> (the number of leaves in the above tree,
-  in general) is precisely <math|<with|mode|text|Fib><around*|(|n+1|)>>. To
-  get an idea of how bad this is, one can show that the value of
+  <scm|(fib 3)>\Valmost half the work\Vis duplicated. In fact, it is not hard
+  to show that the number of times the procedure will compute <scm|(fib 1)>
+  or <scm|(fib 0)> (the number of leaves in the above tree, in general) is
+  precisely <math|<with|mode|text|Fib><around*|(|n+1|)>>. To get an idea of
+  how bad this is, one can show that the value of
   <math|<with|mode|text|Fib><around*|(|n|)>> grows exponentially with
   <math|n>. More precisely (see Exercise <reference|ex1.13>),
   <math|<with|mode|text|Fib><around*|(|n|)>> is the closest integer to
   <math|\<varphi\><rsup|n><around*|/|<sqrt|5>|\<nobracket\>>>, where
   <math|\<varphi\>=<frac|1+<sqrt|5>|2>\<approx\>1.6180> is the <em|golden
-  ratio><index|golden ratio>, which satisfies the equation
-  <math|\<varphi\><rsup|2>=\<varphi\>+1>. Thus, the process uses a number of
-  steps that grows exponentially with the input. On the other hand, the space
-  required grows only linearly with the input, because we need keep track
-  only of which nodes are above us in the tree at any point in the
-  computation. In general, the number of steps required by a tree-recursive
-  process will be proportional to the number of nodes in the tree, while the
-  space required will be proportional to the maximum depth of the tree.
+  ratio><glossary-explain|golden ratio|\<#9EC4\>\<#91D1\>\<#6BD4\>\<#4F8B\>>,
+  which satisfies the equation <math|\<varphi\><rsup|2>=\<varphi\>+1>. Thus,
+  the process uses a number of steps that grows exponentially with the input.
+  On the other hand, the space required grows only linearly with the input,
+  because we need keep track only of which nodes are above us in the tree at
+  any point in the computation. In general, the number of steps required by a
+  tree-recursive process will be proportional to the number of nodes in the
+  tree, while the space required will be proportional to the maximum depth of
+  the tree.
 
   We can also formulate an iterative process for computing the Fibonacci
   numbers. The idea is to use a pair of integers <math|a> and <math|b>,
@@ -2693,7 +2695,7 @@
     </input>
   </session>
 
-  <code*|Count-change> generates a tree-recursive process with redundancies
+  <scm|Count-change> generates a tree-recursive process with redundancies
   similar to those in our first implementation of <code*|fib>. (It will take
   quite a while for that 292 to be computed.) On the other hand, it is not
   obvious how to design a better algorithm for computing the result, and we
@@ -2726,7 +2728,7 @@
 
   <\exercise>
     The following pattern of numbers is called <em|Pascal's
-    triangle><index|Pascal's triangle>.
+    triangle><glossary-explain|Pascal's triangle|\<#5E15\>\<#65AF\>\<#5361\>\<#4E09\>\<#89D2\>\<#5F62\>>.
 
     <\code>
       \ \ \ \ \ \ \ \ \ 1
@@ -13768,116 +13770,128 @@
     <glossary-2|linear iterative process|\<#7EBF\>\<#6027\>\<#8FED\>\<#4EE3\>\<#8FC7\>\<#7A0B\>|<pageref|auto-75>>
 
     <glossary-2|recursive procedure|\<#9012\>\<#5F52\>\<#8FC7\>\<#7A0B\>|<pageref|auto-77>>
+
+    <glossary-2|tail-recursive|\<#5C3E\>\<#9012\>\<#5F52\>|<pageref|auto-78>>
+
+    <glossary-2|syntactic sugar|\<#8BED\>\<#6CD5\>\<#7CD6\>\<#8863\>|<pageref|auto-79>>
+
+    <glossary-2|tree recursion|\<#6811\>\<#5F62\>\<#9012\>\<#5F52\>|<pageref|auto-81>>
+
+    <glossary-2|Fibonacci numbers|\<#6590\>\<#6CE2\>\<#90A3\>\<#5951\>\<#6570\>|<pageref|auto-82>>
+
+    <glossary-2|golden ratio|\<#9EC4\>\<#91D1\>\<#6BD4\>\<#4F8B\>|<pageref|auto-84>>
+
+    <glossary-2|Pascal's triangle|\<#5E15\>\<#65AF\>\<#5361\>\<#4E09\>\<#89D2\>\<#5F62\>|<pageref|auto-87>>
   </the-glossary>
 
   <\the-index|idx>
-    <index+1|Áchárya Pingala|<pageref|auto-90>>
+    <index+1|Áchárya Pingala|<pageref|auto-92>>
 
-    <index+1|abstract models|<pageref|auto-139>>
+    <index+1|abstract models|<pageref|auto-141>>
 
-    <index+1|abstraction barriers|<pageref|auto-135>>
+    <index+1|abstraction barriers|<pageref|auto-137>>
 
-    <index+1|accumulator|<pageref|auto-172>>
+    <index+1|accumulator|<pageref|auto-174>>
 
-    <index+1|additive|<pageref|auto-220>>
+    <index+1|additive|<pageref|auto-222>>
 
-    <index+1|additively|<pageref|auto-208>>
+    <index+1|additively|<pageref|auto-210>>
 
     <index+1|Alan Perlis|<pageref|auto-25>>
 
-    <index+1|algebraic specification|<pageref|auto-140>>
+    <index+1|algebraic specification|<pageref|auto-142>>
 
-    <index+1|average damping|<pageref|auto-114>>
+    <index+1|average damping|<pageref|auto-116>>
 
-    <index+1|balanced|<pageref|auto-166>>
+    <index+1|balanced|<pageref|auto-168>>
 
     <index+1|binds|<pageref|auto-58>>
 
-    <index+1|binomial coefficients|<pageref|auto-86>>
+    <index+1|binomial coefficients|<pageref|auto-88>>
 
     <index+1|block structure|<pageref|auto-62>>
 
     <index+1|bound variable|<pageref|auto-57>>
 
-    <index+1|box-and-pointer notation|<pageref|auto-146>>
+    <index+1|box-and-pointer notation|<pageref|auto-148>>
 
-    <index+1|B-trees|<pageref|auto-195>>
+    <index+1|B-trees|<pageref|auto-197>>
 
     <index+1|bugs|<pageref|auto-6>>
 
     <index+1|capturing|<pageref|auto-61>>
 
-    <index+1|Carmichael numbers|<pageref|auto-99>>
+    <index+1|Carmichael numbers|<pageref|auto-101>>
 
     <index+1|case analysis|<pageref|auto-47>>
 
-    <index+1|Church numerals|<pageref|auto-142>>
+    <index+1|Church numerals|<pageref|auto-144>>
 
     <index+1|clauses|<pageref|auto-48>>
 
-    <index+1|closure property|<pageref|auto-150>>
+    <index+1|closure property|<pageref|auto-152>>
 
-    <index+1|coerce|<pageref|auto-238>>
+    <index+1|coerce|<pageref|auto-240>>
 
-    <index+1|coercion|<pageref|auto-231>>
+    <index+1|coercion|<pageref|auto-233>>
 
-    <index+1|comments|<pageref|auto-175>>
+    <index+1|comments|<pageref|auto-177>>
 
-    <index+1|composition|<pageref|auto-120>>
+    <index+1|composition|<pageref|auto-122>>
 
     <index+1|computational process|<pageref|auto-2>>
 
-    <index+1|congruent modulo|<pageref|auto-96>>
+    <index+1|congruent modulo|<pageref|auto-98>>
 
     <index+1|consequent expression|<pageref|auto-50>>
 
-    <index+1|constructors|<pageref|auto-128>>
+    <index+1|constructors|<pageref|auto-130>>
 
-    <index+1|continued fraction|<pageref|auto-115>>
+    <index+1|continued fraction|<pageref|auto-117>>
 
-    <index+1|conventional interfaces|<pageref|auto-168>>
+    <index+1|conventional interfaces|<pageref|auto-170>>
 
-    <index+1|data|<pageref|auto-3>, <pageref|auto-138>>
+    <index+1|data|<pageref|auto-3>, <pageref|auto-140>>
 
-    <index+1|data abstraction|<pageref|auto-126>>
+    <index+1|data abstraction|<pageref|auto-128>>
 
-    <index+1|data directed programming|<pageref|auto-221>>
+    <index+1|data directed programming|<pageref|auto-223>>
 
-    <index+1|data-directed|<pageref|auto-211>>
+    <index+1|data-directed|<pageref|auto-213>>
 
     <index+1|debug|<pageref|auto-8>>
 
-    <index+1|dense|<pageref|auto-243>>
+    <index+1|dense|<pageref|auto-245>>
 
-    <index+1|dispatching on type|<pageref|auto-219>>
+    <index+1|dispatching on type|<pageref|auto-221>>
 
-    <index+1|dotted-tail notation|<pageref|auto-160>>
+    <index+1|dotted-tail notation|<pageref|auto-162>>
 
-    <index+1|empty list|<pageref|auto-158>>
+    <index+1|empty list|<pageref|auto-160>>
 
-    <index+1|enumerator|<pageref|auto-169>>
+    <index+1|enumerator|<pageref|auto-171>>
 
     <index+1|environment|<pageref|auto-29>>
 
-    <index+1|Euclid's Algorithm|<pageref|auto-93>>
+    <index+1|Euclid's Algorithm|<pageref|auto-95>>
 
     <index+1|evaluating|<pageref|auto-17>>
 
-    <index+1|filter|<pageref|auto-109>, <pageref|auto-170>>
+    <index+1|filter|<pageref|auto-111>, <pageref|auto-172>>
 
-    <index+1|first-class|<pageref|auto-119>>
+    <index+1|first-class|<pageref|auto-121>>
 
-    <index+1|fixed point|<pageref|auto-113>>
+    <index+1|fixed point|<pageref|auto-115>>
 
-    <index+1|fixed-length|<pageref|auto-200>>
+    <index+1|fixed-length|<pageref|auto-202>>
 
-    <index+1|frame coordinate map|<pageref|auto-186>>
+    <index+1|frame coordinate map|<pageref|auto-188>>
 
     <index+1|free|<pageref|auto-59>>
 
-    <index+1|Gabriel Lamé|<pageref|auto-94>>
+    <index+1|Gabriel Lamé|<pageref|auto-96>>
 
-    <index+1|generic procedures|<pageref|auto-206>, <pageref|auto-209>>
+    <index+1|generic procedures|<pageref|auto-208>, <pageref|auto-211>>
 
     <index+1|glitches|<pageref|auto-7>>
 
@@ -13885,83 +13899,79 @@
 
     <index+1|global environment|<pageref|auto-30>>
 
-    <index+1|golden ratio|<pageref|auto-82>>
+    <index+1|half interval method|<pageref|auto-114>>
 
-    <index+1|half interval method|<pageref|auto-112>>
+    <index+1|hierarchical|<pageref|auto-153>>
 
-    <index+1|hierarchical|<pageref|auto-151>>
+    <index+1|hierarchy of types|<pageref|auto-234>>
 
-    <index+1|hierarchy of types|<pageref|auto-232>>
+    <index+1|higher-order procedures|<pageref|auto-106>>
 
-    <index+1|higher-order procedures|<pageref|auto-104>>
+    <index+1|Horner's rule|<pageref|auto-176>>
 
-    <index+1|Horner's rule|<pageref|auto-174>>
-
-    <index+1|indeterminates|<pageref|auto-240>>
+    <index+1|indeterminates|<pageref|auto-242>>
 
     <index+1|integers|<pageref|auto-13>>
 
     <index+1|interpreter|<pageref|auto-10>>
 
-    <index+1|invariant quantity|<pageref|auto-91>>
+    <index+1|invariant quantity|<pageref|auto-93>>
 
-    <index+1|iterative improvement|<pageref|auto-123>>
+    <index+1|iterative improvement|<pageref|auto-125>>
 
-    <index+1|John Wallis|<pageref|auto-108>>
+    <index+1|John Wallis|<pageref|auto-110>>
 
-    <index+1|key|<pageref|auto-198>>
+    <index+1|key|<pageref|auto-200>>
 
-    <index+1|k-term finite continued fraction|<pageref|auto-116>>
+    <index+1|k-term finite continued fraction|<pageref|auto-118>>
 
     <index+1|lexical scoping|<pageref|auto-63>>
 
-    <index+1|list|<pageref|auto-155>, <pageref|auto-161>>
+    <index+1|list|<pageref|auto-157>, <pageref|auto-163>>
 
-    <index+1|list structure|<pageref|auto-157>>
+    <index+1|list structure|<pageref|auto-159>>
 
-    <index+1|list-structured|<pageref|auto-133>>
+    <index+1|list-structured|<pageref|auto-135>>
 
-    <index+1|map|<pageref|auto-171>>
+    <index+1|map|<pageref|auto-173>>
 
-    <index+1|memoization|<pageref|auto-84>>
+    <index+1|memoization|<pageref|auto-86>>
 
-    <index+1|message passing|<pageref|auto-141>, <pageref|auto-224>>
+    <index+1|message passing|<pageref|auto-143>, <pageref|auto-226>>
 
-    <index+1|Miller-Rabin test|<pageref|auto-102>>
+    <index+1|Miller-Rabin test|<pageref|auto-104>>
 
-    <index+1|modulo|<pageref|auto-98>>
+    <index+1|modulo|<pageref|auto-100>>
 
-    <index+1|Newton's method|<pageref|auto-118>>
+    <index+1|Newton's method|<pageref|auto-120>>
 
-    <index+1|n-fold smoothed function|<pageref|auto-122>>
+    <index+1|n-fold smoothed function|<pageref|auto-124>>
 
-    <index+1|nil|<pageref|auto-159>>
+    <index+1|nil|<pageref|auto-161>>
 
-    <index+1|order of growth|<pageref|auto-88>>
+    <index+1|order of growth|<pageref|auto-90>>
 
-    <index+1|ordinary|<pageref|auto-228>>
+    <index+1|ordinary|<pageref|auto-230>>
 
-    <index+1|package|<pageref|auto-223>>
+    <index+1|package|<pageref|auto-225>>
 
-    <index+1|painter|<pageref|auto-179>>
+    <index+1|painter|<pageref|auto-181>>
 
-    <index+1|pair|<pageref|auto-131>\U<pageref|auto-132>>
+    <index+1|pair|<pageref|auto-133>\U<pageref|auto-134>>
 
-    <index+1|Pascal's triangle|<pageref|auto-85>>
+    <index+1|pointer|<pageref|auto-149>>
 
-    <index+1|pointer|<pageref|auto-147>>
-
-    <index+1|poly|<pageref|auto-242>>
+    <index+1|poly|<pageref|auto-244>>
 
     <index+1|predicate|<pageref|auto-51>>
 
-    <index+1|prefix|<pageref|auto-203>>
+    <index+1|prefix|<pageref|auto-205>>
 
-    <index+1|prefix code|<pageref|auto-204>>
+    <index+1|prefix code|<pageref|auto-206>>
 
     <index+1|pretty-printing|<pageref|auto-23>>
 
-    <index+1|probabilistic algorithms|<pageref|auto-100>>
+    <index+1|probabilistic algorithms|<pageref|auto-102>>
 
     <index+1|procedural abstraction|<pageref|auto-56>>
 
@@ -13973,9 +13983,9 @@
 
     <index+1|programming languages|<pageref|auto-5>>
 
-    <index+1|pseudodivision|<pageref|auto-245>>
+    <index+1|pseudodivision|<pageref|auto-247>>
 
-    <index+1|pseudoremainder|<pageref|auto-246>>
+    <index+1|pseudoremainder|<pageref|auto-248>>
 
     <index+1|read-eval-print loop|<pageref|auto-24>>
 
@@ -13985,67 +13995,63 @@
 
     <index+1|recusion equations|<pageref|auto-9>>
 
-    <index+1|red-black trees|<pageref|auto-196>>
+    <index+1|red-black trees|<pageref|auto-198>>
 
-    <index+1|remainder of|<pageref|auto-97>>
+    <index+1|remainder of|<pageref|auto-99>>
 
-    <index+1|robust|<pageref|auto-188>>
+    <index+1|robust|<pageref|auto-190>>
 
-    <index+1|RSA algorithm|<pageref|auto-101>>
+    <index+1|RSA algorithm|<pageref|auto-103>>
 
     <index+1|scope|<pageref|auto-60>>
 
-    <index+1|selectors|<pageref|auto-127>>
+    <index+1|selectors|<pageref|auto-129>>
 
-    <index+1|separator code|<pageref|auto-202>>
+    <index+1|separator code|<pageref|auto-204>>
 
-    <index+1|sequence|<pageref|auto-154>>
+    <index+1|sequence|<pageref|auto-156>>
 
-    <index+1|sequences|<pageref|auto-107>>
+    <index+1|sequences|<pageref|auto-109>>
 
-    <index+1|smoothing|<pageref|auto-121>>
+    <index+1|smoothing|<pageref|auto-123>>
 
-    <index+1|sparse|<pageref|auto-244>>
+    <index+1|sparse|<pageref|auto-246>>
 
     <index+1|special forms|<pageref|auto-35>>
 
-    <index+1|stratified design|<pageref|auto-187>>
+    <index+1|stratified design|<pageref|auto-189>>
 
     <index+1|stream processing|<pageref|auto-45>>
 
     <index+1|substitution|<pageref|auto-42>>
 
-    <index+1|subtype|<pageref|auto-233>>
+    <index+1|subtype|<pageref|auto-235>>
 
-    <index+1|summation of a series|<pageref|auto-106>>
+    <index+1|summation of a series|<pageref|auto-108>>
 
-    <index+1|supertype|<pageref|auto-234>>
+    <index+1|supertype|<pageref|auto-236>>
 
-    <index+1|tabulation|<pageref|auto-83>>
+    <index+1|tabulation|<pageref|auto-85>>
 
-    <index+1|tail-recursive|<pageref|auto-78>>
-
-    <index+1|tower|<pageref|auto-235>>
+    <index+1|tower|<pageref|auto-237>>
 
     <index+1|tree accumulation|<pageref|auto-33>>
 
-    <index+1|tree recursion|<pageref|auto-80>>
+    <index+1|trees|<pageref|auto-166>>
 
-    <index+1|trees|<pageref|auto-164>>
+    <index+1|type tag|<pageref|auto-218>>
 
-    <index+1|type tag|<pageref|auto-216>>
+    <index+1|type tags|<pageref|auto-212>>
 
-    <index+1|type tags|<pageref|auto-210>>
+    <index+1|univariate polynomials|<pageref|auto-243>>
 
-    <index+1|univariate polynomials|<pageref|auto-241>>
+    <index+1|values|<pageref|auto-193>>
 
-    <index+1|values|<pageref|auto-191>>
+    <index+1|variable-length|<pageref|auto-203>>
 
-    <index+1|variable-length|<pageref|auto-201>>
+    <index+1|width|<pageref|auto-146>>
 
-    <index+1|width|<pageref|auto-144>>
-
-    <index+1|wishful thinking|<pageref|auto-130>>
+    <index+1|wishful thinking|<pageref|auto-132>>
   </the-index>
 </body>
 
