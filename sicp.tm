@@ -2116,12 +2116,13 @@
   various types of procedures. Only after we have developed such a skill can
   we learn to reliably construct programs that exhibit the desired behavior.
 
-  A procedure is a pattern for the <em|local evolution><index|local
-  evolution> of a computational process. It specifies how each stage of the
-  process is built upon the previous stage. We would like to be able to make
-  statements about the overall, or <em|global><index|global>, behavior of a
-  process whose local evolution has been specified by a procedure. This is
-  very difficult to do in general, but we can at least try to describe some
+  A procedure is a pattern for the <em|local
+  evolution><glossary-explain|local evolution|\<#5C40\>\<#90E8\>\<#6F14\>\<#5316\>>
+  of a computational process. It specifies how each stage of the process is
+  built upon the previous stage. We would like to be able to make statements
+  about the overall, or <em|global><index|global>, behavior of a process
+  whose local evolution has been specified by a procedure. This is very
+  difficult to do in general, but we can at least try to describe some
   typical patterns of process evolution.
 
   In this section we will examine some common \Pshapes\Q for processes
@@ -2286,30 +2287,34 @@
   Consider the first process. The substitution model reveals a shape of
   expansion followed by contraction, indicated by the arrow in
   <smart-ref|fig:1.3>. The expansion occurs as the process builds up a chain
-  of <index|deferred operations><em|deferred operations> (in this case, a
-  chain of multiplications). The contraction occurs as the operations are
-  actually performed. This type of process, characterized by a chain of
-  deferred operations, is called a <em|recursive process><index|recursive
-  process>. Carrying out this process requires that the interpreter keep
-  track of the operations to be performed later on. In the computation of
-  <math|n>!, the length of the chain of deferred multiplications, and hence
-  the amount of information needed to keep track of it, grows linearly with
-  <math|n> (is proportional to <math|n>), just like the number of steps. Such
-  a process is called a <em|linear recursive process><index|linear recursive
-  process>.
+  of <em|deferred operations><glossary-explain|deferred
+  operations|\<#63A8\>\<#8FDF\>\<#8FDB\>\<#884C\>\<#7684\>\<#64CD\>\<#4F5C\>>
+  (in this case, a chain of multiplications). The contraction occurs as the
+  operations are actually performed. This type of process, characterized by a
+  chain of deferred operations, is called a <em|recursive
+  process><glossary-explain|recursive process|\<#9012\>\<#5F52\>\<#8BA1\>\<#7B97\>\<#8FC7\>\<#7A0B\>>.
+  Carrying out this process requires that the interpreter keep track of the
+  operations to be performed later on. In the computation of <math|n>!, the
+  length of the chain of deferred multiplications, and hence the amount of
+  information needed to keep track of it, grows linearly with <math|n> (is
+  proportional to <math|n>), just like the number of steps. Such a process is
+  called a <em|linear recursive process><glossary-explain|linear recursive
+  process|\<#7EBF\>\<#6027\>\<#9012\>\<#5F52\>\<#8FC7\>\<#7A0B\>>.
 
   By contrast, the second process does not grow and shrink. At each step, all
   we need to keep track of, for any <math|n>, are the current values of the
   variables <code*|product>, <code*|counter>, and <code*|max-count>. We call
-  this an <em|iterative process><index|iterative process>. In general, an
-  iterative process is one whose state can be summarized by a fixed number of
-  <em|state variables><index|state variables>, together with a fixed rule
+  this an <em|iterative process><glossary-explain|iterative
+  process|\<#8FED\>\<#4EE3\>\<#8BA1\>\<#7B97\>\<#8FC7\>\<#7A0B\>>. In
+  general, an iterative process is one whose state can be summarized by a
+  fixed number of <em|state variables><glossary-explain|state
+  variables|\<#72B6\>\<#6001\>\<#53D8\>\<#91CF\>>, together with a fixed rule
   that describes how the state variables should be updated as the process
   moves from state to state and an (optional) end test that specifies
   conditions under which the process should terminate. In computing
   <math|n>!, the number of steps required grows linearly with <math|n>. Such
-  a process is called a <em|linear iterative process><index|linear iterative
-  process>.
+  a process is called a <em|linear iterative process><glossary-explain|linear
+  iterative process|\<#7EBF\>\<#6027\>\<#8FED\>\<#4EE3\>\<#8FC7\>\<#7A0B\>>.
 
   The contrast between the two processes can be seen in another way. In the
   iterative case, the program variables provide a complete description of the
@@ -2330,17 +2335,19 @@
   </footnote>
 
   In contrasting iteration and recursion, we must be careful not to confuse
-  the notion of a recursive <em|process><index|process> with the notion of a
-  recursive <em|procedure><index|procedure>. When we describe a procedure as
-  recursive, we are referring to the syntactic fact that the procedure
-  definition refers (either directly or indirectly) to the procedure itself.
-  But when we describe a process as following a pattern that is, say,
-  linearly recursive, we are speaking about how the process evolves, not
-  about the syntax of how a procedure is written. It may seem disturbing that
-  we refer to a recursive procedure such as <code*|fact-iter> as generating
-  an iterative process. However, the process really is iterative: Its state
-  is captured completely by its three state variables, and an interpreter
-  need keep track of only three variables in order to execute the process.
+  the notion of a <em|recursive process><glossary-dup|recursive process> with
+  the notion of a <em|recursive procedure><glossary-explain|recursive
+  procedure|\<#9012\>\<#5F52\>\<#8FC7\>\<#7A0B\>>. When we describe a
+  procedure as recursive, we are referring to the syntactic fact that the
+  procedure definition refers (either directly or indirectly) to the
+  procedure itself. But when we describe a process as following a pattern
+  that is, say, linearly recursive, we are speaking about how the process
+  evolves, not about the syntax of how a procedure is written. It may seem
+  disturbing that we refer to a recursive procedure such as <code*|fact-iter>
+  as generating an iterative process. However, the process really is
+  iterative: Its state is captured completely by its three state variables,
+  and an interpreter need keep track of only three variables in order to
+  execute the process.
 
   One reason that the distinction between process and procedure may be
   confusing is that most implementations of common languages (including Ada,
@@ -2354,10 +2361,11 @@
   does not share this defect. It will execute an iterative process in
   constant space, even if the iterative process is described by a recursive
   procedure. An implementation with this property is called
-  <em|tail-recursive><index|tail-recursive>. With a tail-recursive
-  implementation, iteration can be expressed using the ordinary procedure
-  call mechanism, so that special iteration constructs are useful only as
-  syntactic sugar.<\footnote>
+  <em|tail-recursive><glossary-explain|tail-recursive|\<#5C3E\>\<#9012\>\<#5F52\>>.
+  With a tail-recursive implementation, iteration can be expressed using the
+  ordinary procedure call mechanism, so that special iteration constructs are
+  useful only as <em|syntactic sugar><glossary-explain|syntactic
+  sugar|\<#8BED\>\<#6CD5\>\<#7CD6\>\<#8863\>>.<\footnote>
     Tail recursion has long been known as a compiler optimization trick. A
     coherent semantic basis for tail recursion was provided by Carl Hewitt
     (1977), who explained it in terms of the \Pmessage-passing\Q model of
@@ -13743,6 +13751,23 @@
     <glossary-2|applicative-order evaluation|\<#5E94\>\<#7528\>\<#5E8F\>\<#6C42\>\<#503C\>|<pageref|auto-44>>
 
     <glossary-2|predicate|\<#8C13\>\<#8BCD\>\V\V\<#4E00\>\<#79CD\>\<#503C\>\<#4E3A\>\<#771F\>\<#6216\>\<#8005\>\<#5047\>\<#7684\>\<#8868\>\<#8FBE\>\<#5F0F\>|<pageref|auto-49>>
+
+    <glossary-2|local evolution|\<#5C40\>\<#90E8\>\<#6F14\>\<#5316\>|<pageref|auto-65>>
+
+    <glossary-2|deferred operations|\<#63A8\>\<#8FDF\>\<#8FDB\>\<#884C\>\<#7684\>\<#64CD\>\<#4F5C\>|<pageref|auto-70>>
+
+    <glossary-2|recursive process|\<#9012\>\<#5F52\>\<#8BA1\>\<#7B97\>\<#8FC7\>\<#7A0B\>|<pageref|auto-71>,
+    <pageref|auto-76>>
+
+    <glossary-2|linear recursive process|\<#7EBF\>\<#6027\>\<#9012\>\<#5F52\>\<#8FC7\>\<#7A0B\>|<pageref|auto-72>>
+
+    <glossary-2|iterative process|\<#8FED\>\<#4EE3\>\<#8BA1\>\<#7B97\>\<#8FC7\>\<#7A0B\>|<pageref|auto-73>>
+
+    <glossary-2|state variables|\<#72B6\>\<#6001\>\<#53D8\>\<#91CF\>|<pageref|auto-74>>
+
+    <glossary-2|linear iterative process|\<#7EBF\>\<#6027\>\<#8FED\>\<#4EE3\>\<#8FC7\>\<#7A0B\>|<pageref|auto-75>>
+
+    <glossary-2|recursive procedure|\<#9012\>\<#5F52\>\<#8FC7\>\<#7A0B\>|<pageref|auto-77>>
   </the-glossary>
 
   <\the-index|idx>
@@ -13822,8 +13847,6 @@
 
     <index+1|debug|<pageref|auto-8>>
 
-    <index+1|deferred operations|<pageref|auto-70>>
-
     <index+1|dense|<pageref|auto-243>>
 
     <index+1|dispatching on type|<pageref|auto-219>>
@@ -13884,8 +13907,6 @@
 
     <index+1|iterative improvement|<pageref|auto-123>>
 
-    <index+1|iterative process|<pageref|auto-73>>
-
     <index+1|John Wallis|<pageref|auto-108>>
 
     <index+1|key|<pageref|auto-198>>
@@ -13894,17 +13915,11 @@
 
     <index+1|lexical scoping|<pageref|auto-63>>
 
-    <index+1|linear iterative process|<pageref|auto-75>>
-
-    <index+1|linear recursive process|<pageref|auto-72>>
-
     <index+1|list|<pageref|auto-155>, <pageref|auto-161>>
 
     <index+1|list structure|<pageref|auto-157>>
 
     <index+1|list-structured|<pageref|auto-133>>
-
-    <index+1|local evolution|<pageref|auto-65>>
 
     <index+1|map|<pageref|auto-171>>
 
@@ -13950,13 +13965,9 @@
 
     <index+1|procedural abstraction|<pageref|auto-56>>
 
-    <index+1|procedure|<pageref|auto-77>>
-
     <index+1|procedure definitions|<pageref|auto-38>>
 
     <index+1|procedures|<pageref|auto-11>>
-
-    <index+1|process|<pageref|auto-76>>
 
     <index+1|program|<pageref|auto-4>>
 
@@ -13971,8 +13982,6 @@
     <index+1|real numbers|<pageref|auto-14>>
 
     <index+1|recursive|<pageref|auto-32>, <pageref|auto-54>>
-
-    <index+1|recursive process|<pageref|auto-71>>
 
     <index+1|recusion equations|<pageref|auto-9>>
 
@@ -13999,8 +14008,6 @@
     <index+1|sparse|<pageref|auto-244>>
 
     <index+1|special forms|<pageref|auto-35>>
-
-    <index+1|state variables|<pageref|auto-74>>
 
     <index+1|stratified design|<pageref|auto-187>>
 
@@ -14045,7 +14052,7 @@
 <\initial>
   <\collection>
     <associate|global-title|sicp.tm>
-    <associate|info-flag|detailed>
+    <associate|info-flag|short>
     <associate|page-medium|paper>
     <associate|page-screen-margin|false>
     <associate|par-first|0tab>
