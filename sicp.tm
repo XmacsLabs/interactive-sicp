@@ -2495,8 +2495,9 @@
   </session>
 
   <\big-figure|<tree|fib 5|<tree|fib 4|<tree|fib 3|<tree|fib 2|<tree|fib
-  1|1>|<tree|fib 0|0>>>|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>>|<tree|fib
-  3|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>>>>
+  1|1>|<tree|fib 0|0>>|<tree|fib 1|1>>|<tree|fib 2|<tree|fib 1|1>|<tree|fib
+  0|0>>>|<tree|fib 3|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>|<tree|fib
+  1|1>>>>
     <label|fig:1.5>The tree-recursive process generated in computing
     <scm|(fib 5)>.
   </big-figure>

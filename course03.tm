@@ -2280,8 +2280,9 @@
   </session>
 
   <\big-figure|<tree|fib 5|<tree|fib 4|<tree|fib 3|<tree|fib 2|<tree|fib
-  1|1>|<tree|fib 0|0>>>|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>>|<tree|fib
-  3|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>>>>
+  1|1>|<tree|fib 0|0>>|<tree|fib 1|1>>|<tree|fib 2|<tree|fib 1|1>|<tree|fib
+  0|0>>>|<tree|fib 3|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>|<tree|fib
+  1|1>>>>
     <label|fig:1.5>The tree-recursive process generated in computing
     <scm|(fib 5)>.
   </big-figure>
@@ -2595,421 +2596,212 @@
 
 <\references>
   <\collection>
-    <associate|%_idx_102|<tuple|3|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_104|<tuple|3|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_48|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_50|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_52|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_56|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_58|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_60|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_62|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_66|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_68|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_70|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_72|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_74|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_76|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_78|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_80|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_82|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_84|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_86|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_88|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_90|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_92|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|%_idx_94|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|1.1|<tuple|1|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|1.1.8|<tuple|1.8|17|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-1|<tuple|1|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-10|<tuple|recusion equations|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-11|<tuple|interpreter|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-12|<tuple|procedures|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-13|<tuple|1|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-14|<tuple|integers|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-15|<tuple|real numbers|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-16|<tuple|1.1|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-17|<tuple|expression|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-18|<tuple|evaluating|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-19|<tuple|combinations|4|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-2|<tuple|computational
-    process|1|../../Library/Application Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-20|<tuple|operator|4|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-21|<tuple|operands|4|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-22|<tuple|arguments|4|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-23|<tuple|prefix notation|4|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-24|<tuple|pretty-printing|4|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-25|<tuple|read-eval-print
-    loop|5|../../Library/Application Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-26|<tuple|Alan Perlis|5|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-27|<tuple|1.2|5|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-28|<tuple|variable|5|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-29|<tuple|value|5|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-3|<tuple|data|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-30|<tuple|environment|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-31|<tuple|global environment|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-32|<tuple|1.3|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-33|<tuple|recursive|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-34|<tuple|tree accumulation|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-35|<tuple|1|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-36|<tuple|special forms|7|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-37|<tuple|syntactic sugar|7|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-38|<tuple|1.4|7|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-39|<tuple|procedure definitions|7|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-4|<tuple|program|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-40|<tuple|compound procedure|8|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-41|<tuple|1.5|9|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-42|<tuple|substitution model|10|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-43|<tuple|substitution|10|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-44|<tuple|substitution|10|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-45|<tuple|normal-order
-    evaluation|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-46|<tuple|applicative-order
-    evaluation|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-47|<tuple|stream processing|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-48|<tuple|1.6|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-49|<tuple|case analysis|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-5|<tuple|programming languages|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-50|<tuple|clauses|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-51|<tuple|predicate|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-52|<tuple|consequent expression|12|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-53|<tuple|predicate|12|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-54|<tuple|1.7|14|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-55|<tuple|1.8|17|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-56|<tuple|recursive|17|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-57|<tuple|2|17|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-58|<tuple|procedural abstraction|17|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-59|<tuple|25|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-6|<tuple|bugs|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-60|<tuple|bound variable|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-61|<tuple|binds|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-62|<tuple|free|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-63|<tuple|scope|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-64|<tuple|capturing|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-65|<tuple|capturing|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-66|<tuple|block structure|19|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-67|<tuple|lexical scoping|19|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-68|<tuple|2|20|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-69|<tuple|local evolution|20|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-7|<tuple|glitches|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-70|<tuple|global|20|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-71|<tuple|2.1|20|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-72|<tuple|3|21|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-73|<tuple|4|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-74|<tuple|deferred operations|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-75|<tuple|recursive process|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-76|<tuple|linear recursive
-    process|22|../../Library/Application Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-77|<tuple|iterative process|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-78|<tuple|state variables|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-79|<tuple|linear iterative
-    process|22|../../Library/Application Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-8|<tuple|debug|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-80|<tuple|process|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-81|<tuple|procedure|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-82|<tuple|tail-recursive|23|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-83|<tuple|2.2|23|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-84|<tuple|tree recursion|23|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-85|<tuple|5|24|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-86|<tuple|golden ratio|24|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-87|<tuple|32|25|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-88|<tuple|tabulation|26|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-89|<tuple|memoization|26|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-9|<tuple|1|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-90|<tuple|Pascal's triangle|26|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-91|<tuple|binomial coefficients|26|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|auto-92|<tuple|13|27|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|define_fib|<tuple|tree recursion|24|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|define_square|<tuple|procedure
-    definitions|8|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|ex1.13|<tuple|13|27|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|ex1.5|<tuple|5|13|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|ex1.7|<tuple|7|16|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|fig:1.1|<tuple|1|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|fig:1.2|<tuple|2|17|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|fig:1.3|<tuple|3|21|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|fig:1.4|<tuple|4|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|fig:1.5|<tuple|5|24|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-1|<tuple|1|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-10|<tuple|10|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-11|<tuple|11|7|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-12|<tuple|12|8|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-13|<tuple|13|8|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-14|<tuple|14|8|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-15|<tuple|15|10|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-16|<tuple|16|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-17|<tuple|17|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-18|<tuple|18|12|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-19|<tuple|19|12|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-2|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-20|<tuple|20|14|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-21|<tuple|21|14|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-22|<tuple|22|15|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-23|<tuple|23|15|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-24|<tuple|24|16|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-25|<tuple|25|17|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-26|<tuple|26|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-27|<tuple|27|19|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-28|<tuple|28|20|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-29|<tuple|29|21|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-3|<tuple|3|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-30|<tuple|30|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-31|<tuple|31|23|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-32|<tuple|32|25|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-33|<tuple|33|25|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-34|<tuple|34|26|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-35|<tuple|35|26|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-4|<tuple|4|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-5|<tuple|5|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-6|<tuple|6|4|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-7|<tuple|7|5|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-8|<tuple|8|5|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnote-9|<tuple|9|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-1|<tuple|1|1|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-10|<tuple|10|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-11|<tuple|syntactic sugar|7|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-12|<tuple|12|8|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-13|<tuple|13|8|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-14|<tuple|14|8|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-15|<tuple|substitution|10|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-16|<tuple|stream processing|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-17|<tuple|17|11|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-18|<tuple|18|12|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-19|<tuple|19|12|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-2|<tuple|2|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-20|<tuple|20|14|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-21|<tuple|21|14|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-22|<tuple|22|15|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-23|<tuple|23|15|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-24|<tuple|24|16|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-25|<tuple|25|17|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-26|<tuple|26|18|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-27|<tuple|27|19|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-28|<tuple|28|20|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-29|<tuple|29|21|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-3|<tuple|3|2|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-30|<tuple|30|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-31|<tuple|31|23|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-32|<tuple|32|25|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-33|<tuple|33|25|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-34|<tuple|memoization|26|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-35|<tuple|binomial coefficients|26|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-4|<tuple|real numbers|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-5|<tuple|5|3|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-6|<tuple|6|4|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-7|<tuple|Alan Perlis|5|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-8|<tuple|8|5|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|footnr-9|<tuple|9|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|index-stack|<tuple|30|22|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|sec:1.1.3|<tuple|1.3|6|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|sec:1.1.4|<tuple|1.4|7|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|sec:1.1.5|<tuple|1.5|9|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|sec:1.1.7|<tuple|1.7|14|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|sec:1.2|<tuple|2|20|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|sec:1.2.1|<tuple|2.1|20|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
-    <associate|sec:1.2.2|<tuple|2.2|23|../../Library/Application
-    Support/XmacsLabs/texts/scratch/no_name_8.tm>>
+    <associate|%_idx_102|<tuple|3|2>>
+    <associate|%_idx_104|<tuple|3|2>>
+    <associate|%_idx_48|<tuple|2|2>>
+    <associate|%_idx_50|<tuple|2|2>>
+    <associate|%_idx_52|<tuple|2|2>>
+    <associate|%_idx_56|<tuple|2|2>>
+    <associate|%_idx_58|<tuple|2|2>>
+    <associate|%_idx_60|<tuple|2|2>>
+    <associate|%_idx_62|<tuple|2|2>>
+    <associate|%_idx_66|<tuple|2|2>>
+    <associate|%_idx_68|<tuple|2|2>>
+    <associate|%_idx_70|<tuple|2|2>>
+    <associate|%_idx_72|<tuple|2|2>>
+    <associate|%_idx_74|<tuple|2|2>>
+    <associate|%_idx_76|<tuple|2|2>>
+    <associate|%_idx_78|<tuple|2|2>>
+    <associate|%_idx_80|<tuple|2|2>>
+    <associate|%_idx_82|<tuple|2|2>>
+    <associate|%_idx_84|<tuple|2|2>>
+    <associate|%_idx_86|<tuple|2|2>>
+    <associate|%_idx_88|<tuple|2|2>>
+    <associate|%_idx_90|<tuple|2|2>>
+    <associate|%_idx_92|<tuple|2|2>>
+    <associate|%_idx_94|<tuple|2|2>>
+    <associate|1.1|<tuple|1|2>>
+    <associate|1.1.8|<tuple|1.8|17>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|recusion equations|1>>
+    <associate|auto-11|<tuple|interpreter|1>>
+    <associate|auto-12|<tuple|procedures|2>>
+    <associate|auto-13|<tuple|1|2>>
+    <associate|auto-14|<tuple|integers|3>>
+    <associate|auto-15|<tuple|real numbers|3>>
+    <associate|auto-16|<tuple|1.1|3>>
+    <associate|auto-17|<tuple|expression|3>>
+    <associate|auto-18|<tuple|evaluating|3>>
+    <associate|auto-19|<tuple|combinations|4>>
+    <associate|auto-2|<tuple|computational process|1>>
+    <associate|auto-20|<tuple|operator|4>>
+    <associate|auto-21|<tuple|operands|4>>
+    <associate|auto-22|<tuple|arguments|4>>
+    <associate|auto-23|<tuple|prefix notation|4>>
+    <associate|auto-24|<tuple|pretty-printing|4>>
+    <associate|auto-25|<tuple|read-eval-print loop|5>>
+    <associate|auto-26|<tuple|Alan Perlis|5>>
+    <associate|auto-27|<tuple|1.2|5>>
+    <associate|auto-28|<tuple|variable|5>>
+    <associate|auto-29|<tuple|value|5>>
+    <associate|auto-3|<tuple|data|1>>
+    <associate|auto-30|<tuple|environment|6>>
+    <associate|auto-31|<tuple|global environment|6>>
+    <associate|auto-32|<tuple|1.3|6>>
+    <associate|auto-33|<tuple|recursive|6>>
+    <associate|auto-34|<tuple|tree accumulation|6>>
+    <associate|auto-35|<tuple|1|6>>
+    <associate|auto-36|<tuple|special forms|7>>
+    <associate|auto-37|<tuple|syntactic sugar|7>>
+    <associate|auto-38|<tuple|1.4|7>>
+    <associate|auto-39|<tuple|procedure definitions|7>>
+    <associate|auto-4|<tuple|program|1>>
+    <associate|auto-40|<tuple|compound procedure|8>>
+    <associate|auto-41|<tuple|1.5|9>>
+    <associate|auto-42|<tuple|substitution model|10>>
+    <associate|auto-43|<tuple|substitution|10>>
+    <associate|auto-44|<tuple|substitution|10>>
+    <associate|auto-45|<tuple|normal-order evaluation|11>>
+    <associate|auto-46|<tuple|applicative-order evaluation|11>>
+    <associate|auto-47|<tuple|stream processing|11>>
+    <associate|auto-48|<tuple|1.6|11>>
+    <associate|auto-49|<tuple|case analysis|11>>
+    <associate|auto-5|<tuple|programming languages|1>>
+    <associate|auto-50|<tuple|clauses|11>>
+    <associate|auto-51|<tuple|predicate|11>>
+    <associate|auto-52|<tuple|consequent expression|12>>
+    <associate|auto-53|<tuple|predicate|12>>
+    <associate|auto-54|<tuple|1.7|14>>
+    <associate|auto-55|<tuple|1.8|17>>
+    <associate|auto-56|<tuple|recursive|17>>
+    <associate|auto-57|<tuple|2|17>>
+    <associate|auto-58|<tuple|procedural abstraction|17>>
+    <associate|auto-59|<tuple|25|18>>
+    <associate|auto-6|<tuple|bugs|1>>
+    <associate|auto-60|<tuple|bound variable|18>>
+    <associate|auto-61|<tuple|binds|18>>
+    <associate|auto-62|<tuple|free|18>>
+    <associate|auto-63|<tuple|scope|18>>
+    <associate|auto-64|<tuple|capturing|18>>
+    <associate|auto-65|<tuple|capturing|18>>
+    <associate|auto-66|<tuple|block structure|19>>
+    <associate|auto-67|<tuple|lexical scoping|19>>
+    <associate|auto-68|<tuple|2|20>>
+    <associate|auto-69|<tuple|local evolution|20>>
+    <associate|auto-7|<tuple|glitches|1>>
+    <associate|auto-70|<tuple|global|20>>
+    <associate|auto-71|<tuple|2.1|20>>
+    <associate|auto-72|<tuple|3|21>>
+    <associate|auto-73|<tuple|4|22>>
+    <associate|auto-74|<tuple|deferred operations|22>>
+    <associate|auto-75|<tuple|recursive process|22>>
+    <associate|auto-76|<tuple|linear recursive process|22>>
+    <associate|auto-77|<tuple|iterative process|22>>
+    <associate|auto-78|<tuple|state variables|22>>
+    <associate|auto-79|<tuple|linear iterative process|22>>
+    <associate|auto-8|<tuple|debug|1>>
+    <associate|auto-80|<tuple|process|22>>
+    <associate|auto-81|<tuple|procedure|22>>
+    <associate|auto-82|<tuple|tail-recursive|23>>
+    <associate|auto-83|<tuple|2.2|23>>
+    <associate|auto-84|<tuple|tree recursion|23>>
+    <associate|auto-85|<tuple|5|24>>
+    <associate|auto-86|<tuple|golden ratio|24>>
+    <associate|auto-87|<tuple|32|25>>
+    <associate|auto-88|<tuple|tabulation|26>>
+    <associate|auto-89|<tuple|memoization|26>>
+    <associate|auto-9|<tuple|1|1>>
+    <associate|auto-90|<tuple|Pascal's triangle|26>>
+    <associate|auto-91|<tuple|binomial coefficients|26>>
+    <associate|auto-92|<tuple|13|27>>
+    <associate|define_fib|<tuple|tree recursion|24>>
+    <associate|define_square|<tuple|procedure definitions|8>>
+    <associate|ex1.13|<tuple|13|27>>
+    <associate|ex1.5|<tuple|5|13>>
+    <associate|ex1.7|<tuple|7|16>>
+    <associate|fig:1.1|<tuple|1|6>>
+    <associate|fig:1.2|<tuple|2|17>>
+    <associate|fig:1.3|<tuple|3|21>>
+    <associate|fig:1.4|<tuple|4|22>>
+    <associate|fig:1.5|<tuple|5|24>>
+    <associate|footnote-1|<tuple|1|1>>
+    <associate|footnote-10|<tuple|10|6>>
+    <associate|footnote-11|<tuple|11|7>>
+    <associate|footnote-12|<tuple|12|8>>
+    <associate|footnote-13|<tuple|13|8>>
+    <associate|footnote-14|<tuple|14|8>>
+    <associate|footnote-15|<tuple|15|10>>
+    <associate|footnote-16|<tuple|16|11>>
+    <associate|footnote-17|<tuple|17|11>>
+    <associate|footnote-18|<tuple|18|12>>
+    <associate|footnote-19|<tuple|19|12>>
+    <associate|footnote-2|<tuple|2|2>>
+    <associate|footnote-20|<tuple|20|14>>
+    <associate|footnote-21|<tuple|21|14>>
+    <associate|footnote-22|<tuple|22|15>>
+    <associate|footnote-23|<tuple|23|15>>
+    <associate|footnote-24|<tuple|24|16>>
+    <associate|footnote-25|<tuple|25|17>>
+    <associate|footnote-26|<tuple|26|18>>
+    <associate|footnote-27|<tuple|27|19>>
+    <associate|footnote-28|<tuple|28|20>>
+    <associate|footnote-29|<tuple|29|21>>
+    <associate|footnote-3|<tuple|3|2>>
+    <associate|footnote-30|<tuple|30|22>>
+    <associate|footnote-31|<tuple|31|23>>
+    <associate|footnote-32|<tuple|32|25>>
+    <associate|footnote-33|<tuple|33|25>>
+    <associate|footnote-34|<tuple|34|26>>
+    <associate|footnote-35|<tuple|35|26>>
+    <associate|footnote-4|<tuple|4|3>>
+    <associate|footnote-5|<tuple|5|3>>
+    <associate|footnote-6|<tuple|6|4>>
+    <associate|footnote-7|<tuple|7|5>>
+    <associate|footnote-8|<tuple|8|5>>
+    <associate|footnote-9|<tuple|9|6>>
+    <associate|footnr-1|<tuple|1|1>>
+    <associate|footnr-10|<tuple|10|6>>
+    <associate|footnr-11|<tuple|syntactic sugar|7>>
+    <associate|footnr-12|<tuple|12|8>>
+    <associate|footnr-13|<tuple|13|8>>
+    <associate|footnr-14|<tuple|14|8>>
+    <associate|footnr-15|<tuple|substitution|10>>
+    <associate|footnr-16|<tuple|stream processing|11>>
+    <associate|footnr-17|<tuple|17|11>>
+    <associate|footnr-18|<tuple|18|12>>
+    <associate|footnr-19|<tuple|19|12>>
+    <associate|footnr-2|<tuple|2|2>>
+    <associate|footnr-20|<tuple|20|14>>
+    <associate|footnr-21|<tuple|21|14>>
+    <associate|footnr-22|<tuple|22|15>>
+    <associate|footnr-23|<tuple|23|15>>
+    <associate|footnr-24|<tuple|24|16>>
+    <associate|footnr-25|<tuple|25|17>>
+    <associate|footnr-26|<tuple|26|18>>
+    <associate|footnr-27|<tuple|27|19>>
+    <associate|footnr-28|<tuple|28|20>>
+    <associate|footnr-29|<tuple|29|21>>
+    <associate|footnr-3|<tuple|3|2>>
+    <associate|footnr-30|<tuple|30|22>>
+    <associate|footnr-31|<tuple|31|23>>
+    <associate|footnr-32|<tuple|32|25>>
+    <associate|footnr-33|<tuple|33|25>>
+    <associate|footnr-34|<tuple|memoization|26>>
+    <associate|footnr-35|<tuple|binomial coefficients|26>>
+    <associate|footnr-4|<tuple|real numbers|3>>
+    <associate|footnr-5|<tuple|5|3>>
+    <associate|footnr-6|<tuple|6|4>>
+    <associate|footnr-7|<tuple|Alan Perlis|5>>
+    <associate|footnr-8|<tuple|8|5>>
+    <associate|footnr-9|<tuple|9|6>>
+    <associate|index-stack|<tuple|30|22>>
+    <associate|sec:1.1.3|<tuple|1.3|6>>
+    <associate|sec:1.1.4|<tuple|1.4|7>>
+    <associate|sec:1.1.5|<tuple|1.5|9>>
+    <associate|sec:1.1.7|<tuple|1.7|14>>
+    <associate|sec:1.2|<tuple|2|20>>
+    <associate|sec:1.2.1|<tuple|2.1|20>>
+    <associate|sec:1.2.2|<tuple|2.2|23>>
   </collection>
 </references>
 
