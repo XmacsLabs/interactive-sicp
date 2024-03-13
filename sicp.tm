@@ -2711,12 +2711,12 @@
     computed. Each time we are asked to apply the procedure to some argument,
     we first look to see if the value is already stored in the table, in
     which case we avoid performing the redundant computation. This strategy,
-    known as <em|tabulation><index|tabulation> or
-    <em|memoization><index|memoization>, can be implemented in a
-    straightforward way. Tabulation can sometimes be used to transform
-    processes that require an exponential number of steps (such as
-    <code*|count-change>) into processes whose space and time requirements
-    grow linearly with the input. See Exercise 3.27.
+    known as <em|tabulation><glossary-explain|tabulation|\<#8868\>\<#683C\>\<#6280\>\<#672F\>>
+    or <em|memoization><glossary-explain|memoization|\<#8BB0\>\<#5FC6\>\<#6280\>\<#672F\>>,
+    can be implemented in a straightforward way. Tabulation can sometimes be
+    used to transform processes that require an exponential number of steps
+    (such as <code*|count-change>) into processes whose space and time
+    requirements grow linearly with the input. See Exercise 3.27.
   </footnote>
 
   <\exercise>
@@ -2748,9 +2748,10 @@
     The numbers at the edge of the triangle are all 1, and each number inside
     the triangle is the sum of the two numbers above it.<\footnote>
       The elements of Pascal's triangle are called the <em|binomial
-      coefficients><index|binomial coefficients>, because the
-      <math|n<rsup|<with|mode|text|th>>> row consists of the coefficients of
-      the terms in the expansion of <math|<around*|(|x+y|)><rsup|n>>. This
+      coefficients><glossary-explain|binomial
+      coefficients|\<#4E8C\>\<#9879\>\<#5F0F\>\<#7CFB\>\<#6570\>>, because
+      the <math|n<rsup|<with|mode|text|th>>> row consists of the coefficients
+      of the terms in the expansion of <math|<around*|(|x+y|)><rsup|n>>. This
       pattern for computing the coefficients appeared in Blaise Pascal's 1653
       seminal work on probability theory, <em|Traité du triangle
       arithmétique>. According to Knuth (1973), the same pattern appears in
@@ -2777,8 +2778,9 @@
   The previous examples illustrate that processes can differ considerably in
   the rates at which they consume computational resources. One convenient way
   to describe this difference is to use the notion of <em|order of
-  growth><index|order of growth> to obtain a gross measure of the resources
-  required by a process as the inputs become larger.
+  growth><glossary-explain|order of growth|\<#589E\>\<#957F\>\<#7684\>\<#9636\>>
+  to obtain a gross measure of the resources required by a process as the
+  inputs become larger.
 
   Let <math|n> be a parameter that measures the size of the problem, and let
   <math|R<around*|(|n|)>> be the amount of resources the process requires for
@@ -3159,7 +3161,7 @@
   repeated reductions will always eventually produce a pair where the second
   number is 0. Then the <abbr|GCD> is the other number in the pair. This
   method for computing the <abbr|GCD> is known as <em|Euclid's
-  Algorithm><index|Euclid's Algorithm>.<\footnote>
+  Algorithm><glossary-explain|Euclid's Algorithm|\<#6B27\>\<#51E0\>\<#91CC\>\<#5F97\>\<#7B97\>\<#6CD5\>>.<\footnote>
     Euclid's Algorithm is so called because it appears in Euclid's
     <cite*|Elements> (Book 7, ca. 300 <abbr|B.C.>). According to Knuth
     (1973), it can be considered the oldest known nontrivial algorithm. The
@@ -13782,7 +13784,17 @@
 
     <glossary-2|golden ratio|\<#9EC4\>\<#91D1\>\<#6BD4\>\<#4F8B\>|<pageref|auto-84>>
 
+    <glossary-2|tabulation|\<#8868\>\<#683C\>\<#6280\>\<#672F\>|<pageref|auto-85>>
+
+    <glossary-2|memoization|\<#8BB0\>\<#5FC6\>\<#6280\>\<#672F\>|<pageref|auto-86>>
+
     <glossary-2|Pascal's triangle|\<#5E15\>\<#65AF\>\<#5361\>\<#4E09\>\<#89D2\>\<#5F62\>|<pageref|auto-87>>
+
+    <glossary-2|binomial coefficients|\<#4E8C\>\<#9879\>\<#5F0F\>\<#7CFB\>\<#6570\>|<pageref|auto-88>>
+
+    <glossary-2|order of growth|\<#589E\>\<#957F\>\<#7684\>\<#9636\>|<pageref|auto-90>>
+
+    <glossary-2|Euclid's Algorithm|\<#6B27\>\<#51E0\>\<#91CC\>\<#5F97\>\<#7B97\>\<#6CD5\>|<pageref|auto-95>>
   </the-glossary>
 
   <\the-index|idx>
@@ -13807,8 +13819,6 @@
     <index+1|balanced|<pageref|auto-168>>
 
     <index+1|binds|<pageref|auto-58>>
-
-    <index+1|binomial coefficients|<pageref|auto-88>>
 
     <index+1|block structure|<pageref|auto-62>>
 
@@ -13874,8 +13884,6 @@
 
     <index+1|environment|<pageref|auto-29>>
 
-    <index+1|Euclid's Algorithm|<pageref|auto-95>>
-
     <index+1|evaluating|<pageref|auto-17>>
 
     <index+1|filter|<pageref|auto-111>, <pageref|auto-172>>
@@ -13936,8 +13944,6 @@
 
     <index+1|map|<pageref|auto-173>>
 
-    <index+1|memoization|<pageref|auto-86>>
-
     <index+1|message passing|<pageref|auto-143>, <pageref|auto-226>>
 
     <index+1|Miller-Rabin test|<pageref|auto-104>>
@@ -13949,8 +13955,6 @@
     <index+1|n-fold smoothed function|<pageref|auto-124>>
 
     <index+1|nil|<pageref|auto-161>>
-
-    <index+1|order of growth|<pageref|auto-90>>
 
     <index+1|ordinary|<pageref|auto-230>>
 
@@ -14031,8 +14035,6 @@
     <index+1|summation of a series|<pageref|auto-108>>
 
     <index+1|supertype|<pageref|auto-236>>
-
-    <index+1|tabulation|<pageref|auto-85>>
 
     <index+1|tower|<pageref|auto-237>>
 
