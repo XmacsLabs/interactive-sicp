@@ -290,7 +290,7 @@
     </equation*>
 
     <\equation*>
-      h<around*|(|n|)>=<choice|<tformat|<table|<row|<cell|0>|<cell|,n=0>>|<row|<cell|2<rsup|2<rsup|n-1>>>|<cell|,n\<gtr\>0>>>>>
+      h<around*|(|n|)>=<choice|<tformat|<table|<row|<cell|0>|<cell|,n=0>>|<row|<cell|2<rsup|h<around*|(|n-1|)>>>|<cell|,n\<gtr\>0>>>>>
     </equation*>
 
     \;
