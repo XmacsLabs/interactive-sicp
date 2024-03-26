@@ -112,7 +112,12 @@
       </unfolded-io>
 
       <\unfolded-io|Scheme] >
-        (define (p x) (- (* 3 x) (* 4 (cube x))))
+        (define (p x)
+
+        \ \ (debug-message "std" (string-append "p " (number-\<gtr\>string x)
+        "\\n"))
+
+        \ \ (- (* 3 x) (* 4 (cube x))))
       <|unfolded-io>
         p
       </unfolded-io>
@@ -165,7 +170,14 @@
       algorithms.)
     </render-exercise>
   <|folded>
-    \;
+    <\render-exercise|\<#63D0\>\<#793A\>>
+      \;
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<around*|(|b|)>>|<cell|=>|<cell|b<rsup|n>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|b,n,1|)>>>|<row|<cell|f<around*|(|b,n,a|)>>|<cell|=>|<cell|a*b<rsup|n>>>|<row|<cell|f<around*|(|b,n,a|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|f<around*|(|b<rsup|2>,<frac|n|2>,a|)>=<around*|(|b<rsup|2>|)><rsup|<frac|n|2>>*a>|<cell|,
+        n\<#662F\>\<#5076\>\<#6570\>>>|<row|<cell|f<around*|(|b<rsup|2>,<frac|n-1|2>,a*b|)>=<around*|(|b<rsup|2>|)><rsup|<frac|n-1|2>>*b*a=b<rsup|n>>|<cell|,n\<#662F\>\<#5947\>\<#6570\>>>|<row|<cell|>|<cell|,n=2>>|<row|<cell|a*b>|<cell|,n=1>>|<row|<cell|a>|<cell|,n=0>>>>>>>>>
+      </eqnarray*>
+    </render-exercise>
   </folded>
 
   <\folded>
@@ -194,7 +206,142 @@
       to <code*|fast-expt> that uses a logarithmic number of steps.
     </render-exercise>
   <|folded>
-    \;
+    0-255
+
+    -128~+127
+
+    64bit
+
+    -2^63 ~ +2^63-1
+
+    Kb*8= KB
+
+    1Mb=128KB 1MB=1024KB
+
+    Gb GB
+
+    <\big-table|<tabular|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|0>|<cell|>|<cell|-126>>|<row|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|>|<cell|-127>>|<row|<cell|1>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|>|<cell|-128>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|0>|<cell|>|<cell|2>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|>|<cell|127>>>>>>
+      \;
+    </big-table>
+
+    <\big-table|<tabular|<tformat|<cwith|1|1|2|2|cell-row-span|1>|<cwith|1|1|2|2|cell-col-span|8>|<cwith|1|1|2|2|cell-halign|c>|<cwith|1|-1|11|11|cell-halign|c>|<cwith|2|2|9|9|cell-background|#afa>|<cwith|3|3|8|8|cell-background|#afa>|<cwith|4|4|7|7|cell-background|#afa>|<cwith|6|6|2|9|cell-background|#faa>|<cwith|7|7|3|9|cell-background|#faa>|<cwith|8|8|4|9|cell-background|#faa>|<cwith|6|6|3|3|cell-background|#afa>|<cwith|7|7|4|4|cell-background|#afa>|<cwith|8|8|5|5|cell-background|#afa>|<cwith|6|6|4|4|cell-background|#aaf>|<cwith|7|7|5|5|cell-background|#aaf>|<cwith|8|8|6|6|cell-background|#aaf>|<cwith|6|6|5|9|cell-background|>|<cwith|7|7|6|9|cell-background|>|<cwith|8|8|7|9|cell-background|>|<cwith|3|3|2|7|cell-background|pastel
+    grey>|<cwith|2|2|2|8|cell-background|pastel
+    grey>|<cwith|4|4|2|6|cell-background|pastel
+    grey>|<cwith|7|7|2|2|cell-background|pastel
+    grey>|<cwith|8|8|2|3|cell-background|pastel
+    grey>|<table|<row|<cell|>|<cell|\<#4E00\>\<#4E2A\>\<#5B57\>\<#8282\>\<#FF08\>\<#4E8C\>\<#8FDB\>\<#5236\>\<#FF09\>>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|\<#5341\>\<#8FDB\>\<#5236\>>>|<row|<cell|<scm|x>>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|>|<cell|1>>|<row|<cell|<scm|(ash
+    x 1)>>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|0>|<cell|>|<cell|2>>|<row|<cell|<scm|(ash
+    x 2)>>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|>|<cell|4>>|<row|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|y>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|>|<cell|255>>|<row|<cell|<scm|(ash
+    y -1)>>|<cell|0>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|>|<cell|127>>|<row|<cell|<scm|(ash
+    y -2)>>|<cell|0>|<cell|0>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|1>|<cell|>|<cell|63>>>>>>
+      \<#5DE6\>\<#79FB\>\<#64CD\>\<#4F5C\>\<#7B26\><scm|ash>
+    </big-table>
+
+    <\big-table|<tabular|<tformat|<cwith|2|2|2|5|cell-background|pastel
+    grey>|<cwith|3|3|2|8|cell-background|pastel
+    grey>|<cwith|4|4|2|8|cell-background|pastel
+    grey>|<cwith|1|1|2|2|cell-row-span|1>|<cwith|1|1|2|2|cell-col-span|8>|<cwith|2|-1|11|11|cell-halign|c>|<cwith|1|1|2|2|cell-halign|c>|<table|<row|<cell|>|<cell|\<#4E8C\>\<#8FDB\>\<#5236\>>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|\<#4E8C\>\<#8FDB\>\<#5236\>>>|<row|<cell|x>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|1>|<cell|>|<cell|9>>|<row|<cell|y>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|>|<cell|1>>|<row|<cell|<scm|(logand
+    x y)>>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|>|<cell|1>>|<row|<cell|<scm|(logior
+    x y)>>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|1>|<cell|0>|<cell|0>|<cell|1>|<cell|>|<cell|9>>|<row|<cell|<scm|(logxor
+    x y)>>|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|0>|<cell|>|<cell|8>>>>>>
+      \<#903B\>\<#8F91\>\<#4E0E\>\<#64CD\>\<#4F5C\>\<#7B26\>
+    </big-table>
+
+    <\session|scheme|default>
+      <\unfolded-io|Scheme] >
+        (logxor 9 1)
+      <|unfolded-io>
+        8
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (logxor 0 1)
+      <|unfolded-io>
+        1
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (logxor 1 0)
+      <|unfolded-io>
+        1
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (logxor 1 1)
+      <|unfolded-io>
+        0
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (halve x) (ash x -1))
+      <|unfolded-io>
+        halve
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (halve 10)
+      <|unfolded-io>
+        5
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (halve 9)
+      <|unfolded-io>
+        4
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (logand 1 9)
+      <|unfolded-io>
+        1
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (logand 1 8)
+      <|unfolded-io>
+        0
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (is-odd? x) (= (logand 1 x) 1))
+      <|unfolded-io>
+        is-odd?
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (define (is-even? x) (= (logand 1 x) 0))
+      <|unfolded-io>
+        is-even?
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (is-odd? 9)
+      <|unfolded-io>
+        #t
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (is-even? 10)
+      <|unfolded-io>
+        #t
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        (expt 2 63)
+      <|unfolded-io>
+        9223372036854776000.0
+      </unfolded-io>
+
+      <\unfolded-io|Scheme] >
+        9223372036854775808
+      <|unfolded-io>
+        -9223372036854775808
+      </unfolded-io>
+
+      <\input|Scheme] >
+        \;
+      </input>
+    </session>
   </folded>
 
   <\folded>
@@ -279,7 +426,108 @@
       </scm-code>
     </render-exercise>
   <|folded>
-    \;
+    <\equation*>
+      f<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|0>|<cell|,x=0>>|<row|<cell|1>|<cell|,x=1>>|<row|<cell|f<around*|(|x-1|)>+f<around*|(|x-2|)>>|<cell|,x\<gtr\>1>>>>>
+    </equation*>
+
+    <\equation*>
+      <matrix|<tformat|<table|<row|<cell|a>|<cell|b>>>>>*<matrix|<tformat|<cwith|1|-1|1|1|cell-background|pastel
+      green>|<cwith|1|-1|2|2|cell-background|#faa>|<table|<row|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>>>>>=<matrix|<tformat|<table|<row|<cell|a+b>|<cell|a>>>>>
+    </equation*>
+
+    <\equation*>
+      <matrix|<tformat|<table|<row|<cell|f<around*|(|x-1|)>>|<cell|f<around*|(|x-2|)>>>>>>*<matrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>>>>>=<matrix|<tformat|<table|<row|<cell|f<around*|(|x-1|)>+f<around*|(|x-2|)>>|<cell|f<around*|(|x-1|)>>>>>>=<matrix|<tformat|<table|<row|<cell|f<around*|(|x|)>>|<cell|f<around*|(|x-1|)>>>>>>
+    </equation*>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<matrix|<tformat|<table|<row|<cell|f<around*|(|n|)>>|<cell|f<around*|(|n-1|)>>>>>>>|<cell|=>|<cell|<matrix|<tformat|<table|<row|<cell|f<around*|(|n-1|)>>|<cell|f<around*|(|n-2|)>>>>>>*<matrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>>>>>>>|<row|<cell|>|<cell|=>|<cell|<matrix|<tformat|<table|<row|<cell|f<around*|(|n-2|)>>|<cell|f<around*|(|n-3|)>>>>>>*<matrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>>>>><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<matrix|<tformat|<table|<row|<cell|f<around*|(|1|)>>|<cell|f<around*|(|0|)>>>>>>*<matrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>>>>><rsup|n-1>>>|<row|<cell|>|<cell|=>|<cell|<matrix|<tformat|<table|<row|<cell|1>|<cell|0>>>>>*<matrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>>>>><rsup|n-1>>>>>
+    </eqnarray*>
+
+    <\session|octave|default>
+      <\unfolded-io>
+        \<gtr\>\<gtr\>\ 
+      <|unfolded-io>
+        [1 1]
+      <|unfolded-io>
+        <with|mode|math|math-display|true|<matrix|<tformat|<table|<row|<cell|<with|mode|math|1>>|<cell|<with|mode|math|1>>>>>>>
+      </unfolded-io>
+
+      <\unfolded-io>
+        \<gtr\>\<gtr\>\ 
+      <|unfolded-io>
+        [1 1; 1 0]
+      <|unfolded-io>
+        <with|mode|math|math-display|true|<matrix|<tformat|<table|<row|<cell|<with|mode|math|1>>|<cell|<with|mode|math|1>>>|<row|<cell|<with|mode|math|1>>|<cell|<with|mode|math|0.0>>>>>>>
+      </unfolded-io>
+
+      <\input>
+        \<gtr\>\<gtr\>\ 
+      <|input>
+        \;
+      </input>
+    </session>
+
+    <\session|octave|default>
+      <\output>
+        GNU Octave (8.3.0) Session in GNU TeXmacs
+
+        Welcome to star and fork it at https://github.com/texmacs/octave
+      </output>
+
+      <\unfolded-io>
+        \<gtr\>\<gtr\>\ 
+      <|unfolded-io>
+        [1 1; 1 0]
+      <|unfolded-io>
+        <with|mode|math|math-display|true|<matrix|<tformat|<table|<row|<cell|<with|mode|math|1>>|<cell|<with|mode|math|1>>>|<row|<cell|<with|mode|math|1>>|<cell|<with|mode|math|0.0>>>>>>>
+      </unfolded-io>
+
+      <\unfolded-io>
+        \<gtr\>\<gtr\>\ 
+      <|unfolded-io>
+        [1 0] * [1 1; 1 0]; # f(2), f(1)
+      <|unfolded-io>
+        <with|mode|math|math-display|true|<matrix|<tformat|<table|<row|<cell|<with|mode|math|1>>|<cell|<with|mode|math|1>>>>>>>
+      </unfolded-io>
+
+      <\unfolded-io>
+        \<gtr\>\<gtr\>\ 
+      <|unfolded-io>
+        [1 0] * [1 1; 1 0]^2; # f(3), f(2)
+      <|unfolded-io>
+        <with|mode|math|math-display|true|<matrix|<tformat|<table|<row|<cell|<with|mode|math|2>>|<cell|<with|mode|math|1>>>>>>>
+      </unfolded-io>
+
+      <\unfolded-io>
+        \<gtr\>\<gtr\>\ 
+      <|unfolded-io>
+        [1 0]*[1 1; 1 0]^10; # f(11), f(10)
+      <|unfolded-io>
+        <with|mode|math|math-display|true|<matrix|<tformat|<table|<row|<cell|<with|mode|math|89>>|<cell|<with|mode|math|55>>>>>>>
+      </unfolded-io>
+
+      <\unfolded-io>
+        \<gtr\>\<gtr\>\ 
+      <|unfolded-io>
+        [1 1; 1 0]^5 * [1 1; 1 0]^5
+      <|unfolded-io>
+        <with|mode|math|math-display|true|<matrix|<tformat|<table|<row|<cell|<with|mode|math|89>>|<cell|<with|mode|math|55>>>|<row|<cell|<with|mode|math|55>>|<cell|<with|mode|math|34>>>>>>>
+      </unfolded-io>
+
+      <\input>
+        \<gtr\>\<gtr\>\ 
+      <|input>
+        \;
+      </input>
+    </session>
+
+    <\equation*>
+      <matrix|<tformat|<table|<row|<cell|a>|<cell|b>>>>>*T<rsub|pq>=<matrix|<tformat|<table|<row|<cell|bq+aq+ap>|<cell|bp+aq>>>>>
+    </equation*>
+
+    <\equation*>
+      T<rsub|pq>=<matrix|<tformat|<table|<row|<cell|q+p>|<cell|q>>|<row|<cell|q>|<cell|p>>>>>
+    </equation*>
   </folded>
 
   <\folded>
@@ -472,21 +720,23 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|invariant quantity|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|auto-2|<tuple|Miller-Rabin
-    test|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|ex1.16|<tuple|b|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|ex1.17|<tuple|invariant quantity|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|ex1.18|<tuple|invariant quantity|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|ex1.22|<tuple|2|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|ex1.24|<tuple|2|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|ex1.25|<tuple|2|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|ex1.28|<tuple|2|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|footnote-1|<tuple|1|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|footnote-2|<tuple|2|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|footnr-1|<tuple|1|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|footnr-2|<tuple|2|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
-    <associate|index-invariant-quantity|<tuple|b|?|https://gitee.com/XmacsLabs/interactive-sicp/raw/main/exercise06.tm>>
+    <associate|auto-1|<tuple|invariant quantity|?>>
+    <associate|auto-2|<tuple|1|?>>
+    <associate|auto-3|<tuple|2|?>>
+    <associate|auto-4|<tuple|3|?>>
+    <associate|auto-5|<tuple|Miller-Rabin test|?>>
+    <associate|ex1.16|<tuple|b|?>>
+    <associate|ex1.17|<tuple|invariant quantity|?>>
+    <associate|ex1.18|<tuple|3|?>>
+    <associate|ex1.22|<tuple|2|?>>
+    <associate|ex1.24|<tuple|2|?>>
+    <associate|ex1.25|<tuple|2|?>>
+    <associate|ex1.28|<tuple|2|?>>
+    <associate|footnote-1|<tuple|1|?>>
+    <associate|footnote-2|<tuple|2|?>>
+    <associate|footnr-1|<tuple|1|?>>
+    <associate|footnr-2|<tuple|2|?>>
+    <associate|index-invariant-quantity|<tuple|b|?>>
   </collection>
 </references>
 
@@ -495,7 +745,20 @@
     <\associate|idx>
       <tuple|<tuple|invariant quantity>|<pageref|auto-1>>
 
-      <tuple|<tuple|Miller-Rabin test>|<pageref|auto-2>>
+      <tuple|<tuple|Miller-Rabin test>|<pageref|auto-5>>
+    </associate>
+    <\associate|table>
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|1>|>
+        \;
+      </surround>|<pageref|auto-2>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|2>|>
+        \<#5DE6\>\<#79FB\>\<#64CD\>\<#4F5C\>\<#7B26\><with|mode|<quote|prog>|prog-language|<quote|scheme>|font-family|<quote|rm>|ash>
+      </surround>|<pageref|auto-3>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|3>|>
+        \<#903B\>\<#8F91\>\<#4E0E\>\<#64CD\>\<#4F5C\>\<#7B26\>
+      </surround>|<pageref|auto-4>>
     </associate>
   </collection>
 </auxiliary>
