@@ -2494,18 +2494,18 @@
     </input>
   </session>
 
-  <\big-figure|<tree|fib 5|<tree|fib 4|<tree|fib 3|<tree|fib 2|<tree|fib
+  <\big-figure|<scm|<tree|fib 5|<tree|fib 4|<tree|fib 3|<tree|fib 2|<tree|fib
   1|1>|<tree|fib 0|0>>|<tree|fib 1|1>>|<tree|fib 2|<tree|fib 1|1>|<tree|fib
   0|0>>>|<tree|fib 3|<tree|fib 2|<tree|fib 1|1>|<tree|fib 0|0>>|<tree|fib
-  1|1>>>>
+  1|1>>>>>
     <label|fig:1.5>The tree-recursive process generated in computing
     <scm|(fib 5)>.
   </big-figure>
 
-  Consider the pattern of this computation. To compute <code*|(fib 5)>, we
-  compute <code*|(fib 4)> and <code*|(fib 3)>. To compute <code*|(fib 4)>, we
-  compute <code*|(fib 3)> and <code*|(fib 2)>. In general, the evolved
-  process looks like a tree, as shown in <smart-ref|fig:1.5>. Notice that the
+  Consider the pattern of this computation. To compute <scm|(fib 5)>, we
+  compute <scm|(fib 4)> and <scm|(fib 3)>. To compute <scm|(fib 4)>, we
+  compute <scm|(fib 3)> and <scm|(fib 2)>. In general, the evolved process
+  looks like a tree, as shown in <smart-ref|fig:1.5>. Notice that the
   branches split into two at each level (except at the bottom); this reflects
   the fact that the <code*|fib> procedure calls itself twice each time it is
   invoked.
@@ -3019,10 +3019,10 @@
     in such a way that the product <math|ab<rsup|n>> is unchanged from state
     to state. At the beginning of the process <math|a> is taken to be 1, and
     the answer is given by the value of <math|a> at the end of the process.
-    In general, the technique of defining an <label|index-invariant-quantity>
-    <em|invariant quantity><index|invariant quantity> that remains unchanged
-    from state to state is a powerful way to think about the design of
-    iterative algorithms.)
+    In general, the technique of defining an <em|invariant
+    quantity><glossary-explain|invariant quantity|\<#4E0D\>\<#53D8\>\<#91CF\>>
+    that remains unchanged from state to state is a powerful way to think
+    about the design of iterative algorithms.)
   </exercise>
 
   <\exercise>
@@ -3334,11 +3334,13 @@
     <math|n>.
   </render-theorem>
 
-  (Two numbers are said to be <em|congruent modulo><index|congruent modulo>
-  <math|n> if they both have the same remainder when divided by <math|n>. The
-  remainder of a number <math|a> when divided by <math|n> is also referred to
-  as the <em|remainder of><index|remainder of> <math|a> <em|modulo> <math|n>,
-  or simply as <math|a> <em|modulo><index|modulo> <math|n>.)
+  (Two numbers are said to be <em|congruent
+  modulo><glossary-explain|congruent modulo|\<#540C\>\<#4F59\>> <math|n> if
+  they both have the same remainder when divided by <math|n>. The remainder
+  of a number <math|a> when divided by <math|n> is also referred to as the
+  <em|remainder of><index|remainder of> <math|a> <em|modulo> <math|n>, or
+  simply as <math|a> <em|modulo> <math|n><glossary-explain|modulo
+  n|\<#6A21\>n>.)
 
   If <math|n> is not prime, then, in general, most of the numbers
   <math|a\<less\>n> will not satisfy the above relation. This leads to the
@@ -3695,9 +3697,10 @@
   number of different procedures. To express such patterns as concepts, we
   will need to construct procedures that can accept procedures as arguments
   or return procedures as values. Procedures that manipulate procedures are
-  called <em|higher-order procedures><index|higher-order procedures>. This
-  section shows how higher-order procedures can serve as powerful abstraction
-  mechanisms, vastly increasing the expressive power of our language.
+  called <em|higher-order procedures><glossary-explain|higher-order
+  procedures|\<#9AD8\>\<#9636\>\<#8FC7\>\<#7A0B\>>. This section shows how
+  higher-order procedures can serve as powerful abstraction mechanisms,
+  vastly increasing the expressive power of our language.
 
   <subsection|Procedures as Arguments><label|1.3.1>
 
@@ -3768,8 +3771,9 @@
   The presence of such a common pattern is strong evidence that there is a
   useful abstraction waiting to be brought to the surface. Indeed,
   mathematicians long ago identified the abstraction of <em|summation of a
-  series><index|summation of a series> and invented \Psigma notation,\Q for
-  example <math|<above|<below|\<big-sum\>|n=a>|b>f<around*|(|n|)>=f<around*|(|a|)>+\<cdots\>+f<around*|(|b|)>>,
+  series><glossary-explain|summation of a
+  series|\<#5E8F\>\<#5217\>\<#6C42\>\<#548C\>> and invented \Psigma
+  notation,\Q for example <math|<above|<below|\<big-sum\>|n=a>|b>f<around*|(|n|)>=f<around*|(|a|)>+\<cdots\>+f<around*|(|b|)>>,
   to express this concept. The power of sigma notation is that it allows
   mathematicians to deal with the concept of summation itself rather than
   only with particular sums\Vfor example, to formulate general results about
@@ -3914,7 +3918,7 @@
   Once we have <code*|sum>, we can use it as a building block in formulating
   further concepts. For instance, the definite integral of a function
   <math|f> between the limits <math|a> and <math|b> can be approximated
-  numerically using the formula <with|math-display|true|<math|\<big-int\><rsub|a><rsup|b>f=<around*|[|f<around*|(|a+<frac|dx|2>|)>+f<around*|(|a+dx+<frac|dx|2>|)>+f<around*|(|a+2*dx+<frac|dx|2>|)>+\<ldots\>|]>*dx>>
+  numerically using the formula <with|math-display|true|<math|<big|int><rsup|b><rsub|a>f=<around*|[|f<around*|(|a+<frac|dx|2>|)>+f<around*|(|a+dx+<frac|dx|2>|)>+f<around*|(|a+2*dx+<frac|dx|2>|)>+\<ldots\>|]>*dx>>
   for small values of <math|dx>. We can express this directly as a procedure:
 
   <\session|scheme|default>
@@ -5098,7 +5102,7 @@
 
     <item>They may be included in data structures.<\footnote>
       We'll see examples of this after we introduce data structures in
-      <hlink|Chapter<nbsp>2|Chapter-2.xhtml#Chapter-2>.
+      Chapter 2.
     </footnote>
   </itemize>
 
@@ -5129,7 +5133,9 @@
     argument, then <code*|(double inc)> should be a procedure that adds 2.
     What value is returned by
 
-    <code|(((double (double double)) inc) 5)>
+    <\scm-code>
+      (((double (double double)) inc) 5)
+    </scm-code>
   </exercise>
 
   <\exercise>
@@ -13794,7 +13800,17 @@
 
     <glossary-2|order of growth|\<#589E\>\<#957F\>\<#7684\>\<#9636\>|<pageref|auto-90>>
 
+    <glossary-2|invariant quantity|\<#4E0D\>\<#53D8\>\<#91CF\>|<pageref|auto-93>>
+
     <glossary-2|Euclid's Algorithm|\<#6B27\>\<#51E0\>\<#91CC\>\<#5F97\>\<#7B97\>\<#6CD5\>|<pageref|auto-95>>
+
+    <glossary-2|congruent modulo|\<#540C\>\<#4F59\>|<pageref|auto-98>>
+
+    <glossary-2|modulo n|\<#6A21\>n|<pageref|auto-100>>
+
+    <glossary-2|higher-order procedures|\<#9AD8\>\<#9636\>\<#8FC7\>\<#7A0B\>|<pageref|auto-106>>
+
+    <glossary-2|summation of a series|\<#5E8F\>\<#5217\>\<#6C42\>\<#548C\>|<pageref|auto-108>>
   </the-glossary>
 
   <\the-index|idx>
@@ -13851,8 +13867,6 @@
     <index+1|composition|<pageref|auto-122>>
 
     <index+1|computational process|<pageref|auto-2>>
-
-    <index+1|congruent modulo|<pageref|auto-98>>
 
     <index+1|consequent expression|<pageref|auto-50>>
 
@@ -13914,8 +13928,6 @@
 
     <index+1|hierarchy of types|<pageref|auto-234>>
 
-    <index+1|higher-order procedures|<pageref|auto-106>>
-
     <index+1|Horner's rule|<pageref|auto-176>>
 
     <index+1|indeterminates|<pageref|auto-242>>
@@ -13923,8 +13935,6 @@
     <index+1|integers|<pageref|auto-13>>
 
     <index+1|interpreter|<pageref|auto-10>>
-
-    <index+1|invariant quantity|<pageref|auto-93>>
 
     <index+1|iterative improvement|<pageref|auto-125>>
 
@@ -13947,8 +13957,6 @@
     <index+1|message passing|<pageref|auto-143>, <pageref|auto-226>>
 
     <index+1|Miller-Rabin test|<pageref|auto-104>>
-
-    <index+1|modulo|<pageref|auto-100>>
 
     <index+1|Newton's method|<pageref|auto-120>>
 
@@ -14031,8 +14039,6 @@
     <index+1|substitution|<pageref|auto-42>>
 
     <index+1|subtype|<pageref|auto-235>>
-
-    <index+1|summation of a series|<pageref|auto-108>>
 
     <index+1|supertype|<pageref|auto-236>>
 
