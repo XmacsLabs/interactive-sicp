@@ -4198,10 +4198,12 @@
   Another use of <scm|lambda> is in creating local variables. We often need
   local variables in our procedures other than those that have been bound as
   formal parameters. For example, suppose we wish to compute the function
-  <math|f<around*|(|x,y|)>=x<around*|(|1+xy|)><rsup|2>+y<around*|(|1-y|)>+<around*|(|1+xy|)><around*|(|1-y|)>>,
+  <math|f<around*|(|x,y|)>=x<around*|(|1+x*y|)><rsup|2>+y*<around*|(|1-y|)>+<around*|(|1+x*y|)>*<around*|(|1-y|)>>,
   which we could also express as
 
-  \ <math|<tabular|<tformat|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|c>|<cwith|1|-1|3|3|cell-halign|l>|<table|<row|<cell|a>|<cell|=>|<cell|1+xy,>>|<row|<cell|<phantom|<around*|(|x,y|)>>b>|<cell|=>|<cell|1-y,>>|<row|<cell|f<around*|(|x,y|)>>|<cell|=>|<cell|xa<rsup|2>+yb+ab.>>>>>>\ 
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|a>|<cell|=>|<cell|1+x*y,>>|<row|<cell|b>|<cell|=>|<cell|1-y,>>|<row|<cell|f<around*|(|x,y|)>>|<cell|=>|<cell|x*a<rsup|2>+y*b+a*b.>>>>
+  </eqnarray*>
 
   In writing a procedure to compute <math|f>, we would like to include as
   local variables not only <math|x> and <math|y> but also the names of
@@ -5221,7 +5223,7 @@
     arguments: a method for telling whether a guess is good enough and a
     method for improving a guess. <scm|Iterative-improve> should return as
     its value a procedure that takes a guess as argument and keeps improving
-    the guess until it is good enough. Rewrite the <code*|sqrt> procedure of
+    the guess until it is good enough. Rewrite the <scm|sqrt> procedure of
     <smart-ref|sec:1.1.7> and the <code*|fixed-point> procedure of
     <smart-ref|sec:1.3.3> in terms of <scm|iterative-improve>.
   </exercise>
