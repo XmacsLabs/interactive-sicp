@@ -90,7 +90,8 @@
     <no-break><pageref|auto-107>>
 
     <with|par-left|1tab|1.3.2<space|2spc>Constructing Procedures Using
-    <with|font-family|tt|Lambda> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|mode|prog|prog-language|scheme|font-family|rm|lambda>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-112>>
 
     <with|par-left|1tab|1.3.3<space|2spc>Procedures as General Methods
@@ -628,7 +629,7 @@
     </input>
   </session>
 
-  Here are further examples of the use of <code*|define>:
+  Here are further examples of the use of <scm|define>:
 
   <\session|scheme|default>
     <\input|Scheme] >
@@ -776,10 +777,10 @@
   our understanding of program execution.
 
   Notice that the evaluation rule given above does not handle definitions.
-  For instance, evaluating <scm|(define x 3)> does not apply <code*|define>
-  to two arguments, one of which is the value of the symbol <code*|x> and the
-  other of which is 3, since the purpose of the <code*|define> is precisely
-  to associate <code*|x> with a value. (That is, <scm|(define x 3)> is not a
+  For instance, evaluating <scm|(define x 3)> does not apply <scm|define> to
+  two arguments, one of which is the value of the symbol <code*|x> and the
+  other of which is 3, since the purpose of the <scm|define> is precisely to
+  associate <code*|x> with a value. (That is, <scm|(define x 3)> is not a
   combination.)
 
   Such exceptions to the general evaluation rule are called <em|special
@@ -1467,9 +1468,9 @@
   </exercise>
 
   <\exercise>
-    \ Observe that our model of evaluation allows for combinations whose
-    operators are compound expressions. Use this observation to describe the
-    behavior of the following procedure:
+    \ <label|ex1.4>Observe that our model of evaluation allows for
+    combinations whose operators are compound expressions. Use this
+    observation to describe the behavior of the following procedure:
 
     <\scm-code>
       (define (a-plus-abs-b a b)
@@ -3679,7 +3680,7 @@
     (* y y y)
   </scm-code>
 
-  and never mentioning <code*|cube> explicitly. This would place us at a
+  and never mentioning <scm|cube> explicitly. This would place us at a
   serious disadvantage, forcing us to work always at the level of the
   particular operations that happen to be primitives in the language
   (multiplication, in this case) rather than in terms of higher-level
@@ -3698,11 +3699,11 @@
   will need to construct procedures that can accept procedures as arguments
   or return procedures as values. Procedures that manipulate procedures are
   called <em|higher-order procedures><glossary-explain|higher-order
-  procedures|\<#9AD8\>\<#9636\>\<#8FC7\>\<#7A0B\>>. This section shows how
+  procedures|\<#9AD8\>\<#9636\>\<#51FD\>\<#6570\>>. This section shows how
   higher-order procedures can serve as powerful abstraction mechanisms,
   vastly increasing the expressive power of our language.
 
-  <subsection|Procedures as Arguments><label|1.3.1>
+  <subsection|Procedures as Arguments><label|sec:1.3.1>
 
   Consider the following three procedures. The first computes the sum of the
   integers from <code*|a> through <code*|b>:
@@ -3988,24 +3989,24 @@
   </exercise>
 
   <\exercise>
-    \;
+    <label|ex1.31>
 
     <\enumerate-alpha>
       <item>The <code*|sum> procedure is only the simplest of a vast number
       of similar abstractions that can be captured as higher-order
       procedures.<\footnote>
-        The intent of <hlink|Exercise 1.31|#Exercise-1_002e31> through
-        <hlink|Exercise 1.33|#Exercise-1_002e33> is to demonstrate the
-        expressive power that is attained by using an appropriate abstraction
-        to consolidate many seemingly disparate operations. However, though
-        accumulation and filtering are elegant ideas, our hands are somewhat
-        tied in using them at this point since we do not yet have data
-        structures to provide suitable means of combination for these
-        abstractions. We will return to these ideas in <smart-ref|sec:2.2.3>
-        when we show how to use <em|sequences><index|sequences> as interfaces
-        for combining filters and accumulators to build even more powerful
-        abstractions. We will see there how these methods really come into
-        their own as a powerful and elegant approach to designing programs.
+        The intent of Exercise <reference|ex1.31> through Exercise
+        <reference|ex1.33> is to demonstrate the expressive power that is
+        attained by using an appropriate abstraction to consolidate many
+        seemingly disparate operations. However, though accumulation and
+        filtering are elegant ideas, our hands are somewhat tied in using
+        them at this point since we do not yet have data structures to
+        provide suitable means of combination for these abstractions. We will
+        return to these ideas in <smart-ref|sec:2.2.3> when we show how to
+        use <em|sequences><index|sequences> as interfaces for combining
+        filters and accumulators to build even more powerful abstractions. We
+        will see there how these methods really come into their own as a
+        powerful and elegant approach to designing programs.
       </footnote> Write an analogous procedure called <code*|product> that
       returns the product of the values of a function at points over a given
       range. Show how to define <code*|factorial> in terms of
@@ -4026,23 +4027,17 @@
   </exercise>
 
   <\exercise>
-    \;
+    <label|ex1.32>
 
     <\enumerate-alpha>
-      <item>Show that <code*|sum> and <code*|product> (<hlink|Exercise
-      1.31|#Exercise-1_002e31>) are both special cases of a still more
-      general notion called <code*|accumulate> that combines a collection of
-      terms, using some general accumulation function:
+      <item>Show that <code*|sum> and <code*|product> (Exercise
+      <reference|ex1.31>) are both special cases of a still more general
+      notion called <code*|accumulate> that combines a collection of terms,
+      using some general accumulation function:
 
-      <\code>
-        (
-
-        accumulate\ 
-
-        \ combiner null-value term a next b
-
-        )
-      </code>
+      <\scm-code>
+        (accumulate combiner null-value term a next b)
+      </scm-code>
 
       <code*|Accumulate> takes as arguments the same term and range
       specifications as <code*|sum> and <code*|product>, together with a
@@ -4060,15 +4055,16 @@
   </exercise>
 
   <\exercise>
-    You can obtain an even more general version of <code*|accumulate>
-    (<hlink|Exercise 1.32|#Exercise-1_002e32>) by introducing the notion of a
-    <em|filter><index|filter> on the terms to be combined. That is, combine
-    only those terms derived from values in the range that satisfy a
-    specified condition. The resulting <code*|filtered-accumulate>
-    abstraction takes the same arguments as accumulate, together with an
-    additional predicate of one argument that specifies the filter. Write
-    <code*|filtered-accumulate> as a procedure. Show how to express the
-    following using <code*|filtered-accumulate>:
+    <label|ex1.33>You can obtain an even more general version of
+    <code*|accumulate> (Exercise <reference|ex1.32>) by introducing the
+    notion of a <em|filter><glossary-explain|filter|\<#8FC7\>\<#6EE4\>\<#5668\>>
+    on the terms to be combined. That is, combine only those terms derived
+    from values in the range that satisfy a specified condition. The
+    resulting <code*|filtered-accumulate> abstraction takes the same
+    arguments as accumulate, together with an additional predicate of one
+    argument that specifies the filter. Write <code*|filtered-accumulate> as
+    a procedure. Show how to express the following using
+    <code*|filtered-accumulate>:
 
     <\enumerate-alpha>
       <item>the sum of the squares of the prime numbers in the interval
@@ -4081,17 +4077,17 @@
     </enumerate-alpha>
   </exercise>
 
-  <subsection|Constructing Procedures Using <code*|Lambda>><label|sec:1.3.2>
+  <subsection|Constructing Procedures Using <scm|lambda>><label|sec:1.3.2>
 
-  In using <code*|sum> as in <hlink|1.3.1|#1.3.1>, it seems terribly awkward
+  In using <code*|sum> as in <smart-ref|sec:1.3.1>, it seems terribly awkward
   to have to define trivial procedures such as <code*|pi-term> and
   <code*|pi-next> just so we can use them as arguments to our higher-order
   procedure. Rather than define <code*|pi-next> and <code*|pi-term>, it would
   be more convenient to have a way to directly specify \Pthe procedure that
   returns its input incremented by 4\Q and \Pthe procedure that returns the
   reciprocal of its input times its input plus 2.\Q We can do this by
-  introducing the special form <code*|lambda>, which creates procedures.
-  Using <code*|lambda> we can describe what we want as
+  introducing the special form <scm|lambda>, which creates procedures. Using
+  <scm|lambda> we can describe what we want as
 
   <\scm-code>
     (lambda (x) (+ x 4))
@@ -4118,7 +4114,7 @@
     \ \ \ \ \ \ \ b))
   </scm-code>
 
-  Again using <code*|lambda>, we can write the <code*|integral> procedure
+  Again using <scm|lambda>, we can write the <code*|integral> procedure
   without having to define the auxiliary procedure <code*|add-dx>:
 
   <\scm-code>
@@ -4135,8 +4131,8 @@
     \ \ \ \ \ dx))
   </scm-code>
 
-  In general, <code*|lambda> is used to create procedures in the same way as
-  <code*|define>, except that no name is specified for the procedure:
+  In general, <scm|lambda> is used to create procedures in the same way as
+  <scm|define>, except that no name is specified for the procedure:
 
   <\scm-code>
     (lambda (\<langle\><var|formal-parameters>\<rangle\>)
@@ -4144,8 +4140,8 @@
   </scm-code>
 
   The resulting procedure is just as much a procedure as one that is created
-  using <code*|define>. The only difference is that it has not been
-  associated with any name in the environment. In fact,
+  using <scm|define>. The only difference is that it has not been associated
+  with any name in the environment. In fact,
 
   <\scm-code>
     (define (plus4 x) (+ x 4))
@@ -4157,9 +4153,9 @@
     (define plus4 (lambda (x) (+ x 4)))
   </scm-code>
 
-  We can read a <code*|lambda> expression as follows:
+  We can read a <scm|lambda> expression as follows:
 
-  <\code>
+  <\scm-code>
     (lambda \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (x) \ \ \ \ (+ \ \ x
     \ \ \ \ 4))
 
@@ -4167,9 +4163,9 @@
     \ \ \ \ \ \ \| \ \ \| \ \ \ \ \|
 
     the procedure of an argument x that adds x and 4
-  </code>
+  </scm-code>
 
-  Like any expression that has a procedure as its value, a <code*|lambda>
+  Like any expression that has a procedure as its value, a <scm|lambda>
   expression can be used as the operator in a combination such as
 
   <\session|scheme|default>
@@ -4187,20 +4183,19 @@
   or, more generally, in any context where we would normally use a procedure
   name.<\footnote>
     It would be clearer and less intimidating to people learning Lisp if a
-    name more obvious than <code*|lambda>, such as <code*|make-procedure>,
-    were used. But the convention is firmly entrenched. The notation is
-    adopted from the \<lambda\>-calculus, a mathematical formalism introduced
-    by the mathematical logician Alonzo <hlink|Church
-    (1941)|References.xhtml#Church-_00281941_0029>. Church developed the
-    \<lambda\>-calculus to provide a rigorous foundation for studying the
-    notions of function and function application. The \<lambda\>-calculus has
-    become a basic tool for mathematical investigations of the semantics of
-    programming languages.
+    name more obvious than <scm|lambda>, such as <code*|make-procedure>, were
+    used. But the convention is firmly entrenched. The notation is adopted
+    from the \<lambda\>-calculus, a mathematical formalism introduced by the
+    mathematical logician Alonzo Church (<cite|church1941calculi>). Church
+    developed the \<lambda\>-calculus to provide a rigorous foundation for
+    studying the notions of function and function application. The
+    \<lambda\>-calculus has become a basic tool for mathematical
+    investigations of the semantics of programming languages.
   </footnote>
 
   <paragraph*|Using <code*|let> to create local variables>
 
-  Another use of <code*|lambda> is in creating local variables. We often need
+  Another use of <scm|lambda> is in creating local variables. We often need
   local variables in our procedures other than those that have been bound as
   formal parameters. For example, suppose we wish to compute the function
   <math|f<around*|(|x,y|)>=x<around*|(|1+xy|)><rsup|2>+y<around*|(|1-y|)>+<around*|(|1+xy|)><around*|(|1-y|)>>,
@@ -4229,7 +4224,7 @@
     \ \ \ \ \ \ \ \ \ \ \ \ (- 1 y)))
   </scm-code>
 
-  Of course, we could use a <code*|lambda> expression to specify an anonymous
+  Of course, we could use a <scm|lambda> expression to specify an anonymous
   procedure for binding our local variables. The body of <code*|f> then
   becomes a single call to that procedure:
 
@@ -4319,10 +4314,10 @@
 
   No new mechanism is required in the interpreter in order to provide local
   variables. A <code*|let> expression is simply syntactic sugar for the
-  underlying <code*|lambda> application.
+  underlying <scm|lambda> application.
 
   We can see from this equivalence that the scope of a variable specified by
-  a <code*|let> expression is the body of the <code*|let>. This implies that:
+  a <scm|let> expression is the body of the <scm|let>. This implies that:
 
   <\itemize>
     <item><code*|Let> allows one to bind variables as locally as possible to
@@ -4337,15 +4332,14 @@
       \ \ \ x)
     </scm-code>
 
-    is 38. Here, the <code*|x> in the body of the <code*|let> is 3, so the
-    value of the <code*|let> expression is 33. On the other hand, the
-    <code*|x> that is the second argument to the outermost <code*|+> is still
-    5.
+    is 38. Here, the <code*|x> in the body of the <scm|let> is 3, so the
+    value of the <scm|let> expression is 33. On the other hand, the <code*|x>
+    that is the second argument to the outermost <code*|+> is still 5.
 
-    <item>The variables' values are computed outside the <code*|let>. This
+    <item>The variables' values are computed outside the <scm|let>. This
     matters when the expressions that provide the values for the local
     variables depend upon variables having the same names as the local
-    variables themselves. For example, if the value of <code*|x> is 2, the
+    variables themselves. For example, if the value of <scm|x> is 2, the
     expression
 
     <\scm-code>
@@ -4356,14 +4350,14 @@
       \ \ (* x y))
     </scm-code>
 
-    will have the value 12 because, inside the body of the <code*|let>,
+    will have the value 12 because, inside the body of the <scm|let>,
     <code*|x> will be 3 and <code*|y> will be 4 (which is the outer <code*|x>
     plus 2).
   </itemize>
 
   Sometimes we can use internal definitions to get the same effect as with
-  <code*|let>. For example, we could have defined the procedure <code*|f>
-  above as
+  <scm|let>. For example, we could have defined the procedure <code*|f> above
+  as
 
   <\scm-code>
     (define (f x y)
@@ -4379,8 +4373,8 @@
     \ \ \ \ \ (* a b)))
   </scm-code>
 
-  We prefer, however, to use <code*|let> in situations like this and to use
-  internal <code*|define> only for internal procedures.<\footnote>
+  We prefer, however, to use <scm|let> in situations like this and to use
+  internal <scm|define> only for internal procedures.<\footnote>
     Understanding internal definitions well enough to be sure a program means
     what we intend it to mean requires a more elaborate model of the
     evaluation process than we have presented in this chapter. The subtleties
@@ -4412,9 +4406,9 @@
   </exercise>
 
   What happens if we (perversely) ask the interpreter to evaluate the
-  combination <code*|(f f)>? Explain.
+  combination <scm|(f f)>? Explain.
 
-  <subsection|Procedures as General Methods><label|1.3.3>
+  <subsection|Procedures as General Methods><label|sec:1.3.3>
 
   We introduced compound procedures in <smart-ref|sec:1.1.4> as a mechanism
   for abstracting patterns of numerical operations so as to make them
@@ -4589,11 +4583,11 @@
 
   <paragraph*|Finding fixed points of functions>
 
-  A number <math|x> is called a <em|fixed point><index|fixed point> of a
-  function <math|f> if <math|x> satisfies the equation
-  <math|f<around*|(|x|)>=x>. For some functions <math|f> we can locate a
-  fixed point by beginning with an initial guess and applying <math|f>
-  repeatedly, <math|f<around*|(|x|)>,f<around*|(|f<around*|(|x|)>|)>,f<around*|(|f<around*|(|f<around*|(|x|)>|)>|)>,\<ldots\>>,
+  A number <math|x> is called a <em|fixed point><glossary-explain|fixed
+  point|\<#4E0D\>\<#52A8\>\<#70B9\>> of a function <math|f> if <math|x>
+  satisfies the equation <math|f<around*|(|x|)>=x>. For some functions
+  <math|f> we can locate a fixed point by beginning with an initial guess and
+  applying <math|f> repeatedly, <math|f<around*|(|x|)>,f<around*|(|f<around*|(|x|)>|)>,f<around*|(|f<around*|(|f<around*|(|x|)>|)>|)>,\<ldots\>>,
   until the value does not change very much. Using this idea, we can devise a
   procedure <code*|fixed-point> that takes as inputs a function and an
   initial guess and produces an approximation to a fixed point of the
@@ -4674,9 +4668,9 @@
   number <math|x> requires finding a <math|y> such that <math|y<rsup|2>=x>.
   Putting this equation into the equivalent form
   <math|y=x<around*|/|y|\<nobracket\>>>, we recognize that we are looking for
-  a fixed point of the function<hlink|<label|DOCF58><rsup|58>|#FOOT58><\footnote>
+  a fixed point of the function<\footnote>
     <math|\<mapsto\>> (pronounced \Pmaps to\Q) is the mathematician's way of
-    writing <code*|lambda>. <math|y\<mapsto\>x<around*|/|y|\<nobracket\>>>
+    writing <scm|lambda>. <math|y\<mapsto\>x<around*|/|y|\<nobracket\>>>
     means <code*|(lambda (y) (/ x y))>, that is, the function whose value at
     <math|y> is <math|x<around*|/|y|\<nobracket\>>>.
   </footnote> <math|y\<mapsto\>x<around*|/|y|\<nobracket\>>>, and we can
@@ -4749,11 +4743,12 @@
   </exercise>
 
   <\exercise>
-    \;
+    <label|ex1.37>
 
     <\enumerate>
-      <item>An infinite <em|continued fraction><index|continued fraction> is
-      an expression of the form <math|f=<frac|N<rsub|1>|D<rsub|1>+<frac|N<rsub|2>|D<rsub|2>+<frac|N<rsub|3>|D<rsub|3>+\<ldots\>>>>>.
+      <item>An infinite <em|continued fraction><glossary-explain|continued
+      fraction|\<#8FDE\>\<#5206\>\<#5F0F\>> is an expression of the form
+      <math|f=<frac|N<rsub|1>|D<rsub|1>+<frac|N<rsub|2>|D<rsub|2>+<frac|N<rsub|3>|D<rsub|3>+\<ldots\>>>>>.
       As an example, one can show that the infinite continued fraction
       expansion with the <math|N<rsub|i>> and the <math|D<rsub|i>> all equal
       to 1 produces <math|1<around*|/|\<varphi\>|\<nobracket\>>>, where
@@ -4796,8 +4791,8 @@
     logarithms. In this fraction, the <math|N<rsub|i>> are all 1, and the
     <math|D<rsub|i>> are successively 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8,
     \<ldots\>. Write a program that uses your <code*|cont-frac> procedure
-    from <hlink|Exercise 1.37|#Exercise-1_002e37> to approximate <math|e>,
-    based on Euler's expansion.
+    from Exercise <reference|ex1.37> to approximate <math|e>, based on
+    Euler's expansion.
   </exercise>
 
   <\exercise>
@@ -4808,10 +4803,10 @@
       tan\<nospace\>x=<frac|x|1-<frac|x<rsup|2>|3-<frac|x<rsup|2>|5-\<ldots\>>>>,
     </equation*>
 
-    where <math|x> is in radians. Define a procedure <code*|(tan-cf x k)>
-    that computes an approximation to the tangent function based on Lambert's
+    where <math|x> is in radians. Define a procedure <scm|(tan-cf x k)> that
+    computes an approximation to the tangent function based on Lambert's
     formula. <code*|k> specifies the number of terms to compute, as in
-    <hlink|Exercise 1.37|#Exercise-1_002e37>.
+    <reference|ex1.37>.
   </exercise>
 
   <subsection|Procedures as Returned Values><label|sec:1.3.4>
@@ -4848,18 +4843,17 @@
 
   <code*|Average-damp> is a procedure that takes as its argument a procedure
   <code*|f> and returns as its value a procedure (produced by the
-  <code*|lambda>) that, when applied to a number <code*|x>, produces the
+  <scm|lambda>) that, when applied to a number <code*|x>, produces the
   average of <code*|x> and <code*|(f x)>. For example, applying
   <code*|average-damp> to the <code*|square> procedure produces a procedure
   whose value at some number <math|x> is the average of <math|x> and
   <math|x<rsup|2>>. Applying this resulting procedure to 10 returns the
   average of 10 and 100, or 55:<\footnote>
     Observe that this is a combination whose operator is itself a
-    combination. <hlink|Exercise 1.4|1_002e1.xhtml#Exercise-1_002e4> already
-    demonstrated the ability to form such combinations, but that was only a
-    toy example. Here we begin to see the real need for such
-    combinations\Vwhen applying a procedure that is obtained as the value
-    returned by a higher-order procedure.
+    combination. Exercise <reference|ex1.4> already demonstrated the ability
+    to form such combinations, but that was only a toy example. Here we begin
+    to see the real need for such combinations\Vwhen applying a procedure
+    that is obtained as the value returned by a higher-order procedure.
   </footnote>
 
   <\session|scheme|default>
@@ -4889,20 +4883,18 @@
   fixed-point search, average damping, and the function
   <math|y\<mapsto\>x<around*|/|y|\<nobracket\>>>. It is instructive to
   compare this formulation of the square-root method with the original
-  version given in <hlink|1.1.7|1_002e1.xhtml#g_t1_002e1_002e7>. Bear in mind
-  that these procedures express the same process, and notice how much clearer
-  the idea becomes when we express the process in terms of these
-  abstractions. In general, there are many ways to formulate a process as a
-  procedure. Experienced programmers know how to choose procedural
-  formulations that are particularly perspicuous, and where useful elements
-  of the process are exposed as separate entities that can be reused in other
-  applications. As a simple example of reuse, notice that the cube root of
-  <math|x> is a fixed point of the function
-  <math|y\<mapsto\>x<around*|/|y<rsup|2>|\<nobracket\>>>, so we can
-  immediately generalize our square-root procedure to one that extracts cube
-  roots:<\footnote>
-    See <hlink|Exercise 1.45|#Exercise-1_002e45> for a further
-    generalization.
+  version given in <smart-ref|sec:1.1.7>. Bear in mind that these procedures
+  express the same process, and notice how much clearer the idea becomes when
+  we express the process in terms of these abstractions. In general, there
+  are many ways to formulate a process as a procedure. Experienced
+  programmers know how to choose procedural formulations that are
+  particularly perspicuous, and where useful elements of the process are
+  exposed as separate entities that can be reused in other applications. As a
+  simple example of reuse, notice that the cube root of <math|x> is a fixed
+  point of the function <math|y\<mapsto\>x<around*|/|y<rsup|2>|\<nobracket\>>>,
+  so we can immediately generalize our square-root procedure to one that
+  extracts cube roots:<\footnote>
+    See Exercise <reference|ex1.45> for a further generalization.
   </footnote>
 
   <\scm-code>
@@ -4916,8 +4908,8 @@
   <paragraph*|Newton's method>
 
   When we first introduced the square-root procedure, in
-  <hlink|1.1.7|1_002e1.xhtml#g_t1_002e1_002e7>, we mentioned that this was a
-  special case of <em|Newton's method><index|Newton's method>. If
+  <smart-ref|sec:1.1.7>, we mentioned that this was a special case of
+  <em|Newton's method><index|Newton's method>. If
   <math|x\<mapsto\>g<around*|(|x|)>> is a differentiable function, then a
   solution of the equation <math|g<around*|(|x|)>=0> is a fixed point of the
   function <math|x\<mapsto\>f<around*|(|x|)>> where
@@ -5139,11 +5131,11 @@
   </exercise>
 
   <\exercise>
-    Let <math|f> and <math|g> be two one-argument functions. The
-    <em|composition><index|composition> <math|f> after <math|g> is defined to
-    be the function <math|x\<mapsto\>f<around*|(|g<around*|(|x|)>|)>>. Define
-    a procedure <code*|compose> that implements composition. For example, if
-    <code*|inc> is a procedure that adds 1 to its argument,
+    <label|ex1.42>Let <math|f> and <math|g> be two one-argument functions.
+    The <em|composition><index|composition> <math|f> after <math|g> is
+    defined to be the function <math|x\<mapsto\>f<around*|(|g<around*|(|x|)>|)>>.
+    Define a procedure <code*|compose> that implements composition. For
+    example, if <code*|inc> is a procedure that adds 1 to its argument,
 
     <\scm-code>
       ((compose square inc) 6)
@@ -5153,10 +5145,10 @@
   </exercise>
 
   <\exercise>
-    If <math|f> is a numerical function and <math|n> is a positive integer,
-    then we can form the <math|n<rsup|<with|mode|text|th>>> repeated
-    application of <math|f>, which is defined to be the function whose value
-    at <math|x> is <math|f<around*|(|f<around*|(|\<ldots\><around*|(|f<around*|(|x|)>|)>*\<ldots\>|)>|)>>.
+    <label|ex1.43>If <math|f> is a numerical function and <math|n> is a
+    positive integer, then we can form the <math|n<rsup|<with|mode|text|th>>>
+    repeated application of <math|f>, which is defined to be the function
+    whose value at <math|x> is <math|f<around*|(|f<around*|(|\<ldots\><around*|(|f<around*|(|x|)>|)>*\<ldots\>|)>|)>>.
     For example, if <math|f> is the function <math|x\<mapsto\>x+1>, then the
     <math|n<rsup|<with|mode|text|th>>> repeated application of <math|f> is
     the function <math|x\<mapsto\>x+n>. If <math|f> is the operation of
@@ -5174,8 +5166,8 @@
       <with|font-shape|italic|625>
     </scm-code>
 
-    Hint: You may find it convenient to use <code*|compose> from
-    <hlink|Exercise 1.42|#Exercise-1_002e42>.
+    Hint: You may find it convenient to use <code*|compose> from Exercise
+    <reference|ex1.42>.
   </exercise>
 
   <\exercise>
@@ -5191,18 +5183,19 @@
     obtain the <em|<with|font-shape|italic|n>-fold smoothed
     function><index|n-fold smoothed function>. Show how to generate the
     <with|font-shape|italic|n>-fold smoothed function of any given function
-    using <code*|smooth> and <code*|repeated> from <hlink|Exercise
-    1.43|#Exercise-1_002e43>.
+    using <code*|smooth> and <code*|repeated> from Exercise
+    <reference|ex1.43>.
   </exercise>
 
   <\exercise>
-    We saw in <hlink|1.3.3|#1.3.3> that attempting to compute square roots by
-    naively finding a fixed point of <math|y\<mapsto\>x<around*|/|y|\<nobracket\>>>
-    does not converge, and that this can be fixed by average damping. The
-    same method works for finding cube roots as fixed points of the
-    average-damped <math|y\<mapsto\>x<around*|/|y<rsup|2>|\<nobracket\>>>.
-    Unfortunately, the process does not work for fourth roots\Va single
-    average damp is not enough to make a fixed-point search for
+    <label|ex1.45>We saw in <smart-ref|sec:1.3.3> that attempting to compute
+    square roots by naively finding a fixed point of
+    <math|y\<mapsto\>x<around*|/|y|\<nobracket\>>> does not converge, and
+    that this can be fixed by average damping. The same method works for
+    finding cube roots as fixed points of the average-damped
+    <math|y\<mapsto\>x<around*|/|y<rsup|2>|\<nobracket\>>>. Unfortunately,
+    the process does not work for fourth roots\Va single average damp is not
+    enough to make a fixed-point search for
     <math|y\<mapsto\>x<around*|/|y<rsup|3>|\<nobracket\>>> converge. On the
     other hand, if we average damp twice (i.e., use the average damp of the
     average damp of <math|y\<mapsto\>x<around*|/|y<rsup|3>|\<nobracket\>>>)
@@ -5212,9 +5205,9 @@
     upon repeated average damping of <math|y\<mapsto\>x<around*|/|y<rsup|n-1>|\<nobracket\>>>.
     Use this to implement a simple procedure for computing
     <math|n<rsup|<with|mode|text|th>>> roots using <code*|fixed-point>,
-    <code*|average-damp>, and the <code*|repeated> procedure of
-    <hlink|Exercise 1.43|#Exercise-1_002e43>. Assume that any arithmetic
-    operations you need are available as primitives.
+    <code*|average-damp>, and the <code*|repeated> procedure of Exercise
+    <reference|ex1.43>. Assume that any arithmetic operations you need are
+    available as primitives.
   </exercise>
 
   <\exercise>
@@ -5226,11 +5219,11 @@
     and continue the process using the improved guess as the new guess. Write
     a procedure <code*|iterative-improve> that takes two procedures as
     arguments: a method for telling whether a guess is good enough and a
-    method for improving a guess. <code*|Iterative-improve> should return as
+    method for improving a guess. <scm|Iterative-improve> should return as
     its value a procedure that takes a guess as argument and keeps improving
     the guess until it is good enough. Rewrite the <code*|sqrt> procedure of
-    <hlink|1.1.7|1_002e1.xhtml#g_t1_002e1_002e7> and the <code*|fixed-point>
-    procedure of <hlink|1.3.3|#1.3.3> in terms of <code*|iterative-improve>.
+    <smart-ref|sec:1.1.7> and the <code*|fixed-point> procedure of
+    <smart-ref|sec:1.3.3> in terms of <scm|iterative-improve>.
   </exercise>
 
   <\hide-preamble>
@@ -6586,13 +6579,12 @@
   <\exercise>
     The procedures <code*|+>, <code*|*>, and <code*|list> take arbitrary
     numbers of arguments. One way to define such procedures is to use
-    <code*|define> with <em|dotted-tail notation><index|dotted-tail
-    notation>. In a procedure definition, a parameter list that has a dot
-    before the last parameter name indicates that, when the procedure is
-    called, the initial parameters (if any) will have as values the initial
-    arguments, as usual, but the final parameter's value will be a
-    <em|list><index|list> of any remaining arguments. For instance, given the
-    definition
+    <scm|define> with <em|dotted-tail notation><index|dotted-tail notation>.
+    In a procedure definition, a parameter list that has a dot before the
+    last parameter name indicates that, when the procedure is called, the
+    initial parameters (if any) will have as values the initial arguments, as
+    usual, but the final parameter's value will be a <em|list><index|list> of
+    any remaining arguments. For instance, given the definition
 
     <code|(define (f x y . z) \<langle\><var|body>\<rangle\>)>
 
@@ -6613,7 +6605,7 @@
 
     then in the body of <code*|g>, <code*|w> will be the list <code*|(1 2 3 4
     5 6)>.<hlink||#FOOT77><\footnote>
-      To define <code*|f> and <code*|g> using <code*|lambda> we would write
+      To define <code*|f> and <code*|g> using <scm|lambda> we would write
 
       <\scm-code>
         (define f (lambda (x y . z) \<langle\><var|body>\<rangle\>))
@@ -13725,8 +13717,12 @@
   </exercise>
 
   <\bibliography|bib|tm-plain|global>
-    <\bib-list|1>
-      <bibitem*|1><label|bib-mccarthy1965lisp>John McCarthy,
+    <\bib-list|2>
+      <bibitem*|1><label|bib-church1941calculi>Alonzo Church.
+      <newblock><with|font-shape|italic|The Calculi of Lambda-Conversion>.
+      <newblock>Princeton University Press, 1941.<newblock>
+
+      <bibitem*|2><label|bib-mccarthy1965lisp>John McCarthy,
       P.W.<nbsp>Abrahams, D.J.<nbsp>Edwards, T.P.<nbsp>Hart<localize|, and
       >M.I.<nbsp>Levin. <newblock><with|font-shape|italic|Lisp 1.5
       Programmer's Manual>. <newblock>MIT Press, 2<localize| edition>,
@@ -13808,9 +13804,15 @@
 
     <glossary-2|modulo n|\<#6A21\>n|<pageref|auto-100>>
 
-    <glossary-2|higher-order procedures|\<#9AD8\>\<#9636\>\<#8FC7\>\<#7A0B\>|<pageref|auto-106>>
+    <glossary-2|higher-order procedures|\<#9AD8\>\<#9636\>\<#51FD\>\<#6570\>|<pageref|auto-106>>
 
     <glossary-2|summation of a series|\<#5E8F\>\<#5217\>\<#6C42\>\<#548C\>|<pageref|auto-108>>
+
+    <glossary-2|filter|\<#8FC7\>\<#6EE4\>\<#5668\>|<pageref|auto-111>>
+
+    <glossary-2|fixed point|\<#4E0D\>\<#52A8\>\<#70B9\>|<pageref|auto-115>>
+
+    <glossary-2|continued fraction|\<#8FDE\>\<#5206\>\<#5F0F\>|<pageref|auto-117>>
   </the-glossary>
 
   <\the-index|idx>
@@ -13872,8 +13874,6 @@
 
     <index+1|constructors|<pageref|auto-130>>
 
-    <index+1|continued fraction|<pageref|auto-117>>
-
     <index+1|conventional interfaces|<pageref|auto-170>>
 
     <index+1|data|<pageref|auto-3>, <pageref|auto-140>>
@@ -13900,11 +13900,9 @@
 
     <index+1|evaluating|<pageref|auto-17>>
 
-    <index+1|filter|<pageref|auto-111>, <pageref|auto-172>>
+    <index+1|filter|<pageref|auto-172>>
 
     <index+1|first-class|<pageref|auto-121>>
-
-    <index+1|fixed point|<pageref|auto-115>>
 
     <index+1|fixed-length|<pageref|auto-202>>
 
@@ -14081,12 +14079,12 @@
 <\attachments>
   <\collection>
     <\associate|bib-bibliography>
-      <\db-entry|+XvyFBcGSDLJZsw|book|mccarthy1965lisp>
-        <db-field|contributor|jingkaimori>
+      <\db-entry|+QsfaxEJkZvl8th|book|mccarthy1965lisp>
+        <db-field|contributor|da>
 
         <db-field|modus|imported>
 
-        <db-field|date|1671194785>
+        <db-field|date|1712818055>
       <|db-entry>
         <db-field|author|John <name|McCarthy><name-sep>P.W.
         <name|Abrahams><name-sep>D.J. <name|Edwards><name-sep>T.P.
@@ -14099,6 +14097,24 @@
         <db-field|year|1965>
 
         <db-field|edition|2>
+      </db-entry>
+
+      <\db-entry|+QsfaxEJkZvl8u6|book|church1941calculi>
+        <db-field|newer|+QsfaxEJkZvl8ti>
+
+        <db-field|contributor|da>
+
+        <db-field|modus|imported>
+
+        <db-field|date|1712819590>
+      <|db-entry>
+        <db-field|author|Alonzo <name|Church>>
+
+        <db-field|title|The Calculi of Lambda-Conversion>
+
+        <db-field|publisher|Princeton University Press>
+
+        <db-field|year|1941>
       </db-entry>
     </associate>
   </collection>
