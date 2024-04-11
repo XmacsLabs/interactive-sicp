@@ -1825,7 +1825,7 @@
     square-root and cube-root procedures.)
   </exercise>
 
-  <subsection|Procedures as Black-Box Abstractions><label|1.1.8>
+  <subsection|Procedures as Black-Box Abstractions><label|sec:1.1.8>
 
   <code*|Sqrt> is our first example of a process defined by a set of mutually
   defined procedures. Notice that the definition of <code*|sqrt-iter> is
@@ -3875,7 +3875,7 @@
   </session>
 
   We can also define <code*|pi-sum> in the same way:<\footnote>
-    Notice that we have used block structure (<hlink|1.1.8|#1.1.8>) to embed
+    Notice that we have used block structure (<smart-ref|sec:1.1.8>) to embed
     the definitions of <code*|pi-next> and <code*|pi-term> within
     <code*|pi-sum>, since these procedures are unlikely to be useful for any
     other purpose. We will see how to get rid of them altogether in
@@ -3919,7 +3919,7 @@
   Once we have <code*|sum>, we can use it as a building block in formulating
   further concepts. For instance, the definite integral of a function
   <math|f> between the limits <math|a> and <math|b> can be approximated
-  numerically using the formula <with|math-display|true|<math|<big|int><rsup|b><rsub|a>f=<around*|[|f<around*|(|a+<frac|dx|2>|)>+f<around*|(|a+dx+<frac|dx|2>|)>+f<around*|(|a+2*dx+<frac|dx|2>|)>+\<ldots\>|]>*dx>>
+  numerically using the formula <with|math-display|true|<math|<big|int><rsup|b><rsub|a>f=<around*|[|f<around*|(|a+<frac|dx|2>|)>+f<around*|(|a+dx+<frac|dx|2>|)>+f<around*|(|a+2*dx+<frac|dx|2>|)>+\<ldots\>|]>dx>>
   for small values of <math|dx>. We can express this directly as a procedure:
 
   <\session|scheme|default>
@@ -3958,7 +3958,7 @@
     function <math|f> between <math|a> and <math|b> is approximated as
     <math|<frac|h|3><around*|(|y<rsub|0>+4*y<rsub|1>+2*y<rsub|2>+4*y<rsub|3>+2*y<rsub|4>+\<cdots\>+2*y<rsub|n-2>+4*y<rsub|n-1>+y<rsub|n>|)>>,
     where <math|h=<around*|(|b-a|)><around*|/|n|\<nobracket\>>>, for some
-    even integer <math|n>, and <math|y<rsub|k>=f<around*|(|a+kh|)>>.
+    even integer <math|n>, and <math|y<rsub|k>=f<around*|(|a+k*h|)>>.
     (Increasing <math|n> increases the accuracy of the approximation.) Define
     a procedure that takes as arguments <math|f>, <math|a>, <math|b>, and
     <math|n> and returns the value of the integral, computed using Simpson's
@@ -4415,11 +4415,11 @@
   We introduced compound procedures in <smart-ref|sec:1.1.4> as a mechanism
   for abstracting patterns of numerical operations so as to make them
   independent of the particular numbers involved. With higher-order
-  procedures, such as the <code*|integral> procedure of <hlink|1.3.1|#1.3.1>,
-  we began to see a more powerful kind of abstraction: procedures used to
-  express general methods of computation, independent of the particular
-  functions involved. In this section we discuss two more elaborate
-  examples\Vgeneral methods for finding zeros and fixed points of
+  procedures, such as the <code*|integral> procedure of
+  <smart-ref|sec:1.3.1>, we began to see a more powerful kind of abstraction:
+  procedures used to express general methods of computation, independent of
+  the particular functions involved. In this section we discuss two more
+  elaborate examples\Vgeneral methods for finding zeros and fixed points of
   functions\Vand show how these methods can be expressed directly as
   procedures.
 
@@ -4663,14 +4663,13 @@
   </session>
 
   The fixed-point process is reminiscent of the process we used for finding
-  square roots in <hlink|1.1.7|1_002e1.xhtml#g_t1_002e1_002e7>. Both are
-  based on the idea of repeatedly improving a guess until the result
-  satisfies some criterion. In fact, we can readily formulate the square-root
-  computation as a fixed-point search. Computing the square root of some
-  number <math|x> requires finding a <math|y> such that <math|y<rsup|2>=x>.
-  Putting this equation into the equivalent form
-  <math|y=x<around*|/|y|\<nobracket\>>>, we recognize that we are looking for
-  a fixed point of the function<\footnote>
+  square roots in <smart-ref|sec:1.1.7>. Both are based on the idea of
+  repeatedly improving a guess until the result satisfies some criterion. In
+  fact, we can readily formulate the square-root computation as a fixed-point
+  search. Computing the square root of some number <math|x> requires finding
+  a <math|y> such that <math|y<rsup|2>=x>. Putting this equation into the
+  equivalent form <math|y=x<around*|/|y|\<nobracket\>>>, we recognize that we
+  are looking for a fixed point of the function<\footnote>
     <math|\<mapsto\>> (pronounced \Pmaps to\Q) is the mathematician's way of
     writing <scm|lambda>. <math|y\<mapsto\>x<around*|/|y|\<nobracket\>>>
     means <code*|(lambda (y) (/ x y))>, that is, the function whose value at
@@ -5115,9 +5114,11 @@
     Define a procedure <code*|cubic> that can be used together with the
     <code*|newtons-method> procedure in expressions of the form
 
-    <code|(newtons-method (cubic a b c) 1)>
+    <\scm-code>
+      (newtons-method (cubic a b c) 1)
+    </scm-code>
 
-    to approximate zeros of the cubic <math|x<rsup|3>+ax<rsup|2>+bx+c>.
+    to approximate zeros of the cubic <math|x<rsup|3>+a*x<rsup|2>+b*x+c>.
   </exercise>
 
   <\exercise>
