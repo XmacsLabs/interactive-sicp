@@ -359,7 +359,7 @@
   such as the interpreters and compilers that support computer languages.
   Above and beyond these considerations, programming in Lisp is great fun.
 
-  <section|The Elements of Programming><label|1.1>
+  <section|The Elements of Programming><label|sec:1.1>
 
   A powerful programming language is more than just a means for instructing a
   computer to perform tasks. The language also serves as a framework within
@@ -1365,11 +1365,11 @@
     to be evaluated in the order in which it is presented.
 
     <\session|scheme|default>
-      <\folded-io|Scheme] >
+      <\unfolded-io|Scheme] >
         10
-      <|folded-io>
+      <|unfolded-io>
         10
-      </folded-io>
+      </unfolded-io>
 
       <\folded-io|Scheme] >
         (+ 5 3 4)
@@ -3652,7 +3652,8 @@
     convenient way to make <code*|expmod> signal is to have it return 0.
   </exercise>
 
-  <section|Formulating Abstractions with Higher-Order Procedures><label|1.3>
+  <section|Formulating Abstractions with Higher-Order
+  Procedures><label|sec:1.3>
 
   We have seen that procedures are, in effect, abstractions that describe
   compound operations on numbers independent of the particular numbers. For
@@ -5237,7 +5238,7 @@
 
   <section|Introduction to Data Abstraction>
 
-  In <hlink|1.1.8|#1.1.8>, we noted that a procedure used as an element in
+  In <smart-ref|sec:1.1.8>, we noted that a procedure used as an element in
   creating a more complex procedure could be regarded not only as a
   collection of particular operations but also as a procedural abstraction.
   That is, the details of how the procedure was implemented could be
@@ -5276,22 +5277,22 @@
   and selectors are available as procedures:
 
   <\itemize>
-    <item><code*|(make-rat \<langle\><var|n>\<rangle\>
-    \<langle\><var|d>\<rangle\>)> returns the rational number whose numerator
-    is the integer \<langle\> and whose denominator is the integer
-    \<rangle\>.
+    <item><scm|(make-rat \<langle\>n\<rangle\> \<langle\>d\<rangle\>)>
+    returns the rational number whose numerator is the integer
+    \<langle\><var|n>\<rangle\> and whose denominator is the integer
+    \<langle\><var|d>\<rangle\>.
 
-    <item><code*|(numer \<langle\><var|x>\<rangle\>)> returns the numerator
-    of the rational number \<langle\>.
+    <item><scm|(numer \<langle\>x\<rangle\>)> returns the numerator of the
+    rational number \<langle\><var|x>\<rangle\>.
 
-    <item><code*|(denom \<langle\><var|x>\<rangle\>)> returns the denominator
-    of the rational number \<langle\>.
+    <item><code*|(denom \<langle\>x\<rangle\>)> returns the denominator of
+    the rational number \<langle\><var|x>\<rangle\>.
   </itemize>
 
   We are using here a powerful strategy of synthesis: <em|wishful
   thinking><index|wishful thinking>. We haven't yet said how a rational
   number is represented, or how the procedures <code*|numer>, <code*|denom>,
-  and <code*|make-rat> should be implemented. Even so, if we did have these
+  and <scm|make-rat> should be implemented. Even so, if we did have these
   three procedures, we could then add, subtract, multiply, divide, and test
   equality by using the following relations:
 
@@ -5368,18 +5369,18 @@
 
   To enable us to implement the concrete level of our data abstraction, our
   language provides a compound structure called a <em|pair><index|pair>,
-  which can be constructed with the primitive procedure <code*|cons>. This
+  which can be constructed with the primitive procedure <scm|cons>. This
   procedure takes two arguments and returns a compound data object that
   contains the two arguments as parts. Given a pair, we can extract the parts
-  using the primitive procedures <code*|car> and <code*|cdr>.<\footnote>
-    The name <code*|cons> stands for \Pconstruct.\Q The names <code*|car> and
-    <code*|cdr> derive from the original implementation of Lisp on the IBM
-    704. That machine had an addressing scheme that allowed one to reference
-    the \Paddress\Q and \Pdecrement\Q parts of a memory location. <code*|Car>
-    stands for \PContents of Address part of Register\Q and <code*|cdr>
+  using the primitive procedures <scm|car> and <scm|cdr>.<\footnote>
+    The name <scm|cons> stands for \Pconstruct.\Q The names <scm|car> and
+    <scm|cdr> derive from the original implementation of Lisp on the IBM 704.
+    That machine had an addressing scheme that allowed one to reference the
+    \Paddress\Q and \Pdecrement\Q parts of a memory location. <code*|Car>
+    stands for \PContents of Address part of Register\Q and <scm|cdr>
     (pronounced \Pcould-er\Q) stands for \PContents of Decrement part of
     Register.\Q
-  </footnote> Thus, we can use <code*|cons>, <code*|car>, and <code*|cdr> as
+  </footnote> Thus, we can use <scm|cons>, <scm|car>, and <scm|cdr> as
   follows:
 
   <\session|scheme|default>
@@ -5405,8 +5406,8 @@
   </session>
 
   Notice that a pair is a data object that can be given a name and
-  manipulated, just like a primitive data object. Moreover, <code*|cons> can
-  be used to form pairs whose elements are pairs, and so on:
+  manipulated, just like a primitive data object. Moreover, <scm|cons> can be
+  used to form pairs whose elements are pairs, and so on:
 
   <\session|scheme|default>
     <\input|Scheme] >
@@ -5432,13 +5433,12 @@
     </input>
   </session>
 
-  In <hlink|2.2|2_002e2.xhtml#g_t2_002e2> we will see how this ability to
-  combine pairs means that pairs can be used as general-purpose building
-  blocks to create all sorts of complex data structures. The single
-  compound-data primitive <em|pair><index|pair>, implemented by the
-  procedures <code*|cons>, <code*|car>, and <code*|cdr>, is the only glue we
-  need. Data objects constructed from pairs are called
-  <em|list-structured><index|list-structured> data.
+  In <smart-ref|sec:2.2> we will see how this ability to combine pairs means
+  that pairs can be used as general-purpose building blocks to create all
+  sorts of complex data structures. The single compound-data primitive
+  <em|pair><index|pair>, implemented by the procedures <scm|cons>, <scm|car>,
+  and <scm|cdr>, is the only glue we need. Data objects constructed from
+  pairs are called <em|list-structured><index|list-structured> data.
 
   <paragraph*|Representing rational numbers>
 
@@ -5457,17 +5457,17 @@
     </scm-code>
 
     The first definition associates the name <code*|make-rat> with the value
-    of the expression <code*|cons>, which is the primitive procedure that
-    constructs pairs. Thus <code*|make-rat> and <code*|cons> are names for
-    the same primitive constructor.
+    of the expression <scm|cons>, which is the primitive procedure that
+    constructs pairs. Thus <code*|make-rat> and <scm|cons> are names for the
+    same primitive constructor.
 
     Defining selectors and constructors in this way is efficient: Instead of
-    <code*|make-rat> <em|calling> <code*|cons>, <code*|make-rat> <em|is>
-    <code*|cons>, so there is only one procedure called, not two, when
+    <code*|make-rat> <em|calling> <scm|cons>, <code*|make-rat> <em|is>
+    <scm|cons>, so there is only one procedure called, not two, when
     <code*|make-rat> is called. On the other hand, doing this defeats
     debugging aids that trace procedure calls or put breakpoints on procedure
     calls: You may want to watch <code*|make-rat> being called, but you
-    certainly don't want to watch every call to <code*|cons>.
+    certainly don't want to watch every call to <scm|cons>.
 
     We have chosen not to use this style of definition in this book.
   </footnote>
@@ -5617,11 +5617,19 @@
   <code*|numer>, and <code*|denom>, which themselves are implemented in terms
   of pairs. The details of how pairs are implemented are irrelevant to the
   rest of the rational-number package so long as pairs can be manipulated by
-  the use of <code*|cons>, <code*|car>, and <code*|cdr>. In effect,
-  procedures at each level are the interfaces that define the abstraction
-  barriers and connect the different levels.
+  the use of <scm|cons>, <scm|car>, and <scm|cdr>. In effect, procedures at
+  each level are the interfaces that define the abstraction barriers and
+  connect the different levels.
 
-  <\big-figure|<include|fig_2.1.tm>>
+  <\big-figure|<tabular|<tformat|<twith|table-halign|l>|<cwith|2|2|5|5|cell-halign|c>|<cwith|3|3|5|5|cell-halign|c>|<cwith|8|8|5|5|cell-halign|c>|<cwith|7|7|5|5|cell-halign|c>|<cwith|6|6|5|5|cell-halign|c>|<cwith|5|5|5|5|cell-halign|c>|<cwith|7|7|5|5|cell-tborder|1ln>|<cwith|6|6|5|5|cell-bborder|1ln>|<cwith|7|7|5|5|cell-bborder|1ln>|<cwith|8|8|5|5|cell-tborder|1ln>|<cwith|7|7|5|5|cell-lborder|1ln>|<cwith|7|7|4|4|cell-rborder|1ln>|<cwith|7|7|5|5|cell-rborder|1ln>|<cwith|7|7|6|6|cell-lborder|1ln>|<cwith|1|1|5|5|cell-halign|c>|<cwith|2|2|5|5|cell-tborder|0ln>|<cwith|1|1|2|2|cell-row-span|1>|<cwith|1|1|2|2|cell-col-span|7>|<cwith|1|1|2|2|cell-halign|c>|<cwith|1|1|2|8|cell-tborder|1ln>|<cwith|1|1|2|8|cell-bborder|1ln>|<cwith|2|2|2|2|cell-tborder|1ln>|<cwith|1|1|1|1|cell-rborder|1ln>|<cwith|1|1|2|8|cell-rborder|1ln>|<cwith|1|1|2|8|cell-lborder|1ln>|<cwith|2|2|5|5|cell-bborder|0ln>|<cwith|4|4|5|5|cell-tborder|0ln>|<cwith|3|3|3|3|cell-row-span|1>|<cwith|3|3|3|3|cell-col-span|5>|<cwith|3|3|3|3|cell-halign|c>|<cwith|4|4|5|5|cell-bborder|0ln>|<cwith|6|6|5|5|cell-tborder|0ln>|<cwith|5|5|4|4|cell-row-span|1>|<cwith|5|5|4|4|cell-col-span|3>|<cwith|5|5|4|6|cell-tborder|1ln>|<cwith|4|4|4|4|cell-bborder|1ln>|<cwith|5|5|4|6|cell-bborder|1ln>|<cwith|6|6|4|4|cell-tborder|1ln>|<cwith|5|5|3|3|cell-rborder|1ln>|<cwith|5|5|4|6|cell-rborder|1ln>|<cwith|5|5|4|6|cell-lborder|1ln>|<cwith|5|5|4|4|cell-halign|c>|<cwith|3|3|3|7|cell-tborder|1ln>|<cwith|2|2|3|3|cell-bborder|1ln>|<cwith|3|3|3|7|cell-bborder|1ln>|<cwith|4|4|3|3|cell-tborder|1ln>|<cwith|3|3|2|2|cell-rborder|1ln>|<cwith|3|3|3|7|cell-rborder|1ln>|<cwith|3|3|3|7|cell-lborder|1ln>|<cwith|2|2|1|-1|cell-width|30px>|<cwith|2|2|1|-1|cell-hmode|exact>|<cwith|2|2|9|9|cell-width|>|<cwith|2|2|9|9|cell-hmode|auto>|<cwith|2|2|1|-1|cell-height|40px>|<cwith|2|2|1|-1|cell-vmode|exact>|<cwith|4|4|1|-1|cell-height|40px>|<cwith|4|4|1|-1|cell-vmode|exact>|<cwith|6|6|1|-1|cell-height|40px>|<cwith|6|6|1|-1|cell-vmode|exact>|<cwith|8|8|1|-1|cell-height|40px>|<cwith|8|8|1|-1|cell-vmode|exact>|<cwith|8|8|5|5|cell-valign|c>|<cwith|6|6|5|5|cell-valign|c>|<cwith|4|4|5|5|cell-halign|c>|<cwith|4|4|5|5|cell-valign|c>|<cwith|2|2|5|5|cell-valign|c>|<table|<row|<cell|>|<cell|Programs
+  that use rational numbers>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|>|<cell|Rational
+  number in problem domain>|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|add-rat
+  sub-rat <text-dots>>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|>|<cell|Rational
+  numbers as numerators and denominators>|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|make-rat
+  numer denom>|<cell|>|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|>|<cell|Rational
+  numbers as pairs>|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|>|<cell|cons
+  car cdr>|<cell|>|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|>|<cell|However
+  pairs are implemented>|<cell|>|<cell|>|<cell|>|<cell|>>>>>>
     <label|fig:2.1>Data-abstraction barriers in the rational-number package.
   </big-figure>
 
@@ -5718,15 +5726,15 @@
     work using either representation?
   </exercise>
 
-  <subsection|What Is Meant by Data?>
+  <subsection|What Is Meant by Data?><label|sec:2.1.3>
 
-  We began the rational-number implementation in
-  <hlink|2.1.1|#g_t2_002e1_002e1> by implementing the rational-number
-  operations <code*|add-rat>, <code*|sub-rat>, and so on in terms of three
-  unspecified procedures: <code*|make-rat>, <code*|numer>, and <code*|denom>.
-  At that point, we could think of the operations as being defined in terms
-  of data objects\Vnumerators, denominators, and rational numbers\Vwhose
-  behavior was specified by the latter three procedures.
+  We began the rational-number implementation in <smart-ref|sec:2.1.1> by
+  implementing the rational-number operations <code*|add-rat>,
+  <code*|sub-rat>, and so on in terms of three unspecified procedures:
+  <code*|make-rat>, <code*|numer>, and <code*|denom>. At that point, we could
+  think of the operations as being defined in terms of data
+  objects\Vnumerators, denominators, and rational numbers\Vwhose behavior was
+  specified by the latter three procedures.
 
   But exactly what is meant by <em|data><index|data>? It is not enough to say
   \Pwhatever is implemented by the given selectors and constructors.\Q
@@ -5773,19 +5781,19 @@
   objects, such as rational numbers, but lower-level objects as well.
   Consider the notion of a pair, which we used in order to define our
   rational numbers. We never actually said what a pair was, only that the
-  language supplied procedures <code*|cons>, <code*|car>, and <code*|cdr> for
+  language supplied procedures <scm|cons>, <scm|car>, and <scm|cdr> for
   operating on pairs. But the only thing we need to know about these three
-  operations is that if we glue two objects together using <code*|cons> we
-  can retrieve the objects using <code*|car> and <code*|cdr>. That is, the
-  operations satisfy the condition that, for any objects <code*|x> and
-  <code*|y>, if <code*|z> is <code*|(cons x y)> then <code*|(car z)> is
-  <code*|x> and <code*|(cdr z)> is <code*|y>. Indeed, we mentioned that these
-  three procedures are included as primitives in our language. However, any
-  triple of procedures that satisfies the above condition can be used as the
-  basis for implementing pairs. This point is illustrated strikingly by the
-  fact that we could implement <code*|cons>, <code*|car>, and <code*|cdr>
-  without using any data structures at all but only using procedures. Here
-  are the definitions:
+  operations is that if we glue two objects together using <scm|cons> we can
+  retrieve the objects using <scm|car> and <scm|cdr>. That is, the operations
+  satisfy the condition that, for any objects <code*|x> and <code*|y>, if
+  <code*|z> is <code*|(cons x y)> then <code*|(car z)> is <code*|x> and
+  <code*|(cdr z)> is <code*|y>. Indeed, we mentioned that these three
+  procedures are included as primitives in our language. However, any triple
+  of procedures that satisfies the above condition can be used as the basis
+  for implementing pairs. This point is illustrated strikingly by the fact
+  that we could implement <scm|cons>, <scm|car>, and <scm|cdr> without using
+  any data structures at all but only using procedures. Here are the
+  definitions:
 
   <\scm-code>
     (define (cons x y)
@@ -5814,19 +5822,19 @@
   valid way to represent pairs is to verify that these procedures satisfy the
   condition given above.
 
-  The subtle point to notice is that the value returned by <code*|(cons x y)>
+  The subtle point to notice is that the value returned by <scm|(cons x y)>
   is a procedure\Vnamely the internally defined procedure <code*|dispatch>,
   which takes one argument and returns either <code*|x> or <code*|y>
-  depending on whether the argument is 0 or 1. Correspondingly, <code*|(car
-  z)> is defined to apply <code*|z> to 0. Hence, if <code*|z> is the
-  procedure formed by <code*|(cons x y)>, then <code*|z> applied to 0 will
-  yield <code*|x>. Thus, we have shown that <code*|(car (cons x y))> yields
-  <code*|x>, as desired. Similarly, <code*|(cdr (cons x y))> applies the
-  procedure returned by <code*|(cons x y)> to 1, which returns <code*|y>.
+  depending on whether the argument is 0 or 1. Correspondingly, <scm|(car z)>
+  is defined to apply <code*|z> to 0. Hence, if <code*|z> is the procedure
+  formed by <scm|(cons x y)>, then <code*|z> applied to 0 will yield
+  <code*|x>. Thus, we have shown that <scm|(car (cons x y))> yields
+  <code*|x>, as desired. Similarly, <scm|(cdr (cons x y))> applies the
+  procedure returned by <scm|(cons x y)> to 1, which returns <code*|y>.
   Therefore, this procedural implementation of pairs is a valid
-  implementation, and if we access pairs using only <code*|cons>,
-  <code*|car>, and <code*|cdr> we cannot distinguish this implementation from
-  one that uses \Preal\Q data structures.
+  implementation, and if we access pairs using only <scm|cons>, <scm|car>,
+  and <scm|cdr> we cannot distinguish this implementation from one that uses
+  \Preal\Q data structures.
 
   The point of exhibiting the procedural representation of pairs is not that
   our language works this way (Scheme, and Lisp systems in general, implement
@@ -5839,8 +5847,7 @@
   representations of data will play a central role in our programming
   repertoire. This style of programming is often called <em|message
   passing><index|message passing>, and we will be using it as a basic tool in
-  <hlink|Chapter 3|Chapter-3.xhtml#Chapter-3> when we address the issues of
-  modeling and simulation.
+  Chapter 3 when we address the issues of modeling and simulation.
 
   <\exercise>
     Here is an alternative procedural representation of pairs. For this
@@ -5859,17 +5866,16 @@
       \ \ (z (lambda (p q) p)))
     </scm-code>
 
-    What is the corresponding definition of <code*|cdr>? (Hint: To verify
-    that this works, make use of the substitution model of
-    <hlink|1.1.5|#1.1.5>.)
+    What is the corresponding definition of <scm|cdr>? (Hint: To verify that
+    this works, make use of the substitution model of <hlink|1.1.5|#1.1.5>.)
   </exercise>
 
   <\exercise>
     Show that we can represent pairs of nonnegative integers using only
     numbers and arithmetic operations if we represent the pair <math|a> and
     <math|b> as the integer that is the product <math|2<rsup|a>*3<rsup|b>>.
-    Give the corresponding definitions of the procedures <code*|cons>,
-    <code*|car>, and <code*|cdr>.
+    Give the corresponding definitions of the procedures <scm|cons>,
+    <scm|car>, and <scm|cdr>.
   </exercise>
 
   <\exercise>
@@ -6127,7 +6133,7 @@
     This problem is very difficult.)
   </exercise>
 
-  <section|Hierarchical Data and the Closure Property>
+  <section|Hierarchical Data and the Closure Property><label|sec:2.2>
 
   As we have seen, pairs provide a primitive \Pglue\Q that we can use to
   construct compound data objects. <smart-ref|fig:2.2> shows a standard way
@@ -6137,27 +6143,46 @@
   <em|pointer><index|pointer> to a box. The box for a primitive object
   contains a representation of the object. For example, the box for a number
   contains a numeral. The box for a pair is actually a double box, the left
-  part containing (a pointer to) the <code*|car> of the pair and the right
-  part containing the <code*|cdr>.
+  part containing (a pointer to) the <scm|car> of the pair and the right part
+  containing the <scm|cdr>.
 
-  <\big-figure|<include|fig_2.2.tm>>
+  <\big-figure|<with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.509999gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|2|none>>|gr-edit-grid|<tuple|empty>|gr-point-size|4ln|gr-line-width|2ln|gr-arrow-end|\<gtr\>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-grid-aspect|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|2|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|2|#e0e0ff>>|<graphics||<with|line-width|2ln|<line|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>|<point|-4.0|3.0>>>|<with|line-width|2ln|<line|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>>|<point|-3.5|2.5>|<with|point-size|4ln|<point|-2.5|2.5>>|<with|point-size|4ln|<point|-3.5|2.5>>|<with|line-width|2ln|<line|<point|-1.4|3.0>|<point|-0.3999999999999998|3.0>|<point|-0.3999999999999998|2.0>|<point|-1.4|2.0>|<point|-1.4|3.0>>>|<with|line-width|2ln|<line|<point|-4|1>|<point|-3.0|1.0>|<point|-3.0|0.0>|<point|-4.0|0.0>|<point|-4.0|1.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-2.5|2.5>|<point|-1.4|2.5>>>|<text-at|<with|font-base-size|14|2>|<point|-1.0144462145786481|2.351532338933721>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|14|1>|<point|-3.5|0.5>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.5|2.5>|<point|-3.5|1.0>>>>>>
     <label|fig:2.2>Box-and-pointer representation of <scm|(cons 1 2)>.
   </big-figure>
 
-  We have already seen that <code*|cons> can be used to combine not only
+  We have already seen that <scm|cons> can be used to combine not only
   numbers but pairs as well. (You made use of this fact, or should have, in
   doing <smart-ref|exercise:2.2> and <smart-ref|exercise:2.3>.) As a
   consequence, pairs provide a universal building block from which we can
   construct all sorts of data structures. <smart-ref|fig:2.3> shows two ways
   to use pairs to combine the numbers 1, 2, 3, and 4.
 
-  <\big-figure|<include|fig_2.3.tm>>
+  <\big-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|0.840896cm|<tuple|0.35547gw|0.407513gh>>|gr-geometry|<tuple|geometry|1par|0.486669par|bottom>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-line-width|2ln|gr-grid-old|<tuple|cartesian|<point|0|0>|5>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|5>|gr-snap|<tuple|control
+  point>|gr-point-size|4ln|gr-arrow-end|\<gtr\>|magnify|0.840896415|gr-auto-crop|true|<graphics||<with|line-width|2ln|<cline|<point|-2.999999999999999|4.0>|<point|-2.0|4.0>|<point|-2.0|2.9999999999999996>|<point|-2.999999999999999|2.9999999999999996>>>|<with|line-width|2ln|<line|<point|-3.9999999999999982|4.0>|<point|-2.999999999999999|4.0>|<point|-2.999999999999999|2.9999999999999996>|<point|-3.9999999999999982|2.9999999999999996>|<point|-3.9999999999999982|4.0>>>|<with|line-width|2ln|<cline|<point|-3.4795032094192346|1.9788269413943644>|<point|-2.4795032094192346|1.9788269413943644>|<point|-2.4795032094192346|0.9788269413943622>|<point|-3.4795032094192346|0.9788269413943622>>>|<with|line-width|2ln|<line|<point|4.500830491202061|3.978836727080301>|<point|5.500830491202061|3.978836727080301>|<point|5.500830491202061|2.978836727080302>|<point|4.500830491202061|2.978836727080302>|<point|4.500830491202061|3.978836727080301>>>|<with|line-width|2ln|<line|<point|7.506516534329462|2.010308669533006>|<point|8.50651653432946|2.010308669533006>|<point|8.50651653432946|1.0103086695330072>|<point|7.506516534329462|1.0103086695330072>|<point|7.506516534329462|2.010308669533006>>>|<with|line-width|2ln|<line|<point|5.008834257573277|1.989156450588701>|<point|6.008834257573275|1.989156450588701>|<point|6.008834257573275|0.9891564505887016>|<point|5.008834257573277|0.9891564505887016>|<point|5.008834257573277|1.989156450588701>>>|<with|line-width|2ln|<line|<point|3.992830847069243|1.9891493557348854>|<point|4.992830847069246|1.9891493557348854>|<point|4.992830847069246|0.9891493557348854>|<point|3.992830847069243|0.9891493557348854>|<point|3.992830847069243|1.9891493557348854>>>|<with|line-width|2ln|<line|<point|5.495671988754653|3.9788376240243384>|<point|6.495671988754655|3.9788376240243384>|<point|6.495671988754655|2.9788376240243437>|<point|5.495671988754653|2.9788376240243437>|<point|5.495671988754653|3.9788376240243384>>>|<with|line-width|2ln|<line|<point|0.775484359438603|2.5183232729196994>|<point|1.775484359438602|2.5183232729196994>|<point|1.775484359438602|1.518323272919699>|<point|0.775484359438603|1.518323272919699>|<point|0.775484359438603|2.5183232729196994>>>|<with|line-width|2ln|<line|<point|-0.748538741368383|2.5394861105966395>|<point|0.25146125863161667|2.5394861105966395>|<point|0.25146125863161667|1.5394861105966395>|<point|-0.748538741368383|1.5394861105966395>|<point|-0.748538741368383|2.5394861105966395>>>|<with|line-width|2ln|<line|<point|-3.2885604573361045|0.4863072895885694>|<point|-2.2885604573361036|0.4863072895885694>|<point|-2.2885604573361036|-0.5136927104114304>|<point|-3.2885604573361045|-0.5136927104114304>|<point|-3.2885604573361045|0.4863072895885694>>>|<with|line-width|2ln|<line|<point|-4.727896815319965|0.4863081105966391>|<point|-3.7278968153199665|0.4863081105966391>|<point|-3.7278968153199665|-0.5136918894033606>|<point|-4.727896815319965|-0.5136918894033606>|<point|-4.727896815319965|0.4863081105966391>>>|<with|line-width|2ln|<line|<point|0.5002990796396865|4.02116293160471>|<point|1.5002990796396856|4.02116293160471>|<point|1.5002990796396856|3.02116293160471>|<point|0.5002990796396865|3.02116293160471>|<point|0.5002990796396865|4.02116293160471>>>|<with|line-width|2ln|<line|<point|-0.5157041943118931|4.021169289588569>|<point|0.4842958056881046|4.021169289588569>|<point|0.4842958056881046|3.0211692895885696>|<point|-0.5157041943118931|3.0211692895885696>|<point|-0.5157041943118931|4.021169289588569>>>|<with|line-width|2ln|<line|<point|-4.484738837175153|1.978838007672973>|<point|-3.4847388371751533|1.978838007672973>|<point|-3.4847388371751533|0.978838007672972>|<point|-4.484738837175153|0.978838007672972>|<point|-4.484738837175153|1.978838007672973>>>|<with|point-size|4ln|<point|-3.51996|3.5254>>|<with|point-size|4ln|<point|-2.50395|3.5254>>|<with|point-size|4ln|<point|-0.0274342|3.5254>>|<with|point-size|4ln|<point|1.03091|3.5254>>|<with|point-size|4ln|<point|-3.98563|1.51455>>|<with|point-size|4ln|<point|-3.01196|1.51455>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.51996|3.5254>|<point|-3.4987928297393833|2.0013890726286547>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.98563|1.51455>|<point|-3.98562971292499|0.5197116020637651>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.01196|1.51455>|<point|-3.011955946553777|0.4985447810556952>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-0.0274342|3.5254>|<point|-0.006267363407858182|2.5728932398465405>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|1.03091|3.5254>|<point|1.0520736869956344|2.5517264188384705>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-2.50395|3.5254>|<point|-0.5566047096176743|3.525400185209684>>>|<with|line-width|2ln|<line|<point|7.993359083608475|3.9999988145257315>|<point|8.99335908360847|3.9999988145257315>|<point|8.99335908360847|2.9999988145257306>|<point|7.993359083608475|2.9999988145257306>|<point|7.993359083608475|3.9999988145257315>>>|<with|line-width|2ln|<line|<point|8.522519049212395|2.01031999193015>|<point|9.52251904921239|2.01031999193015>|<point|9.52251904921239|1.0103199919301498>|<point|8.522519049212395|1.0103199919301498>|<point|8.522519049212395|2.01031999193015>>>|<with|line-width|2ln|<line|<point|8.755368083476181|0.5074766368170397>|<point|9.755368083476176|0.5074766368170397>|<point|9.755368083476176|-0.4925233631829607>|<point|8.755368083476181|-0.4925233631829607>|<point|8.755368083476181|0.5074766368170397>>>|<with|line-width|2ln|<line|<point|7.252521725492322|0.4863096758896686>|<point|8.252521725492318|0.4863096758896686>|<point|8.252521725492318|-0.5136903241103327>|<point|7.252521725492322|-0.5136903241103327>|<point|7.252521725492322|0.4863096758896686>>>|<with|line-width|2ln|<line|<point|3.9928285200418667|0.48630963173700287>|<point|4.9928285200418605|0.48630963173700287>|<point|4.9928285200418605|-0.5136903682629971>|<point|3.9928285200418667|-0.5136903682629971>|<point|3.9928285200418667|0.48630963173700287>>>|<with|point-size|4ln|<point|5.00432|3.50564>>|<with|point-size|4ln|<point|5.99916|3.48447>>|<with|point-size|4ln|<point|4.49631|1.49479>>|<with|point-size|4ln|<point|5.49115|1.49479>>|<with|point-size|4ln|<point|8.01|1.51596>>|<with|point-size|4ln|<point|9.00485|1.51596>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.00432|3.50564>|<point|5.004316047096177|2.0451283238523614>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|4.49631|1.49479>|<point|4.496312342902501|0.5211172112713321>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.49115|1.49479>|<point|7.459667284032279|1.5159577986506152>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|8.01|1.51596>|<point|8.031171451250165|0.4787835692551925>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|9.00485|1.51596>|<point|9.004845217621378|0.5211172112713321>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|5.99916|3.48447>|<point|7.946504167217886|3.484472152401111>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-5.5029|3.48837>|<point|-4.042949007885784|3.5135395567442136>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|3.00509|3.53871>|<point|4.490216514916128|3.5387111364574935>>>|<\document-at>
+    <\scm-code>
+      <\with|font-base-size|16>
+        (cons (cons 1 2)
+
+        \ \ \ \ \ \ (cons 3 4))
+      </with>
+    </scm-code>
+  </document-at|<point|-4.745587661992882|-1.1039063151167132>>|<\document-at>
+    <\scm-code>
+      <\with|font-base-size|16>
+        (cons (cons 1
+
+        \ \ \ \ \ \ \ \ \ \ \ \ (cons 2 3))
+
+        \ \ \ \ \ \ 4)
+      </with>
+    </scm-code>
+  </document-at|<point|2.98208|-1.01734>>||<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|-4.26733|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|-2.78221|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|4.49238|-0.0104816>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|7.71434|0.0398616>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|9.24981|0.01469>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|-0.265049|2.02842>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|1.27042|2.02842>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|8.49466|3.48837>>>>>>
     <label|fig:2.3>Two ways to combine 1, 2, 3, and 4 using pairs.
   </big-figure>
 
   The ability to create pairs whose elements are pairs is the essence of list
   structure's importance as a representational tool. We refer to this ability
-  as the <em|closure property><index|closure property> of <code*|cons>. In
+  as the <em|closure property><index|closure property> of <scm|cons>. In
   general, an operation for combining data objects satisfies the closure
   property if the results of combining things with that operation can
   themselves be combined using the same operation.<\footnote>
@@ -6201,7 +6226,9 @@
 
   <subsection|Representing Sequences><label|sec:2.2.1>
 
-  <\big-figure|<include|fig_2.4.tm>>
+  <\big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|0.707097cm|<tuple|0.420873gw|0.443453gh>>|gr-geometry|<tuple|geometry|0.986667par|0.6par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-transformation|<tuple|<tuple|0.9950041652780258|0.0|-0.09983341664682815|0.0>|<tuple|0.0|1.0|0.0|0.0>|<tuple|0.09983341664682815|0.0|0.9950041652780258|0.0>|<tuple|0.0|0.0|0.0|1.0>>|magnify|0.840896415|gr-snap|<tuple|control
+  point|grid point|grid curve point|curve-grid
+  intersection>|<graphics||<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|3>|<point|-4.0|2.0>|<point|-3.0|2.0>|<point|-3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-3|3>|<point|-2.0|3.0>|<point|-2.0|2.0>|<point|-3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-3.50102|2.52259>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-4|1>|<point|-4.0|0.0>|<point|-3.0|0.0>|<point|-3.0|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1|3>|<point|-1.0|2.0>|<point|0.0|2.0>|<point|0.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|0|3>|<point|0.0|2.0>|<point|1.0|2.0>|<point|1.0|3.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|-0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|0.5|2.5>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|3.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|3.0|3.0>|<point|3.9999999999999987|3.0>|<point|3.9999999999999987|2.0>|<point|3.0|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|2.5|2.5>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|1.9999999999999996|3.0>|<point|1.9999999999999996|2.0>|<point|3.0|2.0>|<point|3.0|3.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.999999999999999|3.0000000000000004>|<point|6.999999999999997|3.0000000000000004>|<point|6.999999999999997|2.0>|<point|5.999999999999999|2.0>>>|<with|magnify|0.8408964147443614|point-size|4ln|<point|5.499999999999999|2.5000000000000004>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|4.999999999999998|3.0000000000000004>|<point|4.999999999999998|2.0>|<point|5.999999999999999|2.0>|<point|5.999999999999999|3.0000000000000004>>>|<with|magnify|0.8408964147443614|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|-1.0000000000000004|1.0>|<point|-1.0000000000000004|-5.551115123125784e-17>|<point|4.579669976578771e-16|-5.551115123125784e-17>|<point|4.579669976578771e-16|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|2.0|1.0>|<point|2.0|-3.885780586188048e-16>|<point|3.0|-3.885780586188048e-16>|<point|3.0|1.0>>>|<with|magnify|0.8408964147443614|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|line-width|2ln|<cline|<point|5.0|1.0>|<point|5.0|-8.326672684688674e-17>|<point|6.000000000000001|-8.326672684688674e-17>|<point|6.000000000000001|1.0>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|1>|<point|-3.593097631961901|0.3682762270141557>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|2>|<point|-0.6449913157577223|0.3075032520986105>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|3>|<point|2.348511608144202|0.3075048443957941>>>|<with|magnify|0.8408964147443614|<text-at|<with|font-base-size|14|4>|<point|5.342030339128242|0.2775770710333033>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-3.501024677268475|2.5225909878829595>|<point|-3.501024677268475|1.0225909878829582>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-0.48894846585593915|2.561781411894845>|<point|-0.48894846585593915|1.061781411894845>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|2.495524431244153|2.5459183332822795>|<point|2.495524431244153|1.0459183332822821>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|5.5123046324007365|2.5369012998207285>|<point|5.5123046324007365|1.0369012998207283>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-2.5203512558408128|2.51236>|<point|-1.020351255840812|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|0.4725050759228232|2.48776>|<point|1.9725050759228244|2.48776>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|3.464129235987035|2.51236>|<point|4.964129235987034|2.51236>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|-5|2.5>|<point|-4.0|2.5>>>|<with|arrow-end|\<gtr\>|magnify|0.8408964147443614|line-width|2ln|<line|<point|7|3>|<point|6.0|2.0>>>>>>
     <label|fig:2.4>The sequence 1, 2, 3, 4 represented as a chain of pairs.
   </big-figure>
 
@@ -6210,13 +6237,13 @@
   are, of course, many ways to represent sequences in terms of pairs. One
   particularly straightforward representation is illustrated in
   <smart-ref|fig:2.4>, where the sequence 1, 2, 3, 4 is represented as a
-  chain of pairs. The <code*|car> of each pair is the corresponding item in
-  the chain, and the <code*|cdr> of the pair is the next pair in the chain.
-  The <code*|cdr> of the final pair signals the end of the sequence by
-  pointing to a distinguished value that is not a pair, represented in
-  box-and-pointer diagrams as a diagonal line and in programs as the value of
-  the variable <code*|nil>. The entire sequence is constructed by nested
-  <code*|cons> operations:
+  chain of pairs. The <scm|car> of each pair is the corresponding item in the
+  chain, and the <scm|cdr> of the pair is the next pair in the chain. The
+  <scm|cdr> of the final pair signals the end of the sequence by pointing to
+  a distinguished value that is not a pair, represented in box-and-pointer
+  diagrams as a diagonal line and in programs as the value of the variable
+  <code*|nil>. The entire sequence is constructed by nested <scm|cons>
+  operations:
 
   <\scm-code>
     (cons 1
@@ -6228,14 +6255,14 @@
     \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (cons 4 nil))))
   </scm-code>
 
-  Such a sequence of pairs, formed by nested <code*|cons>es, is called a
+  Such a sequence of pairs, formed by nested <scm|cons>es, is called a
   <em|list><index|list>, and Scheme provides a primitive called <code*|list>
   to help in constructing lists.<\footnote>
     In this book, we use <em|list><index|list> to mean a chain of pairs
     terminated by the end-of-list marker. In contrast, the term <em|list
     structure><index|list structure> refers to any data structure made out of
     pairs, not just to lists.
-  </footnote> The above sequence could be produced by <code*|(list 1 2 3 4)>.
+  </footnote> The above sequence could be produced by <scm|(list 1 2 3 4)>.
   In general,
 
   <\scm-code>
@@ -6251,8 +6278,8 @@
   </scm-code>
 
   Lisp systems conventionally print lists by printing the sequence of
-  elements, enclosed in parentheses. Thus, the data object in <hlink|Figure
-  2.4|#Figure-2_002e4> is printed as <code*|(1 2 3 4)>:
+  elements, enclosed in parentheses. Thus, the data object in
+  <smart-ref|fig:2.4> is printed as <code*|(1 2 3 4)>:
 
   <\session|scheme|default>
     <\input|Scheme] >
@@ -6270,12 +6297,12 @@
   signal an error when the interpreter tries to apply the procedure <code*|1>
   to arguments <code*|2>, <code*|3>, <code*|4>.
 
-  We can think of <code*|car> as selecting the first item in the list, and of
-  <code*|cdr> as selecting the sublist consisting of all but the first item.
-  Nested applications of <code*|car> and <code*|cdr> can be used to extract
-  the second, third, and subsequent items in the list.<\footnote>
-    Since nested applications of <code*|car> and <code*|cdr> are cumbersome
-    to write, Lisp dialects provide abbreviations for them\Vfor instance,
+  We can think of <scm|car> as selecting the first item in the list, and of
+  <scm|cdr> as selecting the sublist consisting of all but the first item.
+  Nested applications of <scm|car> and <scm|cdr> can be used to extract the
+  second, third, and subsequent items in the list.<\footnote>
+    Since nested applications of <scm|car> and <scm|cdr> are cumbersome to
+    write, Lisp dialects provide abbreviations for them\Vfor instance,
 
     <\scm-code>
       (cadr \<langle\><var|arg>\<rangle\>) = (car (cdr
@@ -6283,13 +6310,12 @@
     </scm-code>
 
     The names of all such procedures start with <code*|c> and end with
-    <code*|r>. Each <code*|a> between them stands for a <code*|car> operation
-    and each <code*|d> for a <code*|cdr> operation, to be applied in the same
-    order in which they appear in the name. The names <code*|car> and
-    <code*|cdr> persist because simple combinations like <code*|cadr> are
-    pronounceable.
-  </footnote> The constructor <code*|cons> makes a list like the original
-  one, but with an additional item at the beginning.
+    <code*|r>. Each <code*|a> between them stands for a <scm|car> operation
+    and each <code*|d> for a <scm|cdr> operation, to be applied in the same
+    order in which they appear in the name. The names <scm|car> and <scm|cdr>
+    persist because simple combinations like <scm|cadr> are pronounceable.
+  </footnote> The constructor <scm|cons> makes a list like the original one,
+  but with an additional item at the beginning.
 
   <\session|scheme|default>
     <\unfolded-io|Scheme] >
@@ -6341,26 +6367,26 @@
     Lisp, treat <code*|nil> as a special symbol. The authors of this book,
     who have endured too many language standardization brawls, would like to
     avoid the entire issue. Once we have introduced quotation in
-    <hlink|2.3|2_002e3.xhtml#g_t2_002e3>, we will denote the empty list as
-    <code*|'()> and dispense with the variable <code*|nil> entirely.
+    <smart-ref|sec:2.3>, we will denote the empty list as <scm|'()> and
+    dispense with the variable <scm|nil> entirely.
   </footnote>
 
   <paragraph*|List operations>
 
   The use of pairs to represent sequences of elements as lists is accompanied
   by conventional programming techniques for manipulating lists by
-  successively \P<code*|cdr>ing down\Q the lists. For example, the procedure
-  <code*|list-ref> takes as arguments a list and a number <math|n> and
-  returns the <math|n<rsup|<with|mode|text|th>>> item of the list. It is
-  customary to number the elements of the list beginning with 0. The method
-  for computing <code*|list-ref> is the following:
+  successively \P<scm|cdr>ing down\Q the lists. For example, the procedure
+  <scm|list-ref> takes as arguments a list and a number <math|n> and returns
+  the <math|n<rsup|<with|mode|text|th>>> item of the list. It is customary to
+  number the elements of the list beginning with 0. The method for computing
+  <scm|list-ref> is the following:
 
   <\itemize>
-    <item>For <math|n=0>, <code*|list-ref> should return the <code*|car> of
-    the list.
+    <item>For <math|n=0>, <scm|list-ref> should return the <scm|car> of the
+    list.
 
-    <item>Otherwise, <code*|list-ref> should return the
-    <math|<around*|(|n-1|)>>-st item of the <code*|cdr> of the list.
+    <item>Otherwise, <scm|list-ref> should return the
+    <math|<around*|(|n-1|)>>-st item of the <scm|cdr> of the list.
   </itemize>
 
   <\session|scheme|default>
@@ -6389,9 +6415,9 @@
     </input>
   </session>
 
-  Often we <code*|cdr> down the whole list. To aid in this, Scheme includes a
-  primitive predicate <code*|null?>, which tests whether its argument is the
-  empty list. The procedure <code*|length>, which returns the number of items
+  Often we <scm|cdr> down the whole list. To aid in this, Scheme includes a
+  primitive predicate <scm|null?>, which tests whether its argument is the
+  empty list. The procedure <scm|length>, which returns the number of items
   in a list, illustrates this typical pattern of use:
 
   <\session|scheme|default>
@@ -6420,21 +6446,21 @@
     </input>
   </session>
 
-  The <code*|length> procedure implements a simple recursive plan. The
+  The <scm|length> procedure implements a simple recursive plan. The
   reduction step is:
 
   <\itemize>
-    <item>The <code*|length> of any list is 1 plus the <code*|length> of the
-    <code*|cdr> of the list.
+    <item>The <scm|length> of any list is 1 plus the <scm|length> of the
+    <scm|cdr> of the list.
   </itemize>
 
   This is applied successively until we reach the base case:
 
   <\itemize>
-    <item>The <code*|length> of the empty list is 0.
+    <item>The <scm|length> of the empty list is 0.
   </itemize>
 
-  We could also compute <code*|length> in an iterative style:
+  We could also compute <scm|length> in an iterative style:
 
   <\scm-code>
     (define (length items)
@@ -6450,8 +6476,8 @@
     \ \ (length-iter items 0))
   </scm-code>
 
-  Another conventional programming technique is to \P<code*|cons> up\Q an
-  answer list while <code*|cdr>ing down a list, as in the procedure
+  Another conventional programming technique is to \P<scm|cons> up\Q an
+  answer list while <scm|cdr>ing down a list, as in the procedure
   <code*|append>, which takes two lists as arguments and combines their
   elements to make a new list:
 
@@ -6480,8 +6506,8 @@
     <item>If <code*|list1> is the empty list, then the result is just
     <code*|list2>.
 
-    <item>Otherwise, <code*|append> the <code*|cdr> of <code*|list1> and
-    <code*|list2>, and <code*|cons> the <code*|car> of <code*|list1> onto the
+    <item>Otherwise, <code*|append> the <scm|cdr> of <code*|list1> and
+    <code*|list2>, and <scm|cons> the <scm|car> of <code*|list1> onto the
     result:
   </itemize>
 
@@ -6507,8 +6533,8 @@
   </exercise>
 
   <\exercise>
-    Define a procedure <code*|reverse> that takes a list as argument and
-    returns a list of the same elements in reverse order:
+    <label|exercise:2.18>Define a procedure <code*|reverse> that takes a list
+    as argument and returns a list of the same elements in reverse order:
 
     <\scm-code>
       (reverse (list 1 4 9 16 25))
@@ -6518,15 +6544,14 @@
   </exercise>
 
   <\exercise>
-    Consider the change-counting program of
-    <hlink|1.2.2|1_002e2.xhtml#g_t1_002e2_002e2>. It would be nice to be able
-    to easily change the currency used by the program, so that we could
-    compute the number of ways to change a British pound, for example. As the
-    program is written, the knowledge of the currency is distributed partly
-    into the procedure <code*|first-denomination> and partly into the
-    procedure <code*|count-change> (which knows that there are five kinds of
-    U.S. coins). It would be nicer to be able to supply a list of coins to be
-    used for making change.
+    Consider the change-counting program of <smart-ref|sec:1.2.2>. It would
+    be nice to be able to easily change the currency used by the program, so
+    that we could compute the number of ways to change a British pound, for
+    example. As the program is written, the knowledge of the currency is
+    distributed partly into the procedure <code*|first-denomination> and
+    partly into the procedure <code*|count-change> (which knows that there
+    are five kinds of U.S. coins). It would be nicer to be able to supply a
+    list of coins to be used for making change.
 
     We want to rewrite the procedure <code*|cc> so that its second argument
     is a list of the values of the coins to use rather than an integer
@@ -6580,14 +6605,15 @@
   </exercise>
 
   <\exercise>
-    The procedures <code*|+>, <code*|*>, and <code*|list> take arbitrary
-    numbers of arguments. One way to define such procedures is to use
-    <scm|define> with <em|dotted-tail notation><index|dotted-tail notation>.
-    In a procedure definition, a parameter list that has a dot before the
-    last parameter name indicates that, when the procedure is called, the
-    initial parameters (if any) will have as values the initial arguments, as
-    usual, but the final parameter's value will be a <em|list><index|list> of
-    any remaining arguments. For instance, given the definition
+    <label|exercise:2.20>The procedures <code*|+>, <code*|*>, and
+    <code*|list> take arbitrary numbers of arguments. One way to define such
+    procedures is to use <scm|define> with <em|dotted-tail
+    notation><index|dotted-tail notation>. In a procedure definition, a
+    parameter list that has a dot before the last parameter name indicates
+    that, when the procedure is called, the initial parameters (if any) will
+    have as values the initial arguments, as usual, but the final parameter's
+    value will be a <em|list><index|list> of any remaining arguments. For
+    instance, given the definition
 
     <code|(define (f x y . z) \<langle\><var|body>\<rangle\>)>
 
@@ -6816,7 +6842,7 @@
     list in the reverse order of the one desired. Why?
 
     Louis then tries to fix his bug by interchanging the arguments to
-    <code*|cons>:
+    <scm|cons>:
 
     <\scm-code>
       (define (square-list items)
@@ -6840,13 +6866,13 @@
   </exercise>
 
   <\exercise>
-    The procedure <code*|for-each> is similar to <code*|map>. It takes as
-    arguments a procedure and a list of elements. However, rather than
-    forming a list of the results, <code*|for-each> just applies the
-    procedure to each of the elements in turn, from left to right. The values
-    returned by applying the procedure to the elements are not used at
-    all\V<code*|for-each> is used with procedures that perform an action,
-    such as printing. For example,
+    <label|exercise:2.23>The procedure <code*|for-each> is similar to
+    <code*|map>. It takes as arguments a procedure and a list of elements.
+    However, rather than forming a list of the results, <code*|for-each> just
+    applies the procedure to each of the elements in turn, from left to
+    right. The values returned by applying the procedure to the elements are
+    not used at all\V<code*|for-each> is used with procedures that perform an
+    action, such as printing. For example,
 
     <\scm-code>
       (for-each (lambda (x) (newline) (display x))
@@ -6865,7 +6891,7 @@
     of <code*|for-each>.
   </exercise>
 
-  <subsection|Hierarchical Structures><label|2.2.2>
+  <subsection|Hierarchical Structures><label|sec:2.2.2>
 
   The representation of sequences in terms of lists generalizes naturally to
   represent sequences whose elements may themselves be sequences. For
@@ -6880,8 +6906,11 @@
   by the interpreter. <smart-ref|fig:2.5> shows the representation of this
   structure in terms of pairs.
 
-  <\big-figure|<include|fig_2.5.tm>>
-    <label|fig:2.5>Structure formed by <code*|(cons (list 1 2) (list 3 4))>.
+  <\big-figure|<with|gr-mode|<tuple|group-edit|move>|gr-frame|<tuple|scale|1.00007cm|<tuple|0.425912gw|0.300015gh>>|gr-geometry|<tuple|geometry|1par|0.440007par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-grid-aspect|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|10|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|10|#e0e0ff>>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-line-width|2ln|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-point-size|4ln|magnify|0.594603556782387|<graphics||<with|line-width|2ln|<cline|<point|-2.8000000000000007|3.2>|<point|-2.0000000000000004|3.2>|<point|-2.0000000000000004|2.4>|<point|-2.8000000000000007|2.4>>>|<with|line-width|2ln|<cline|<point|-2|3.2>|<point|-1.2000000000000004|3.2>|<point|-1.2000000000000004|2.4>|<point|-2.0|2.4>>>|<with|line-width|2ln|<cline|<point|-2.8|1.4>|<point|-2.0|1.4>|<point|-2.0|0.6>|<point|-2.8|0.6>>>|<with|line-width|2ln|<cline|<point|-2|1.4>|<point|-1.2000000000000004|1.4>|<point|-1.2000000000000004|0.6>|<point|-2.0|0.6>>>|<with|line-width|2ln|<cline|<point|-0.4|1.4>|<point|0.3999999999999998|1.4>|<point|0.3999999999999998|0.6>|<point|-0.3999999999999998|0.6>>>|<with|line-width|2ln|<cline|<point|0.4|1.4>|<point|1.2000000000000004|1.4>|<point|1.2000000000000004|0.6>|<point|0.3999999999999998|0.6>>>|<with|line-width|2ln|<line|<point|1.2|1.4>|<point|0.3999999999999998|0.6>>>|<with|line-width|2ln|<line|<point|-2.8|-0.4>|<point|-2.0|-0.4>|<point|-2.0|-1.2>|<point|-2.8|-1.2>|<point|-2.8|-0.4>>>|<with|line-width|2ln|<line|<point|-0.4|-0.4>|<point|0.3999999999999998|-0.4>|<point|0.3999999999999998|-1.2>|<point|-0.3999999999999998|-1.2>|<point|-0.3999999999999998|-0.4>>>|<with|line-width|2ln|<line|<point|1.8|1.4>|<point|2.599999999999999|1.4>|<point|2.599999999999999|0.6>|<point|1.7999999999999996|0.6>|<point|1.7999999999999996|1.4>>>|<with|line-width|2ln|<line|<point|1.8|3.2>|<point|1.7999999999999996|2.4>|<point|2.599999999999999|2.4>|<point|2.599999999999999|3.2>|<point|1.7999999999999996|3.2>>>|<with|line-width|2ln|<line|<point|2.6|3.2>|<point|3.400000000000001|3.2>|<point|3.400000000000001|2.4>|<point|2.599999999999999|2.4>>>|<with|line-width|2ln|<line|<point|4.4|3.2>|<point|5.2|3.2>|<point|5.2|2.4>|<point|4.4|2.4>|<point|4.4|3.2>>>|<with|line-width|2ln|<line|<point|5.2|3.2>|<point|6.0|3.2>|<point|6.0|2.4>|<point|5.2|2.4>|<point|5.2|3.2>>>|<with|line-width|2ln|<line|<point|6|3.2>|<point|5.2|2.4>>>|<with|line-width|2ln|<line|<point|4.4|1.4>|<point|4.4|0.6>|<point|5.2|0.6>|<point|5.2|1.4>|<point|4.4|1.4>>>|<point|-2.4|2.8>|<point|-1.6|2.8>|<point|-2.4|1>|<point|-1.6|1>|<point|0|1>|<point|2.2|2.8>|<point|3|2.8>|<point|4.8|2.8>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|-2.4|-0.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|0|-0.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|2.2|1>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|4.8|1>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-1.6|2.8>|<point|1.7999999999999996|2.830350764372113>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-2.4|2.8>|<point|-2.4|1.4>>>|<with|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-2.4|1>|<point|-2.4|-0.4>>>|<with|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-1.6|1>|<point|-0.3999999999999998|0.9965700622530262>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|0|1>|<point|0.0|-0.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|2.2|2.8>|<point|2.2|1.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|3|2.8>|<point|4.4|2.8>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|4.8|2.8>|<point|4.8|1.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<arrow-with-text|<point|2.6|4.4>|<point|2.599999999999999|3.2>|<math-at|<scm|<with|font-base-size|16|(3
+  4)>>>>>|<with|point-size|4ln|magnify|1.681792830495885|<point|-2.4|2.8>>||<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.8|2.8>|<point|-2.8|2.8>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.8|1>|<point|-2.8|1.0>>>|<with|text-at-valign|center|<text-at|<scm|<with|font-base-size|16|(1
+  2)>>|<point|-4.074604801904888|1.1849725510946492>>>|<text-at|<with|font-base-size|16|<scm|((1
+  2) 3 4)>>|<point|-4.708014844291365|3.0461910834049872>>>>>
+    <label|fig:2.5>Structure formed by <scm|(cons (list 1 2) (list 3 4))>.
   </big-figure>
 
   Another way to think of sequences whose elements are sequences is as
@@ -6900,7 +6929,7 @@
   often reduce operations on trees to operations on their branches, which
   reduce in turn to operations on the branches of the branches, and so on,
   until we reach the leaves of the tree. As an example, compare the
-  <code*|length> procedure of <hlink|2.2.1|#g_t2_002e2_002e1> with the
+  <scm|length> procedure of <smart-ref|sec:2.2.1> with the
   <code*|count-leaves> procedure, which returns the total number of leaves of
   a tree:
 
@@ -6945,11 +6974,11 @@
   </session>
 
   To implement <code*|count-leaves>, recall the recursive plan for computing
-  <code*|length>:
+  <scm|length>:
 
   <\itemize>
-    <item><code*|Length> of a list <code*|x> is 1 plus <code*|length> of the
-    <code*|cdr> of <code*|x>.
+    <item><code*|Length> of a list <code*|x> is 1 plus <scm|length> of the
+    <scm|cdr> of <code*|x>.
 
     <item><code*|Length> of the empty list is 0.
   </itemize>
@@ -6960,17 +6989,17 @@
     <item><code*|Count-leaves> of the empty list is 0.
   </itemize>
 
-  But in the reduction step, where we strip off the <code*|car> of the list,
-  we must take into account that the <code*|car> may itself be a tree whose
-  leaves we need to count. Thus, the appropriate reduction step is
+  But in the reduction step, where we strip off the <scm|car> of the list, we
+  must take into account that the <scm|car> may itself be a tree whose leaves
+  we need to count. Thus, the appropriate reduction step is
 
   <\itemize>
     <item><code*|Count-leaves> of a tree <code*|x> is <code*|count-leaves> of
-    the <code*|car> of <code*|x> plus <code*|count-leaves> of the <code*|cdr>
-    of <code*|x>.
+    the <scm|car> of <code*|x> plus <code*|count-leaves> of the <scm|cdr> of
+    <code*|x>.
   </itemize>
 
-  Finally, by taking <code*|car>s we reach actual leaves, so we need another
+  Finally, by taking <scm|car>s we reach actual leaves, so we need another
   base case:
 
   <\itemize>
@@ -6981,7 +7010,7 @@
   primitive predicate <code*|pair?>, which tests whether its argument is a
   pair. Here is the complete procedure:<\footnote>
     The order of the first two clauses in the <code*|cond> matters, since the
-    empty list satisfies <code*|null?> and also is not a pair.
+    empty list satisfies <scm|null?> and also is not a pair.
   </footnote>
 
   <\session|scheme|default>
@@ -7003,15 +7032,15 @@
   </session>
 
   <\exercise>
-    Suppose we evaluate the expression <code*|(list 1 (list 2 (list 3 4)))>.
+    Suppose we evaluate the expression <scm|(list 1 (list 2 (list 3 4)))>.
     Give the result printed by the interpreter, the corresponding
     box-and-pointer structure, and the interpretation of this as a tree (as
-    in <hlink|Figure 2.6|#Figure-2_002e6>).
+    in <smart-ref|fig:2.6>).
   </exercise>
 
   <\exercise>
-    Give combinations of <code*|car>s and <code*|cdr>s that will pick 7 from
-    each of the following lists:
+    Give combinations of <scm|car>s and <scm|cdr>s that will pick 7 from each
+    of the following lists:
 
     <\scm-code>
       (1 3 (5 7) 9)
@@ -7068,11 +7097,10 @@
   </exercise>
 
   <\exercise>
-    Modify your <code*|reverse> procedure of <hlink|Exercise
-    2.18|#Exercise-2_002e18> to produce a <code*|deep-reverse> procedure that
-    takes a list as argument and returns as its value the list with its
-    elements reversed and with all sublists deep-reversed as well. For
-    example,
+    Modify your <code*|reverse> procedure of <smart-ref|exercise:2.18> to
+    produce a <code*|deep-reverse> procedure that takes a list as argument
+    and returns as its value the list with its elements reversed and with all
+    sublists deep-reversed as well. For example,
 
     <\scm-code>
       (define x (list (list 1 2) (list 3 4)))
@@ -7098,9 +7126,10 @@
   </exercise>
 
   <\exercise>
-    Write a procedure <code*|fringe> that takes as argument a tree
-    (represented as a list) and returns a list whose elements are all the
-    leaves of the tree arranged in left-to-right order. For example,
+    <label|exercise:2.28>Write a procedure <code*|fringe> that takes as
+    argument a tree (represented as a list) and returns a list whose elements
+    are all the leaves of the tree arranged in left-to-right order. For
+    example,
 
     <\scm-code>
       (define x (list (list 1 2) (list 3 4)))
@@ -7132,7 +7161,7 @@
       \ \ (list left right))
     </scm-code>
 
-    A branch is constructed from a <code*|length> (which must be a number)
+    A branch is constructed from a <scm|length> (which must be a number)
     together with a <code*|structure>, which may be either a number
     (representing a simple weight) or another mobile:
 
@@ -7182,7 +7211,7 @@
   Just as <code*|map> is a powerful abstraction for dealing with sequences,
   <code*|map> together with recursion is a powerful abstraction for dealing
   with trees. For instance, the <code*|scale-tree> procedure, analogous to
-  <code*|scale-list> of <hlink|2.2.1|#2.2.1>, takes as arguments a numeric
+  <code*|scale-list> of <smart-ref|sec:2.2.1>, takes as arguments a numeric
   factor and a tree whose leaves are numbers. It returns a tree of the same
   shape, where each number is multiplied by the factor. The recursive plan
   for <code*|scale-tree> is similar to the one for <code*|count-leaves>:
@@ -7237,9 +7266,9 @@
   operations and recursion.
 
   <\exercise>
-    <label|ex2.30>Define a procedure <code*|square-tree> analogous to the
-    <code*|square-list> procedure of <hlink|Exercise 2.21|#ex2.21>. That is,
-    <code*|square-tree> should behave as follows:
+    <label|exercise:2.30>Define a procedure <code*|square-tree> analogous to
+    the <code*|square-list> procedure of <hlink|Exercise 2.21|#ex2.21>. That
+    is, <code*|square-tree> should behave as follows:
 
     <\scm-code>
       (square-tree
@@ -7258,9 +7287,9 @@
   </exercise>
 
   <\exercise>
-    Abstract your answer to <hlink|Exercise 2.30|#ex2.30> to produce a
-    procedure <code*|tree-map> with the property that <code*|square-tree>
-    could be defined as
+    Abstract your answer to <smart-ref|exercise:2.30> to produce a procedure
+    <code*|tree-map> with the property that <code*|square-tree> could be
+    defined as
 
     <\scm-code>
       (define (square-tree tree) (tree-map square tree))
@@ -7270,10 +7299,10 @@
   <\exercise>
     We can represent a set as a list of distinct elements, and we can
     represent the set of all subsets of the set as a list of lists. For
-    example, if the set is <code*|(1 2 3)>, then the set of all subsets is
-    <code*|(() (3) (2) (2 3) (1) (1 3) (1 2) (1 2 3))>. Complete the
-    following definition of a procedure that generates the set of subsets of
-    a set and give a clear explanation of why it works:
+    example, if the set is <scm|(1 2 3)>, then the set of all subsets is
+    <scm|(() (3) (2) (2 3) (1) (1 3) (1 2) (1 2 3))>. Complete the following
+    definition of a procedure that generates the set of subsets of a set and
+    give a clear explanation of why it works:
 
     <\scm-code>
       (define (subsets s)
@@ -7297,13 +7326,13 @@
   another powerful design principle for working with data structures\Vthe use
   of <em|conventional interfaces><index|conventional interfaces>.
 
-  In <hlink|1.3|#1.3> we saw how program abstractions, implemented as
+  In <smart-ref|sec:1.3> we saw how program abstractions, implemented as
   higher-order procedures, can capture common patterns in programs that deal
   with numerical data. Our ability to formulate analogous operations for
   working with compound data depends crucially on the style in which we
   manipulate our data structures. Consider, for example, the following
   procedure, analogous to the <code*|count-leaves> procedure of
-  <hlink|2.2.2|#2.2.2>, which takes a tree as argument and computes the sum
+  <smart-ref|sec:2.2.2>, which takes a tree as argument and computes the sum
   of the squares of the leaves that are odd:
 
   <\scm-code>
@@ -7368,7 +7397,7 @@
 
     <item>filters them, selecting the even ones; and
 
-    <item>accumulates the results using <code*|cons>, starting with the empty
+    <item>accumulates the results using <scm|cons>, starting with the empty
     list.
   </itemize>
 
@@ -7386,7 +7415,37 @@
   <code*|+>, starting from an initial 0. The plan for <code*|even-fibs> is
   analogous.
 
-  <\big-figure|<include|fig_2.7.tm>>
+  <\big-figure>
+    <\script-output|dot|default>
+      digraph {
+
+      \ \ rankdir=LR
+
+      \ \ node [shape=box]
+
+      \;
+
+      \ \ "enumerate:\\ntree leaves"
+
+      \ \ -\<gtr\> "filter:\\nodd?"
+
+      \ \ -\<gtr\> "map:\\nsquare"
+
+      \ \ -\<gtr\> "accumulate:\\n+, 0"
+
+      \ \ \ \ 
+
+      \ \ "enumerate:\\nintegers"
+
+      \ \ -\<gtr\> "map:\\nfib"
+
+      \ \ -\<gtr\> "filter:\\neven?"
+
+      \ \ -\<gtr\> "accumulate:\\ncons, ()"
+
+      }
+    </script-output|<image|<tuple|<#252150532D41646F62652D332E3020455053462D332E300A252543726561746F723A20677261706876697A2076657273696F6E20322E34372E31202832303231303431372E31393139290A25255469746C653A2025330A252550616765733A20310A2525426F756E64696E67426F783A20333620333620343230203133380A2525456E64436F6D6D656E74730A736176650A2525426567696E50726F6C6F670A2F446F7444696374203230302064696374206465660A446F744469637420626567696E0A0A2F73657475704C6174696E31207B0A6D61726B0A2F456E636F64696E67566563746F7220323536206172726179206465660A20456E636F64696E67566563746F7220300A0A49534F4C6174696E31456E636F64696E6720302032353520676574696E74657276616C20707574696E74657276616C0A456E636F64696E67566563746F72203435202F68797068656E207075740A0A25205365742075702049534F204C6174696E20312063686172616374657220656E636F64696E670A2F737461726E657449534F207B0A2020202020202020647570206475702066696E64666F6E7420647570206C656E677468206469637420626567696E0A20202020202020207B203120696E646578202F464944206E65207B20646566207D7B20706F7020706F70207D206966656C73650A20202020202020207D20666F72616C6C0A20202020202020202F456E636F64696E6720456E636F64696E67566563746F72206465660A202020202020202063757272656E746469637420656E6420646566696E65666F6E740A7D206465660A2F54696D65732D526F6D616E20737461726E657449534F206465660A2F54696D65732D4974616C696320737461726E657449534F206465660A2F54696D65732D426F6C6420737461726E657449534F206465660A2F54696D65732D426F6C644974616C696320737461726E657449534F206465660A2F48656C76657469636120737461726E657449534F206465660A2F48656C7665746963612D4F626C6971756520737461726E657449534F206465660A2F48656C7665746963612D426F6C6420737461726E657449534F206465660A2F48656C7665746963612D426F6C644F626C6971756520737461726E657449534F206465660A2F436F757269657220737461726E657449534F206465660A2F436F75726965722D4F626C6971756520737461726E657449534F206465660A2F436F75726965722D426F6C6420737461726E657449534F206465660A2F436F75726965722D426F6C644F626C6971756520737461726E657449534F206465660A636C656172746F6D61726B0A7D2062696E64206465660A0A2525426567696E5265736F757263653A2070726F6373657420677261706876697A203020300A2F636F6F72642D666F6E742D66616D696C79202F54696D65732D526F6D616E206465660A2F64656661756C742D666F6E742D66616D696C79202F54696D65732D526F6D616E206465660A2F636F6F7264666F6E7420636F6F72642D666F6E742D66616D696C792066696E64666F6E742038207363616C65666F6E74206465660A0A2F496E765363616C65466163746F7220312E30206465660A2F7365745F7363616C65207B0A202020202020206475702031206578636820646976202F496E765363616C65466163746F722065786368206465660A202020202020207363616C650A7D2062696E64206465660A0A25207374796C65730A2F736F6C6964207B205B5D20302073657464617368207D2062696E64206465660A2F646173686564207B205B3920496E765363616C65466163746F72206D756C20647570205D20302073657464617368207D2062696E64206465660A2F646F74746564207B205B3120496E765363616C65466163746F72206D756C203620496E765363616C65466163746F72206D756C5D20302073657464617368207D2062696E64206465660A2F696E766973207B2F66696C6C207B6E6577706174687D20646566202F7374726F6B65207B6E6577706174687D20646566202F73686F77207B706F70206E6577706174687D206465667D2062696E64206465660A2F626F6C64207B2032207365746C696E657769647468207D2062696E64206465660A2F66696C6C6564207B207D2062696E64206465660A2F756E66696C6C6564207B207D2062696E64206465660A2F726F756E646564207B207D2062696E64206465660A2F646961676F6E616C73207B207D2062696E64206465660A2F74617065726564207B207D2062696E64206465660A0A2520686F6F6B7320666F722073657474696E6720636F6C6F72200A2F6E6F6465636F6C6F72207B20736574687362636F6C6F72207D2062696E64206465660A2F65646765636F6C6F72207B20736574687362636F6C6F72207D2062696E64206465660A2F6772617068636F6C6F72207B20736574687362636F6C6F72207D2062696E64206465660A2F6E6F70636F6C6F72207B706F7020706F7020706F707D2062696E64206465660A0A2F626567696E70616765207B09252069206A206E70616765730A092F6E70616765732065786368206465660A092F6A2065786368206465660A092F692065786368206465660A092F73747220313020737472696E67206465660A096E70616765732031206774207B0A090967736176650A090909636F6F7264666F6E7420736574666F6E740A090909302030206D6F7665746F0A090909285C28292073686F77206920737472206376732073686F7720282C292073686F77206A20737472206376732073686F7720285C29292073686F770A090967726573746F72650A097D2069660A7D2062696E64206465660A0A2F7365745F666F6E74207B0A0966696E64666F6E7420657863680A097363616C65666F6E7420736574666F6E740A7D206465660A0A25206472617720746578742066697474656420746F206974732065787065637465642077696474680A2F616C69676E656474657874207B0909092520776964746820746578740A092F746578742065786368206465660A092F77696474682065786368206465660A0967736176650A090977696474682030206774207B0A0909095B5D203020736574646173680A0909097465787420737472696E67776964746820706F702077696474682065786368207375622074657874206C656E6774682064697620302074657874206173686F770A09097D2069660A0967726573746F72650A7D206465660A0A2F626F787072696D207B09090909252078636F726E65722079636F726E6572207873697A65207973697A650A090934203220726F6C6C0A09096D6F7665746F0A09093220636F70790A090965786368203020726C696E65746F0A090930206578636820726C696E65746F0A0909706F70206E6567203020726C696E65746F0A0909636C6F7365706174680A7D2062696E64206465660A0A2F656C6C697073655F70617468207B0A092F72792065786368206465660A092F72782065786368206465660A092F792065786368206465660A092F782065786368206465660A096D61747269782063757272656E746D61747269780A096E6577706174680A09782079207472616E736C6174650A097278207279207363616C650A093020302031203020333630206172630A097365746D61747269780A7D2062696E64206465660A0A2F656E6470616765207B2073686F7770616765207D2062696E64206465660A2F73686F7770616765207B207D206465660A0A2F6C61796572636F6C6F727365710A095B0925206C6179657220636F6C6F722073657175656E6365202D206461726B65737420746F206C696768746573740A09095B30203020305D0A09095B2E32202E38202E385D0A09095B2E34202E38202E385D0A09095B2E36202E38202E385D0A09095B2E38202E38202E385D0A095D0A6465660A0A2F6C617965726C656E206C61796572636F6C6F72736571206C656E677468206465660A0A2F7365746C61796572207B2F6D61786C61796572206578636820646566202F6375726C617965722065786368206465660A096C61796572636F6C6F72736571206375726C61796572203120737562206C617965726C656E206D6F64206765740A09616C6F616420706F7020736574687362636F6C6F720A092F6E6F6465636F6C6F72207B6E6F70636F6C6F727D206465660A092F65646765636F6C6F72207B6E6F70636F6C6F727D206465660A092F6772617068636F6C6F72207B6E6F70636F6C6F727D206465660A7D2062696E64206465660A0A2F6F6E6C61796572207B206375726C61796572206E65207B696E7669737D206966207D206465660A0A2F6F6E6C6179657273207B0A092F6D7975707065722065786368206465660A092F6D796C6F7765722065786368206465660A096375726C61796572206D796C6F776572206C740A096375726C61796572206D7975707065722067740A096F720A097B696E7669737D2069660A7D206465660A0A2F6375726C617965722030206465660A0A2525456E645265736F757263650A2525456E6450726F6C6F670A2525426567696E53657475700A31342064656661756C742D666F6E742D66616D696C79207365745F666F6E740A25202F6172726F776C656E677468203130206465660A25202F6172726F7777696474682035206465660A0A25206D616B652073757265207064666D61726B206973206861726D6C65737320666F722050532D696E74657270726574657273206F74686572207468616E2044697374696C6C65720A2F7064666D61726B207768657265207B706F707D207B7573657264696374202F7064666D61726B202F636C656172746F6D61726B206C6F6164207075747D206966656C73650A25206D616B6520273C3C2720616E6420273E3E272073616665206F6E205053204C6576656C203120646576696365730A2F6C616E67756167656C6576656C207768657265207B706F70206C616E67756167656C6576656C7D7B317D206966656C73650A32206C74207B0A20202020757365726469637420283C3C292063766E20285B292063766E206C6F6164207075740A20202020757365726469637420283E3E292063766E20285B292063766E206C6F6164207075740A7D2069660A0A2525456E6453657475700A73657475704C6174696E310A2525506167653A203120310A252550616765426F756E64696E67426F783A20333620333620343230203133380A2525506167654F7269656E746174696F6E3A20506F7274726169740A302030203120626567696E706167650A67736176650A3336203336203338342031303220626F787072696D20636C6970206E6577706174680A312031207365745F7363616C65203020726F74617465203430203430207472616E736C6174650A2520656E756D65726174653A5C6E74726565206C65617665730A67736176650A31207365746C696E6577696474680A3020302030206E6F6465636F6C6F720A6E657770617468203737203338206D6F7665746F0A30203338206C696E65746F0A302030206C696E65746F0A37372030206C696E65746F0A636C6F736570617468207374726F6B650A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A382032322E38206D6F7665746F2036312028656E756D65726174653A2920616C69676E6564746578740A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A392E3520372E38206D6F7665746F203538202874726565206C65617665732920616C69676E6564746578740A67726573746F72650A252066696C7465723A5C6E6F64643F0A67736176650A31207365746C696E6577696474680A3020302030206E6F6465636F6C6F720A6E65777061746820313637203338206D6F7665746F0A313133203338206C696E65746F0A3131332030206C696E65746F0A3136372030206C696E65746F0A636C6F736570617468207374726F6B650A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3132352032322E38206D6F7665746F203330202866696C7465723A2920616C69676E6564746578740A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3132362E3520372E38206D6F7665746F20323720286F64643F2920616C69676E6564746578740A67726573746F72650A2520656E756D65726174653A5C6E74726565206C65617665732D3E66696C7465723A5C6E6F64643F0A67736176650A31207365746C696E6577696474680A30203020302065646765636F6C6F720A6E6577706174682037372E31313637203139206D6F7665746F0A38352E343734382031392039342E33313934203139203130322E36323635203139206375727665746F0A7374726F6B650A30203020302065646765636F6C6F720A6E657770617468203130322E373834342032322E35303031206D6F7665746F0A3131322E37383434203139206C696E65746F0A3130322E373834332031352E35303031206C696E65746F0A636C6F7365706174682066696C6C0A31207365746C696E6577696474680A736F6C69640A30203020302065646765636F6C6F720A6E657770617468203130322E373834342032322E35303031206D6F7665746F0A3131322E37383434203139206C696E65746F0A3130322E373834332031352E35303031206C696E65746F0A636C6F736570617468207374726F6B650A67726573746F72650A25206D61703A5C6E7371756172650A67736176650A31207365746C696E6577696474680A3020302030206E6F6465636F6C6F720A6E65777061746820323537203338206D6F7665746F0A323033203338206C696E65746F0A3230332030206C696E65746F0A3235372030206C696E65746F0A636C6F736570617468207374726F6B650A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3231362032322E38206D6F7665746F20323820286D61703A2920616C69676E6564746578740A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A32313220372E38206D6F7665746F20333620287371756172652920616C69676E6564746578740A67726573746F72650A252066696C7465723A5C6E6F64643F2D3E6D61703A5C6E7371756172650A67736176650A31207365746C696E6577696474680A30203020302065646765636F6C6F720A6E657770617468203136372E34303239203139206D6F7665746F0A3137352E33393332203139203138342E33313036203139203139322E38323431203139206375727665746F0A7374726F6B650A30203020302065646765636F6C6F720A6E657770617468203139322E3931392032322E35303031206D6F7665746F0A3230322E393139203139206C696E65746F0A3139322E3931392031352E35303031206C696E65746F0A636C6F7365706174682066696C6C0A31207365746C696E6577696474680A736F6C69640A30203020302065646765636F6C6F720A6E657770617468203139322E3931392032322E35303031206D6F7665746F0A3230322E393139203139206C696E65746F0A3139322E3931392031352E35303031206C696E65746F0A636C6F736570617468207374726F6B650A67726573746F72650A2520616363756D756C6174653A5C6E2B2C20300A67736176650A31207365746C696E6577696474680A3020302030206E6F6465636F6C6F720A6E65777061746820333736203338206D6F7665746F0A323933203338206C696E65746F0A3239332030206C696E65746F0A3337362030206C696E65746F0A636C6F736570617468207374726F6B650A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3330312032322E38206D6F7665746F2036372028616363756D756C6174653A2920616C69676E6564746578740A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A33323320372E38206D6F7665746F20323320282B2C20302920616C69676E6564746578740A67726573746F72650A25206D61703A5C6E7371756172652D3E616363756D756C6174653A5C6E2B2C20300A67736176650A31207365746C696E6577696474680A30203020302065646765636F6C6F720A6E657770617468203235372E31333033203139206D6F7665746F0A3236342E38383932203139203237332E36363835203139203238322E34343034203139206375727665746F0A7374726F6B650A30203020302065646765636F6C6F720A6E657770617468203238322E363732392032322E35303031206D6F7665746F0A3239322E36373239203139206C696E65746F0A3238322E363732392031352E35303031206C696E65746F0A636C6F7365706174682066696C6C0A31207365746C696E6577696474680A736F6C69640A30203020302065646765636F6C6F720A6E657770617468203238322E363732392032322E35303031206D6F7665746F0A3239322E36373239203139206C696E65746F0A3238322E363732392031352E35303031206C696E65746F0A636C6F736570617468207374726F6B650A67726573746F72650A2520656E756D65726174653A5C6E696E7465676572730A67736176650A31207365746C696E6577696474680A3020302030206E6F6465636F6C6F720A6E657770617468203737203934206D6F7665746F0A30203934206C696E65746F0A30203536206C696E65746F0A3737203536206C696E65746F0A636C6F736570617468207374726F6B650A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A382037382E38206D6F7665746F2036312028656E756D65726174653A2920616C69676E6564746578740A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A31372036332E38206D6F7665746F2034332028696E7465676572732920616C69676E6564746578740A67726573746F72650A25206D61703A5C6E6669620A67736176650A31207365746C696E6577696474680A3020302030206E6F6465636F6C6F720A6E65777061746820313637203934206D6F7665746F0A313133203934206C696E65746F0A313133203536206C696E65746F0A313637203536206C696E65746F0A636C6F736570617468207374726F6B650A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3132362037382E38206D6F7665746F20323820286D61703A2920616C69676E6564746578740A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3133322E352036332E38206D6F7665746F20313520286669622920616C69676E6564746578740A67726573746F72650A2520656E756D65726174653A5C6E696E7465676572732D3E6D61703A5C6E6669620A67736176650A31207365746C696E6577696474680A30203020302065646765636F6C6F720A6E6577706174682037372E31313637203735206D6F7665746F0A38352E343734382037352039342E33313934203735203130322E36323635203735206375727665746F0A7374726F6B650A30203020302065646765636F6C6F720A6E657770617468203130322E373834342037382E35303031206D6F7665746F0A3131322E37383434203735206C696E65746F0A3130322E373834332037312E35303031206C696E65746F0A636C6F7365706174682066696C6C0A31207365746C696E6577696474680A736F6C69640A30203020302065646765636F6C6F720A6E657770617468203130322E373834342037382E35303031206D6F7665746F0A3131322E37383434203735206C696E65746F0A3130322E373834332037312E35303031206C696E65746F0A636C6F736570617468207374726F6B650A67726573746F72650A252066696C7465723A5C6E6576656E3F0A67736176650A31207365746C696E6577696474680A3020302030206E6F6465636F6C6F720A6E65777061746820323537203934206D6F7665746F0A323033203934206C696E65746F0A323033203536206C696E65746F0A323537203536206C696E65746F0A636C6F736570617468207374726F6B650A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3231352037382E38206D6F7665746F203330202866696C7465723A2920616C69676E6564746578740A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3231342036332E38206D6F7665746F20333220286576656E3F2920616C69676E6564746578740A67726573746F72650A25206D61703A5C6E6669622D3E66696C7465723A5C6E6576656E3F0A67736176650A31207365746C696E6577696474680A30203020302065646765636F6C6F720A6E657770617468203136372E34303239203735206D6F7665746F0A3137352E33393332203735203138342E33313036203735203139322E38323431203735206375727665746F0A7374726F6B650A30203020302065646765636F6C6F720A6E657770617468203139322E3931392037382E35303031206D6F7665746F0A3230322E393139203735206C696E65746F0A3139322E3931392037312E35303031206C696E65746F0A636C6F7365706174682066696C6C0A31207365746C696E6577696474680A736F6C69640A30203020302065646765636F6C6F720A6E657770617468203139322E3931392037382E35303031206D6F7665746F0A3230322E393139203735206C696E65746F0A3139322E3931392037312E35303031206C696E65746F0A636C6F736570617468207374726F6B650A67726573746F72650A2520616363756D756C6174653A5C6E636F6E732C2028290A67736176650A31207365746C696E6577696474680A3020302030206E6F6465636F6C6F720A6E65777061746820333736203934206D6F7665746F0A323933203934206C696E65746F0A323933203536206C696E65746F0A333736203536206C696E65746F0A636C6F736570617468207374726F6B650A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3330312037382E38206D6F7665746F2036372028616363756D756C6174653A2920616C69676E6564746578740A3020302030206E6F6465636F6C6F720A3134202F54696D65732D526F6D616E207365745F666F6E740A3331332E352036332E38206D6F7665746F2034322028636F6E732C205C285C292920616C69676E6564746578740A67726573746F72650A252066696C7465723A5C6E6576656E3F2D3E616363756D756C6174653A5C6E636F6E732C2028290A67736176650A31207365746C696E6577696474680A30203020302065646765636F6C6F720A6E657770617468203235372E31333033203735206D6F7665746F0A3236342E38383932203735203237332E36363835203735203238322E34343034203735206375727665746F0A7374726F6B650A30203020302065646765636F6C6F720A6E657770617468203238322E363732392037382E35303031206D6F7665746F0A3239322E36373239203735206C696E65746F0A3238322E363732392037312E35303031206C696E65746F0A636C6F7365706174682066696C6C0A31207365746C696E6577696474680A736F6C69640A30203020302065646765636F6C6F720A6E657770617468203238322E363732392037382E35303031206D6F7665746F0A3239322E36373239203735206C696E65746F0A3238322E363732392037312E35303031206C696E65746F0A636C6F736570617468207374726F6B650A67726573746F72650A656E64706167650A73686F77706167650A67726573746F72650A252550616765547261696C65720A2525456E64506167653A20310A2525547261696C65720A656E640A726573746F72650A2525454F460A>|ps>|0.618par|||>>
+  <|big-figure>
     <label|fig:2.7>The signal-flow plans for the procedures
     <code*|sum-odd-squares> (top) and <code*|even-fibs> (bottom) reveal the
     commonality between the two programs.
@@ -7395,16 +7454,16 @@
   Unfortunately, the two procedure definitions above fail to exhibit this
   signal-flow structure. For instance, if we examine the
   <code*|sum-odd-squares> procedure, we find that the enumeration is
-  implemented partly by the <code*|null?> and <code*|pair?> tests and partly
-  by the tree-recursive structure of the procedure. Similarly, the
-  accumulation is found partly in the tests and partly in the addition used
-  in the recursion. In general, there are no distinct parts of either
-  procedure that correspond to the elements in the signal-flow description.
-  Our two procedures decompose the computations in a different way, spreading
-  the enumeration over the program and mingling it with the map, the filter,
-  and the accumulation. If we could organize our programs to make the
-  signal-flow structure manifest in the procedures we write, this would
-  increase the conceptual clarity of the resulting code.
+  implemented partly by the <scm|null?> and <code*|pair?> tests and partly by
+  the tree-recursive structure of the procedure. Similarly, the accumulation
+  is found partly in the tests and partly in the addition used in the
+  recursion. In general, there are no distinct parts of either procedure that
+  correspond to the elements in the signal-flow description. Our two
+  procedures decompose the computations in a different way, spreading the
+  enumeration over the program and mingling it with the map, the filter, and
+  the accumulation. If we could organize our programs to make the signal-flow
+  structure manifest in the procedures we write, this would increase the
+  conceptual clarity of the resulting code.
 
   <paragraph*|Sequence Operations>
 
@@ -7414,7 +7473,7 @@
   lists, then we can use list operations to implement the processing at each
   of the stages. For instance, we can implement the mapping stages of the
   signal-flow diagrams using the <code*|map> procedure from
-  <hlink|2.2.1|#2.2.1>:
+  <smart-ref|sec:2.2.1>:
 
   <\session|scheme|default>
     <\unfolded-io|Scheme] >
@@ -7532,9 +7591,8 @@
 
   To enumerate the leaves of a tree, we can use<\footnote>
     This is, in fact, precisely the <code*|fringe> procedure from
-    <hlink|Exercise 2.28|#Exercise-2_002e28>. Here we've renamed it to
-    emphasize that it is part of a family of general sequence-manipulation
-    procedures.
+    <smart-ref|exercise:2.28>. Here we've renamed it to emphasize that it is
+    part of a family of general sequence-manipulation procedures.
   </footnote>
 
   <\session|scheme|default>
@@ -7798,15 +7856,15 @@
   </exercise>
 
   <\exercise>
-    The procedure <code*|accumulate-n> is similar to <code*|accumulate>
-    except that it takes as its third argument a sequence of sequences, which
-    are all assumed to have the same number of elements. It applies the
-    designated accumulation procedure to combine all the first elements of
-    the sequences, all the second elements of the sequences, and so on, and
-    returns a sequence of the results. For instance, if <code*|s> is a
-    sequence containing four sequences, <code*|((1 2 3) (4 5 6) (7 8 9) (10
-    11 12)),> then the value of <code*|(accumulate-n + 0 s)> should be the
-    sequence <code*|(22 26 30)>. Fill in the missing expressions in the
+    <label|exercise:2.36>The procedure <code*|accumulate-n> is similar to
+    <code*|accumulate> except that it takes as its third argument a sequence
+    of sequences, which are all assumed to have the same number of elements.
+    It applies the designated accumulation procedure to combine all the first
+    elements of the sequences, all the second elements of the sequences, and
+    so on, and returns a sequence of the results. For instance, if <code*|s>
+    is a sequence containing four sequences, <code*|((1 2 3) (4 5 6) (7 8 9)
+    (10 11 12)),> then the value of <code*|(accumulate-n + 0 s)> should be
+    the sequence <code*|(22 26 30)>. Fill in the missing expressions in the
     following definition of <code*|accumulate-n>:
 
     <\scm-code>
@@ -7859,7 +7917,7 @@
 
     Fill in the missing expressions in the following procedures for computing
     the other matrix operations. (The procedure <code*|accumulate-n> is
-    defined in <hlink|Exercise 2.36|#Exercise-2_002e36>.)
+    defined in <smart-ref|exercise:2.36>.)
 
     <\scm-code>
       (define (matrix-*-vector m v)
@@ -7879,11 +7937,11 @@
   </exercise>
 
   <\exercise>
-    The <code*|accumulate> procedure is also known as <code*|fold-right>,
-    because it combines the first element of the sequence with the result of
-    combining all the elements to the right. There is also a
-    <code*|fold-left>, which is similar to <code*|fold-right>, except that it
-    combines elements working in the opposite direction:
+    <label|exercise:2.38>The <code*|accumulate> procedure is also known as
+    <code*|fold-right>, because it combines the first element of the sequence
+    with the result of combining all the elements to the right. There is also
+    a <code*|fold-left>, which is similar to <code*|fold-right>, except that
+    it combines elements working in the opposite direction:
 
     <\session|scheme|default>
       <\input|Scheme] >
@@ -7935,9 +7993,9 @@
   </exercise>
 
   <\exercise>
-    Complete the following definitions of <code*|reverse> (<hlink|Exercise
-    2.18|#Exercise-2_002e18>) in terms of <code*|fold-right> and
-    <code*|fold-left> from <hlink|Exercise 2.38|#Exercise-2_002e38>:
+    Complete the following definitions of <code*|reverse>
+    (<smart-ref|exercise:2.18>) in terms of <code*|fold-right> and
+    <code*|fold-left> from <smart-ref|exercise:2.38>:
 
     <\scm-code>
       (define (reverse sequence)
@@ -7956,8 +8014,8 @@
   commonly expressed using nested loops.<\footnote>
     This approach to nested mappings was shown to us by David Turner, whose
     languages KRC and Miranda provide elegant formalisms for dealing with
-    these constructs. The examples in this section (see also <hlink|Exercise
-    2.42|#Exercise-2_002e42>) are adapted from <hlink|Turner
+    these constructs. The examples in this section (see also
+    <smart-ref|exercise:2.42>) are adapted from <hlink|Turner
     1981|References.xhtml#Turner-1981>. In
     <hlink|3.5.3|3_002e5.xhtml#g_t3_002e5_002e3>, we'll see how this approach
     generalizes to infinite sequences.
@@ -8164,25 +8222,28 @@
   </exercise>
 
   <\exercise>
-    The \Peight-queens puzzle\Q asks how to place eight queens on a
-    chessboard so that no queen is in check from any other (i.e., no two
-    queens are in the same row, column, or diagonal). One possible solution
-    is shown in <smart-ref|fig:2.8>. One way to solve the puzzle is to work
-    across the board, placing a queen in each column. Once we have placed
-    <math|k-1> queens, we must place the <math|k<rsup|<with|mode|text|th>>>
-    queen in a position where it does not check any of the queens already on
-    the board. We can formulate this approach recursively: Assume that we
-    have already generated the sequence of all possible ways to place
-    <math|k-1> queens in the first <math|k-1> columns of the board. For each
-    of these ways, generate an extended set of positions by placing a queen
-    in each row of the <math|k<rsup|<with|mode|text|th>>> column. Now filter
-    these, keeping only the positions for which the queen in the
+    <label|exercise:2.42>The \Peight-queens puzzle\Q asks how to place eight
+    queens on a chessboard so that no queen is in check from any other (i.e.,
+    no two queens are in the same row, column, or diagonal). One possible
+    solution is shown in <smart-ref|fig:2.8>. One way to solve the puzzle is
+    to work across the board, placing a queen in each column. Once we have
+    placed <math|k-1> queens, we must place the
+    <math|k<rsup|<with|mode|text|th>>> queen in a position where it does not
+    check any of the queens already on the board. We can formulate this
+    approach recursively: Assume that we have already generated the sequence
+    of all possible ways to place <math|k-1> queens in the first <math|k-1>
+    columns of the board. For each of these ways, generate an extended set of
+    positions by placing a queen in each row of the
+    <math|k<rsup|<with|mode|text|th>>> column. Now filter these, keeping only
+    the positions for which the queen in the
     <math|k<rsup|<with|mode|text|th>>> column is safe with respect to the
     other queens. This produces the sequence of all ways to place <math|k>
     queens in the first <math|k> columns. By continuing this process, we will
     produce not only one solution, but all solutions to the puzzle.
 
-    <\big-figure|<include|fig_2.8.tm>>
+    <\big-figure|<with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|0.75cm|<tuple|0.529997gw|0.5gh>>|gr-geometry|<tuple|geometry|0.720011par|0.733328par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|10>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|10>|gr-snap|<tuple|control
+    point|grid point|grid curve point|curve-grid
+    intersection>|gr-auto-crop|true|magnify|0.75|<graphics||<line|<point|-4|4>|<point|-4.0|-4.0>>|<line|<point|-3|4>|<point|-3.0|-4.0>>|<line|<point|-2|4>|<point|-2.0|-4.0>>|<line|<point|-1|4>|<point|-1.0|-4.0>>|<line|<point|1|4>|<point|1.0|-4.0>>|<line|<point|0|4>|<point|0.0|-4.0>>|<line|<point|2|4>|<point|2.0|-4.0>>|<with|magnify|0.6426740332348719|line-width|2ln|<cspline|<point|1.321481531818866|3.328119569832102>|<point|1.4702960827431275|3.3073911632516126>|<point|1.648236653899971|3.3261281645933543>|<point|1.4657521470547015|3.212276076580765>>>|<with|magnify|0.6426740332348719|line-width|2ln|<line|<point|1.321481531818866|3.328119569832102>|<point|1.2691185120969881|3.657474040078196>|<point|1.3687335969153938|3.462050797378295>|<point|1.393202346235125|3.846753681535428>|<point|1.4787348204502027|3.484033467068909>|<point|1.5537513458534882|3.839083769698714>|<point|1.5867886429756861|3.4652525281863022>|<point|1.6916407346931621|3.6645266353639854>|<point|1.648236653899971|3.3261281645933543>>>|<with|magnify|0.6426740332348719|line-width|2ln|<line|<point|-2.6790530362456932|2.312116853864381>|<point|-2.7314160559675713|2.641471324110474>|<point|-2.6318009711491643|2.446048081410573>|<point|-2.6073322218294335|2.8307509655677072>|<point|-2.5217997476143563|2.468030751101187>|<point|-2.4467832222110713|2.823081053730993>|<point|-2.413745925088873|2.4492498122185813>|<point|-2.308893833371397|2.6485239193962644>|<point|-2.3522979141645877|2.3101254486256333>>>|<with|magnify|0.6426740332348719|line-width|2ln|<cspline|<point|-2.6790530362456932|2.312116853864381>|<point|-2.5302384853214313|2.2913884472838926>|<point|-2.3522979141645877|2.3101254486256333>|<point|-2.534782421009857|2.196273360613045>>>|<with|magnify|0.6426740332348719|line-width|2ln|<line|<point|-4.689903353748008|1.2961120437043065>|<point|-4.742266373469887|1.6254665139503992>|<point|-4.64265128865148|1.4300432712504991>|<point|-4.618182539331751|1.8147461554076327>|<point|-4.532650065116674|1.4520259409411134>|<point|-4.457633539713389|1.8070762435709191>|<point|-4.424596242591189|1.4332450020585072>|<point|-4.319744150873713|1.6325191092361906>|<point|-4.363148231666904|1.2941206384655592>>>|<with|magnify|0.6426740332348719|line-width|2ln|<cspline|<point|-4.689903353748008|1.2961120437043065>|<point|-4.541088802823748|1.2753836371238187>|<point|-4.363148231666904|1.2941206384655592>|<point|-4.5456327385121735|1.1802685504529713>>>|<with|magnify|0.6426740332348719|line-width|2ln|<line|<point|-3.6738974310069055|-2.7044198361739844>|<point|-3.7262604507287835|-2.3750653659278913>|<point|-3.6266453659103774|-2.5704886086277923>|<point|-3.6021766165906475|-2.1857857244706573>|<point|-3.5166441423755708|-2.5485059389371774>|<point|-3.4416276169722857|-2.1934556363073714>|<point|-3.4085903198500866|-2.5672868778197837>|<point|-3.3037382281326093|-2.3680127706420997>|<point|-3.3471423089258012|-2.7064112414127313>>>|<with|magnify|0.6426740332348719|line-width|2ln|<cspline|<point|-3.6738974310069055|-2.7044198361739844>|<point|-3.5250828800826453|-2.725148242754472>|<point|-3.3471423089258012|-2.7064112414127313>|<point|-3.5296268157710715|-2.820263329425319>>>|<with|magnify|0.6426740332348719|line-width|2ln|<line|<point|-1.7053784536289454|-3.7204271135916325>|<point|-1.7577414733508234|-3.3910726433455394>|<point|-1.6581263885324173|-3.5864958860454403>|<point|-1.6336576392126874|-3.2017930018883054>|<point|-1.5481251649976107|-3.5645132163548254>|<point|-1.4731086395943256|-3.2094629137250195>|<point|-1.4400713424721265|-3.583294155237432>|<point|-1.3352192507546492|-3.384020048059748>|<point|-1.3786233315478411|-3.7224185188303793>>>|<with|magnify|0.6426740332348719|line-width|2ln|<cspline|<point|-1.7053784536289454|-3.7204271135916325>|<point|-1.5565639027046851|-3.7411555201721205>|<point|-1.3786233315478411|-3.7224185188303793>|<point|-1.5611078383931114|-3.8362706068429673>>>|<with|magnify|0.6426740332348719|line-width|2ln|<line|<point|-0.6682046887129515|-0.6935713297577926>|<point|-0.7205677084348292|-0.3642168595116992>|<point|-0.620952623616423|-0.5596401022115998>|<point|-0.5964838742966935|-0.17493721805446488>|<point|-0.5109514000816164|-0.5376574325209856>|<point|-0.43593487467833153|-0.18260712989117922>|<point|-0.40289757755613226|-0.5564383714035915>|<point|-0.2980454858386547|-0.3571642642259077>|<point|-0.3414495666318469|-0.6955627349965391>>>|<with|magnify|0.6426740332348719|line-width|2ln|<cspline|<point|-0.6682046887129515|-0.6935713297577926>|<point|-0.5193901377886909|-0.7142997363382805>|<point|-0.3414495666318469|-0.6955627349965391>|<point|-0.5239340734771174|-0.8094148230091265>>>|<with|magnify|0.6426740332348719|line-width|2ln|<line|<point|1.3214790272547692|0.3436030282260678>|<point|1.2691160075328916|0.6729574984721616>|<point|1.368731092351298|0.4775342557722605>|<point|1.3931998416710272|0.8622371399293954>|<point|1.4787323158861043|0.4995169254628747>|<point|1.5537488412893892|0.8545672280926813>|<point|1.5867861384115884|0.48073598658026867>|<point|1.6916382301290662|0.6800100937579525>|<point|1.6482341493358734|0.34161162298732145>>>|<with|magnify|0.6426740332348719|line-width|2ln|<cspline|<point|1.3214790272547692|0.3436030282260678>|<point|1.4702935781790296|0.32287462164557973>|<point|1.6482341493358734|0.34161162298732145>|<point|1.465749642490603|0.2277595349747339>>>|<with|magnify|0.6426740332348719|line-width|2ln|<line|<point|2.3374865467679333|-1.730749653345569>|<point|2.2851235270460553|-1.401395183099475>|<point|2.384738611864462|-1.5968184257993756>|<point|2.4092073611841904|-1.2121155416422411>|<point|2.4947398353992676|-1.5748357561087616>|<point|2.5697563608025527|-1.2197854534789547>|<point|2.6027936579247517|-1.5936166949913675>|<point|2.7076457496422295|-1.3943425878136835>|<point|2.6642416688490376|-1.7327410585843142>>>|<with|magnify|0.6426740332348719|line-width|2ln|<cspline|<point|2.3374865467679333|-1.730749653345569>|<point|2.4863010976921935|-1.751478059926057>|<point|2.6642416688490376|-1.7327410585843142>|<point|2.481757162003767|-1.8465931465969014>>>|<line|<point|-5|4>|<point|3.0|4.0>|<point|3.0|-4.0>|<point|-5.0|-4.0>|<point|-5.0|4.0>>|<line|<point|-5|3>|<point|3.0|3.0>>|<line|<point|-5|2>|<point|3.0|2.0>>|<line|<point|-5|1>|<point|3.0|1.0>>|<line|<point|-5|0>|<point|3.0|0.0>>|<line|<point|-5|-1>|<point|3.0|-1.0>>|<line|<point|-5|-2>|<point|3.0|-2.0>>|<line|<point|-5|-3>|<point|3.0|-3.0>>>>>
       <label|fig:2.8>A solution to the eight-queens puzzle.
     </big-figure>
 
@@ -8237,12 +8298,12 @@
   </exercise>
 
   <\exercise>
-    Louis Reasoner is having a terrible time doing <hlink|Exercise
-    2.42|#Exercise-2_002e42>. His <code*|queens> procedure seems to work, but
-    it runs extremely slowly. (Louis never does manage to wait long enough
-    for it to solve even the <math|6\<times\>6> case.) When Louis asks Eva Lu
-    Ator for help, she points out that he has interchanged the order of the
-    nested mappings in the <code*|flatmap>, writing it as
+    Louis Reasoner is having a terrible time doing <smart-ref|exercise:2.42>.
+    His <code*|queens> procedure seems to work, but it runs extremely slowly.
+    (Louis never does manage to wait long enough for it to solve even the
+    <math|6\<times\>6> case.) When Louis asks Eva Lu Ator for help, she
+    points out that he has interchanged the order of the nested mappings in
+    the <code*|flatmap>, writing it as
 
     <\scm-code>
       (flatmap
@@ -8260,8 +8321,8 @@
 
     Explain why this interchange makes the program run slowly. Estimate how
     long it will take Louis's program to solve the eight-queens puzzle,
-    assuming that the program in <hlink|Exercise 2.42|#Exercise-2_002e42>
-    solves the puzzle in time <math|T>.
+    assuming that the program in <smart-ref|exercise:2.42> solves the puzzle
+    in time <math|T>.
   </exercise>
 
   <subsection|Example: A Picture Language>
@@ -8279,7 +8340,7 @@
     using the <code*|square-limit> procedure in this section.
   </footnote> In this language, the data objects being combined are
   represented as procedures rather than as list structure. Just as
-  <code*|cons>, which satisfies the closure property, allowed us to easily
+  <scm|cons>, which satisfies the closure property, allowed us to easily
   build arbitrarily complicated list structure, the operations in this
   language, which also satisfy the closure property, allow us to easily build
   arbitrarily complicated patterns.
@@ -8292,10 +8353,10 @@
 
   <paragraph*|The picture language>
 
-  When we began our study of programming in <hlink|1.1|#1.1>, we emphasized
-  the importance of describing a language by focusing on the language's
-  primitives, its means of combination, and its means of abstraction. We'll
-  follow that framework here.
+  When we began our study of programming in <smart-ref|sec:1.1>, we
+  emphasized the importance of describing a language by focusing on the
+  language's primitives, its means of combination, and its means of
+  abstraction. We'll follow that framework here.
 
   Part of the elegance of this picture language is that there is only one
   kind of element, called a <em|painter><index|painter>. A painter draws an
@@ -8410,7 +8471,7 @@
   that painters are closed under the language's means of combination. The
   <code*|beside> or <code*|below> of two painters is itself a painter;
   therefore, we can use it as an element in making more complex painters. As
-  with building up list structure using <code*|cons>, the closure of our data
+  with building up list structure using <scm|cons>, the closure of our data
   under the means of combination is crucial to the ability to create complex
   structures while using only a few operations.
 
@@ -8452,14 +8513,56 @@
     \ \ \ \ \ \ \ \ (beside painter (below smaller smaller)))))
   </scm-code>
 
-  <\big-figure|<include|fig_2.13.tm>>
+  <\big-figure|<with|gr-mode|<tuple|group-edit|move>|gr-frame|<tuple|scale|1.18921cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|magnify|1.189207115|<graphics||<cline|<point|-4|2>|<point|-4.0|-2.0>|<point|0.0|-2.0>|<point|0.0|2.0>>|<cline|<point|0.8|2>|<point|0.7999999999999996|-2.0>|<point|4.8|-2.0>|<point|4.8|2.0>>|<line|<point|-2|2>|<point|-2.0|-2.0>>|<line|<point|-2|0>|<point|0.0|0.0>>|<line|<point|2.8|2>|<point|2.8|-2.0000000000000004>>|<line|<point|0.8|-0.0113182>|<point|4.8|0.0>>|<line|<point|1.8|2>|<point|1.7999999999999996|0.0>>|<line|<point|2.8|-1>|<point|4.8|-1.0>>|<with|text-at-valign|center|<text-at|identity|<point|-3.6|0>>>|<with|text-at-valign|center|<text-at|identity|<point|1.178644661992327|-0.9137551263394632>>>|<\document-at>
+    <\with|par-mode|center>
+      right-split
+
+      n-1
+    </with>
+  </document-at|<point|-1.7101666887154383|1.2786914406667547>>|<\document-at>
+    <\with|par-mode|center>
+      right-split
+
+      n-1
+    </with>
+  </document-at|<point|-1.7000000000000002|-0.7000000000000002>>|<\document-at>
+    up-
+
+    split
+
+    n-1
+  </document-at|<point|1.0289820082021433|1.5907295938616217>>|<\document-at>
+    up-
+
+    split
+
+    n-1
+  </document-at|<point|2.01297459981479|1.5483959518454822>>|<\document-at>
+    <\with|par-mode|center>
+      corner-split
+
+      n-1
+    </with>
+  </document-at|<point|2.9481638166661446|1.3841041726204455>>|<\document-at>
+    <\with|par-mode|center>
+      right-split
+
+      n-1
+    </with>
+  </document-at|<point|3.061962561185342|-0.18525929355734896>>|<\document-at>
+    <\with|par-mode|center>
+      right-split
+
+      n-1
+    </with>
+  </document-at|<point|3.0502366662256906|-1.1899028112184151>>>>>
     <label|fig:2.13>Recursive plans for <code*|right-split> and
     <code*|corner-split>.
   </big-figure>
 
   We can produce balanced patterns by branching upwards as well as towards
-  the right (see <hlink|Exercise 2.44|#Exercise-2_002e44>,
-  <smart-ref|fig:2.13> and <smart-ref|fig:2.14>):
+  the right (see <smart-ref|exercise:2.44>, <smart-ref|fig:2.13> and
+  <smart-ref|fig:2.14>):
 
   <\scm-code>
     (define (corner-split painter n)
@@ -8507,9 +8610,9 @@
   </scm-code>
 
   <\exercise>
-    Define the procedure <code*|up-split> used by <code*|corner-split>. It is
-    similar to <code*|right-split>, except that it switches the roles of
-    <code*|below> and <code*|beside>.
+    <label|exercise:2.44>Define the procedure <code*|up-split> used by
+    <code*|corner-split>. It is similar to <code*|right-split>, except that
+    it switches the roles of <code*|below> and <code*|beside>.
   </exercise>
 
   <paragraph*|Higher-order operations>
@@ -8614,10 +8717,34 @@
   about how frames are represented, other than to say that there is a
   constructor <code*|make-frame>, which takes three vectors and produces a
   frame, and three corresponding selectors <code*|origin-frame>,
-  <code*|edge1-frame>, and <code*|edge2-frame> (see <hlink|Exercise
-  2.47|#Exercise-2_002e47>).
+  <code*|edge1-frame>, and <code*|edge2-frame> (see
+  <smart-ref|exercise:2.47>).
 
-  <\big-figure|<include|fig_2.15.tm>>
+  <\big-figure>
+    <with|gr-dash-style|11100|gr-mode|<tuple|edit|document-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-auto-crop|true|<graphics|<with|arrow-end|\<gtr\>|<line|<point|-0.852361|-0.714446>|<point|-1.5621775367112052|0.5458393967456012>>>|<with|arrow-end|\<gtr\>|<line|<point|-0.866847|-0.670988>|<point|1.3350310887683556|0.5603254398729991>>>|<with|arrow-end|\<gtr\>|<line|<point|0.82802|-1.14903>|<point|-0.8523614234687128|-0.6854742690832121>>>|<with|dash-style|11100|<line|<point|-1.54769|0.574811>|<point|0.6107289323984654|1.820611191956608>>>|<with|dash-style|11100|<line|<point|1.37849|0.632756>|<point|0.5962428892710676|1.820611191956608>>>|<point|0.82802|-1.14903>|<\document-at>
+      frame
+
+      origin
+
+      vector
+    </document-at|<point|-1.20003|-1.13758>>|<\document-at>
+      frame
+
+      edge1
+
+      vector
+    </document-at|<point|1.39298|0.137187>>|<\document-at>
+      frame
+
+      edge2
+
+      vector
+    </document-at|<point|-2.61966|0.441394>>|<\document-at>
+      (0,0) point
+
+      on display screen
+    </document-at|<point|0.552785|-1.55768>>>>
+  <|big-figure>
     \ A frame is described by three vectors \V an origin and two edges.
   </big-figure>
 
@@ -8633,10 +8760,10 @@
   frame. We can create a frame's coordinate map with the following
   procedure:<\footnote>
     <code*|Frame-coord-map> uses the vector operations described in
-    <hlink|Exercise 2.46|#Exercise-2_002e46> below, which we assume have been
-    implemented using some representation for vectors. Because of data
-    abstraction, it doesn't matter what this vector representation is, so
-    long as the vector operations behave correctly.
+    <smart-ref|exercise:2.46> below, which we assume have been implemented
+    using some representation for vectors. Because of data abstraction, it
+    doesn't matter what this vector representation is, so long as the vector
+    operations behave correctly.
   </footnote>
 
   <\scm-code>
@@ -8674,14 +8801,15 @@
   </scm-code>
 
   <\exercise>
-    A two-dimensional vector <math|v> running from the origin to a point can
-    be represented as a pair consisting of an <math|x>-coordinate and a
-    <math|y>-coordinate. Implement a data abstraction for vectors by giving a
-    constructor <code*|make-vect> and corresponding selectors
-    <code*|xcor-vect> and <code*|ycor-vect>. In terms of your selectors and
-    constructor, implement procedures <code*|add-vect>, <code*|sub-vect>, and
-    <code*|scale-vect> that perform the operations vector addition, vector
-    subtraction, and multiplying a vector by a scalar:\ 
+    <label|exercise:2.46>A two-dimensional vector <math|v> running from the
+    origin to a point can be represented as a pair consisting of an
+    <math|x>-coordinate and a <math|y>-coordinate. Implement a data
+    abstraction for vectors by giving a constructor <code*|make-vect> and
+    corresponding selectors <code*|xcor-vect> and <code*|ycor-vect>. In terms
+    of your selectors and constructor, implement procedures <code*|add-vect>,
+    <code*|sub-vect>, and <code*|scale-vect> that perform the operations
+    vector addition, vector subtraction, and multiplying a vector by a
+    scalar:\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|(|x<rsub|1>,y<rsub|1>|)>+<around*|(|x<rsub|2>,y<rsub|2>|)>>|<cell|=>|<cell|<around*|(|x<rsub|1>+x<rsub|2>,y<rsub|1>+y<rsub|2>|)>,>>|<row|<cell|<around*|(|x<rsub|1>,y<rsub|1>|)>-<around*|(|x<rsub|2>,y<rsub|2>|)>>|<cell|=>|<cell|<around*|(|x<rsub|1>-x<rsub|2>,y<rsub|1>-y<rsub|2>|)>,>>|<row|<cell|s\<cdot\><around*|(|x,y|)>>|<cell|=>|<cell|<around*|(|sx,sy|)>.>>>>
@@ -8689,7 +8817,7 @@
   </exercise>
 
   <\exercise>
-    Here are two possible constructors for frames:
+    <label|exercise:2.47>Here are two possible constructors for frames:
 
     <\scm-code>
       (define (make-frame origin edge1 edge2)
@@ -8722,9 +8850,8 @@
   painters for line drawings, such as the <code*|wave> painter in
   <smart-ref|fig:2.10>, from lists of line segments as follows:<\footnote>
     <code*|Segments-\<gtr\>painter> uses the representation for line segments
-    described in <hlink|Exercise 2.48|#Exercise-2_002e48> below. It also uses
-    the <code*|for-each> procedure described in <hlink|Exercise
-    2.23|#Exercise-2_002e23>.
+    described in <smart-ref|exercise:2.48> below. It also uses the
+    <code*|for-each> procedure described in <smart-ref|exercise:2.23>.
   </footnote>
 
   <\scm-code>
@@ -8756,27 +8883,26 @@
   implementation do not matter. Any procedure can serve as a painter,
   provided that it takes a frame as argument and draws something scaled to
   fit the frame.<\footnote>
-    For example, the <code*|rogers> painter of <hlink|Figure
-    2.11|#Figure-2_002e11> was constructed from a gray-level image. For each
-    point in a given frame, the <code*|rogers> painter determines the point
-    in the image that is mapped to it under the frame coordinate map, and
-    shades it accordingly. By allowing different types of painters, we are
-    capitalizing on the abstract data idea discussed in
-    <hlink|2.1.3|2_002e1.xhtml#g_t2_002e1_002e3>, where we argued that a
-    rational-number representation could be anything at all that satisfies an
-    appropriate condition. Here we're using the fact that a painter can be
-    implemented in any way at all, so long as it draws something in the
-    designated frame. <hlink|2.1.3|#2.1.3> also showed how pairs could be
-    implemented as procedures. Painters are our second example of a
-    procedural representation for data.
+    For example, the <code*|rogers> painter of <smart-ref|fig:2.11> was
+    constructed from a gray-level image. For each point in a given frame, the
+    <code*|rogers> painter determines the point in the image that is mapped
+    to it under the frame coordinate map, and shades it accordingly. By
+    allowing different types of painters, we are capitalizing on the abstract
+    data idea discussed in <hlink|2.1.3|2_002e1.xhtml#g_t2_002e1_002e3>,
+    where we argued that a rational-number representation could be anything
+    at all that satisfies an appropriate condition. Here we're using the fact
+    that a painter can be implemented in any way at all, so long as it draws
+    something in the designated frame. <smart-ref|sec:2.1.3> also showed how
+    pairs could be implemented as procedures. Painters are our second example
+    of a procedural representation for data.
   </footnote>
 
   <\exercise>
-    A directed line segment in the plane can be represented as a pair of
-    vectors\Vthe vector running from the origin to the start-point of the
-    segment, and the vector running from the origin to the end-point of the
-    segment. Use your vector representation from <hlink|Exercise
-    2.46|#Exercise-2_002e46> to define a representation for segments with a
+    <label|exercise:2.48>A directed line segment in the plane can be
+    represented as a pair of vectors\Vthe vector running from the origin to
+    the start-point of the segment, and the vector running from the origin to
+    the end-point of the segment. Use your vector representation from
+    <smart-ref|exercise:2.46> to define a representation for segments with a
     constructor <code*|make-segment> and selectors <code*|start-segment> and
     <code*|end-segment>.
   </exercise>
@@ -9050,14 +9176,14 @@
     </enumerate>
   </exercise>
 
-  <section|Symbolic Data>
+  <section|Symbolic Data><label|sec:2.3>
 
   All the compound data objects we have used so far were constructed
   ultimately from numbers. In this section we extend the representational
   capability of our language by introducing the ability to work with
   arbitrary symbols as data.
 
-  <subsection|Quotation>
+  <subsection|Quotation><label|sec:2.3.1>
 
   If we can form compound data using symbols, we can have lists such as
 
@@ -9386,8 +9512,8 @@
   differentiation of algebraic expressions. We would like the procedure to
   take as arguments an algebraic expression and a variable and to return the
   derivative of the expression with respect to the variable. For example, if
-  the arguments to the procedure are <math|ax<rsup|2>+bx+c> and <math|x>, the
-  procedure should return <math|2ax+b>. Symbolic differentiation is of
+  the arguments to the procedure are <math|a*x<rsup|2>+b*x+c> and <math|x>,
+  the procedure should return <math|2a*x+b>. Symbolic differentiation is of
   special historical significance in Lisp. It was one of the motivating
   examples behind the development of a computer language for symbol
   manipulation. Furthermore, it marked the beginning of the line of research
@@ -9397,7 +9523,7 @@
 
   In developing the symbolic-differentiation program, we will follow the same
   strategy of data abstraction that we followed in developing the
-  rational-number system of <hlink|2.1.1|#2.2.1>. That is, we will first
+  rational-number system of <smart-ref|sec:2.1.1>. That is, we will first
   define a differentiation algorithm that operates on abstract objects such
   as \Psums,\Q \Pproducts,\Q and \Pvariables\Q without worrying about how
   these are to be represented. Only afterward will we address the
@@ -9512,7 +9638,7 @@
   usual algebraic notation, representing <math|ax+b> as the list <code*|(a *
   x + b)>. However, one especially straightforward choice is to use the same
   parenthesized prefix notation that Lisp uses for combinations; that is, to
-  represent <math|ax+b> as <code*|(+ (* a x) b)>. Then our data
+  represent <math|a*x+b> as <code*|(+ (* a x) b)>. Then our data
   representation for the differentiation problem is as follows:
 
   <\itemize>
@@ -9871,7 +9997,7 @@
   One way to represent a set is as a list of its elements in which no element
   appears more than once. The empty set is represented by the empty list. In
   this representation, <code*|element-of-set?> is similar to the procedure
-  <code*|memq> of <hlink|2.3.1|#2.3.1>. It uses <code*|equal?> instead of
+  <code*|memq> of <smart-ref|sec:2.3.1>. It uses <code*|equal?> instead of
   <code*|eq?> so that the set elements need not be symbols:
 
   <\session|scheme|default>
@@ -9891,8 +10017,8 @@
   </session>
 
   Using this, we can write <code*|adjoin-set>. If the object to be adjoined
-  is already in the set, we just return the set. Otherwise, we use
-  <code*|cons> to add the object to the list that represents the set:
+  is already in the set, we just return the set. Otherwise, we use <scm|cons>
+  to add the object to the list that represents the set:
 
   <\session|scheme|default>
     <\input|Scheme] >
@@ -9911,8 +10037,8 @@
   </session>
 
   For <code*|intersection-set> we can use a recursive strategy. If we know
-  how to form the intersection of <code*|set2> and the <code*|cdr> of
-  <code*|set1>, we only need to decide whether to include the <code*|car> of
+  how to form the intersection of <code*|set2> and the <scm|cdr> of
+  <code*|set1>, we only need to decide whether to include the <scm|car> of
   <code*|set1> in this. But this depends on whether <code*|(car set1)> is
   also in <code*|set2>. Here is the resulting procedure:
 
@@ -10026,14 +10152,14 @@
   comparing the initial elements, <code*|x1> and <code*|x2>, of the two sets.
   If <code*|x1> equals <code*|x2>, then that gives an element of the
   intersection, and the rest of the intersection is the intersection of the
-  <code*|cdr>-s of the two sets. Suppose, however, that <code*|x1> is less
-  than <code*|x2>. Since <code*|x2> is the smallest element in <code*|set2>,
-  we can immediately conclude that <code*|x1> cannot appear anywhere in
+  <scm|cdr>-s of the two sets. Suppose, however, that <code*|x1> is less than
+  <code*|x2>. Since <code*|x2> is the smallest element in <code*|set2>, we
+  can immediately conclude that <code*|x1> cannot appear anywhere in
   <code*|set2> and hence is not in the intersection. Hence, the intersection
-  is equal to the intersection of <code*|set2> with the <code*|cdr> of
+  is equal to the intersection of <code*|set2> with the <scm|cdr> of
   <code*|set1>. Similarly, if <code*|x2> is less than <code*|x1>, then the
   intersection is given by the intersection of <code*|set1> with the
-  <code*|cdr> of <code*|set2>. Here is the procedure:
+  <scm|cdr> of <code*|set2>. Here is the procedure:
 
   <\session|scheme|default>
     <\input|Scheme] >
@@ -10263,13 +10389,14 @@
     1990|References.xhtml#Cormen-et-al_002e-1990>.
   </footnote>
 
-  <\big-figure|<include|fig_2.17.tm>>
+  <\big-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1.18921cm|<tuple|0.285963gw|0.390011gh>>|gr-geometry|<tuple|geometry|0.90667par|0.639999par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-grid-aspect|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|10|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|10|#e0e0ff>>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|magnify|1.189207115|gr-text-at-halign|center|gr-text-at-valign|center|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-auto-crop|true|<graphics||<line|<point|-1.6|3.6>|<point|-1.0|3.0>>|<line|<point|-0.6|2.6>|<point|0.0|2.0>>|<line|<point|0.4|1.6>|<point|1.0|1.0>>|<line|<point|1.4|0.6>|<point|2.0|0.0>>|<line|<point|2.4|-0.4>|<point|3.0|-1.0>>|<line|<point|3.4|-1.4>|<point|4.0|-2.0>>|<with|text-at-halign|center|text-at-valign|center|<text-at|1|<point|-1.8|3.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|2|<point|-0.8|2.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|3|<point|0.2|1.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|4|<point|1.2|0.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|5|<point|2.2|-0.2>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|6|<point|3.2|-1.2>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|7|<point|4.2|-2.2>>>>>>
     <label|fig:2.17>Unbalanced tree produced by adjoining 1 through 7 in
     sequence.
   </big-figure>
 
   <\exercise>
-    Each of the following two procedures converts a binary tree to a list.
+    <label|exercise:2.63>Each of the following two procedures converts a
+    binary tree to a list.
 
     <\scm-code>
       (define (tree-\<gtr\>list-1 tree)
@@ -10317,13 +10444,14 @@
   </exercise>
 
   <\exercise>
-    The following procedure <code*|list-\<gtr\>tree> converts an ordered list
-    to a balanced binary tree. The helper procedure <code*|partial-tree>
-    takes as arguments an integer <math|n> and list of at least <math|n>
-    elements and constructs a balanced tree containing the first <math|n>
-    elements of the list. The result returned by <code*|partial-tree> is a
-    pair (formed with <code*|cons>) whose <code*|car> is the constructed tree
-    and whose <code*|cdr> is the list of elements not included in the tree.
+    <label|exercise:2.64>The following procedure <code*|list-\<gtr\>tree>
+    converts an ordered list to a balanced binary tree. The helper procedure
+    <code*|partial-tree> takes as arguments an integer <math|n> and list of
+    at least <math|n> elements and constructs a balanced tree containing the
+    first <math|n> elements of the list. The result returned by
+    <code*|partial-tree> is a pair (formed with <scm|cons>) whose <scm|car>
+    is the constructed tree and whose <scm|cdr> is the list of elements not
+    included in the tree.
 
     <\scm-code>
       (define (list-\<gtr\>tree elements)
@@ -10377,13 +10505,12 @@
   </exercise>
 
   <\exercise>
-    Use the results of <hlink|Exercise 2.63|#Exercise-2_002e63> and
-    <hlink|Exercise 2.64|#Exercise-2_002e64> to give
-    <math|\<Theta\><around*|(|n|)>> implementations of <code*|union-set> and
-    <code*|intersection-set> for sets implemented as (balanced) binary
-    trees.<\footnote>
-      <hlink|Exercise 2.63|#Exercise-2_002e63> through <hlink|Exercise
-      2.65|#Exercise-2_002e65> are due to Paul Hilfinger.
+    <label|exercise:2.65>Use the results of <smart-ref|exercise:2.63> and
+    <smart-ref|exercise:2.64> to give <math|\<Theta\><around*|(|n|)>>
+    implementations of <code*|union-set> and <code*|intersection-set> for
+    sets implemented as (balanced) binary trees.<\footnote>
+      <smart-ref|exercise:2.63> through <smart-ref|exercise:2.65> are due to
+      Paul Hilfinger.
     </footnote>
   </exercise>
 
@@ -10809,7 +10936,7 @@
   tree, choosing a left or a right branch according to whether the next bit
   in the list is a zero or a one. (This is done with the procedure
   <code*|choose-branch>.) When it reaches a leaf, it returns the symbol at
-  that leaf as the next symbol in the message by <code*|cons>ing it onto the
+  that leaf as the next symbol in the message by <scm|cons>ing it onto the
   result of decoding the rest of the message, starting at the root of the
   tree. Note the error check in the final clause of <code*|choose-branch>,
   which complains if the procedure finds something other than a zero or a one
@@ -11090,7 +11217,7 @@
   barrier that gives us the ability to separately design and install
   alternative representations.
 
-  <\big-figure|<include|fig_2.19.tm>>
+  <\big-figure|<image|<tuple|<#89504E470D0A1A0A0000000D494844520000017F000000A00806000000E45B6C290000000473424954080808087C086488000000097048597300000B1300000B1301009A9C1800000A3649444154789CEDDDDB12A32A16005073AAFFFF97330F33A9F1D05C365E51D6AAEAEA8E226E1011316D96058EF5BD3B004EE3D8BEC89FBB0378B9DCC9F2B93C0A46F45D9ED51674FC2FF3CFDD014CE0B33CEB24871C6DF86574FED779EBC973C488D0A8122E66DAE73A6907977EFE6496AF2F18A50EF25359D7934F2B96349FF5FA740A2352B6DFF2521EEBF4E9F6ADF85A71E7D2A4E97A8FC3D6386AE9D2186A5345A5F2F4D661CE967A891CF35C3EF00ADFE44FBA2E973EDD36CDA794B6964F6DBF3DDBE66CCD2FBA9F2DF1A5F5BEB70EB6D667349F48BCB9E55BE2E859574B9B2B4FAE0CAD76CE4D8CFCCFB77554938EDA7A4E98DEF435E948718F23E3FA698D6C236A698F8AB9944F4FBC238D90D3BBB6DFB2A823DB151B98F37F8E75E7D6FAA6C86FFDDE136B9DC75173FB473E003F3ABED1BDA58CB31DB721E9FC9F63DD71B63AFEA31DD1599FF960F853F8776DBBC834DC155AF11E3D42BEAA7DF43E4BE062A67DCE537B9099A6F9ACFE2E3D505B96BF4FA8DC03B75F1E690792A6AD7DCEED2F72C1598FE6D2F4ADB86A9D5C6D6EBF145F6D5D2E96F402D2CA3B527F91185B0FFAD3CFAD7AEA79205CDA6E4F7972EB4A5373B93CB8888A7F9EDA0580B1B4A6E7E036A67D9E211D29E950805D4CFB3C43E99B222E02003020DF660100000000000000000000000000000080F99CF96230EF340138C6A35EE2A8F307D8EF94BED4FBFC0126A4F3079890CE1F60423A7F80098DDCF9D71E727898BC9DBAE32EDADE4046FD0DDFA776FCE90FAD8FEABB8C1DDFCF93EAF3479CED7DA7CB47AEB39AA71CF7CBEDEDA49F7A015816F11DED29F18A73CCFD9EEDEC729D92FFD523FF5C213E9575B5EDB6EEF35358D78AE3D358B7358E34869ED144A93EBFAB7F2F99CFB5785ADE5A9F91386BF5B9D55BEB339767695DADCCBDA3EBD1EB3317C72D77107F96FA01DAAA548074F937F93B57419175A57DA5B794DFD5B2DCBA4FB26EFD7724CF96D2FED6F9A4E922729D52AD81E56269B583B7D76724CE346DCBCCEDB335E02875BEA5BA6DD5F953EA73BDBCA74E0FEFA7FF04767AA4D6C1EB5DB7B5933C52A423285DACA28DA8B5EFBD0D23D7C8A3DB1DEDCEFA3CDAECF5B975DBD26878E6FA3CBC2C777CDB673D9A58FB16FEDD5AD7A3B46D6F9EBDF1AC1B6FFA679D47EB563417479A57295D6DD9D63A7D5B7D469D71B75CCBF7A9F5B9B78DEDADE751EB739DCF596DB4E9CC5152EE2A572A60ED6ADA5AD78AA1B65DED36B4345552BA252DEDAFB5AE369DD05BBE687DE7F4DCCA97B67D727DB6E28CEE33B2AF749FA56D9F5C9FA53C73F994F2EB1D293FA13E7371B4EA74B43BDAA6CBAF6417796BB9EEA23E8FA53E8F35427D9E12C3D523FFA76B8DB4E9A33E8FA53E8F354A7D3EAE2F1DE18A09F074A7F4A523BFDE018093E8FC0126A4F3079890CE1F604267BFDBC7435F000000000000000000000000000000000000000000000000000000000000000080D4F7EE006E30639939C99FBB03E02FB513FC73610C57ED6BE418D6EE8E47C70F2FF65DCA27F99527FF133A9A27C478B419CBCC49FEB93B00FE521A5D8E340ABEC3D51D9F8E965733EDF35CEBCEE953585EF2C9A4AB5D5C4A69D3185A5323B57DE6E24EF793E61F89ABA494765D37DFE47334DEB59E32D7E24FF35EC7563B9EA5BAA8951FB85874B4F94DFE9D7EAEE5F9CD2C8FE491FE29ADAFD912E796CFBD697365DB937F6B5FB53C23FBCDEDAF946EEFB1E5A58CFC9F2F37EA3B328FDCA8B7964F6EDBDFBA23623D524FD96AA2DBA7E58FD447AD4E6B7947F23FAAFC3C9039FFF18CD439F6CA753EBF3FBFF5EBCFB3DB521FA5E99A525EEBF4777F638981E8FC9FE3AE8B426B1E3B3A7A1CF1A21699A32FE999FA896CDF9377F46EE0B72EBD0897F269E5C58B18058CA7F5802E972EF710311D21A6A3EFC883C8C843C16F215DB463A93D3CEE5D5F2B732BED9E78D6CB533D0F7CD37DD5628AAE6B3D3CF6C017266384778D51EAD9435DFEC5B40FBC57EE813B2CCBE2DB3EF06691691F60426EFFAFA19E0100000000000000000000000080FF1BEDC73500003633A8810A6FF5049890CE1F60423A7F8009E9FC0126A4F30798D0CCBFE4F5B65F385AFF283940D5CC9DFFB2FCBFB3F4B54066B075C06360F142A67DFEEB8886ED02C213F82177966531F2FFC975DCE9B2C85DC2B792EE93A44B45EF42D274B913B967DF3A8239F9DFFD939BBDF35F37FE562798EB6CD3CE3ECDA3D6A1E73AE45C3CA50B4AEBE48DEE9B39B5063CB536121D186967039BBDF32F75A0A551754FE3DE32B23A6A3466544749A9834F0719AD797E1DFEC399F33FEFA1EFEFE4E93D197A4EC0A3F7CDFB7D9676DB68B59BDFE0C200E3C174FEFFD5338F9E36F8C8F3821EEB8EBBE7D6FB887D4384C1C50BCC3AEDB3EEC87F0D783D9A29CDB12FCBDF239EDCDC7D6E64948EE26BA3FADE87C5699E917DA7F94284C1C54B38F9C7652E751FDF4DFFB7C8C3DCC8A0264DB74EDFF3050A60A5348564B4D54F9D41C5ACD33EA32A7D4BC7280A00028CFCA1C2B77D0026A4F37F1F235E9E4ADB0576D391408591FFB8A29D974E8ED168BB0FF0F66F9144DF90994B1BFD8F55917C7ADE105AFABE742BDFF5E7DA3B89A26F177DBA277FCF7F4F1B3AAA2DD6D2E6D2E7B689EE4FDBBDC10C23FFDAAB12720DB37632F4E613FDCF3469DA4FF2772EBE5CBA526C5BCBC57DB6B4A174F9D67C7AFEE779A4EDE6F2D4766F36D3F7FC7B5E69507B2B66249FF4350FD1FD6E8DE9CA3CB85EB40DB58E6F2B9F51DBED91F9F03F338CFCAF561BA9ECE1655A9C49BB9DCC4C9D7F64BAE6C87C5AB7B33D8C78E67665DBD56E2731C3B44FEDA554D1874B3DF96C591EBD0D2FBDA93317DBFA246E95CBA86C3CB96997DEB6D593CFD6BC23CF077ADE30ABED7239A3947799E578CE524E0E36D3B40F00FFA3F307607A6EA1DF63A66339535901AA74885061DA0760423A7F8009E9FC0126A4F3079890CE1F6042DE940773F25A84C98DD4005C840000000000000000000000000000000000000000004ABCC1F5784FADD3A7C6FD78B3FF984BADE16994E738B25EF7E4D5DAF64DC7FFCEB28C568FA3C5C34D34847BA8F7E33DB54E9F1AF7E3CD3EF2DF6B4BC33DABB13B89F6517FD7B8BA9E1DD782917EC9EB0EDF255F07BF06F3C92CCB29D563649B529A747D2BFD7ABBD236A53C723FE7192D532DAEC8BA48DEA53CA269D2F4B5FA88ACFF2DABD5672A1A5B2DBF2D751C6DCB7BCAB225EFAD658AA64DDBF496BAE0C57AE6FC7369B7CC1B6FC9F7DB581EC9B796F6B72CFD9353CAA71673A4CCB9FC22316FFDBC65DB5AD95B75B735B6C8B1EFC92F92B6A72C7BE28AC4D2933617F79EFC5FEDCFDD013C4C6EE470C6365147E5D91363EE2E21B24DAF2DFB39D33A9EDCA8FFC8E31B29FB19ED295A96D18ECD51C760AA11BF39FFB8CFD2773BBA759BD1FD3ABEA94E94952B8EE3E8753C7A7C04E8FCFF76C6886BCF49D27BDB1CC923159DA3DEDAF1BDE5C297ABA7ADF3FB257BA722F7889465C463B9E7183CA17CA798F9CA5D3BC83D0FFDD265A57DB41E2E96D2B4D645F26DA5ADE59B2AE59BABAFE843ED52DEA50773AD07D9B5CF9187E0A58783691E91B8D3343DB1A57946EAA7A7AC473EBCDEFAF0FCECB87BE2592F072E34CDA80BEE66DA0760423A7F00E076A67EE002FF01095328F6C21753230000000049454E44AE426082>|png>|200pt|||>>
     <label|fig:2.19>Data-abstraction barriers in the complex-number system.
   </big-figure>
 
@@ -11101,7 +11228,7 @@
   new kind of number is needed. In <hlink|2.5.3|#2.5.3>, we'll show how to
   use generic arithmetic in a system that performs symbolic algebra.
 
-  <subsection|Representations for Complex Numbers>
+  <subsection|Representations for Complex Numbers><label|sec:2.4.1>
 
   We will develop a system that performs arithmetic operations on complex
   numbers as a simple but unrealistic example of a program that uses generic
@@ -11152,13 +11279,15 @@
   Similarly, it is often useful to be able to determine the real part of a
   complex number that is specified by polar coordinates.
 
-  <\big-figure|<include|fig_2.20.tm>>
+  <\big-figure>
+    <with|gr-mode|<tuple|group-edit|edit-props>|gr-auto-crop|true|<graphics|<with|arrow-end|\<gtr\>|<line|<point|-2.53274|-1.87378>|<point|-2.51825638311946|1.5739019711602065>>>|<with|arrow-end|\<gtr\>|<line|<point|-3.47434|-1.38125>|<point|1.957930943246461|-1.3812508268289456>>>|<line|<point|-2.53067|-1.38125>|<point|1.2626008731313665|0.42950456409577986>>|<text-at|Imaginary|<point|-2.89489|1.85792>>|<text-at|Real|<point|2.21868|-1.40144>>|<point|1.2626|0.429505>|<with|dash-style|10|dash-style-unit|5ln|<line|<point|1.2626|0.429505>|<point|1.2543163226240437|-1.381250719733968>>>|<with|dash-style|10|<line|<point|1.2626|0.429505>|<point|-2.523108112093964|0.4189958001177042>>>|<math-at|y|<point|-2.83695|0.409313>>|<with|text-at-halign|center|text-at-valign|center|<math-at|x|<point|1.23363|-1.57527>>>|<math-at|r|<point|-0.881334|-0.358447>>|<math-at|z=x+i*y=r*e<rsup|i*A>|<point|1.45092|0.365855>>|<std-arc|<point|-2.53067|-1.38125>|<point|-1.5006201331706897|-0.8895457268306762>|<point|-1.2439127285549683|-1.381250339486349>>|<with|text-at-valign|center|<math-at|A|<point|-1.7505|-1.18415>>>>>
+  <|big-figure>
     <label|fig:2.20>Complex numbers as points in the plane.
   </big-figure>
 
   To design such a system, we can follow the same data-abstraction strategy
   we followed in designing the rational-number package in
-  <hlink|2.1.1|#2.1.1>. Assume that the operations on complex numbers are
+  <smart-ref|sec:2.1.1>. Assume that the operations on complex numbers are
   implemented in terms of four selectors: <code*|real-part>,
   <code*|imag-part>, <code*|magnitude>, and <code*|angle>. Also assume that
   we have two procedures for constructing complex numbers:
@@ -11520,7 +11649,7 @@
     \ \ (make-from-mag-ang-polar r a))
   </scm-code>
 
-  <\big-figure|<include|fig_2.21.tm>>
+  <\big-figure|<image|<tuple|<#89504E470D0A1A0A0000000D494844520000017F000000BB08060000008D4A9E710000000473424954080808087C086488000000097048597300000B1300000B1301009A9C1800000C9049444154789CEDDDED92A3AA160050736BDEFF95FBFE38931A87E1535141D6AA9A9AEE88B0256487605AB70DCEF9793A002EE5F97DA95F4F07F042B117CBE7F62818CDCF36DF3890F85FEC7F4F07F0529F6DBE173A848CE11793FCAFF5C6174F8FD9A019253CCCB2CFB5C22417FEFE091EFB64CAA6F6C93D96ABA7A66CF8E6F5B3FB3F176BAEBE541D615D611D357586EDA7EA2EC55AF33C94EAC8C5912A1BC6505A2A4A1D4F6B1FC6A4FAE0ECF31EAB075EE127F8176E4BFDBE2F1FDB3FF573697B6B0C2547EB6B69A735C6B0CF4BFD538AAD47FFD5D4938A39771C476269D9962B9B8B331CBFA558799899FF358ECC6AC2195BEB8BE5C83E31E12CF18C5E318562FDD41A6FAA7CAF9873F5D4C63CDAEC38FCE4F67DAC56CFB1C549D6FCC7B5FF085DF34D916F99332FACFDFEBDDE487A9FFCEE1DE3C8DE747C2B3D6F5390FCC7B54F9C3589BFA71EC9BA574CB9731FFBFF6BF6292D77DC2517F315B3E32B8EB3A5DF4BFBF100CB3E7D954E66EECB7C937AEA64DAB6FDFB628A9D6CDBD713AEC77E223FE7E2CBC5122B97AAFFBBAD1453AE9D9A045E73523217CF27D896DABFB6FF4A71C4EA89954D3DCFA9F65AFB3015CBD1638A6D8B8D91541D3CC09330BEDC1B0063A9599E832158F61953384B925080AE2CFB8C29F54D116F02003020DF640100000000000000000000000000F2AEBE5C80BF7604386FBA4BBB48FE00E75C92475DD5136041923FC082247F800549FE000B92FC011624F9032C68F4E49FFB8A93AF911EA7EF7892F1378091EFE13B6BE20F6FBE3EAA9F6DECF8BE66EACFAF91E3DCB667634DBD7667198F31333DF7B7399BA4677D03D836F1F5364BBCB3C4B96DCFC53A531FB5B8EAB82EA9F7D7551567C4DAFB64B6E5F63BDAE627B1AD14C7A7B0ED681C610C2D3389547FFEEC7EDE22BFE7E229796B7FD6C499EBCFA35AFB33B6CFBECC487D1AAB33B52D77DCADB3EBB78ED169D424EC9FDDFF61F9966DB17FB1184ADB62F5A7B6C5EA4C9529B5B7AFA7E58D2E2C5F8AB3A6EDD5FB33F67F4D7BA5187AF6E791589FE8D3A3ED86FBC67E5E658CD6BC369BFF3DB1E69F3BC8DC3B5E6A5BEBBBE415EFAAB9D9C1576EF09D89E9DB764B82CBD5B37A7FF636427F7EEB7D728C1EDDEF27F8FD487D6F18A3DD8FE1A96FFB7CB6F8C1D4CEB2CE24BAD4BEAD75B6C6B31FB8E1BF7D1D354B60611C615DA972B9C78EF6E9DBFAB356EFFA4AF51E696F943E3D3BCECEF6F5AA6334EB8E4B3A876DA40EB0B4B696DB568A21B75F6C66B17F52C2FD53B1E49EC0D2B63086584C29B1F872DB738EAC6186FBCEDC9FA5386BDBAC692B6C33B56F2AF659FA345567AC9E547DAD33E5B78DD1D13ECD56B9F59DEC466F3DAEA7E8CFFEF4695F4FF6E7256D3F31F39F5D69A64D1BFDD99F3EEDEBE9FE9C328F9A7D009C73491E1DFDF20E005C40F20758D01DDFF3B7F403000000000000000000000000000000005358F152212B1E333778E21EBEC41DBDB771EF189EBC6EF8D3ED879E8E47E28797CBDD80FDCE04307AB2193DBE2BAC78CCDCC0259DC7919A618E3413BEDBDD894FA26519967DE652BA99774EEA86D2353734DF978DDD78BAB58ED8E3A9ED61FDADF5D594DD1FD74FF07BA99F6337DB4E6D6FD996AAFBB3FD1B6358BEE586E92B4F2EE0713589EB27F839FC3D575FAA6C4D3DE1BFD8B69C5CDBB9B2ADBFB7968D1DD799FA73ED94EAAB69B7D45FFB72A57653CF290B31F39F536C06D7BB9ED8CC3755C7D1369E507B5C2535FBA73E29B5D6DD3A933FFB9CB2006BFEE3182941B6A899F97F360967DB8EF7456A392755DFBEFCD3DF58625092FFF89E7A5388258C7009A29454467C43CB1D5749EDD24FCDBEAD75D77E1AF86EFB6CFFBE319C39765EC68C601CA513A06199D8E3E10C71FF7BCD09DF543D61D9547DB5C925B61C526A3F76123616C7993EA8692FB6DFDED193BA2D276F4BDB8EB403BC9C99DEB546EA5F277649B2EC03EF127E7A31B327CAB77DE05D4ACB3EC0C22C015C4BFF02000000000000000000000050CD5FFDCDC51F0F310AB9036E24F93302E3F0055CD80D6041923FC082247F800549FE000B92FCA935D21DA19E8A618463BFC25B8F8B0CC99F5AEE0AE5F8791177F27AA7DCCDE08FDE60BC771CA5F64AB3D1D28DE37B4AB575C5F1E58EE52DFDC90024FFF78BBD90C304F64994AD590EC895F9BED984ED7D1FAB6D2F56EECE04954AA0FBE3DBFF1FEEF7F513FC1FD69BBA0563ACBD7D9DB3F5270390FCDFAD947CF68F97124F6D1B35E55371F4A87F24A544BEFF397C43A8B5527FD29135FFB5EC67F8E1BF2DD8D6D34FE2E75EED8D7CC232757CB93E2959B93FE9C42C602EB51FCF5BD77E6BD6A18F9E0FB8A2BDDEE7264A52EDE5966B729FA466EF4FCB4470B319676433C6FC84DA7E1AA13F47888193ACF973A5D4094EFED3FA0D1BFD098B32E36204C6E10B38E10BB020C91F6041923FC082247F8005FDDA9CBC01588EAF8ACDC51FD7300213C617F03D7FE0089390C959F3075890E4CF0C2C334067923FBDC412748FA4FDC6C43FD22D315994E44F2F57AD01BF716DD92D31799C13BEEF72E56DFE6AF68BDDE230B63D7727AB522CB9DB505EA17439E7D8B6D47EFBEDB5ED7993009A6EAB587377A77D99F00621B91B86D42EF1B424F1542C61D99A58AE54134BA93F53FBE7EA1CC98831D1C8CC7F2D476E2BF884D46CB7741BCA2B1CED8723FDF9C4F1B128C97F3DA965899FCCB65E5249AC3696D80DCCEF70A45F8EF4E753C7C7820CB2B99412C315B7158C25DF9AFDB6C2B6DCF62B6E7F78544DE2EED92F771FDF11DEA0E066772EC558D7EDEB4DFDF9A6635996651FF65A6F2B489EFE04BA30E36204C6E10BF8232F800549FE000B92FC011624F9032C48F2075890AF7ACEC7372D00A081374EF8CDB20FC082247F800549FE000B92FC011624F9032C48F2075890EFF9FF31C34D345AB8E1069024F9FFEDEADB18C2688E4E7A4C2E2667D927AED7A0F626C20C3E9B44BE1C33FFB854D28EDD173757FEBB2D55EEE83D5D73E5522FE254DBA56DAC2377FF645E46F2FF5BEB6DF76209374CF6613DA53782FDB6583CA937939A17EE4C3709E77EB17151FB9AA89DD818678390FCFF964BA0A99975CBE06E9D59F59C8999D591924AF0E144A3B4CE2FE14FC49AFFBFAE3CE9FB7DF1B4BC185A5E7CBDDB660D9FAD3C364AE3E63BB930C19884E41F975A5609C5966762BFA71EABB14FDA2D1FBB7BB40DB54C2E2663D9E73FFB24FE1DBCFB994CEAE468382B0F1FDF978FCD8C4AE707626DA6EA4FEDF77D41E6DA0EE38416261713F2429F8775D4F37C37FD6F3527736B263561B97DF9D62F51005B7AF9C84CEB18FD06BF59F6195BEA1B3A66500050C9CC1F7EF36D1F800549FE6B30E36546C62DD0856402BF99F9CFA5367949728CA4653C1ABB3759F15B23472F7E56BA0A66EB85AD5AAFF099FAE3B252B99A6B1295FE68EC2DE364E6EFF9F71873B16DA15EE33C56FECCD56D6331AD326E2FB1EACC3F77B9847070E5066CEECFD963F5D45E9E2156FE13FC1F8B31562E758C678E8D671C1973E1E3A57A7A8FF3DA711B96356E2FB6FAF7FC6B2F6950BA2266EDB5F4C3417B769096E2BAAB0EEED763ECD6D4115E9EA4A6CD12E37600ABCEFCEF949BA99CE5625A5CE9AAB16BDC0E60F5E45FF3B1B7573DB18FC267DA35EB595B8F31545B476909B185713B8855977D7217A54A9D444A9D782A95AFA923564FCD1252E92AA1611CFB1771292EB3B2F1D48EB9DCE3B17A5AEBB872DC86F51BB7DCCE0CE57D56794E57394E4E587DD9076049923F00047C7C7E97959ECF958E15204B4284DF2CFB002C48F2075890E40FB020C91F6041923FC0825C190F00000000000000000000000000000000000000000000A6E1D2E2FDCDDAA7B3C63D153773F95B69D01994D7E8D9AF67EACAEDFBB6E7FEC9E319AD2F478B87071804CFD1F7FDCDDAA7B3C63D1533FFFE8E0CDCAB06BB17D139FAEF1E77F7B3E775FBEF368EFCF1B3A5FBE43B603E91C7624AF5E4F6499509B797CAEFF74BED93AA23768BCFD831E5CAC4E2CAC5DCA3FEDA3261F99A3E8D6DDB3F96EBCB98DAD872751EE9E3A3C7BA7F3CD4125F6AFBD163AA2D1B8EE9585F94DAE7A55AD7FC63E58F9C373852EF4FE1F19A7A7365BF8F85FF7271D5B617AB2BD56F61FD35311FFDBD755B6A7B4DBF9D89ADE6B93F525F6A5BEBB13CF51CC5CAC6623F53FF6BFC7A3A801788CD1CAED8A756AF3A6B638C7D42A87124CEA36D5D611F4B6CD6DFFBB9AD39F6DE6DB61CCB48CFCDB6F57B1E5E3BE3B7E67FCE676BFB387A749F917D13DF6B5F2405773D87A3F7F3E8F11190FCCB5AD6185B9C7991B47E6CAEA92354B3FE7E26F1BDE18D2FD64735FDD62AB7FF95CB14B5C732E27379E6795862E9C7BBF41FB927B8E62469EEB1543BA97D4A654ADB6AEA2D95CDD5BB575367CD49D1541BB9187231B7FCDE72223D165F4BCCB17247FBAB7452BEF6585BDA6D39795D1ACBA571DAF21CB5C45ED35E6C3FE046AF9C75C1D32CFB002C48F207008664E9073AFB3F19172F8C985B34690000000049454E44AE426082>|png>|0.618par|||>>
     <label|fig:2.21>Structure of the generic complex-arithmetic system.
   </big-figure>
 
@@ -11553,21 +11682,21 @@
   appropriate procedure is called <em|dispatching on type><index|dispatching
   on type>. This is a powerful strategy for obtaining modularity in system
   design. On the other hand, implementing the dispatch as in
-  <hlink|2.4.2|#g_t2_002e4_002e2> has two significant weaknesses. One
-  weakness is that the generic interface procedures (<code*|real-part>,
-  <code*|imag-part>, <code*|magnitude>, and <code*|angle>) must know about
-  all the different representations. For instance, suppose we wanted to
-  incorporate a new representation for complex numbers into our
-  complex-number system. We would need to identify this new representation
-  with a type, and then add a clause to each of the generic interface
-  procedures to check for the new type and apply the appropriate selector for
-  that representation.
+  <smart-ref|sec:2.4.2><hlink||#g_t2_002e4_002e2> has two significant
+  weaknesses. One weakness is that the generic interface procedures
+  (<code*|real-part>, <code*|imag-part>, <code*|magnitude>, and
+  <code*|angle>) must know about all the different representations. For
+  instance, suppose we wanted to incorporate a new representation for complex
+  numbers into our complex-number system. We would need to identify this new
+  representation with a type, and then add a clause to each of the generic
+  interface procedures to check for the new type and apply the appropriate
+  selector for that representation.
 
   Another weakness of the technique is that even though the individual
   representations can be designed separately, we must guarantee that no two
   procedures in the entire system have the same name. This is why Ben and
   Alyssa had to change the names of their original procedures from
-  <hlink|2.4.1|#2.4.1>.
+  <smart-ref|sec:2.4.1>.
 
   The issue underlying both of these weaknesses is that the technique for
   implementing generic interfaces is not <em|additive><index|additive>. The
@@ -11692,7 +11821,7 @@
   </scm-code>
 
   Notice that the internal procedures here are the same procedures from
-  <hlink|2.4.1|#2.4.1> that Ben wrote when he was working in isolation. No
+  <smart-ref|sec:2.4.1> that Ben wrote when he was working in isolation. No
   changes are necessary in order to interface them to the rest of the system.
   Moreover, since these procedure definitions are internal to the
   installation procedure, Ben needn't worry about name conflicts with other
@@ -11772,11 +11901,10 @@
   table under the name of the operation and the types of the arguments and
   applies the resulting procedure if one is present:<\footnote>
     <code*|Apply-generic> uses the dotted-tail notation described in
-    <hlink|Exercise 2.20|2_002e2.xhtml#Exercise-2_002e20>, because different
-    generic operations may take different numbers of arguments. In
-    <code*|apply-generic>, <code*|op> has as its value the first argument to
-    <code*|apply-generic> and <code*|args> has as its value a list of the
-    remaining arguments.
+    <smart-ref|exercise:2.20>, because different generic operations may take
+    different numbers of arguments. In <code*|apply-generic>, <code*|op> has
+    as its value the first argument to <code*|apply-generic> and <code*|args>
+    has as its value a list of the remaining arguments.
 
     <code*|Apply-generic> also uses the primitive procedure <code*|apply>,
     which takes two arguments, a procedure and a list. <code*|Apply> applies
@@ -12029,9 +12157,9 @@
   passing>. The name comes from the image that a data object is an entity
   that receives the requested operation name as a \Pmessage.\Q We have
   already seen an example of message passing in <hlink|2.1.3|#2.1.3>, where
-  we saw how <code*|cons>, <code*|car>, and <code*|cdr> could be defined with
-  no data objects but only procedures. Here we see that message passing is
-  not a mathematical trick but a useful technique for organizing systems with
+  we saw how <scm|cons>, <scm|car>, and <scm|cdr> could be defined with no
+  data objects but only procedures. Here we see that message passing is not a
+  mathematical trick but a useful technique for organizing systems with
   generic operations. In the remainder of this chapter we will continue to
   use data-directed programming, rather than message passing, to discuss
   generic arithmetic operations. In <hlink|Chapter
@@ -12087,7 +12215,7 @@
   packages separately and combine them to produce a generic arithmetic
   system.
 
-  <\big-figure|<include|fig_2.23.tm>>
+  <\big-figure|<image|<tuple|<#89504E470D0A1A0A0000000D4948445200000197000000EC0806000000B8F4EBBB0000000473424954080808087C086488000000097048597300000B1300000B1301009A9C1800000F9749444154789CEDDDEB92ABA81A005033B5DFFF95737E4CA5C6C3E62E2AE25A555DDD897211081F6A92DE366084EFDD15988CF678B93F77578065C52697CFE5B5E00E020BDB3F775780A57D3601E58DF439820B975871B219B13AB7C267592E8B718570120D1F7F82E73E997D536972CFE5F2A9D9370C8EDFDDEF5C5D73F9A5F208F30AF3A8C9332C3F95772A7D6D9931A9F638DA4EB17C8017FA063FE1B6D4E3FDFEB1F4A9BF4BDB5BEB50D29B5F4B39AD750CDB3C957F4BBE23DA30D687B17A96FA930771E6C2997A5699E10ABA7572E9491313AEDA8F1855A750AC9D665CD987676ABFE76ACD7C6C24B8E7C2ECF6974C529790F67EFB1C9988F6E94705AAD16F6E185DC759BDE5389723B830BBFDC45C1358461A110C46D52977EF69FF7B64D9674CE6BDF574D6F2302E8B7186D2CDEAFD3EBFA091BAF9BB6D7F4F3EB19BC3FB7CC2EBFB9FC8DFB9FAE5EA12DB2F95FF6F5BA94EB9726AEE9BD4DC448FA56F2D3396AE369F5C9FA6FAB3940713D3593C85770D013044EE1D51C0C4ACFE985DEA3319000000000000000000000000000000000000000000000000309AFF8BC153F807616B31F70053105CD6A12F5FE09FBB2B00C07A04170086135C00184E70E18D72D7FCCFBC1FF0E47B0D4FAE3B37105C789BBB02CB956584E5FD7E8EE4D1F23CC0638C9CC8EE0C30774DC847CBBDAAFD59C49FBB2B0083C426AC4F665B2EDD91F2BEBBBFB7C8E358DAD2673E5275AC2DAF476D9BA58EEB93D90F601AAD41E0BBFB1DA6ADD95693FF37789CCAA3B4ADA6CC6FE277A9BCDC73B9B27AF3DCA74D1D9B33971770E6C22A7213566ED5DCBBA2FEADCC8F4E94E10A7F1647DBE5683E3CDC9F6DCE810D3D5297C1BE9DDB72F6E97269532BF79E326B8CCAEF681D4B69CC3B8BB3AAE029C2C93CB63D26776650DA56AA4F6EFF96C9B3B6AC587D730120757C35AFFBD6368B1D7FAA9C525F025CC64A771DFAF2057CCE0580E104170086135C00184E70016038C10580E17C889227F12E23000000000000000000000000000000000000E06A6FFD1EB4B71E37015F5CC9597AFF37FDC8F2CF2C6BB6FF033F437D0416E054A949E64D93CF9B8E75EFADC70D9CECAD934B78DC67B7C3ACED3C6BBDB898CB62DC259C843E89E773DB7269F6DB4BF98EAA577869AAB5BE35FB7E22E57D8334A5FAEEA5EA98DBD692F767FBBB9E35F9FDB6E7EA07BC48EE92D837F2F81B6CCB9D01D4A689A5ABA9632E5D298F96C7ADFBF6B4532EFF5259B93C6BEB5EDB27E171A5EA14DB8F893973E12AE18AFBF75CAD9E34B9BAE4B6CD32818D3AE6DAF4E1B1D7B445CDD9502EBF5C1923FB9C8BFD73770558D22C93738FDF251C135A7F5BA42E77A5F2DBEF3FC3BBDE184070E12CB900D3B2DA3D9226B76FE9B2CD0C8E1CF3D13718D45E4A4BED1BD6BD94DF67FB3BF01CED736E6485C0594A37D94B3777F78F5B6EE8E7F289A50DA526CAD4E5A2541D6A8E63E4318F3ADE9A3705F4A469C92F97C69CF5103A0ADE6DA6CB5002C9425C1603EE149E8109288BF06E31E04EA5CB62003C949BE40000000000000000000000000000000000000000C0357ABED6DA37A83EDF595F676E6CF034BEDA7F222690673BB3FF8C0D9EC4783D91FF4409C070820B00C3DD155C72A7A32B9DAAAE742C577ACBF8B89AB6E332770497BB278EAB5F60AB9737DADDE3A3D777F733B3D9EBF7F394F624E18EE0927B77C66AEFDC58ED78AEF0D4F1F1D9E6AEDFB6CD5FBFBD27B427197F06E6155B617C32DB72E97ACBFB9599AACBEFF96FF07C6F79FB3CC363DDE71BA6AD29F3EAE33B536E6CA4B6D76C6B2D375566699CA6DA3CCCB3B51E611D5AFAEDEAF1584AF7F4F63CE20D675797CC23B50DB99FE8C2342DDB623FE1F6963A1F0966A97C52C790DA56FA09F7ABA95BAABCDCBEA3B58E8DDFDF678D8F305D6E5B2CFFD4B69ABAE79ECB8D895A778CC754F94F6DCF51AF85D5834BD7F19D7DE6F2D373A9A33652C6F63BA3B37F2BA1A379FFF299EDF8CE54AAEF99E3A377FFDA3C6B27B0D80478A44E778DC77DBAD1EE6C4F061B7DCF25759DB4775575465D422DABEDCF56CEB7B4D21A758CA38FEF6CB9FA5E313E52695BF36CADCF67F73BFCD9E751730939ACC79DE371B5F664B0DEAF7F69594D97AEAFE6B695EA914AD35ADE91EBBCB9FAA4F4068511C777E60AAF676C94B68F1C1FA932631353ACBF5BFBA4B42DAC43AC4E29338CC77DDA27B6E7A8D7C2EA674D971D9F95C0B39DD97FAB8F8DD58FEF6A77B7A77B2E7135F7BD8A7C421FEAECAFF5AF3699DCE14DED79F5F19D71F9B8D9C81BFAB0B2952F7BDC417B8E17BB7FD5D3CE43FAC6990BC01AC2A0D01A24869E61397379A7D52F4340ADB35E0BB9FB16ADEFEEAB49374ACD3B3A4F63627AB6236F151D9D37DC69D4872CAFFAB0668DD4E7806AD28D7A7BF9B66DFF9EB9981000D6F0097EF7A41DE24F478682D1BF567F6F3BCF623CD2EB94397D861BFADF2D7F4A76467967E53143E09DA10E235D3D3E7ADD59CF99C763AFA7F47B8D2704FDE1759C21B8D47E8DC94C467DDF15654F191F77D673C5F1F8947E5FC129ED3CEADD62355FDF91FAEE9F33CB4C3DDFF2351BA5F272F98DFC7A8F543EB1E77B8EEF2CB55F1B327A7CC4CACEF54D6CFFFDF6DEAFA1C9D5E38CF111CB37F57CEB3859B93D9940E9143C36C1D57C9D406C9FD44FB8BD2457971AB1726A8E214C9BAAFF95C777C7BBC57263A3E6716A9F52FBC5F62F95D73A8E7BEB1ECBA7B6ADEF1A8FB97C52E5CEDC9EA35E2B3D73CA93741DDFCC9F73A95D69B47C51E211BD2B9FD40A6AB6E37B9AD6FE3863E59A5B81FFE426E02375BA6B3C1E2DBF94E75DEDC96077DC73B96A62ACBD66DBB33AE93DFB1969F4F1CDE2ACFA96CEAA7AF2A949BB9FBCC39F7D1EA54B4947EB914BDF63B5F664B09E481F5B21EC3B34ECCC96AFC96EA9572E5D6A408D2EAF25CFD695D559C7D7538F96FB523D63638B6C4BA509D3E5EA1293BA3EBF7F2E55D7D63E6919FB57DC930BD31F1D8FFB7C9FD89EA536A86DA33704B04BCE0ADFD0902B3BB2B21C9DF7D3AC7E7C57BBBB3D47DD73216286B722C313C46E82D34F7B2E6EE61BFA3013378BC7D29E8B73E602C070820B00C3092E000CD77BCFC50D3800927A828B1B71E4587800DE2DC650161EC0B66DEEB9007002C10580E104170086135C00184E70016038C10580E104170086135C00184E70016038C10580E10417781FDFFFF66C8FE8BF55BE5B2CD6D83DDF73F5ED4C374BFEE45F7857B6FD9D7D3DDB389BAD3E773A3A5785E9B5EDC9BEC1DFB346F659EB95F3A43AE7FAFEEAE398B9DD66AEDB4C46B7532CBF9EF9EA11FDB7E265B123AB009E2FD5FF6F5EDD09ACF74BB5C9B2E37295CB627BA9D5C1DE67F7DC37781C76F63EED27F17CB83D561E7369E9D7504F3FE7C6E0FE712A8F5C59356331CC3B95DFD1E3AF795D8DBA8CFD3435C7581A27B17D737D77A4CFF7DB9BFB67A5E0929A2CC2E7F61DB26FB458277E837461238F7AB172ADD67EADEDE7961761AC0E253D93482A68D51C5358CF54D9E1BEB9D7552CBF37049616B1F64E3D7774D1519BAED94AC12517E173DB46E47F46795C63545FB5AC307379F4E47F87DA632A1158CA46B551ED180ACF40BBAC76CF2515957FABA3AB06F2D5E5F19F9926E056356705C6D473DD3D365BC7D0A105C46AC165DBE2D79AAF74F70022EECE7E89BD38C3F1D972BF6606B9632A892DFEDEAAE6B2E088F669CDE3F02266855550E9C66CEA5430754335954F2EFFDFE3D235F1519712AEF4B46BE2B5EFCA69E9D7F071CB75EBD2BEA9FC72F58DE5B17F2E57766A7BEE786BEADB5B9FFDF3B33963EC978E3D36066A2EF797FA35954F6C1EDCEF3F6BDFB08037AF2A4BB4CDDADEDEBF878E7FC5CB62001C7338B0AEF46E31008E297DA4038679FBA58112EDB32E7D7B80CB62708CD51D44BC39B85895004FF0C8B96AE5E0325B87CC561F601E33CD0F33D5E59134601DEDC45BCD32F667A9479395CF5C423EA90F3CC11D73C7F0329F7633B2E613C1A5ED35DF2C7BE41B6A7B3EF91FE639139FD2E5AD8E8EFD9EF9EAEAB9AA947FCDF6257C2BFE4E3DD7F2B875DFF0E768FE3399B96E70A6A363BF77BEBA7AAE6AA96B759B3CED4394BE761C788A99E6ABCBE7AAA7DD73F99DA69A8C81D9BD7ABE7A5270996505B0E76BC78198D95ECF97CF554F0A2EB17F091BBB9EB805CF858F4BD73E736973FBFE7EC21B61B1F2C26371D31CD67274BEBA7AAE4AD5B57BAE32A15132DB0A0CAE648E8493082EBC95B17FC0932E8BC1EA4C662C4370016038C10580E104170086135C00184E70016038C10580E104170086135C00184E70016038C10580E104170086135C00184E70016038C10580E104170086135C00184E700160B83F775780A5C5FEB3E293FF27F9777B76FDE132820B67FB4DC6FE85EFB3F52E1404E49772598CAB8C9A6004A9FB7C3681824ACE5CB84A2C2884CF7D32DBC274A933A2DC9952ED5954B85F6A42AD2D7BB509F9B309F214082E9C6D3F099526D95FD0082FA584C124CCA76652FF46F689E5196E6F0D44B1B257535A28E48EFDAD01F9750417CE969AA04B6705611EADF98FDAFFAABC9E201540C2E05CBACF22A0BC807B2E5CE1CC9BFABF89AC65626A99084797FD649FAD7CBCA5B6F805E43705E557125CB84ACD7D8C6FE2EFD8E3D47335F641A1E512CE88B2DFEE6D01F9B50417CE52BAC7B1DF2F3C8308CF2C62F7606297626279E7EAB7FF896D4BA58BD53156B600F4FFB4C78B583D50B2F2E71466BBE63F6B5BD7DCACCFDD8FD93F977A175FCB1B3FAE326B7FC012565B6DA62EAFCD709C33D481FFE88F03BC5B8CB749BDC3CB0A1506125C782381044EE6863E00C3092E000C27B800309CE002C070820B00C3092E000C27B800309CE002C070820B00C3092E000C27B800309CE002C070820B00C3092E000C27B800305CEA1F27010000000000000000000000000000000000000000000000000000C070FE81DE784F6DD3A7D6FB76FECDF1DC7203DBA03FC7C8763D925729ED4AFD7FF7B1DC5DFEDE4C75616106DA3DB4FB784F6DD3A7D6FB76CE5CD6D7F3E238E305E5457A8CF6BBC61DEDBC64DF7EEEAE0059DF2DDE47BFC1F8893CB7EDB67D83C7A97C4A6962833FDC96DB3755466D1E61BDF6FB8652FBD51CC391FC6BF2A9994472ED53BBFDF75CAE3D636AEB97CB33D506A5E76BDBF18C7110AB63EFB8A9DDB776ECB58C4DA8D672CF25B56FCF7D9B52DEA9C7B9FD5AF28CD5EB1BF98949E593AB736D5BC6F2EC3DC6D2E39EB4B9636F6DBB96FA1DEDFFD672478E83A37569D93755EFD631FB087FEEAE0043C5568167A4A9352ACF963AA656C9A5343D7ACA3ACBBE2EB1B396D1FD5B73ECA3CB3C7B1C9C65541F3CEA8CC53D97757CB6B6D3F5DE34B3FB4DAC8F7A210E74553FCEDECEB3D76F7982CBF39CB15A3CF2026CBD7C539347A8E67E516D593DE53F45AC9D6ADBAEC588CBB53DCE1E076739D2078FBD3426AACF2B37886A6FEAE69E6F49937B1CA6AFB971D992C7889BD2A9F6AAB9C95BCABFA6DD4A6F5CC8D5A9F6A6FEBE0EB97E8EA509F76BA95F986FA9FF5B8E75F49B134A37ED7363FDCC7AF7BC9E80C53C66E5087772590C80E10417008009B8340605FF032A7155E6F050AFF50000000049454E44AE426082>|png>|0.618par|||>>
     <label|fig2.23>Generic arithmetic system.
   </big-figure>
 
@@ -12355,7 +12483,7 @@
   next level of tag (if any) becomes visible to be used for further
   dispatching.
 
-  <\big-figure|<include|fig_2.24.tm>>
+  <\big-figure|<image|<tuple|<#89504E470D0A1A0A0000000D494844520000011500000047080600000029DFD3AA0000000473424954080808087C086488000000097048597300000B1300000B1301009A9C18000003E349444154789CEDDDEDAEA3201485E13AE9FDDF72E7C7A4194200C1AE2D0B799F64723EEA41D8D02DA2638FD7FA3EB32B70D131BB0219E20889F7EC0A88440CAC4F50B9DFB21D11C77BAD5CFF6A9F3E25A900AB8A4CB85392F99FA09D02D8144905801449058014490580144905801449058094EB25E5F49295EAB2587E19CCBD5C15752C778DE38888F1BB0CD7A4927684A2834AD7D515D7F1A3CA5552C672E7388EA8C53C7F6D4454A29297EB9A5452111DB4AB562C11231FA357E29EFF8D2AE196CA7DFD5AF6BB50307ED71353E27E8E38D6DB673B937BBF4C2B965871767256C75903A2154BC737A76B1C47D54E311C63FE33D7D31FF579DEF18A494E51E52A2963B9731C4728DB528A8D35D7A41231A0BE65AA8F6EEE835F5DBFEF208F28F729EE684BD43E7E2ED735A900F82FFA80282D979BDF0048915400489154004891540048915400483DE5EACFE875FCDEED97BA3F4060A4BD51DB62714FBA37A0D72A77613A23861A2B275BFA3FB17247BA20867344C55D5A2E6B2A00A4482A00A4482A00A4482A00A4482A00A4482A00A4482A00A4482A00A4482A00A4482A00A4482A00A4482A00A476492AB58FD5C418E28853BB24156055AD4F288C28FBE772492A80B7E53E4C6C279FE42B9D745D1A3FE2788F3CDEAAB88794CB4C0580144905D857C8A9D54E498573532D9E537B9F74ECDAC77DA7A492B2EE1473C4EE9964C96AD7A402E01FF94182A402AC81192200B9C88FE890953D23FBEDB0581A1DD71D6238C3CAFD365AF7478DA14735A6E08EF63D3D8633ACDC6F57CA0DAB0B6B2A00A4482A00A4482A00A4482A00A4482A00A4DEB32B3049BAF2CD4D456D4EFFD7847E5BC0AE3395E3C5A05C11FDB600A7994A7EDDFCA8BC76147E97FF5DEBB5ABF5C8EBE078D41C89495EE7D2EBA587F7D4FAA5B5AFFC6FCFEE91C8B7BBD26F3DFB73E9B754AB1D338CF4C1343DCFC56C3D5DEC53F8BEB46DABCCD1BA94CA897C76E899D6BE6B75EB89635E4E6B5F67F5AAED2FAF5FE9E75A99ADDF9DD5E5EC5674D79BDF46DBAA2CF7BBDDD018709AA9A422B262CFF3545A89CC3A53676AB390DE76F5B6F5EA1BF1C8BE8F7A88736BBFEE1CEE9AFE8E8FA1BAB8AEA9A86601AD2360C9917CCDFFA565F44EE35D9CB52B377244BFB2CED1DB2FA3F17DE29ACBACF65C1EDB4E3395DA51B4B67ED19A5E8FACC794CE195BEB0B39C7594CEF1A48EBB5B45D236FFC3CB6A5A796B5A6D4A558978E983DFDD633165CA5B1775853995D8FA6BB8EEEB36611AEE7E6CE1CDAE3DA6FB3D75486B7759AA928E56B08B61976632BCD1AEED49A4DCE303C53796A5299DD1138471F95B9C565B83EAE0BB500164552012045520120455201204552012035EBEA8FC37D09AB23866B72EAB790BAFC055E87104D3A235A080000000049454E44AE426082>|png>|277pt|71pt||>>
     <label|fig:2.24>Representation of 3 + 4<em|i><nbsp>in rectangular form.
   </big-figure>
 
@@ -12409,7 +12537,7 @@
     from <hlink|2.4.2|#2.4.2> so that our generic system takes advantage of
     Scheme's internal type system. That is to say, the system should work as
     before except that ordinary numbers should be represented simply as
-    Scheme numbers rather than as pairs whose <code*|car> is the symbol
+    Scheme numbers rather than as pairs whose <scm|car> is the symbol
     <code*|scheme-number>.
   </exercise>
 
@@ -13249,7 +13377,7 @@
     generic arithmetic system using the type mechanism suggested in
     <hlink|Exercise 2.78|#Exercise-2_002e78>. Thus, coefficients that are
     ordinary numbers will be represented as the numbers themselves rather
-    than as pairs whose <code*|car> is the symbol <code*|scheme-number>.
+    than as pairs whose <scm|car> is the symbol <code*|scheme-number>.
   </footnote> This would be a terrible representation for a sparse polynomial
   such as <math|B>: There would be a giant list of zeros punctuated by a few
   lonely nonzero terms. A more reasonable representation of the term list of
@@ -13263,7 +13391,7 @@
   implementing the selectors and constructors for terms and term lists is
   straightforward:<\footnote>
     Although we are assuming that term lists are ordered, we have implemented
-    <code*|adjoin-term> to simply <code*|cons> the new term onto the existing
+    <code*|adjoin-term> to simply <scm|cons> the new term onto the existing
     term list. We can get away with this so long as we guarantee that the
     procedures (such as <code*|add-terms>) that use <code*|adjoin-term>
     always call it with a higher-order term than appears in the list. If we
