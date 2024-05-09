@@ -6242,7 +6242,7 @@
   <scm|cdr> of the final pair signals the end of the sequence by pointing to
   a distinguished value that is not a pair, represented in box-and-pointer
   diagrams as a diagonal line and in programs as the value of the variable
-  <code*|nil>. The entire sequence is constructed by nested <scm|cons>
+  <scm|nil>. The entire sequence is constructed by nested <scm|cons>
   operations:
 
   <\scm-code>
@@ -6256,8 +6256,8 @@
   </scm-code>
 
   Such a sequence of pairs, formed by nested <scm|cons>es, is called a
-  <em|list><index|list>, and Scheme provides a primitive called <code*|list>
-  to help in constructing lists.<\footnote>
+  <em|list><index|list>, and Scheme provides a primitive called <scm|list> to
+  help in constructing lists.<\footnote>
     In this book, we use <em|list><index|list> to mean a chain of pairs
     terminated by the end-of-list marker. In contrast, the term <em|list
     structure><index|list structure> refers to any data structure made out of
@@ -6279,7 +6279,7 @@
 
   Lisp systems conventionally print lists by printing the sequence of
   elements, enclosed in parentheses. Thus, the data object in
-  <smart-ref|fig:2.4> is printed as <code*|(1 2 3 4)>:
+  <smart-ref|fig:2.4> is printed as <scm|(1 2 3 4)>:
 
   <\session|scheme|default>
     <\input|Scheme] >
@@ -6291,9 +6291,9 @@
     </input>
   </session>
 
-  Be careful not to confuse the expression <code*|(list 1 2 3 4)> with the
-  list <code*|(1 2 3 4)>, which is the result obtained when the expression is
-  evaluated. Attempting to evaluate the expression <code*|(1 2 3 4)> will
+  Be careful not to confuse the expression <scm|(list 1 2 3 4)> with the list
+  <scm|(1 2 3 4)>, which is the result obtained when the expression is
+  evaluated. Attempting to evaluate the expression <scm|(1 2 3 4)> will
   signal an error when the interpreter tries to apply the procedure <code*|1>
   to arguments <code*|2>, <code*|3>, <code*|4>.
 
@@ -6353,22 +6353,22 @@
     </input>
   </session>
 
-  The value of <code*|nil>, used to terminate the chain of pairs, can be
+  The value of <scm|nil>, used to terminate the chain of pairs, can be
   thought of as a sequence of no elements, the <em|empty list><index|empty
   list>. The word <em|nil><index|nil> is a contraction of the Latin word
   <em|nihil>, which means \Pnothing.\Q<\footnote>
     It's remarkable how much energy in the standardization of Lisp dialects
     has been dissipated in arguments that are literally over nothing: Should
-    <code*|nil> be an ordinary name? Should the value of <code*|nil> be a
-    symbol? Should it be a list? Should it be a pair? In Scheme, <code*|nil>
-    is an ordinary name, which we use in this section as a variable whose
-    value is the end-of-list marker (just as <code*|true> is an ordinary
-    variable that has a true value). Other dialects of Lisp, including Common
-    Lisp, treat <code*|nil> as a special symbol. The authors of this book,
-    who have endured too many language standardization brawls, would like to
-    avoid the entire issue. Once we have introduced quotation in
-    <smart-ref|sec:2.3>, we will denote the empty list as <scm|'()> and
-    dispense with the variable <scm|nil> entirely.
+    <scm|nil> be an ordinary name? Should the value of <scm|nil> be a symbol?
+    Should it be a list? Should it be a pair? In Scheme, <scm|nil> is an
+    ordinary name, which we use in this section as a variable whose value is
+    the end-of-list marker (just as <code*|true> is an ordinary variable that
+    has a true value). Other dialects of Lisp, including Common Lisp, treat
+    <scm|nil> as a special symbol. The authors of this book, who have endured
+    too many language standardization brawls, would like to avoid the entire
+    issue. Once we have introduced quotation in <smart-ref|sec:2.3>, we will
+    denote the empty list as <scm|'()> and dispense with the variable
+    <scm|nil> entirely.
   </footnote>
 
   <paragraph*|List operations>
@@ -6672,7 +6672,7 @@
 
       \ \ (if (null? items)
 
-      \ \ \ \ \ \ #nil
+      \ \ \ \ \ \ ()
 
       \ \ \ \ \ \ (cons (* (car items) factor)
 
@@ -6693,11 +6693,11 @@
   We can abstract this general idea and capture it as a common pattern
   expressed as a higher-order procedure, just as in
   <hlink|1.3|1_002e3.xhtml#g_t1_002e3>. The higher-order procedure here is
-  called <code*|map>. <code*|Map> takes as arguments a procedure of one
-  argument and a list, and returns a list of the results produced by applying
-  the procedure to each element in the list:<\footnote>
-    Scheme standardly provides a <code*|map> procedure that is more general
-    than the one described here. This more general <code*|map> takes a
+  called <scm|map>. <scm|Map> takes as arguments a procedure of one argument
+  and a list, and returns a list of the results produced by applying the
+  procedure to each element in the list:<\footnote>
+    Scheme standardly provides a <scm|map> procedure that is more general
+    than the one described here. This more general <scm|map> takes a
     procedure of <math|n> arguments, together with <math|n> lists, and
     applies the procedure to all the first elements of the lists, all the
     second elements of the lists, and so on, returning a list of the results.
@@ -6731,7 +6731,7 @@
 
     \ \ (if (null? items)
 
-    \ \ \ \ \ \ #nil
+    \ \ \ \ \ \ ()
 
     \ \ \ \ \ \ (cons (proc (car items))
 
@@ -6759,7 +6759,7 @@
   </session>
 
   Now we can give a new definition of <code*|scale-list> in terms of
-  <code*|map>:
+  <scm|map>:
 
   <\scm-code>
     (define (scale-list items factor)
@@ -6771,14 +6771,14 @@
 
   <code*|Map> is an important construct, not only because it captures a
   common pattern, but because it establishes a higher level of abstraction in
-  dealing with lists. In the original definition of <code*|scale-list>, the
+  dealing with lists. In the original definition of <scm|scale-list>, the
   recursive structure of the program draws attention to the
   element-by-element processing of the list. Defining <code*|scale-list> in
-  terms of <code*|map> suppresses that level of detail and emphasizes that
+  terms of <scm|map> suppresses that level of detail and emphasizes that
   scaling transforms a list of elements to a list of results. The difference
   between the two definitions is not that the computer is performing a
   different process (it isn't) but that we think about the process
-  differently. In effect, <code*|map> helps establish an abstraction barrier
+  differently. In effect, <scm|map> helps establish an abstraction barrier
   that isolates the implementation of procedures that transform lists from
   the details of how the elements of the list are extracted and combined.
   Like the barriers shown in <smart-ref|fig:2.1>, this abstraction gives us
@@ -6805,7 +6805,7 @@
 
       \ \ (if (null? items)
 
-      \ \ \ \ \ \ nil
+      \ \ \ \ \ \ ()
 
       \ \ \ \ \ \ (cons \<less\>??\<gtr\> \<less\>??\<gtr\>)))
 
@@ -6835,7 +6835,7 @@
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ answer))))
 
-      \ \ (iter items nil))
+      \ \ (iter items ()))
     </scm-code>
 
     Unfortunately, defining <code*|square-list> this way produces the answer
@@ -6859,7 +6859,7 @@
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (square (car things))))))
 
-      \ \ (iter items nil))
+      \ \ (iter items ()))
     </scm-code>
 
     This doesn't work either. Explain.
@@ -6867,7 +6867,7 @@
 
   <\exercise>
     <label|exercise:2.23>The procedure <code*|for-each> is similar to
-    <code*|map>. It takes as arguments a procedure and a list of elements.
+    <scm|map>. It takes as arguments a procedure and a list of elements.
     However, rather than forming a list of the results, <code*|for-each> just
     applies the procedure to each of the elements in turn, from left to
     right. The values returned by applying the procedure to the elements are
@@ -6895,16 +6895,16 @@
 
   The representation of sequences in terms of lists generalizes naturally to
   represent sequences whose elements may themselves be sequences. For
-  example, we can regard the object <code*|((1 2) 3 4)> constructed by
+  example, we can regard the object <scm|((1 2) 3 4)> constructed by
 
   <\scm-code>
     (cons (list 1 2) (list 3 4))
   </scm-code>
 
-  as a list of three items, the first of which is itself a list, <code*|(1
-  2)>. Indeed, this is suggested by the form in which the result is printed
-  by the interpreter. <smart-ref|fig:2.5> shows the representation of this
-  structure in terms of pairs.
+  as a list of three items, the first of which is itself a list, <scm|(1 2)>.
+  Indeed, this is suggested by the form in which the result is printed by the
+  interpreter. <smart-ref|fig:2.5> shows the representation of this structure
+  in terms of pairs.
 
   <\big-figure|<with|gr-mode|<tuple|group-edit|move>|gr-frame|<tuple|scale|1.00007cm|<tuple|0.425912gw|0.300015gh>>|gr-geometry|<tuple|geometry|1par|0.440007par|center>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-grid-aspect|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|10|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#808080>|<tuple|1|#c0c0c0>|<tuple|10|#e0e0ff>>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-line-width|2ln|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-point-size|4ln|magnify|0.594603556782387|<graphics||<with|line-width|2ln|<cline|<point|-2.8000000000000007|3.2>|<point|-2.0000000000000004|3.2>|<point|-2.0000000000000004|2.4>|<point|-2.8000000000000007|2.4>>>|<with|line-width|2ln|<cline|<point|-2|3.2>|<point|-1.2000000000000004|3.2>|<point|-1.2000000000000004|2.4>|<point|-2.0|2.4>>>|<with|line-width|2ln|<cline|<point|-2.8|1.4>|<point|-2.0|1.4>|<point|-2.0|0.6>|<point|-2.8|0.6>>>|<with|line-width|2ln|<cline|<point|-2|1.4>|<point|-1.2000000000000004|1.4>|<point|-1.2000000000000004|0.6>|<point|-2.0|0.6>>>|<with|line-width|2ln|<cline|<point|-0.4|1.4>|<point|0.3999999999999998|1.4>|<point|0.3999999999999998|0.6>|<point|-0.3999999999999998|0.6>>>|<with|line-width|2ln|<cline|<point|0.4|1.4>|<point|1.2000000000000004|1.4>|<point|1.2000000000000004|0.6>|<point|0.3999999999999998|0.6>>>|<with|line-width|2ln|<line|<point|1.2|1.4>|<point|0.3999999999999998|0.6>>>|<with|line-width|2ln|<line|<point|-2.8|-0.4>|<point|-2.0|-0.4>|<point|-2.0|-1.2>|<point|-2.8|-1.2>|<point|-2.8|-0.4>>>|<with|line-width|2ln|<line|<point|-0.4|-0.4>|<point|0.3999999999999998|-0.4>|<point|0.3999999999999998|-1.2>|<point|-0.3999999999999998|-1.2>|<point|-0.3999999999999998|-0.4>>>|<with|line-width|2ln|<line|<point|1.8|1.4>|<point|2.599999999999999|1.4>|<point|2.599999999999999|0.6>|<point|1.7999999999999996|0.6>|<point|1.7999999999999996|1.4>>>|<with|line-width|2ln|<line|<point|1.8|3.2>|<point|1.7999999999999996|2.4>|<point|2.599999999999999|2.4>|<point|2.599999999999999|3.2>|<point|1.7999999999999996|3.2>>>|<with|line-width|2ln|<line|<point|2.6|3.2>|<point|3.400000000000001|3.2>|<point|3.400000000000001|2.4>|<point|2.599999999999999|2.4>>>|<with|line-width|2ln|<line|<point|4.4|3.2>|<point|5.2|3.2>|<point|5.2|2.4>|<point|4.4|2.4>|<point|4.4|3.2>>>|<with|line-width|2ln|<line|<point|5.2|3.2>|<point|6.0|3.2>|<point|6.0|2.4>|<point|5.2|2.4>|<point|5.2|3.2>>>|<with|line-width|2ln|<line|<point|6|3.2>|<point|5.2|2.4>>>|<with|line-width|2ln|<line|<point|4.4|1.4>|<point|4.4|0.6>|<point|5.2|0.6>|<point|5.2|1.4>|<point|4.4|1.4>>>|<point|-2.4|2.8>|<point|-1.6|2.8>|<point|-2.4|1>|<point|-1.6|1>|<point|0|1>|<point|2.2|2.8>|<point|3|2.8>|<point|4.8|2.8>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|1>|<point|-2.4|-0.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|2>|<point|0|-0.8>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|3>|<point|2.2|1>>>|<with|text-at-halign|center|text-at-valign|center|<text-at|<with|font-base-size|16|4>|<point|4.8|1>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-1.6|2.8>|<point|1.7999999999999996|2.830350764372113>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-2.4|2.8>|<point|-2.4|1.4>>>|<with|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-2.4|1>|<point|-2.4|-0.4>>>|<with|line-width|2ln|arrow-end|\<gtr\>|<line|<point|-1.6|1>|<point|-0.3999999999999998|0.9965700622530262>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|0|1>|<point|0.0|-0.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|2.2|2.8>|<point|2.2|1.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|3|2.8>|<point|4.4|2.8>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|4.8|2.8>|<point|4.8|1.4>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<arrow-with-text|<point|2.6|4.4>|<point|2.599999999999999|3.2>|<math-at|<scm|<with|font-base-size|16|(3
   4)>>>>>|<with|point-size|4ln|magnify|1.681792830495885|<point|-2.4|2.8>>||<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.8|2.8>|<point|-2.8|2.8>>>|<with|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-3.8|1>|<point|-2.8|1.0>>>|<with|text-at-valign|center|<text-at|<scm|<with|font-base-size|16|(1
@@ -6929,14 +6929,15 @@
   often reduce operations on trees to operations on their branches, which
   reduce in turn to operations on the branches of the branches, and so on,
   until we reach the leaves of the tree. As an example, compare the
-  <scm|length> procedure of <smart-ref|sec:2.2.1> with the
-  <code*|count-leaves> procedure, which returns the total number of leaves of
-  a tree:
+  <scm|length> procedure of <smart-ref|sec:2.2.1> with the <scm|count-leaves>
+  procedure, which returns the total number of leaves of a tree:
 
   <\session|scheme|default>
-    <\input|Scheme] >
+    <\unfolded-io|Scheme] >
       (define x (cons (list 1 2) (list 3 4)))
-    </input>
+    <|unfolded-io>
+      ((1 2) 3 4)
+    </unfolded-io>
 
     <\unfolded-io|Scheme] >
       (length x)
@@ -7208,8 +7209,8 @@
 
   <paragraph*|Mapping over trees>
 
-  Just as <code*|map> is a powerful abstraction for dealing with sequences,
-  <code*|map> together with recursion is a powerful abstraction for dealing
+  Just as <scm|map> is a powerful abstraction for dealing with sequences,
+  <scm|map> together with recursion is a powerful abstraction for dealing
   with trees. For instance, the <code*|scale-tree> procedure, analogous to
   <code*|scale-list> of <smart-ref|sec:2.2.1>, takes as arguments a numeric
   factor and a tree whose leaves are numbers. It returns a tree of the same
@@ -7220,7 +7221,7 @@
     <\input|Scheme] >
       (define (scale-tree tree factor)
 
-      \ \ (cond ((null? tree) #nil)
+      \ \ (cond ((null? tree) ())
 
       \ \ \ \ \ \ \ \ ((not (pair? tree)) (* tree factor))
 
@@ -7244,9 +7245,9 @@
   </session>
 
   Another way to implement <code*|scale-tree> is to regard the tree as a
-  sequence of sub-trees and use <code*|map>. We map over the sequence,
-  scaling each sub-tree in turn, and return the list of results. In the base
-  case, where the tree is a leaf, we simply multiply by the factor:
+  sequence of sub-trees and use <scm|map>. We map over the sequence, scaling
+  each sub-tree in turn, and return the list of results. In the base case,
+  where the tree is a leaf, we simply multiply by the factor:
 
   <\scm-code>
     (define (scale-tree tree factor)
@@ -7283,7 +7284,7 @@
     </scm-code>
 
     Define <code*|square-tree> both directly (i.e., without using any
-    higher-order procedures) and also by using <code*|map> and recursion.
+    higher-order procedures) and also by using <scm|map> and recursion.
   </exercise>
 
   <\exercise>
@@ -7309,7 +7310,7 @@
 
       \ \ (if (null? s)
 
-      \ \ \ \ \ \ (list nil)
+      \ \ \ \ \ \ (list ())
 
       \ \ \ \ \ \ (let ((rest (subsets (cdr s))))
 
@@ -7361,7 +7362,7 @@
 
     \ \ \ \ (if (\<gtr\> k n)
 
-    \ \ \ \ \ \ \ \ nil
+    \ \ \ \ \ \ \ \ ()
 
     \ \ \ \ \ \ \ \ (let ((f (fib k)))
 
@@ -7454,7 +7455,7 @@
   Unfortunately, the two procedure definitions above fail to exhibit this
   signal-flow structure. For instance, if we examine the
   <code*|sum-odd-squares> procedure, we find that the enumeration is
-  implemented partly by the <scm|null?> and <code*|pair?> tests and partly by
+  implemented partly by the <scm|null?> and <scm|pair?> tests and partly by
   the tree-recursive structure of the procedure. Similarly, the accumulation
   is found partly in the tests and partly in the addition used in the
   recursion. In general, there are no distinct parts of either procedure that
@@ -7472,7 +7473,7 @@
   one stage in the process to the next. If we represent these signals as
   lists, then we can use list operations to implement the processing at each
   of the stages. For instance, we can implement the mapping stages of the
-  signal-flow diagrams using the <code*|map> procedure from
+  signal-flow diagrams using the <scm|map> procedure from
   <smart-ref|sec:2.2.1>:
 
   <\session|scheme|default>
@@ -7552,7 +7553,7 @@
     </unfolded-io>
 
     <\unfolded-io|Scheme] >
-      (accumulate cons #nil (list 1 2 3 4 5))
+      (accumulate cons () (list 1 2 3 4 5))
     <|unfolded-io>
       (1 2 3 4 5)
     </unfolded-io>
@@ -7573,7 +7574,7 @@
 
       \ \ (if (\<gtr\> low high)
 
-      \ \ \ \ \ \ #nil
+      \ \ \ \ \ \ ()
 
       \ \ \ \ \ \ (cons low (enumerate-interval (+ low 1) high))))
     </input>
@@ -7599,7 +7600,7 @@
     <\input|Scheme] >
       (define (enumerate-tree tree)
 
-      \ \ (cond ((null? tree) #nil)
+      \ \ (cond ((null? tree) ())
 
       \ \ \ \ \ \ \ \ ((not (pair? tree)) (list tree))
 
@@ -7620,7 +7621,7 @@
     </input>
   </session>
 
-  Now we can reformulate <code*|sum-odd-squares> and <code*|even-fibs> as in
+  Now we can reformulate <scm|sum-odd-squares> and <code*|even-fibs> as in
   the signal-flow diagrams. For <code*|sum-odd-squares>, we enumerate the
   sequence of leaves of the tree, filter this to keep only the odd numbers in
   the sequence, square each element, and sum the results:
@@ -7650,7 +7651,7 @@
 
     \ \ (accumulate cons
 
-    \ \ \ \ \ \ \ \ \ \ \ \ \ \ nil
+    \ \ \ \ \ \ \ \ \ \ \ \ \ \ ()
 
     \ \ \ \ \ \ \ \ \ \ \ \ \ \ (filter even?
 
@@ -7681,7 +7682,7 @@
 
       \ \ (accumulate cons
 
-      \ \ \ \ \ \ \ \ \ \ \ \ \ \ #nil
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ ()
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ (map square
 
@@ -7780,7 +7781,7 @@
     <\scm-code>
       (define (map p sequence)
 
-      \ \ (accumulate (lambda (x y) \<less\>??\<gtr\>) nil sequence))
+      \ \ (accumulate (lambda (x y) \<less\>??\<gtr\>) () sequence))
 
       (define (append seq1 seq2)
 
@@ -7862,8 +7863,8 @@
     It applies the designated accumulation procedure to combine all the first
     elements of the sequences, all the second elements of the sequences, and
     so on, and returns a sequence of the results. For instance, if <code*|s>
-    is a sequence containing four sequences, <code*|((1 2 3) (4 5 6) (7 8 9)
-    (10 11 12)),> then the value of <code*|(accumulate-n + 0 s)> should be
+    is a sequence containing four sequences, <scm|((1 2 3) (4 5 6) (7 8 9)
+    (10 11 12))>, then the value of <code*|(accumulate-n + 0 s)> should be
     the sequence <code*|(22 26 30)>. Fill in the missing expressions in the
     following definition of <code*|accumulate-n>:
 
@@ -7872,7 +7873,7 @@
 
       \ \ (if (null? (car seqs))
 
-      \ \ \ \ \ \ nil
+      \ \ \ \ \ \ ()
 
       \ \ \ \ \ \ (cons (accumulate op init \<less\>??\<gtr\>)
 
@@ -7886,7 +7887,7 @@
     <with|font-series|bold|m> = <math|<around*|(|m<rsub|ij>|)>> as sequences
     of vectors (the rows of the matrix). For example, the matrix
     <math|<around*|(|<tabular|<table|<row|<cell|1>|<cell|2>|<cell|3>|<cell|4>>|<row|<cell|4>|<cell|5>|<cell|6>|<cell|6>>|<row|<cell|6>|<cell|7>|<cell|8>|<cell|9>>>>|)>>
-    is represented as the sequence <code*|((1 2 3 4) (4 5 6 6) (6 7 8 9))>.
+    is represented as the sequence <scm|((1 2 3 4) (4 5 6 6) (6 7 8 9))>.
     With this representation, we can use sequence operations to concisely
     express the basic matrix and vector operations. These operations (which
     are described in any book on matrix algebra) are the following:
@@ -7905,7 +7906,7 @@
     n<rsub|ij>=m<rsub|ji>.>>>>>>\ 
 
     We can define the dot product as<\footnote>
-      This definition uses the extended version of <code*|map> described in
+      This definition uses the extended version of <scm|map> described in
       <hlink|Footnote 78|#Footnote-78>.
     </footnote>
 
@@ -7979,11 +7980,11 @@
       </folded-io>
 
       <\input|Scheme] >
-        (fold-right list nil (list 1 2 3))
+        (fold-right list () (list 1 2 3))
       </input>
 
       <\input|Scheme] >
-        (fold-left list nil (list 1 2 3))
+        (fold-left list () (list 1 2 3))
       </input>
     </session>
 
@@ -8000,11 +8001,11 @@
     <\scm-code>
       (define (reverse sequence)
 
-      \ \ (fold-right (lambda (x y) \<less\>??\<gtr\>) nil sequence))
+      \ \ (fold-right (lambda (x y) \<less\>??\<gtr\>) () sequence))
 
       (define (reverse sequence)
 
-      \ \ (fold-left (lambda (x y) \<less\>??\<gtr\>) nil sequence))
+      \ \ (fold-left (lambda (x y) \<less\>??\<gtr\>) () sequence))
     </scm-code>
   </exercise>
 
@@ -8016,8 +8017,7 @@
     languages KRC and Miranda provide elegant formalisms for dealing with
     these constructs. The examples in this section (see also
     <smart-ref|exercise:2.42>) are adapted from <hlink|Turner
-    1981|References.xhtml#Turner-1981>. In
-    <hlink|3.5.3|3_002e5.xhtml#g_t3_002e5_002e3>, we'll see how this approach
+    1981|References.xhtml#Turner-1981>. In 3.5.3, we'll see how this approach
     generalizes to infinite sequences.
   </footnote> Consider this problem: Given a positive integer <math|n>, find
   all ordered pairs of distinct positive integers <math|i> and <math|j>,
@@ -8036,21 +8036,21 @@
   <math|i\<leq\>n>, enumerate the integers <math|j\<less\>i>, and for each
   such <math|i> and <math|j> generate the pair <math|<around*|(|i,j|)>>. In
   terms of sequence operations, we map along the sequence
-  <code*|(enumerate-interval 1 n)>. For each <math|i> in this sequence, we
-  map along the sequence <code*|(enumerate-interval 1 (- i 1))>. For each
-  <math|j> in this latter sequence, we generate the pair <code*|(list i j)>.
-  This gives us a sequence of pairs for each <math|i>. Combining all the
-  sequences for all the <math|i> (by accumulating with <code*|append>)
-  produces the required sequence of pairs:<\footnote>
+  <scm|(enumerate-interval 1 n)>. For each <math|i> in this sequence, we map
+  along the sequence <scm|(enumerate-interval 1 (- i 1))>. For each <math|j>
+  in this latter sequence, we generate the pair <scm|(list i j)>. This gives
+  us a sequence of pairs for each <math|i>. Combining all the sequences for
+  all the <math|i> (by accumulating with <scm|append>) produces the required
+  sequence of pairs:<\footnote>
     We're representing a pair here as a list of two elements rather than as a
     Lisp pair. Thus, the \Ppair\Q <math|<around*|(|i,j|)>> is represented as
-    <code*|(list i j)>, not <code*|(cons i j)>.
+    <scm|(list i j)>, not <scm|(cons i j)>.
   </footnote>
 
   <\scm-code>
     (accumulate append
 
-    \ \ \ \ \ \ \ \ \ \ \ \ nil
+    \ \ \ \ \ \ \ \ \ \ \ \ ()
 
     \ \ \ \ \ \ \ \ \ \ \ \ (map (lambda (i)
 
@@ -8062,15 +8062,14 @@
     \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (enumerate-interval 1 n)))
   </scm-code>
 
-  The combination of mapping and accumulating with <code*|append> is so
-  common in this sort of program that we will isolate it as a separate
-  procedure:
+  The combination of mapping and accumulating with <scm|append> is so common
+  in this sort of program that we will isolate it as a separate procedure:
 
   <\session|scheme|default>
     <\input|Scheme] >
       (define (flatmap proc seq)
 
-      \ \ (accumulate append nil (map proc seq)))
+      \ \ (accumulate append () (map proc seq)))
     </input>
 
     <\input|Scheme] >
@@ -8167,7 +8166,7 @@
 
       \ \ (if (null? s) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ; empty set?
 
-      \ \ \ \ \ \ (list nil) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ; sequence
+      \ \ \ \ \ \ (list ()) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ; sequence
       containing empty set
 
       \ \ \ \ \ \ (flatmap (lambda (x)
@@ -8189,10 +8188,10 @@
   <math|S> to the problem of generating the permutations of sets with fewer
   elements than <math|S>. In the terminal case, we work our way down to the
   empty list, which represents a set of no elements. For this, we generate
-  <code*|(list nil)>, which is a sequence with one item, namely the set with
-  no elements. The <code*|remove> procedure used in <code*|permutations>
-  returns all the items in a given sequence except for a given item. This can
-  be expressed as a simple filter:
+  <scm|(list ())>, which is a sequence with one item, namely the set with no
+  elements. The <code*|remove> procedure used in <code*|permutations> returns
+  all the items in a given sequence except for a given item. This can be
+  expressed as a simple filter:
 
   <\session|scheme|default>
     <\input|Scheme] >
@@ -9324,9 +9323,9 @@
   </session>
 
   In keeping with this, we can obtain the empty list by evaluating
-  <code*|'()>, and thus dispense with the variable <code*|nil>.
+  <code*|'()>, and thus dispense with the variable <scm|nil>.
 
-  One additional primitive used in manipulating symbols is <code*|eq?>, which
+  One additional primitive used in manipulating symbols is <scm|eq?>, which
   takes two symbols as arguments and tests whether they are the
   same.<\footnote>
     \ We can consider two symbols to be \Pthe same\Q if they consist of the
@@ -9334,9 +9333,9 @@
     that we are not yet ready to address: the meaning of \Psameness\Q in a
     programming language. We will return to this in <hlink|Chapter
     3|Chapter-3.xhtml#Chapter-3> (<hlink|3.1.3|3_002e1.xhtml#g_t3_002e1_002e3>).
-  </footnote> Using <code*|eq?>, we can implement a useful procedure called
+  </footnote> Using <scm|eq?>, we can implement a useful procedure called
   <code*|memq>. This takes two arguments, a symbol and a list. If the symbol
-  is not contained in the list (i.e., is not <code*|eq?> to any item in the
+  is not contained in the list (i.e., is not <scm|eq?> to any item in the
   list), then <code*|memq> returns false. Otherwise, it returns the sublist
   of the list beginning with the first occurrence of the symbol:
 
@@ -9470,16 +9469,16 @@
     </session>
 
     is false. To be more precise, we can define <code*|equal?> recursively in
-    terms of the basic <code*|eq?> equality of symbols by saying that
-    <code*|a> and <code*|b> are <code*|equal?> if they are both symbols and
-    the symbols are <code*|eq?>, or if they are both lists such that
-    <code*|(car a)> is <code*|equal?> to <code*|(car b)> and <code*|(cdr a)>
-    is <code*|equal?> to <code*|(cdr b)>. Using this idea, implement
-    <code*|equal?> as a procedure.<\footnote>
+    terms of the basic <scm|eq?> equality of symbols by saying that <code*|a>
+    and <code*|b> are <code*|equal?> if they are both symbols and the symbols
+    are <scm|eq?>, or if they are both lists such that <code*|(car a)> is
+    <code*|equal?> to <code*|(car b)> and <code*|(cdr a)> is <code*|equal?>
+    to <code*|(cdr b)>. Using this idea, implement <code*|equal?> as a
+    procedure.<\footnote>
       In practice, programmers use <code*|equal?> to compare lists that
       contain numbers as well as symbols. Numbers are not considered to be
       symbols. The question of whether two numerically equal numbers (as
-      tested by <code*|=>) are also <code*|eq?> is highly
+      tested by <code*|=>) are also <scm|eq?> is highly
       implementation-dependent. A better definition of <code*|equal?> (such
       as the one that comes as a primitive in Scheme) would also stipulate
       that if <code*|a> and <code*|b> are both numbers, then <code*|a> and
@@ -9656,7 +9655,7 @@
     </session>
 
     <item>Two variables are the same if the symbols representing them are
-    <code*|eq?>:
+    <scm|eq?>:
 
     <\session|scheme|default>
       <\input|Scheme] >
@@ -9998,7 +9997,7 @@
   appears more than once. The empty set is represented by the empty list. In
   this representation, <code*|element-of-set?> is similar to the procedure
   <code*|memq> of <smart-ref|sec:2.3.1>. It uses <code*|equal?> instead of
-  <code*|eq?> so that the set elements need not be symbols:
+  <scm|eq?> so that the set elements need not be symbols:
 
   <\session|scheme|default>
     <\input|Scheme] >
@@ -10820,8 +10819,8 @@
   make a tree by merging two nodes, we obtain the weight of the tree as the
   sum of the weights of the nodes, and the set of symbols as the union of the
   sets of symbols for the nodes. Since our symbol sets are represented as
-  lists, we can form the union by using the <code*|append> procedure we
-  defined in <hlink|2.2.1|2_002e2.xhtml#g_t2_002e2_002e1>:
+  lists, we can form the union by using the <scm|append> procedure we defined
+  in <hlink|2.2.1|2_002e2.xhtml#g_t2_002e2_002e1>:
 
   <\session|scheme|default>
     <\input|Scheme] >
