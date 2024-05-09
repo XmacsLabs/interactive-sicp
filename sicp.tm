@@ -7495,7 +7495,7 @@
     <\input|Scheme] >
       (define (filter predicate sequence)
 
-      \ \ (cond ((null? sequence) nil)
+      \ \ (cond ((null? sequence) ())
 
       \ \ \ \ \ \ \ \ ((predicate (car sequence))
 
@@ -9322,8 +9322,8 @@
     </input>
   </session>
 
-  In keeping with this, we can obtain the empty list by evaluating
-  <code*|'()>, and thus dispense with the variable <scm|nil>.
+  In keeping with this, we can obtain the empty list by evaluating <scm|'()>,
+  and thus dispense with the variable <scm|nil>.
 
   One additional primitive used in manipulating symbols is <scm|eq?>, which
   takes two symbols as arguments and tests whether they are the
@@ -9439,7 +9439,7 @@
   </exercise>
 
   <\exercise>
-    Two lists are said to be <code*|equal?> if they contain equal elements
+    Two lists are said to be <scm|equal?> if they contain equal elements
     arranged in the same order. For example,
 
     <\session|scheme|default>
@@ -9468,21 +9468,21 @@
       </input>
     </session>
 
-    is false. To be more precise, we can define <code*|equal?> recursively in
+    is false. To be more precise, we can define <scm|equal?> recursively in
     terms of the basic <scm|eq?> equality of symbols by saying that <code*|a>
-    and <code*|b> are <code*|equal?> if they are both symbols and the symbols
+    and <code*|b> are <scm|equal?> if they are both symbols and the symbols
     are <scm|eq?>, or if they are both lists such that <code*|(car a)> is
-    <code*|equal?> to <code*|(car b)> and <code*|(cdr a)> is <code*|equal?>
-    to <code*|(cdr b)>. Using this idea, implement <code*|equal?> as a
+    <scm|equal?> to <code*|(car b)> and <code*|(cdr a)> is <scm|equal?> to
+    <code*|(cdr b)>. Using this idea, implement <scm|equal?> as a
     procedure.<\footnote>
-      In practice, programmers use <code*|equal?> to compare lists that
-      contain numbers as well as symbols. Numbers are not considered to be
-      symbols. The question of whether two numerically equal numbers (as
-      tested by <code*|=>) are also <scm|eq?> is highly
-      implementation-dependent. A better definition of <code*|equal?> (such
-      as the one that comes as a primitive in Scheme) would also stipulate
-      that if <code*|a> and <code*|b> are both numbers, then <code*|a> and
-      <code*|b> are <code*|equal?> if they are numerically equal.
+      In practice, programmers use <scm|equal?> to compare lists that contain
+      numbers as well as symbols. Numbers are not considered to be symbols.
+      The question of whether two numerically equal numbers (as tested by
+      <code*|=>) are also <scm|eq?> is highly implementation-dependent. A
+      better definition of <scm|equal?> (such as the one that comes as a
+      primitive in Scheme) would also stipulate that if <code*|a> and
+      <code*|b> are both numbers, then <code*|a> and <code*|b> are
+      <scm|equal?> if they are numerically equal.
     </footnote>
   </exercise>
 
@@ -9996,7 +9996,7 @@
   One way to represent a set is as a list of its elements in which no element
   appears more than once. The empty set is represented by the empty list. In
   this representation, <code*|element-of-set?> is similar to the procedure
-  <code*|memq> of <smart-ref|sec:2.3.1>. It uses <code*|equal?> instead of
+  <code*|memq> of <smart-ref|sec:2.3.1>. It uses <scm|equal?> instead of
   <scm|eq?> so that the set elements need not be symbols:
 
   <\session|scheme|default>
