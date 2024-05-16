@@ -9462,35 +9462,45 @@
   Now we can distinguish between symbols and their values:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define a 1)
-    </input>
+    <|unfolded-io>
+      1
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define b 2)
-    </input>
+    <|unfolded-io>
+      2
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (list a b)
     <|unfolded-io>
       (1 2)
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (list 'a 'b)
     <|unfolded-io>
       (a b)
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (list 'a b)
     <|unfolded-io>
       (a 2)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Quotation also allows us to type in compound objects, using the
@@ -9542,13 +9552,15 @@
     programming language. We will return to this in <hlink|Chapter
     3|Chapter-3.xhtml#Chapter-3> (<hlink|3.1.3|3_002e1.xhtml#g_t3_002e1_002e3>).
   </footnote> Using <scm|eq?>, we can implement a useful procedure called
-  <code*|memq>. This takes two arguments, a symbol and a list. If the symbol
-  is not contained in the list (i.e., is not <scm|eq?> to any item in the
-  list), then <code*|memq> returns false. Otherwise, it returns the sublist
-  of the list beginning with the first occurrence of the symbol:
+  <scm|memq>. This takes two arguments, a symbol and a list. If the symbol is
+  not contained in the list (i.e., is not <scm|eq?> to any item in the list),
+  then <scm|memq> returns false. Otherwise, it returns the sublist of the
+  list beginning with the first occurrence of the symbol:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (memq item x)
 
       \ \ (cond ((null? x) #f)
@@ -9556,39 +9568,33 @@
       \ \ \ \ \ \ \ \ ((eq? item (car x)) x)
 
       \ \ \ \ \ \ \ \ (else (memq item (cdr x)))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      memq
+    </unfolded-io>
   </session>
 
   For example, the value of
 
   <\session|s7|default>
-    <\folded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (memq 'apple '(pear banana prune))
-    <|folded-io>
+    <|unfolded-io>
       #f
-    </folded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    </unfolded-io>
   </session>
 
   is false, whereas the value of
 
   <\session|s7|default>
-    <\folded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (memq 'apple '(x (apple sauce) y apple pear))
-    <|folded-io>
+    <|unfolded-io>
       (apple pear)
-    </folded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    </unfolded-io>
   </session>
 
   is <code*|(apple pear)>.
@@ -10204,7 +10210,7 @@
   One way to represent a set is as a list of its elements in which no element
   appears more than once. The empty set is represented by the empty list. In
   this representation, <code*|element-of-set?> is similar to the procedure
-  <code*|memq> of <smart-ref|sec:2.3.1>. It uses <scm|equal?> instead of
+  <scm|memq> of <smart-ref|sec:2.3.1>. It uses <scm|equal?> instead of
   <scm|eq?> so that the set elements need not be symbols:
 
   <\session|s7|default>
