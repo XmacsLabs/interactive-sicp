@@ -438,46 +438,54 @@
   compound expression that represents the application of the procedure to
   those numbers. For example:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (+ 137 349)
     <|unfolded-io>
       486
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (- 1000 334)
     <|unfolded-io>
       666
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (- 1000 334)
     <|unfolded-io>
       666
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (* 5 99)
     <|unfolded-io>
       495
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (/ 10 5)
     <|unfolded-io>
       2
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (+ 2.7 10)
     <|unfolded-io>
       12.7
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Expressions such as these, formed by delimiting a list of expressions
@@ -498,22 +506,22 @@
   however. One of them is that it can accommodate procedures that may take an
   arbitrary number of arguments, as in the following examples:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (+ 21 35 12 7)
     <|unfolded-io>
       75
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (* 25 4 12)
     <|unfolded-io>
       1200
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   No ambiguity can arise, because the operator is always the leftmost element
@@ -524,16 +532,14 @@
   <with|font-shape|italic|nested>, that is, to have combinations whose
   elements are themselves combinations:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (+ (* 3 5) (- 10 6))
     <|unfolded-io>
       19
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   There is no limit (in principle) to the depth of such nesting and to the
@@ -594,14 +600,14 @@
 
   In the Scheme dialect of Lisp, we name things with <scm|define>. Typing
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define size 2)
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      2
+    </unfolded-io>
   </session>
 
   causes the interpreter to associate the value 2 with the name
@@ -611,54 +617,76 @@
   </footnote> Once the name <scm|size> has been associated with the number 2,
   we can refer to the value 2 by name:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       size
     <|unfolded-io>
       2
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (* 5 size)
     <|unfolded-io>
       10
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Here are further examples of the use of <scm|define>:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define pi 3.14159)
-    </input>
+    <|unfolded-io>
+      syntax-error
 
-    <\input|Scheme] >
+      <\errput>
+        \;
+
+        ;define: pi is immutable
+
+        ; (define pi 3.14159)
+
+        \;
+      </errput>
+    </unfolded-io>
+
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define radius 10)
-    </input>
+    <|unfolded-io>
+      10
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (* pi (* radius radius))
     <|unfolded-io>
-      314.159
+      314.1592653589793
     </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define circumference (* 2 pi radius))
-    </input>
+    <|unfolded-io>
+      62.83185307179586
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       circumference
     <|unfolded-io>
-      62.8318
+      62.83185307179586
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   <scm|Define> is our language's simplest means of abstraction, for it allows
@@ -830,14 +858,14 @@
   say, \PTo square something, multiply it by itself.\Q This is expressed in
   our language as
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       <label|define_square>(define (square x) (* x x))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      square
+    </unfolded-io>
   </session>
 
   We can understand this in the following way:
@@ -895,31 +923,33 @@
 
   Having defined <code*|square>, we can now use it:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (square 21)
     <|unfolded-io>
       441
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (square (+ 2 5))
     <|unfolded-io>
       49
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (square (square 3))
     <|unfolded-io>
       81
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
-  We can also use <code*|square> as a building block in defining other
+  We can also use <scm|square> as a building block in defining other
   procedures. For example, <math|x<rsup|2>+y<rsup|2>> can be expressed as
 
   <\scm-code>
@@ -929,43 +959,47 @@
   We can easily define a procedure <code*|sum-of-squares> that, given any two
   numbers as arguments, produces the sum of their squares:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (sum-of-squares x y)
 
       \ \ (+ (square x) (square y)))
-    </input>
+    <|unfolded-io>
+      sum-of-squares
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (sum-of-squares 3 4)
     <|unfolded-io>
       25
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Now we can use <code*|sum-of-squares> as a building block in constructing
   further procedures:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (f a)
 
       \ \ (sum-of-squares (+ a 1) (* a 2)))
-    </input>
+    <|unfolded-io>
+      f
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (f 5)
     <|unfolded-io>
       136
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Compound procedures are used in exactly the same way as primitive
@@ -1251,7 +1285,7 @@
 
     \ \ (cond ((\<less\> x 0) (- x))
 
-    \ \ (else x)))
+    \ \ \ \ \ \ \ \ (else x)))
   </scm-code>
 
   which could be expressed in English as \PIf <math|x> is less than zero
@@ -1269,19 +1303,21 @@
   <\scm-code>
     (define (abs x)
 
-    (if (\<less\> x 0) \ 
+    \ \ (if (\<less\> x 0) \ 
 
-    \ \ \ \ (- x)
+    \ \ \ \ \ \ (- x)
 
-    \ \ \ \ x))
+    \ \ \ \ \ \ x))
   </scm-code>
 
   This uses the special form <code*|if>, a restricted type of conditional
   that can be used when there are precisely two cases in the case analysis.
   The general form of an <code*|if> expression is
 
-  <code|(if \<langle\><var|predicate>\<rangle\>
-  \<langle\><var|consequent>\<rangle\> \<langle\><var|alternative>\<rangle\>)>
+  <\scm-code>
+    (if \<langle\><var|predicate>\<rangle\>
+    \<langle\><var|consequent>\<rangle\> \<langle\><var|alternative>\<rangle\>)
+  </scm-code>
 
   To evaluate an <code*|if> expression, the interpreter starts by evaluating
   the \<langle\><var|predicate>\<rangle\> part of the expression. If the
@@ -1364,58 +1400,82 @@
     interpreter in response to each expression? Assume that the sequence is
     to be evaluated in the order in which it is presented.
 
-    <\session|scheme|default>
-      <\unfolded-io|Scheme] >
+    <\session|s7|default>
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         10
-      <|unfolded-io>
+      <|folded-io>
         10
-      </unfolded-io>
+      </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (+ 5 3 4)
       <|folded-io>
         12
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (- 9 1)
       <|folded-io>
         8
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (/ 6 2)
       <|folded-io>
         3
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (+ (* 2 4) (- 4 6))
       <|folded-io>
         6
       </folded-io>
 
-      <\input|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (define a 3)
-      </input>
+      <|folded-io>
+        3
+      </folded-io>
 
-      <\input|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (define b (+ a 1))
-      </input>
+      <|folded-io>
+        4
+      </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (+ a b (* a b))
       <|folded-io>
         19
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (= a b)
       <|folded-io>
         #f
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (if (and (\<gtr\> b a) (\<less\> b (* a b)))
 
         \ \ \ \ b
@@ -1425,7 +1485,9 @@
         4
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (cond ((= a 4) 6)
 
         \ \ \ \ \ \ ((= b 4) (+ 6 7 a))
@@ -1435,13 +1497,17 @@
         16
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (+ 2 (if (\<gtr\> b a) b a))
       <|folded-io>
         6
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (* (cond ((\<gtr\> a b) a)
 
         \ \ \ \ \ \ \ \ \ ((\<less\> a b) b)
@@ -1450,10 +1516,6 @@
       <|folded-io>
         4
       </folded-io>
-
-      <\input|Scheme] >
-        \;
-      </input>
     </session>
   </exercise>
 
@@ -1612,8 +1674,10 @@
   purposes, we are done; if not, we must repeat the process with an improved
   guess. We write this basic strategy as a procedure:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (sqrt-iter guess x)
 
       \ \ (if (good-enough? guess x)
@@ -1623,40 +1687,38 @@
       \ \ \ \ \ \ (sqrt-iter (improve guess x)
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x)))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      sqrt-iter
+    </unfolded-io>
   </session>
 
   A guess is improved by averaging it with the quotient of the radicand and
   the old guess:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (improve guess x)
 
       \ \ (average guess (/ x guess)))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      improve
+    </unfolded-io>
   </session>
 
   where
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (average x y)
 
       \ \ (/ (+ x y) 2))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      average
+    </unfolded-io>
   </session>
 
   We also have to say what we mean by \Pgood enough.\Q The following will do
@@ -1670,16 +1732,16 @@
     just an ordinary character.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (good-enough? guess x)
 
       \ \ (\<less\> (abs (- (<hlink|square|#define_square> guess) x)) 0.001))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      good-enough?
+    </unfolded-io>
   </session>
 
   Finally, we need a way to get started. For instance, we can always guess
@@ -1698,49 +1760,53 @@
     initial guess of 1.0 forces all subsequent values to be decimals.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (sqrt x)
 
       \ \ (sqrt-iter 1.0 x))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      sqrt
+    </unfolded-io>
   </session>
 
   If we type these definitions to the interpreter, we can use <code*|sqrt>
   just as we can use any procedure:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (sqrt 9)
     <|unfolded-io>
       3.00009155413138
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (sqrt (+ 100 37))
     <|unfolded-io>
       11.704699917758145
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (sqrt (+ (sqrt 2) (sqrt 3)))
     <|unfolded-io>
       1.7739279023207892
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (square (sqrt 1000))
     <|unfolded-io>
       1000.000369924366
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   The <code*|sqrt> program also illustrates that the simple procedural
@@ -2477,8 +2543,10 @@
   We can immediately translate this definition into a recursive procedure for
   computing Fibonacci numbers:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       <label|define_fib>(define (fib n)
 
       \ \ (cond ((= n 0) 0)
@@ -2488,11 +2556,9 @@
       \ \ \ \ \ \ \ \ (else (+ (fib (- n 1))
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (fib (- n 2))))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      fib
+    </unfolded-io>
   </session>
 
   <\big-figure|<scm|<tree|fib 5|<tree|fib 4|<tree|fib 3|<tree|fib 2|<tree|fib
@@ -2638,8 +2704,10 @@
 
   We can easily translate this description into a recursive procedure:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (first-denomination kinds-of-coins)
 
       \ \ (cond ((= kinds-of-coins 1) 1)
@@ -2651,7 +2719,13 @@
       \ \ \ \ \ \ \ \ ((= kinds-of-coins 4) 25)
 
       \ \ \ \ \ \ \ \ ((= kinds-of-coins 5) 50)))
+    <|unfolded-io>
+      first-denomination
+    </unfolded-io>
 
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (cc amount kinds-of-coins)
 
       \ \ (cond ((= amount 0) 1)
@@ -2668,15 +2742,19 @@
       kinds-of-coins))
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kinds-of-coins)))))
+    <|unfolded-io>
+      cc
+    </unfolded-io>
 
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (count-change amount)
 
       \ \ (cc amount 5))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      count-change
+    </unfolded-io>
   </session>
 
   (The <code*|first-denomination> procedure takes as input the number of
@@ -2685,16 +2763,14 @@
   smallest, but any order would do as well.) We can now answer our original
   question about changing a dollar:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (count-change 100)
     <|unfolded-io>
       292
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   <scm|Count-change> generates a tree-recursive process with redundancies
@@ -3659,14 +3735,14 @@
   compound operations on numbers independent of the particular numbers. For
   example, when we
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (cube x) (* x x x))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      cube
+    </unfolded-io>
   </session>
 
   we are not talking about the cube of a particular number, but rather about
@@ -3787,8 +3863,10 @@
   We can do so readily in our procedural language by taking the common
   template shown above and transforming the \Pslots\Q into formal parameters:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (sum term a next b)
 
       \ \ (if (\<gtr\> a b)
@@ -3798,11 +3876,9 @@
       \ \ \ \ \ \ (+ (term a)
 
       \ \ \ \ \ \ \ \ \ (sum term (next a) next b))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      sum
+    </unfolded-io>
   </session>
 
   Notice that <code*|sum> takes as its arguments the lower and upper bounds
@@ -3811,68 +3887,72 @@
   example, we can use it (along with a procedure <code*|inc> that increments
   its argument by 1) to define <code*|sum-cubes>:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (inc n) (+ n 1))
-    </input>
+    <|unfolded-io>
+      inc
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (sum-cubes a b)
 
       \ \ (sum cube a inc b))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      sum-cubes
+    </unfolded-io>
   </session>
 
   Using this, we can compute the sum of the cubes of the integers from 1 to
   10:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (sum-cubes 1 10)
     <|unfolded-io>
       3025
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   With the aid of an identity procedure to compute the term, we can define
   <code*|sum-integers> in terms of <code*|sum>:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (identity x) x)
-    </input>
+    <|unfolded-io>
+      identity
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (sum-integers a b)
 
       \ \ (sum identity a inc b))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      sum-integers
+    </unfolded-io>
   </session>
 
   Then we can add up the integers from 1 to 10:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (sum-integers 1 10)
     <|unfolded-io>
       55
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   We can also define <code*|pi-sum> in the same way:<\footnote>
@@ -3883,8 +3963,10 @@
     <smart-ref|sec:1.3.2>.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (pi-sum a b)
 
       \ \ (define (pi-term x)
@@ -3896,25 +3978,21 @@
       \ \ \ \ (+ x 4))
 
       \ \ (sum pi-term a pi-next b))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      pi-sum
+    </unfolded-io>
   </session>
 
   Using these procedures, we can compute an approximation to <math|\<pi\>>:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (* 8 (pi-sum 1 1000))
     <|unfolded-io>
       3.139592655589783
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Once we have <code*|sum>, we can use it as a building block in formulating
@@ -3923,8 +4001,10 @@
   numerically using the formula <with|math-display|true|<math|<big|int><rsup|b><rsub|a>f=<around*|[|f<around*|(|a+<frac|dx|2>|)>+f<around*|(|a+dx+<frac|dx|2>|)>+f<around*|(|a+2*dx+<frac|dx|2>|)>+\<ldots\>|]>dx>>
   for small values of <math|dx>. We can express this directly as a procedure:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (integral f a b dx)
 
       \ \ (define (add-dx x) (+ x dx))
@@ -3932,23 +4012,25 @@
       \ \ (* (sum f (+ a (/ dx 2.0)) add-dx b)
 
       \ \ \ \ \ dx))
-    </input>
+    <|unfolded-io>
+      integral
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (integral cube 0 1 0.01)
     <|unfolded-io>
       0.24998750000000042
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (integral cube 0 1 0.001)
     <|unfolded-io>
       0.249999875000001
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   (The exact value of the integral of <code*|cube> between 0 and 1 is 1/4.)
@@ -4169,7 +4251,7 @@
   Like any expression that has a procedure as its value, a <scm|lambda>
   expression can be used as the operator in a combination such as
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\unfolded-io|Scheme] >
       ((lambda (x y z) (+ x y (square z))) 1 2 3)
     <|unfolded-io>
@@ -4445,12 +4527,18 @@
   error tolerance (that is, the size of the interval we will consider \Psmall
   enough\Q). Here is a procedure that implements this strategy:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (average x y) (/ (+ x y) 2))
-    </input>
+    <|unfolded-io>
+      average
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (search f neg-point pos-point)
 
       \ \ (let ((midpoint (average neg-point pos-point)))
@@ -4470,11 +4558,9 @@
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (search f midpoint pos-point))
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (else midpoint))))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      search
+    </unfolded-io>
   </session>
 
   We assume that we are initially given the function <math|f> together with
@@ -4500,16 +4586,16 @@
     some other kind of magician.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (close-enough? x y)
 
       \ \ (\<less\> (abs (- x y)) 0.001))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      close-enough?
+    </unfolded-io>
   </session>
 
   <code*|Search> is awkward to use directly, because we can accidentally give
@@ -4524,8 +4610,10 @@
     number of items that are printed as error messages.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (half-interval-method f a b)
 
       \ \ (let ((a-value (f a))
@@ -4543,33 +4631,31 @@
       \ \ \ \ \ \ \ \ \ \ (else
 
       \ \ \ \ \ \ \ \ \ \ \ (error "Values are not of opposite sign" a b)))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      half-interval-method
+    </unfolded-io>
   </session>
 
   The following example uses the half-interval method to approximate
   <math|\<pi\>> as the root between 2 and 4 of <math|sin\<nospace\>x=0>:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (half-interval-method sin 2.0 4.0)
     <|unfolded-io>
       3.14111328125
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Here is another example, using the half-interval method to search for a
   root of the equation <math|x<rsup|3>-2*x-3=0> between 1 and 2:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (half-interval-method (lambda (x) (- (* x x x) (* 2 x) 3))
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.0
@@ -4578,10 +4664,6 @@
     <|unfolded-io>
       1.89306640625
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   <paragraph*|Finding fixed points of functions>
@@ -4597,12 +4679,18 @@
   function. We apply the function repeatedly until we find two successive
   values whose difference is less than some prescribed tolerance:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define tolerance 0.00001)
-    </input>
+    <|unfolded-io>
+      0.00001
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (fixed-point f first-guess)
 
       \ \ (define (close-enough? v1 v2)
@@ -4620,11 +4708,9 @@
       \ \ \ \ \ \ \ \ \ \ (try next))))
 
       \ \ (try first-guess))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      fixed-point
+    </unfolded-io>
   </session>
 
   For example, we can use this method to approximate the fixed point of the
@@ -4634,33 +4720,29 @@
     point.
   </footnote>
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (fixed-point cos 1.0)
     <|unfolded-io>
       0.7390822985224024
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Similarly, we can find a solution to the equation
   <math|y=sin\<nospace\>y+cos\<nospace\>y>:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (fixed-point (lambda (y) (+ (sin y) (cos y)))
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ 1.0)
     <|unfolded-io>
       1.2587315962971173
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   The fixed-point process is reminiscent of the process we used for finding
@@ -4831,16 +4913,16 @@
   We can express the idea of average damping by means of the following
   procedure:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (average-damp f)
 
       \ \ (lambda (x) (average x (f x))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      average-damp
+    </unfolded-io>
   </session>
 
   <code*|Average-damp> is a procedure that takes as its argument a procedure
@@ -4858,16 +4940,14 @@
     that is obtained as the value returned by a higher-order procedure.
   </footnote>
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       ((average-damp square) 10)
     <|unfolded-io>
       55
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Using <code*|average-damp>, we can reformulate the square-root procedure as
@@ -5307,20 +5387,24 @@
 
   We can express these rules as procedures:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
-      <\with|prog-scripts|scheme>
-        (define (add-rat x y)
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
+      (define (add-rat x y)
 
-        \ \ (make-rat (+ (* (numer x) (denom y))
+      \ \ (make-rat (+ (* (numer x) (denom y))
 
-        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (* (numer y) (denom x)))
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (* (numer y) (denom x)))
 
-        \ \ \ \ \ \ \ \ \ \ \ \ (* (denom x) (denom y))))
-      </with>
-    </input>
+      \ \ \ \ \ \ \ \ \ \ \ \ (* (denom x) (denom y))))
+    <|unfolded-io>
+      add-rat
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (sub-rat x y)
 
       \ \ (make-rat (- (* (numer x) (denom y))
@@ -5328,35 +5412,45 @@
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (* (numer y) (denom x)))
 
       \ \ \ \ \ \ \ \ \ \ \ \ (* (denom x) (denom y))))
-    </input>
+    <|unfolded-io>
+      sub-rat
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (mul-rat x y)
 
       \ \ (make-rat (* (numer x) (numer y))
 
       \ \ \ \ \ \ \ \ \ \ \ \ (* (denom x) (denom y))))
-    </input>
+    <|unfolded-io>
+      mul-rat
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (div-rat x y)
 
       \ \ (make-rat (* (numer x) (denom y))
 
       \ \ \ \ \ \ \ \ \ \ \ \ (* (denom x) (numer y))))
-    </input>
+    <|unfolded-io>
+      div-rat
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (equal-rat? x y)
 
       \ \ (= (* (numer x) (denom y))
 
       \ \ \ \ \ (* (numer y) (denom x))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      equal-rat?
+    </unfolded-io>
   </session>
 
   Now we have the operations on rational numbers defined in terms of the
@@ -5383,54 +5477,68 @@
   </footnote> Thus, we can use <scm|cons>, <scm|car>, and <scm|cdr> as
   follows:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define x (cons 1 2))
-    </input>
+    <|unfolded-io>
+      (1 . 2)
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (car x)
     <|unfolded-io>
       1
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (cdr x)
     <|unfolded-io>
       2
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Notice that a pair is a data object that can be given a name and
   manipulated, just like a primitive data object. Moreover, <scm|cons> can be
   used to form pairs whose elements are pairs, and so on:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define x (cons 1 2))
-    </input>
+    <|unfolded-io>
+      (1 . 2)
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define y (cons 3 4))
-    </input>
+    <|unfolded-io>
+      (3 . 4)
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define z (cons x y))
-    </input>
+    <|unfolded-io>
+      ((1 . 2) 3 . 4)
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (car (car z))
     <|unfolded-io>
       1
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   In <smart-ref|sec:2.2> we will see how this ability to combine pairs means
@@ -5472,22 +5580,30 @@
     We have chosen not to use this style of definition in this book.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (make-rat n d) (cons n d))
-    </input>
+    <|unfolded-io>
+      make-rat
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (numer x) (car x))
-    </input>
+    <|unfolded-io>
+      numer
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (denom x) (cdr x))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      denom
+    </unfolded-io>
   </session>
 
   Also, in order to display the results of our computations, we can print
@@ -5500,54 +5616,80 @@
     what the interpreter prints as the value returned by <code*|print-rat>.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (print-rat x)
-
-      \ \ (newline)
 
       \ \ (display (numer x))
 
       \ \ (display "/")
 
-      \ \ (display (denom x)))
-    </input>
+      \ \ (display (denom x))
 
-    <\input|Scheme] >
+      \ \ (newline))
+    <|unfolded-io>
+      print-rat
+    </unfolded-io>
+
+    <\input>
+      \<gtr\>\ 
+    <|input>
       \;
     </input>
   </session>
 
   Now we can try our rational-number procedures:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define one-half (make-rat 1 2))
-    </input>
+    <|unfolded-io>
+      (1 . 2)
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (print-rat one-half)
-    </input>
+    <|unfolded-io>
+      1/2
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define one-third (make-rat 1 3))
-    </input>
+    <|unfolded-io>
+      (1 . 3)
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (print-rat (add-rat one-half one-third))
-    </input>
+    <|unfolded-io>
+      5/6
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (print-rat (mul-rat one-half one-third))
-    </input>
+    <|unfolded-io>
+      1/6
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (print-rat (add-rat one-third one-third))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      2/3
+    </unfolded-io>
   </session>
 
   As the final example shows, our rational-number implementation does not
@@ -5557,28 +5699,30 @@
   integers, we can use <code*|gcd> to reduce the numerator and the
   denominator to lowest terms before constructing the pair:
 
-  <\session|scheme|default>
-    <\input>
-      Scheme]\ 
-    <|input>
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (make-rat n d)
 
       \ \ (let ((g (gcd n d)))
 
       \ \ \ \ (cons (/ n g) (/ d g))))
-    </input>
+    <|unfolded-io>
+      make-rat
+    </unfolded-io>
   </session>
 
   Now we have
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (print-rat (add-rat one-third one-third))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      2/3
+    </unfolded-io>
   </session>
 
   as desired. This modification was accomplished by changing the constructor
@@ -6281,14 +6425,14 @@
   elements, enclosed in parentheses. Thus, the data object in
   <smart-ref|fig:2.4> is printed as <scm|(1 2 3 4)>:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define one-through-four (list 1 2 3 4))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      (1 2 3 4)
+    </unfolded-io>
   </session>
 
   Be careful not to confuse the expression <scm|(list 1 2 3 4)> with the list
@@ -6317,40 +6461,46 @@
   </footnote> The constructor <scm|cons> makes a list like the original one,
   but with an additional item at the beginning.
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (car one-through-four)
     <|unfolded-io>
       1
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (cdr one-through-four)
     <|unfolded-io>
       (2 3 4)
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (car (cdr one-through-four))
     <|unfolded-io>
       2
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (cons 10 one-through-four)
     <|unfolded-io>
       (10 1 2 3 4)
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (cons 5 one-through-four)
     <|unfolded-io>
       (5 1 2 3 4)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   The value of <scm|nil>, used to terminate the chain of pairs, can be
@@ -6389,8 +6539,10 @@
     <math|<around*|(|n-1|)>>-st item of the <scm|cdr> of the list.
   </itemize>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (list-ref items n)
 
       \ \ (if (= n 0)
@@ -6398,21 +6550,25 @@
       \ \ \ \ \ \ (car items)
 
       \ \ \ \ \ \ (list-ref (cdr items) (- n 1))))
-    </input>
+    <|unfolded-io>
+      list-ref
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define squares (list 1 4 9 16 25))
-    </input>
+    <|unfolded-io>
+      (1 4 9 16 25)
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (list-ref squares 3)
     <|unfolded-io>
       16
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Often we <scm|cdr> down the whole list. To aid in this, Scheme includes a
@@ -6420,8 +6576,10 @@
   empty list. The procedure <scm|length>, which returns the number of items
   in a list, illustrates this typical pattern of use:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (length items)
 
       \ \ (if (null? items)
@@ -6429,21 +6587,25 @@
       \ \ \ \ \ \ 0
 
       \ \ \ \ \ \ (+ 1 (length (cdr items)))))
-    </input>
+    <|unfolded-io>
+      length
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define odds (list 1 3 5 7))
-    </input>
+    <|unfolded-io>
+      (1 3 5 7)
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (length odds)
     <|unfolded-io>
       4
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   The <scm|length> procedure implements a simple recursive plan. The
@@ -6481,22 +6643,22 @@
   <code*|append>, which takes two lists as arguments and combines their
   elements to make a new list:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (append squares odds)
     <|unfolded-io>
       (1 4 9 16 25 1 3 5 7)
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (append odds squares)
     <|unfolded-io>
       (1 3 5 7 1 4 9 16 25)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   <code*|Append> is also implemented using a recursive plan. To
@@ -6615,25 +6777,33 @@
     value will be a <em|list><index|list> of any remaining arguments. For
     instance, given the definition
 
-    <code|(define (f x y . z) \<langle\><var|body>\<rangle\>)>
+    <\scm-code>
+      (define (f x y . z) \<langle\><var|body>\<rangle\>)
+    </scm-code>
 
     the procedure <code*|f> can be called with two or more arguments. If we
     evaluate
 
-    <code|(f 1 2 3 4 5 6)>
+    <\scm-code>
+      (f 1 2 3 4 5 6)
+    </scm-code>
 
     then in the body of <code*|f>, <code*|x> will be 1, <code*|y> will be 2,
     and <code*|z> will be the list <code*|(3 4 5 6)>. Given the definition
 
-    <code|(define (g . w) \<langle\><var|body>\<rangle\>)>
+    <\scm-code>
+      (define (g . w) \<langle\><var|body>\<rangle\>)
+    </scm-code>
 
     the procedure <code*|g> can be called with zero or more arguments. If we
     evaluate
 
-    <code|(g 1 2 3 4 5 6)>
+    <\scm-code>
+      (g 1 2 3 4 5 6)
+    </scm-code>
 
-    then in the body of <code*|g>, <code*|w> will be the list <code*|(1 2 3 4
-    5 6)>.<hlink||#FOOT77><\footnote>
+    then in the body of <code*|g>, <code*|w> will be the list <scm|(1 2 3 4 5
+    6)>.<hlink||#FOOT77><\footnote>
       To define <code*|f> and <code*|g> using <scm|lambda> we would write
 
       <\scm-code>
@@ -6666,8 +6836,10 @@
   element in a list and generate the list of results. For instance, the
   following procedure scales each number in a list by a given factor:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (scale-list items factor)
 
       \ \ (if (null? items)
@@ -6677,17 +6849,17 @@
       \ \ \ \ \ \ (cons (* (car items) factor)
 
       \ \ \ \ \ \ \ \ \ \ \ \ (scale-list (cdr items) factor))))
-    </input>
+    <|unfolded-io>
+      scale-list
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (scale-list (list 1 2 3 4 5) 10)
     <|unfolded-io>
       (10 20 30 40 50)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   We can abstract this general idea and capture it as a common pattern
@@ -6703,14 +6875,18 @@
     second elements of the lists, and so on, returning a list of the results.
     For example:
 
-    <\session|scheme|default>
-      <\unfolded-io|Scheme] >
+    <\session|s7|default>
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (map + (list 1 2 3) (list 40 50 60) (list 700 800 900))
       <|unfolded-io>
         (741 852 963)
       </unfolded-io>
 
-      <\unfolded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (map (lambda (x y) (+ x (* 2 y)))
 
         \ \ \ \ \ (list 1 2 3)
@@ -6719,43 +6895,43 @@
       <|unfolded-io>
         (9 12 15)
       </unfolded-io>
-
-      <\input|Scheme] >
-        \;
-      </input>
     </session>
   </footnote>
 
-  <\scm-code>
-    (define (map proc items)
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
+      (define (map proc items)
 
-    \ \ (if (null? items)
+      \ \ (if (null? items)
 
-    \ \ \ \ \ \ ()
+      \ \ \ \ \ \ ()
 
-    \ \ \ \ \ \ (cons (proc (car items))
+      \ \ \ \ \ \ (cons (proc (car items))
 
-    \ \ \ \ \ \ \ \ \ \ \ \ (map proc (cdr items)))))
-  </scm-code>
+      \ \ \ \ \ \ \ \ \ \ \ \ (map proc (cdr items)))))
+    <|unfolded-io>
+      map
+    </unfolded-io>
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (map abs (list -10 2.5 -11.6 17))
     <|unfolded-io>
       (10 2.5 11.6 17)
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (map (lambda (x) (* x x))
 
       \ \ \ \ \ (list 1 2 3 4))
     <|unfolded-io>
       (1 4 9 16)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Now we can give a new definition of <code*|scale-list> in terms of
@@ -6932,46 +7108,54 @@
   <scm|length> procedure of <smart-ref|sec:2.2.1> with the <scm|count-leaves>
   procedure, which returns the total number of leaves of a tree:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define x (cons (list 1 2) (list 3 4)))
     <|unfolded-io>
       ((1 2) 3 4)
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (length x)
     <|unfolded-io>
       3
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (count-leaves x)
     <|unfolded-io>
-      4
+      3
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (list x x)
     <|unfolded-io>
-      (((1 2) 3 4) ((1 2) 3 4))
+      ((1 2 3) (1 2 3))
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (length (list x x))
     <|unfolded-io>
       2
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (count-leaves (list x x))
     <|unfolded-io>
-      8
+      6
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   To implement <code*|count-leaves>, recall the recursive plan for computing
@@ -7014,8 +7198,10 @@
     empty list satisfies <scm|null?> and also is not a pair.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (count-leaves x)
 
       \ \ (cond ((null? x) 0) \ 
@@ -7025,11 +7211,9 @@
       \ \ \ \ \ \ \ \ (else (+ (count-leaves (car x))
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (count-leaves (cdr x))))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      count-leaves
+    </unfolded-io>
   </session>
 
   <\exercise>
@@ -7055,45 +7239,51 @@
   <\exercise>
     Suppose we define <code*|x> and <code*|y> to be two lists:
 
-    <\session|scheme|default>
-      <\input|Scheme] >
+    <\session|s7|default>
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define x (list 1 2 3))
-      </input>
+      <|unfolded-io>
+        (1 2 3)
+      </unfolded-io>
 
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define y (list 4 5 6))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        (4 5 6)
+      </unfolded-io>
     </session>
 
     What result is printed by the interpreter in response to evaluating each
     of the following expressions:
 
-    <\session|scheme|default>
-      <\folded-io|Scheme] >
+    <\session|s7|default>
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (append x y)
       <|folded-io>
         (1 2 3 4 5 6)
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (cons x y)
       <|folded-io>
         ((1 2 3) 4 5 6)
       </folded-io>
 
-      <\folded-io|Scheme] >
+      <\folded-io>
+        \<gtr\>\ 
+      <|folded-io>
         (list x y)
       <|folded-io>
         ((1 2 3) (4 5 6))
       </folded-io>
-
-      <\input|Scheme] >
-        \;
-      </input>
     </session>
   </exercise>
 
@@ -7217,8 +7407,10 @@
   shape, where each number is multiplied by the factor. The recursive plan
   for <code*|scale-tree> is similar to the one for <code*|count-leaves>:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (scale-tree tree factor)
 
       \ \ (cond ((null? tree) ())
@@ -7229,19 +7421,19 @@
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (scale-tree (cdr tree)
       factor)))))
-    </input>
+    <|unfolded-io>
+      scale-tree
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (scale-tree (list 1 (list 2 (list 3 4) 5) (list 6 7))
 
       \ \ \ \ \ \ \ \ \ \ \ \ 10)
     <|unfolded-io>
       (10 (20 (30 40) 50) (60 70))
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Another way to implement <code*|scale-tree> is to regard the tree as a
@@ -7476,23 +7668,23 @@
   signal-flow diagrams using the <scm|map> procedure from
   <smart-ref|sec:2.2.1>:
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
-      (map square (list 1 2 3 4 5))
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
+      (map <hlink|square|#define_square> (list 1 2 3 4 5))
     <|unfolded-io>
       (1 4 9 16 25)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Filtering a sequence to select only those elements that satisfy a given
   predicate is accomplished by
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (filter predicate sequence)
 
       \ \ (cond ((null? sequence) ())
@@ -7504,31 +7696,29 @@
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (filter predicate (cdr sequence))))
 
       \ \ \ \ \ \ \ \ (else (filter predicate (cdr sequence)))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      filter
+    </unfolded-io>
   </session>
 
   For example,
 
-  <\session|scheme|default>
-    <\unfolded-io|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (filter odd? (list 1 2 3 4 5))
     <|unfolded-io>
       (1 3 5)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Accumulations can be implemented by
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (accumulate op initial sequence)
 
       \ \ (if (null? sequence)
@@ -7538,29 +7728,33 @@
       \ \ \ \ \ \ (op (car sequence)
 
       \ \ \ \ \ \ \ \ \ \ (accumulate op initial (cdr sequence)))))
-    </input>
+    <|unfolded-io>
+      accumulate
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (accumulate + 0 (list 1 2 3 4 5))
     <|unfolded-io>
       15
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (accumulate * 1 (list 1 2 3 4 5))
     <|unfolded-io>
       120
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (accumulate cons () (list 1 2 3 4 5))
     <|unfolded-io>
       (1 2 3 4 5)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   All that remains to implement signal-flow diagrams is to enumerate the
@@ -7568,8 +7762,10 @@
   generate the sequence of integers in a given range, which we can do as
   follows:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (enumerate-interval low high)
 
       \ \ (if (\<gtr\> low high)
@@ -7577,17 +7773,17 @@
       \ \ \ \ \ \ ()
 
       \ \ \ \ \ \ (cons low (enumerate-interval (+ low 1) high))))
-    </input>
+    <|unfolded-io>
+      enumerate-interval
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (enumerate-interval 2 7)
     <|unfolded-io>
       (2 3 4 5 6 7)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   To enumerate the leaves of a tree, we can use<\footnote>
@@ -7596,8 +7792,10 @@
     part of a family of general sequence-manipulation procedures.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (enumerate-tree tree)
 
       \ \ (cond ((null? tree) ())
@@ -7608,17 +7806,17 @@
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (enumerate-tree (cdr
       tree))))))
-    </input>
+    <|unfolded-io>
+      enumerate-tree
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (enumerate-tree (list 1 (list 2 (list 3 4)) 5))
     <|unfolded-io>
       (1 2 3 4 5)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Now we can reformulate <scm|sum-odd-squares> and <code*|even-fibs> as in
@@ -7676,8 +7874,10 @@
   <code*|sum-odd-squares> and <code*|even-fibs> procedures in a program that
   constructs a list of the squares of the first <math|n+1> Fibonacci numbers:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (list-fib-squares n)
 
       \ \ (accumulate cons
@@ -7690,24 +7890,26 @@
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (enumerate-interval 0
       n)))))
-    </input>
+    <|unfolded-io>
+      list-fib-squares
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (list-fib-squares 10)
     <|unfolded-io>
       (0 1 1 4 9 25 64 169 441 1156 3025)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   We can rearrange the pieces and use them in computing the product of the
   squares of the odd integers in a sequence:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (product-of-squares-of-odd-elements sequence)
 
       \ \ (accumulate *
@@ -7717,17 +7919,17 @@
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ (map <hlink|square|#define_square>
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (filter odd? sequence))))
-    </input>
+    <|unfolded-io>
+      product-of-squares-of-odd-elements
+    </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (product-of-squares-of-odd-elements (list 1 2 3 4 5))
     <|unfolded-io>
       225
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   We can also formulate conventional data-processing applications in terms of
@@ -7944,8 +8146,10 @@
     a <code*|fold-left>, which is similar to <code*|fold-right>, except that
     it combines elements working in the opposite direction:
 
-    <\session|scheme|default>
-      <\input|Scheme] >
+    <\session|s7|default>
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (fold-left op initial sequence)
 
         \ \ (define (iter result rest)
@@ -7959,31 +8163,35 @@
         \ \ \ \ \ \ \ \ \ \ \ \ \ \ (cdr rest))))
 
         \ \ (iter initial sequence))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        fold-left
+      </unfolded-io>
     </session>
 
     What are the values of
 
-    <\session|scheme|default>
-      <\input|Scheme] >
+    <\session|s7|default>
+      <\input>
+        \<gtr\>\ 
+      <|input>
         (fold-right / 1 (list 1 2 3))
       </input>
 
-      <\folded-io|Scheme] >
+      <\input>
+        \<gtr\>\ 
+      <|input>
         (fold-left \ / 1 (list 1 2 3))
-      <|folded-io>
-        1/6
-      </folded-io>
+      </input>
 
-      <\input|Scheme] >
+      <\input>
+        \<gtr\>\ 
+      <|input>
         (fold-right list () (list 1 2 3))
       </input>
 
-      <\input|Scheme] >
+      <\input>
+        \<gtr\>\ 
+      <|input>
         (fold-left list () (list 1 2 3))
       </input>
     </session>
@@ -8065,16 +8273,16 @@
   The combination of mapping and accumulating with <scm|append> is so common
   in this sort of program that we will isolate it as a separate procedure:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (flatmap proc seq)
 
       \ \ (accumulate append () (map proc seq)))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      flatmap
+    </unfolded-io>
   </session>
 
   Now filter this sequence of pairs to find those whose sum is prime. The
@@ -8082,38 +8290,40 @@
   is a pair and it must extract the integers from the pair. Thus, the
   predicate to apply to each element in the sequence is
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (prime-sum? pair)
 
       \ \ (prime? (+ (car pair) (cadr pair))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      prime-sum?
+    </unfolded-io>
   </session>
 
   Finally, generate the sequence of results by mapping over the filtered
   pairs using the following procedure, which constructs a triple consisting
   of the two elements of the pair along with their sum:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (make-pair-sum pair)
 
       \ \ (list (car pair) (cadr pair) (+ (car pair) (cadr pair))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      make-pair-sum
+    </unfolded-io>
   </session>
 
   Combining all these steps yields the complete procedure:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (prime-sum-pairs n)
 
       \ \ (map make-pair-sum
@@ -8130,11 +8340,9 @@
       i 1))))
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (enumerate-interval 1 n)))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      prime-sum-pairs
+    </unfolded-io>
   </session>
 
   Nested mappings are also useful for sequences other than those that
@@ -8160,8 +8368,10 @@
     descriptive names.
   </footnote>
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (permutations s)
 
       \ \ (if (null? s) \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ; empty set?
@@ -8177,11 +8387,9 @@
       s))))
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s)))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      permutations
+    </unfolded-io>
   </session>
 
   Notice how this strategy reduces the problem of generating permutations of
@@ -8193,18 +8401,18 @@
   all the items in a given sequence except for a given item. This can be
   expressed as a simple filter:
 
-  <\session|scheme|default>
-    <\input|Scheme] >
+  <\session|s7|default>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (remove item sequence)
 
       \ \ (filter (lambda (x) (not (= x item)))
 
       \ \ \ \ \ \ \ \ \ \ sequence))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      remove
+    </unfolded-io>
   </session>
 
   <\exercise>
@@ -9253,7 +9461,7 @@
 
   Now we can distinguish between symbols and their values:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define a 1)
     </input>
@@ -9304,7 +9512,7 @@
     c)))>.
   </footnote>
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\unfolded-io|Scheme] >
       (car '(a b c))
     <|unfolded-io>
@@ -9339,7 +9547,7 @@
   list), then <code*|memq> returns false. Otherwise, it returns the sublist
   of the list beginning with the first occurrence of the symbol:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (memq item x)
 
@@ -9357,7 +9565,7 @@
 
   For example, the value of
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\folded-io|Scheme] >
       (memq 'apple '(pear banana prune))
     <|folded-io>
@@ -9371,7 +9579,7 @@
 
   is false, whereas the value of
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\folded-io|Scheme] >
       (memq 'apple '(x (apple sauce) y apple pear))
     <|folded-io>
@@ -9389,7 +9597,7 @@
     What would the interpreter print in response to evaluating each of the
     following expressions?
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\folded-io|Scheme] >
         (list 'a 'b 'c)
       <|folded-io>
@@ -9442,7 +9650,7 @@
     Two lists are said to be <scm|equal?> if they contain equal elements
     arranged in the same order. For example,
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\folded-io|Scheme] >
         (equal? '(this is a list) '(this is a list))
       <|folded-io>
@@ -9456,7 +9664,7 @@
 
     is true, but
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\folded-io|Scheme] >
         (equal? '(this is a list) '(this (is a) list))
       <|folded-io>
@@ -9489,7 +9697,7 @@
   <\exercise>
     Eva Lu Ator types to the interpreter the expression
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\unfolded-io|Scheme] >
         (car ''abracadabra)
       <|unfolded-io>
@@ -9585,7 +9793,7 @@
   numbers, we can express the differentiation rules as the following
   procedure:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (deriv exp var)
 
@@ -9644,7 +9852,7 @@
     <item>The variables are symbols. They are identified by the primitive
     predicate <code*|symbol?>:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (variable? x) (symbol? x))
       </input>
@@ -9657,7 +9865,7 @@
     <item>Two variables are the same if the symbols representing them are
     <scm|eq?>:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (same-variable? v1 v2)
 
@@ -9671,7 +9879,7 @@
 
     <item>Sums and products are constructed as lists:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (make-sum a1 a2) (list '+ a1 a2))
       </input>
@@ -9687,7 +9895,7 @@
 
     <item>A sum is a list whose first element is the symbol <code*|+>:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (sum? x)
 
@@ -9701,7 +9909,7 @@
 
     <item>The addend is the second item of the sum list:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (addend s) (cadr s))
       </input>
@@ -9713,7 +9921,7 @@
 
     <item>The augend is the third item of the sum list:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (augend s) (caddr s))
       </input>
@@ -9725,7 +9933,7 @@
 
     <item>A product is a list whose first element is the symbol <code*|*>:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (product? x)
 
@@ -9739,7 +9947,7 @@
 
     <item>The multiplier is the second item of the product list:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (multiplier p) (cadr p))
       </input>
@@ -9751,7 +9959,7 @@
 
     <item>The multiplicand is the third item of the product list:
 
-    <\session|scheme|default>
+    <\session|s7|default>
       <\input|Scheme] >
         (define (multiplicand p) (caddr p))
       </input>
@@ -9766,7 +9974,7 @@
   <code*|deriv> in order to have a working symbolic-differentiation program.
   Let us look at some examples of its behavior:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\unfolded-io|Scheme] >
       (deriv '(+ x 3) 'x)
     <|unfolded-io>
@@ -9806,7 +10014,7 @@
   will add them and return their sum. Also, if one of the summands is 0, then
   <code*|make-sum> will return the other summand:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (make-sum a1 a2)
 
@@ -9827,7 +10035,7 @@
   This uses the procedure <code*|=number?>, which checks whether an
   expression is equal to a given number:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (=number? exp num)
 
@@ -9842,7 +10050,7 @@
   Similarly, we will change <code*|make-product> to build in the rules that 0
   times anything is 0 and 1 times anything is the thing itself:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (make-product m1 m2)
 
@@ -9864,7 +10072,7 @@
 
   Here is how this version works on our three examples:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\unfolded-io|Scheme] >
       (deriv '(+ x 3) 'x)
     <|unfolded-io>
@@ -9999,7 +10207,7 @@
   <code*|memq> of <smart-ref|sec:2.3.1>. It uses <scm|equal?> instead of
   <scm|eq?> so that the set elements need not be symbols:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (element-of-set? x set)
 
@@ -10019,7 +10227,7 @@
   is already in the set, we just return the set. Otherwise, we use <scm|cons>
   to add the object to the list that represents the set:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (adjoin-set x set)
 
@@ -10041,7 +10249,7 @@
   <code*|set1> in this. But this depends on whether <code*|(car set1)> is
   also in <code*|set2>. Here is the resulting procedure:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input>
       Scheme]\ 
     <|input>
@@ -10113,7 +10321,7 @@
   we reach a set element that is larger than the item we are looking for,
   then we know that the item is not in the set:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (element-of-set? x set)
 
@@ -10160,7 +10368,7 @@
   intersection is given by the intersection of <code*|set1> with the
   <scm|cdr> of <code*|set2>. Here is the procedure:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (intersection-set set1 set2)
 
@@ -10269,7 +10477,7 @@
     represent such a tree in terms of list structure.
   </footnote>
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (entry tree) (car tree))
     </input>
@@ -10296,7 +10504,7 @@
   Now we can write the <code*|element-of-set?> procedure using the strategy
   described above:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (element-of-set? x set)
 
@@ -10329,7 +10537,7 @@
   <code*|x> as the entry and empty right and left branches. Here is the
   procedure:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (adjoin-set x set)
 
@@ -10540,7 +10748,7 @@
   almost the same way as <code*|element-of-set?>. For example, if the set of
   records is implemented as an unordered list, we could use
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (lookup given-key set-of-records)
 
@@ -10787,7 +10995,7 @@
   Leaves of the tree are represented by a list consisting of the symbol
   <code*|leaf>, the symbol at the leaf, and the weight:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (make-leaf symbol weight)
 
@@ -10822,7 +11030,7 @@
   lists, we can form the union by using the <scm|append> procedure we defined
   in <hlink|2.2.1|2_002e2.xhtml#g_t2_002e2_002e1>:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (make-code-tree left right)
 
@@ -10842,7 +11050,7 @@
 
   If we make a tree in this way, we have the following selectors:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (left-branch tree) (car tree))
     </input>
@@ -10889,7 +11097,7 @@
   The following procedure implements the decoding algorithm. It takes as
   arguments a list of zeros and ones, together with a Huffman tree.
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (decode bits tree)
 
@@ -10956,7 +11164,7 @@
   2.61|#Exercise-2_002e61>; however, items are compared by their weights, and
   the element being added to the set is never already in it.
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (adjoin-set x set)
 
@@ -10978,7 +11186,7 @@
   <code*|((A 4) (B 2) (C 1) (D 1))> and constructs an initial ordered set of
   leaves, ready to be merged according to the Huffman algorithm:
 
-  <\session|scheme|default>
+  <\session|s7|default>
     <\input|Scheme] >
       (define (make-leaf-set pairs)
 
