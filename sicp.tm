@@ -9415,8 +9415,8 @@
 
   In order to manipulate symbols we need a new element in our language: the
   ability to <label|index-quote> <em|quote> a data object. Suppose we want to
-  construct the list <code*|(a b)>. We can't accomplish this with
-  <code*|(list a b)>, because this expression constructs a list of the
+  construct the list <scm|(a b)>. We can't accomplish this with <scm|(list a
+  b)>, because this expression constructs a list of the
   <em|values><index|values> of <code*|a> and <code*|b> rather than the
   symbols themselves. This issue is well known in the context of natural
   languages, where words and sentences may be regarded either as semantic
@@ -9508,36 +9508,35 @@
     Strictly, our use of the quotation mark violates the general rule that
     all compound expressions in our language should be delimited by
     parentheses and look like lists. We can recover this consistency by
-    introducing a special form <code*|quote>, which serves the same purpose
-    as the quotation mark. Thus, we would type <code*|(quote a)> instead of
-    <code*|'a>, and we would type <code*|(quote (a b c))> instead of
-    <code*|'(a b c)>. This is precisely how the interpreter works. The
-    quotation mark is just a single-character abbreviation for wrapping the
-    next complete expression with <code*|quote> to form <code*|(quote
+    introducing a special form <scm|quote>, which serves the same purpose as
+    the quotation mark. Thus, we would type <scm|(quote a)> instead of
+    <scm|'a>, and we would type <scm|(quote (a b c))> instead of <scm|'(a b
+    c)>. This is precisely how the interpreter works. The quotation mark is
+    just a single-character abbreviation for wrapping the next complete
+    expression with <scm|quote> to form <scm|(quote
     \<langle\><var|expression>\<rangle\>)>. This is important because it
     maintains the principle that any expression seen by the interpreter can
     be manipulated as a data object. For instance, we could construct the
-    expression <code*|(car '(a b c))>, which is the same as <code*|(car
-    (quote (a b c)))>, by evaluating <code*|(list 'car (list 'quote '(a b
-    c)))>.
+    expression <scm|(car '(a b c))>, which is the same as <scm|(car (quote (a
+    b c)))>, by evaluating <scm|(list 'car (list 'quote '(a b c)))>.
   </footnote>
 
   <\session|s7|default>
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (car '(a b c))
     <|unfolded-io>
       a
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (cdr '(a b c))
     <|unfolded-io>
       (b c)
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   In keeping with this, we can obtain the empty list by evaluating <scm|'()>,
@@ -9604,51 +9603,61 @@
     following expressions?
 
     <\session|s7|default>
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (list 'a 'b 'c)
-      <|folded-io>
+      <|unfolded-io>
         (a b c)
-      </folded-io>
+      </unfolded-io>
 
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (list (list 'george))
-      <|folded-io>
+      <|unfolded-io>
         ((george))
-      </folded-io>
+      </unfolded-io>
 
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (cdr '((x1 x2) (y1 y2)))
-      <|folded-io>
+      <|unfolded-io>
         ((y1 y2))
-      </folded-io>
+      </unfolded-io>
 
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (cadr '((x1 x2) (y1 y2)))
-      <|folded-io>
+      <|unfolded-io>
         (y1 y2)
-      </folded-io>
+      </unfolded-io>
 
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (pair? (car '(a short list)))
-      <|folded-io>
+      <|unfolded-io>
         #f
-      </folded-io>
+      </unfolded-io>
 
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (memq 'red '((red shoes) (blue socks)))
-      <|folded-io>
+      <|unfolded-io>
         #f
-      </folded-io>
+      </unfolded-io>
 
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (memq 'red '(red shoes blue socks))
-      <|folded-io>
+      <|unfolded-io>
         (red shoes blue socks)
-      </folded-io>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      </unfolded-io>
     </session>
   </exercise>
 
@@ -9657,37 +9666,33 @@
     arranged in the same order. For example,
 
     <\session|s7|default>
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (equal? '(this is a list) '(this is a list))
-      <|folded-io>
+      <|unfolded-io>
         #t
-      </folded-io>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      </unfolded-io>
     </session>
 
     is true, but
 
     <\session|s7|default>
-      <\folded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (equal? '(this is a list) '(this (is a) list))
-      <|folded-io>
+      <|unfolded-io>
         #f
-      </folded-io>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      </unfolded-io>
     </session>
 
     is false. To be more precise, we can define <scm|equal?> recursively in
     terms of the basic <scm|eq?> equality of symbols by saying that <code*|a>
     and <code*|b> are <scm|equal?> if they are both symbols and the symbols
-    are <scm|eq?>, or if they are both lists such that <code*|(car a)> is
-    <scm|equal?> to <code*|(car b)> and <code*|(cdr a)> is <scm|equal?> to
-    <code*|(cdr b)>. Using this idea, implement <scm|equal?> as a
+    are <scm|eq?>, or if they are both lists such that <scm|(car a)> is
+    <scm|equal?> to <scm|(car b)> and <scm|(cdr a)> is <scm|equal?> to
+    <scm|(cdr b)>. Using this idea, implement <scm|equal?> as a
     procedure.<\footnote>
       In practice, programmers use <scm|equal?> to compare lists that contain
       numbers as well as symbols. Numbers are not considered to be symbols.
@@ -9704,18 +9709,16 @@
     Eva Lu Ator types to the interpreter the expression
 
     <\session|s7|default>
-      <\unfolded-io|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (car ''abracadabra)
       <|unfolded-io>
         quote
       </unfolded-io>
-
-      <\input|Scheme] >
-        \;
-      </input>
     </session>
 
-    To her surprise, the interpreter prints back <code*|quote>. Explain.
+    To her surprise, the interpreter prints back <scm|quote>. Explain.
   </exercise>
 
   <subsection|Example: Symbolic Differentiation><label|sec:2.3.2>
@@ -9800,7 +9803,9 @@
   procedure:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (deriv exp var)
 
       \ \ (cond ((number? exp) 0)
@@ -9831,11 +9836,9 @@
       \ \ \ \ \ \ \ \ (else
 
       \ \ \ \ \ \ \ \ \ (error "unknown expression type -- DERIV" exp))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      deriv
+    </unfolded-io>
   </session>
 
   This <code*|deriv> procedure incorporates the complete differentiation
@@ -9859,120 +9862,124 @@
     predicate <code*|symbol?>:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (variable? x) (symbol? x))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        variable?
+      </unfolded-io>
     </session>
 
     <item>Two variables are the same if the symbols representing them are
     <scm|eq?>:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (same-variable? v1 v2)
 
         \ \ (and (variable? v1) (variable? v2) (eq? v1 v2)))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        same-variable?
+      </unfolded-io>
     </session>
 
     <item>Sums and products are constructed as lists:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (make-sum a1 a2) (list '+ a1 a2))
-      </input>
+      <|unfolded-io>
+        make-sum
+      </unfolded-io>
 
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (make-product m1 m2) (list '* m1 m2))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        make-product
+      </unfolded-io>
     </session>
 
     <item>A sum is a list whose first element is the symbol <code*|+>:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (sum? x)
 
         \ \ (and (pair? x) (eq? (car x) '+)))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        sum?
+      </unfolded-io>
     </session>
 
     <item>The addend is the second item of the sum list:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (addend s) (cadr s))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        addend
+      </unfolded-io>
     </session>
 
     <item>The augend is the third item of the sum list:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (augend s) (caddr s))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        augend
+      </unfolded-io>
     </session>
 
     <item>A product is a list whose first element is the symbol <code*|*>:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (product? x)
 
         \ \ (and (pair? x) (eq? (car x) '*)))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        product?
+      </unfolded-io>
     </session>
 
     <item>The multiplier is the second item of the product list:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (multiplier p) (cadr p))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        multiplier
+      </unfolded-io>
     </session>
 
     <item>The multiplicand is the third item of the product list:
 
     <\session|s7|default>
-      <\input|Scheme] >
+      <\unfolded-io>
+        \<gtr\>\ 
+      <|unfolded-io>
         (define (multiplicand p) (caddr p))
-      </input>
-
-      <\input|Scheme] >
-        \;
-      </input>
+      <|unfolded-io>
+        multiplicand
+      </unfolded-io>
     </session>
   </itemize>
 
@@ -9981,27 +9988,29 @@
   Let us look at some examples of its behavior:
 
   <\session|s7|default>
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (deriv '(+ x 3) 'x)
     <|unfolded-io>
       (+ 1 0)
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (deriv '(* x y) 'x)
     <|unfolded-io>
       (+ (* x 0) (* 1 y))
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (deriv '(* (* x y) (+ x 3)) 'x)
     <|unfolded-io>
       (+ (* (* x y) (+ 1 0)) (* (+ (* x 0) (* 1 y)) (+ x 3)))
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   The program produces answers that are correct; however, they are
@@ -10021,7 +10030,9 @@
   <code*|make-sum> will return the other summand:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (make-sum a1 a2)
 
       \ \ (cond ((=number? a1 0) a2)
@@ -10031,33 +10042,33 @@
       \ \ \ \ \ \ \ \ ((and (number? a1) (number? a2)) (+ a1 a2))
 
       \ \ \ \ \ \ \ \ (else (list '+ a1 a2))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      make-sum
+    </unfolded-io>
   </session>
 
   This uses the procedure <code*|=number?>, which checks whether an
   expression is equal to a given number:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (=number? exp num)
 
       \ \ (and (number? exp) (= exp num)))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      =number?
+    </unfolded-io>
   </session>
 
   Similarly, we will change <code*|make-product> to build in the rules that 0
   times anything is 0 and 1 times anything is the thing itself:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (make-product m1 m2)
 
       \ \ (cond ((or (=number? m1 0) (=number? m2 0)) 0)
@@ -10069,37 +10080,37 @@
       \ \ \ \ \ \ \ \ ((and (number? m1) (number? m2)) (* m1 m2))
 
       \ \ \ \ \ \ \ \ (else (list '* m1 m2))))
-    </input>
-
-    <\input|Scheme] >
-      \;
-    </input>
+    <|unfolded-io>
+      make-product
+    </unfolded-io>
   </session>
 
   Here is how this version works on our three examples:
 
   <\session|s7|default>
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (deriv '(+ x 3) 'x)
     <|unfolded-io>
       1
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (deriv '(* x y) 'x)
     <|unfolded-io>
       y
     </unfolded-io>
 
-    <\unfolded-io|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (deriv '(* (* x y) (+ x 3)) 'x)
     <|unfolded-io>
       (+ (* x y) (* y (+ x 3)))
     </unfolded-io>
-
-    <\input|Scheme] >
-      \;
-    </input>
   </session>
 
   Although this is quite an improvement, the third example shows that there
@@ -10125,7 +10136,7 @@
     arbitrary numbers of (two or more) terms. Then the last example above
     could be expressed as
 
-    <code|(deriv '(* x y (+ x 3)) 'x)>
+    <scm|(deriv '(* x y (+ x 3)) 'x)>
 
     Try to do this by changing only the representation for sums and products,
     without changing the <code*|deriv> procedure at all. For example, the
@@ -10135,7 +10146,7 @@
 
   <\exercise>
     Suppose we want to modify the differentiation program so that it works
-    with ordinary mathematical notation, in which <code*|+> and <code*|*> are
+    with ordinary mathematical notation, in which <scm|+> and <scm|*> are
     infix rather than prefix operators. Since the differentiation program is
     defined in terms of abstract data, we can modify it to work with
     different representations of expressions solely by changing the
@@ -10144,12 +10155,12 @@
 
     <\enumerate>
       <item>Show how to do this in order to differentiate algebraic
-      expressions presented in infix form, such as <code*|(x + (3 * (x + (y +
-      2))))>. To simplify the task, assume that <code*|+> and <code*|*>
-      always take two arguments and that expressions are fully parenthesized.
+      expressions presented in infix form, such as <scm|(x + (3 * (x + (y +
+      2))))>. To simplify the task, assume that <scm|+> and <scm|*> always
+      take two arguments and that expressions are fully parenthesized.
 
       <item>The problem becomes substantially harder if we allow standard
-      algebraic notation, such as <code*|(x + 3 * (x + y + 2))>, which drops
+      algebraic notation, such as <scm|(x + 3 * (x + y + 2))>, which drops
       unnecessary parentheses and assumes that multiplication is done before
       addition. Can you design appropriate predicates, selectors, and
       constructors for this notation such that our derivative program still
