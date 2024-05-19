@@ -1,5 +1,7 @@
 [English](./README_EN.md) | 简体中文
 
+> 请使用墨干v1.2.6及以上版本阅读，因为v1.2.6开始墨干内置了S7 Scheme插件。S7 Scheme是斯坦福大学Bill Schottstaedt的作品，小巧优雅，非常适合用于学习Scheme语言。
+
 ## 交互式SICP
 
 享受在GNU TeXmacs/墨干中阅读SICP！
