@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|book|old-dots|old-lengths|maxima|preview-ref|smart-ref>>
+<style|<tuple|book|old-dots|old-lengths|maxima|preview-ref|smart-ref|s7>>
 
 <\body>
   <\hide-preamble>
@@ -90,7 +90,7 @@
     <no-break><pageref|auto-107>>
 
     <with|par-left|1tab|1.3.2<space|2spc>Constructing Procedures Using
-    <with|mode|prog|prog-language|scheme|font-family|rm|lambda>
+    <with|mode|prog|prog-language|s7|font-family|rm|lambda>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-112>>
 
@@ -10225,7 +10225,9 @@
   <scm|eq?> so that the set elements need not be symbols:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (element-of-set? x set)
 
       \ \ (cond ((null? set) false)
@@ -10233,9 +10235,13 @@
       \ \ \ \ \ \ \ \ ((equal? x (car set)) true)
 
       \ \ \ \ \ \ \ \ (else (element-of-set? x (cdr set)))))
-    </input>
+    <|unfolded-io>
+      element-of-set?
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\input>
+      \<gtr\>\ 
+    <|input>
       \;
     </input>
   </session>
@@ -10245,7 +10251,9 @@
   to add the object to the list that represents the set:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\input>
+      \<gtr\>\ 
+    <|input>
       (define (adjoin-set x set)
 
       \ \ (if (element-of-set? x set)
@@ -10253,10 +10261,6 @@
       \ \ \ \ \ \ set
 
       \ \ \ \ \ \ (cons x set)))
-    </input>
-
-    <\input|Scheme] >
-      \;
     </input>
   </session>
 
@@ -10267,9 +10271,9 @@
   also in <code*|set2>. Here is the resulting procedure:
 
   <\session|s7|default>
-    <\input>
-      Scheme]\ 
-    <|input>
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (intersection-set set1 set2)
 
       \ \ (cond ((or (null? set1) (null? set2)) '())
@@ -10281,6 +10285,14 @@
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (intersection-set (cdr set1) set2)))
 
       \ \ \ \ \ \ \ \ (else (intersection-set (cdr set1) set2))))
+    <|unfolded-io>
+      intersection-set
+    </unfolded-io>
+
+    <\input>
+      \<gtr\>\ 
+    <|input>
+      \;
     </input>
   </session>
 
@@ -10339,7 +10351,9 @@
   then we know that the item is not in the set:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (element-of-set? x set)
 
       \ \ (cond ((null? set) false)
@@ -10349,9 +10363,13 @@
       \ \ \ \ \ \ \ \ ((\<less\> x (car set)) false)
 
       \ \ \ \ \ \ \ \ (else (element-of-set? x (cdr set)))))
-    </input>
+    <|unfolded-io>
+      element-of-set?
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\input>
+      \<gtr\>\ 
+    <|input>
       \;
     </input>
   </session>
@@ -10386,7 +10404,9 @@
   <scm|cdr> of <code*|set2>. Here is the procedure:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (intersection-set set1 set2)
 
       \ \ (if (or (null? set1) (null? set2))
@@ -10411,9 +10431,13 @@
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\<less\> x2 x1)
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (intersection-set set1 (cdr set2)))))))
-    </input>
+    <|unfolded-io>
+      intersection-set
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\input>
+      \<gtr\>\ 
+    <|input>
       \;
     </input>
   </session>
@@ -10473,7 +10497,7 @@
   searching a tree of size <math|n<around*|/|2|\<nobracket\>>>. Since the
   size of the tree is halved at each step, we should expect that the number
   of steps needed to search a tree of size <math|n> grows as
-  <math|\<Theta\><around*|(|log\<nospace\>n|)>>.<\footnote>
+  <math|\<Theta\><around*|(|log n|)>>.<\footnote>
     Halving the size of the problem at each step is the distinguishing
     characteristic of logarithmic growth, as we saw with the
     fast-exponentiation algorithm of <smart-ref|sec:1.2.4> and the
@@ -10495,25 +10519,43 @@
   </footnote>
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (entry tree) (car tree))
-    </input>
+    <|unfolded-io>
+      entry
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (left-branch tree) (cadr tree))
-    </input>
+    <|unfolded-io>
+      left-branch
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (right-branch tree) (caddr tree))
-    </input>
+    <|unfolded-io>
+      right-branch
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (make-tree entry left right)
 
       \ \ (list entry left right))
-    </input>
+    <|unfolded-io>
+      make-tree
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\input>
+      \<gtr\>\ 
+    <|input>
       \;
     </input>
   </session>
@@ -10522,7 +10564,9 @@
   described above:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (element-of-set? x set)
 
       \ \ (cond ((null? set) false)
@@ -10536,9 +10580,13 @@
       \ \ \ \ \ \ \ \ ((\<gtr\> x (entry set))
 
       \ \ \ \ \ \ \ \ \ (element-of-set? x (right-branch set)))))
-    </input>
+    <|unfolded-io>
+      element-of-set?
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\input>
+      \<gtr\>\ 
+    <|input>
       \;
     </input>
   </session>
@@ -10555,7 +10603,9 @@
   procedure:
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (adjoin-set x set)
 
       \ \ (cond ((null? set) (make-tree x '() '()))
@@ -10579,9 +10629,13 @@
 
       \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (adjoin-set x (right-branch
       set))))))
-    </input>
+    <|unfolded-io>
+      adjoin-set
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\input>
+      \<gtr\>\ 
+    <|input>
       \;
     </input>
   </session>
@@ -10766,7 +10820,9 @@
   records is implemented as an unordered list, we could use
 
   <\session|s7|default>
-    <\input|Scheme] >
+    <\unfolded-io>
+      \<gtr\>\ 
+    <|unfolded-io>
       (define (lookup given-key set-of-records)
 
       \ \ (cond ((null? set-of-records) false)
@@ -10776,9 +10832,13 @@
       \ \ \ \ \ \ \ \ \ (car set-of-records))
 
       \ \ \ \ \ \ \ \ (else (lookup given-key (cdr set-of-records)))))
-    </input>
+    <|unfolded-io>
+      lookup
+    </unfolded-io>
 
-    <\input|Scheme] >
+    <\input>
+      \<gtr\>\ 
+    <|input>
       \;
     </input>
   </session>
